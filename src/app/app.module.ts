@@ -10,6 +10,10 @@ import { MainComponent } from './main/main.component';
 import { HeaderBannerComponent } from './header-banner/header-banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { TopNavComponent } from './top-nav/top-nav.component';
+import { HeaderNarrowComponent } from './header-narrow/header-narrow.component';
+import { TermsComponent } from './terms/terms.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { ContactComponent } from './contact/contact.component';
     MainComponent,
     HeaderBannerComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    TopNavComponent,
+    HeaderNarrowComponent,
+    TermsComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,

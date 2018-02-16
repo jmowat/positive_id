@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderBannerComponent } from '../header-banner/header-banner.component';
+import { HeaderNarrowComponent } from '../header-narrow/header-narrow.component';
 import { FooterComponent } from '../footer/footer.component';
 
 @Component({

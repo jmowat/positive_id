@@ -3,11 +3,11 @@ import { HeaderNarrowComponent } from '../header-narrow/header-narrow.component'
 import { FooterComponent } from '../footer/footer.component';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  selector: 'app-terms',
+  templateUrl: './terms.component.html',
+  styleUrls: ['./terms.component.css']
 })
-export class AboutComponent implements OnInit {
+export class TermsComponent implements OnInit {
 
   constructor() { }
 

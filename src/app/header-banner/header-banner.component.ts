@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TopNavComponent } from '../top-nav/top-nav.component';
 
 @Component({
   selector: 'app-header-banner',
