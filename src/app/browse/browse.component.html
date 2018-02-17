@@ -14,9 +14,14 @@
           	</div>
           	<div class="row">
           		<div class="col">
-          			<ul class="heroes">
+          			<ul>
 					  <li *ngFor="let vehicle of vehicles">
-					      {{vehicle.name}}
+					      {{vehicle.name}} - {{vehicle.class}} - {{vehicle.nationality}}
+					    <ul>
+					  		<li *ngFor="let image of vehicle.images">
+					  			{{image.img_lg}} - {{image.perspective}} - {{image.distance}}
+					  		</li>
+					  	</ul>
 					  </li>
 					</ul>
           		</div>

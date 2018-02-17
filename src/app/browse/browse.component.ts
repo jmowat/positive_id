@@ -10,14 +10,14 @@ import { Vehicle }  from '../vehicle';
 })
 export class BrowseComponent implements OnInit {
 	vehicles: Vehicle[];
+	errorMessage: string;
+
   constructor(private vehicleService: VehicleService) { }
 
 	ngOnInit() {
-		this.showVehicles();
+		this.vehicleService.getVehicles()
+            .subscribe(vehicles => this.vehicles = vehicles,
+                       error => this.errorMessage = <any>error);
 	}
 
-	showVehicles() {
-	  	this.vehicleService.getVehicles()
-	    	.subscribe(data => this.vehicles = data);
-	}
 }
