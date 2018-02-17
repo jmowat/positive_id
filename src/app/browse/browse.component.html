@@ -5,27 +5,57 @@
 
       <section class="browse">
         <div class="container">
-        	<div class="row">
-        		<div class="col">
-		        	<h1>
-		        		Browse
-		          	</h1>
-		        </div>
-          	</div>
-          	<div class="row">
-          		<div class="col">
-          			<ul>
-					  <li *ngFor="let vehicle of vehicles">
-					      {{vehicle.name}} - {{vehicle.class}} - {{vehicle.nationality}}
-					    <ul>
-					  		<li *ngFor="let image of vehicle.images">
-					  			{{image.img_lg}} - {{image.perspective}} - {{image.distance}}
-					  		</li>
-					  	</ul>
-					  </li>
-					</ul>
-          		</div>
-          	</div>
+			<div class="row">
+				<div class="col-sm-2 col-md-4">
+					<form action="#">
+						<div class="form-group">
+							<label>Name</label>
+							<input class="form-control" id="searchText" ng-model="$ctrl.query" ng-change="$ctrl.filter()">
+						</div>
+						<div class="form-group">
+							<label for="platformFilter">Platform</label>
+							<select class="form-control" name="platformFilter" id="platformFilter" ng-model="$ctrl.platforms.selectedOption" ng-options="platform.name for platform in $ctrl.platforms.availableOptions track by platform.id" ng-change="$ctrl.refresh()">
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="sideFilter">Side</label>
+							<select class="form-control" name="sideFilter" id="sideFilter" ng-model="$ctrl.sides.selectedOption" ng-options="side.name for side in $ctrl.sides.availableOptions track by side.id">
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="sideFilter">Era</label>
+							<select class="form-control" name="eraFilter" id="eraFilter" ng-model="$ctrl.eras.selectedOption" ng-options="era.name for era in $ctrl.eras.availableOptions track by era.id">
+							</select>
+						</div>
+						<div class="form-group">
+							<div>
+								<button type="reset" class="btn btn-default" ng-click="$ctrl.reset()">Reset</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-10 col-md-8">
+					<h2>Browse Database</h2>
+					<p>Here are the current vehicles in Positive ID</p>
+					<div class="row">
+
+						<div class="col-sm-6 col-md-4" *ngFor="let vehicle of vehicles">
+							<a ng-click="$ctrl.open(vehicle)">
+								<div class="thumbnail">
+									<div class="caption">
+										<h3>{{vehicle.name}}</h3>
+									</div>
+									<img src="assets/{{vehicle.image_dir}}/{{vehicle.images[0].img_sm}}" alt="{{vehicle.name}} side">
+									<img src="assets/{{vehicle.image_dir}}/{{vehicle.images[1].img_sm}}" alt="{{vehicle.name}} front">
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<ul uib-pagination total-items="$ctrl.filtered.length" ng-model="$ctrl.currentPage" ng-change="$ctrl.pageChanged()" class="pagination-lg" items-per-page="$ctrl.entryLimit"></ul>
+					</div>
+				</div>
+			</div>
         </div>
       </section> <!-- end .browse -->
 
