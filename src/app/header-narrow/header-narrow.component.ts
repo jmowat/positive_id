@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header-narrow',
@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-narrow.component.css']
 })
 export class HeaderNarrowComponent implements OnInit {
+	@Input() public showBrand: boolean = false;
+  	constructor() { }
 
-  constructor() { }
+	ngOnInit() {
 
-  ngOnInit() {
-  }
-
+	}
 }

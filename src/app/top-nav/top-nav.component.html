@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark ">
-  <a class="navbar-brand"><!-- <img class="img-fluid" src="img/logo_white.png" alt="Positive ID"> --></a>
+  <a routerLink="/main" class="navbar-brand">
+    <img *ngIf="showBrand" class="img-fluid" src="assets/img/logo_white.png" alt="Positive ID">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

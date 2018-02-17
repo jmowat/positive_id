@@ -10,11 +10,6 @@
 	border-bottom-left-radius: 6px;
 }
 
-.no-padding {
-	padding-left: 0;
-	padding-right: 0;
-}
-
 .footer-bs .footer-brand, .footer-nav {
 	padding: 10px 25px;
 }
@@ -75,4 +70,8 @@
 .footer-bs .footer-nav ul.list a:hover {
 	color: rgba(255, 255, 255, 0.60);
 	text-decoration: none;
+}
+
+.copyright {
+	padding-left: 10px;
 }
