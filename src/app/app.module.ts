@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { MainComponent } from './main/main.component';
@@ -14,6 +14,9 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import { HeaderNarrowComponent } from './header-narrow/header-narrow.component';
 import { TermsComponent } from './terms/terms.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowseComponent } from './browse/browse.component';
+import { VehicleService }  from './vehicle.service';
 
 @NgModule({
   declarations: [
@@ -26,14 +29,18 @@ import { PrivacyComponent } from './privacy/privacy.component';
     TopNavComponent,
     HeaderNarrowComponent,
     TermsComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    BrowseComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    VehicleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

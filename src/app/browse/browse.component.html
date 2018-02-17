@@ -1,0 +1,30 @@
+<div class="site">
+  <div class="page">
+
+      <app-header-narrow></app-header-narrow>
+
+      <section class="browse">
+        <div class="container">
+        	<div class="row">
+        		<div class="col">
+		        	<h1>
+		        		Browse
+		          	</h1>
+		        </div>
+          	</div>
+          	<div class="row">
+          		<div class="col">
+          			<ul class="heroes">
+					  <li *ngFor="let vehicle of vehicles">
+					      {{vehicle.name}}
+					  </li>
+					</ul>
+          		</div>
+          	</div>
+        </div>
+      </section> <!-- end .browse -->
+
+      <app-footer></app-footer>
+
+  </div> <!-- /end .page -->
+</div> <!-- /end .site -->
