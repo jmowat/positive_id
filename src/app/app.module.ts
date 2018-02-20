@@ -17,6 +17,8 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowseComponent } from './browse/browse.component';
 import { VehicleService }  from './vehicle.service';
+import { PlatformSelectComponent } from './platform-select/platform-select.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { VehicleService }  from './vehicle.service';
     HeaderNarrowComponent,
     TermsComponent,
     PrivacyComponent,
-    BrowseComponent
+    BrowseComponent,
+    PlatformSelectComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

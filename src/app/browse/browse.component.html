@@ -38,8 +38,8 @@
 					<h2>Browse Database</h2>
 					<p>Here are the current vehicles in Positive ID</p>
 					<div class="row">
-
-						<div class="col-sm-6 col-md-4" *ngFor="let vehicle of vehicles">
+						<div class="col-sm-6 col-md-4" *ngFor="let vehicle of vehicles
+						| slice:(page-1)*6:(page)*6">
 							<a ng-click="$ctrl.open(vehicle)">
 								<div class="thumbnail">
 									<div class="caption">
@@ -52,11 +52,21 @@
 						</div>
 					</div>
 					<div class="row">
-						<ul uib-pagination total-items="$ctrl.filtered.length" ng-model="$ctrl.currentPage" ng-change="$ctrl.pageChanged()" class="pagination-lg" items-per-page="$ctrl.entryLimit"></ul>
+						  <div class="col">
+						  	<ngb-pagination [collectionSize]="getNumberOfItems()" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+						  </div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<p>Current page: {{page}}</p>
+  							<p>Total items: {{getNumberOfItems()}}</p>
+  						</div>
 					</div>
 				</div>
 			</div>
         </div>
+
+
       </section> <!-- end .browse -->
 
       <app-footer></app-footer>

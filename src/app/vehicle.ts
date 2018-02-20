@@ -14,5 +14,5 @@ export class Vehicle {
   	classification: string,
   	distance: string,
   	source: string
-  }]
+  }];
 }
