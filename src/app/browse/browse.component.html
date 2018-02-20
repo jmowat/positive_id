@@ -51,17 +51,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="row">
-						  <div class="col">
-						  	<ngb-pagination [collectionSize]="getNumberOfItems()" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
-						  </div>
-					</div>
-					<div class="row">
-						<div class="col">
-							<p>Current page: {{page}}</p>
-  							<p>Total items: {{getNumberOfItems()}}</p>
-  						</div>
-					</div>
+					<app-pagination [collectionSize]="getNumberOfItems()" [page]="page" (pageChanged)="page=$event"></app-pagination>
 				</div>
 			</div>
         </div>

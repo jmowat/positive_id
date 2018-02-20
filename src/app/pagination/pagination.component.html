@@ -1,7 +1,3 @@
 <div class="col">
-  	<ngb-pagination [collectionSize]="getNumberOfItems()" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
-</div>
-<div class="col">
-	<p>Current page: {{page}}</p>
-	<p>Total items: {{getNumberOfItems()}}</p>
+  	<ngb-pagination [collectionSize]="collectionSize" [(page)]="page" (pageChange)="onChange($event)" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
 </div>
