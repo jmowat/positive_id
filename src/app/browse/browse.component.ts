@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
 import { VehicleService }  from '../vehicle.service';
 import { Vehicle }  from '../vehicle';
 import { PaginationComponent } from '../pagination/pagination.component';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { BrowseFormComponent } from '../browse-form/browse-form.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from '../modal/modal.component';
 
 @Component({
@@ -16,8 +16,8 @@ export class BrowseComponent implements OnInit {
 	errorMessage: string;
 	page = 1;
 
-  constructor(private vehicleService: VehicleService, private modalService: NgbModal) {
-   }
+  	constructor(private vehicleService: VehicleService, private modalService: NgbModal) {
+   	}
 
 	ngOnInit() {
 		/*
@@ -39,15 +39,15 @@ export class BrowseComponent implements OnInit {
 	}
 
 	popUp(vehicle: Vehicle) {
-		console.log("try to open", vehicle.name);
+		// console.log("try to open", vehicle.name);
 		const modalRef = this.modalService.open(ModalComponent);
 		modalRef.componentInstance.vehicle = vehicle;
 		modalRef.result.then((result) => {
-			console.log(result);
-			console.log('closed');
+			// console.log(result);
+			// console.log('closed');
 		}).catch( (result) => {
-			console.log(result);
-			console.log('cancelling');
+			// console.log(result);
+			// console.log('cancelling');
 		});
 
 	}

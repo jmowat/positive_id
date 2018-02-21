@@ -20,6 +20,7 @@ import { VehicleService }  from './vehicle.service';
 import { PlatformSelectComponent } from './platform-select/platform-select.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ModalComponent } from './modal/modal.component';
+import { BrowseFormComponent } from './browse-form/browse-form.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ModalComponent } from './modal/modal.component';
     BrowseComponent,
     PlatformSelectComponent,
     PaginationComponent,
-    ModalComponent
+    ModalComponent,
+    BrowseFormComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,7 @@ import { ModalComponent } from './modal/modal.component';
   ],
   entryComponents: [
     ModalComponent
-  ]
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
