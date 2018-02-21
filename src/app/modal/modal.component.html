@@ -1,0 +1,73 @@
+<!-- <div class="modal-header">
+      <h4 class="modal-title">{{vehicle.name}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div> -->
+
+    <div class="modal-body">
+    	<div class="modal-header">
+        	<h3>{{vehicle.name}}</h3>
+    	</div>
+		<div class="modal-body row">
+    		<div class="col-sm-12 col-md-8" *ngFor="let image of vehicle.images">
+        		<img src="assets/{{vehicle.image_dir}}/{{image.img_sm}}" alt="{{vehicle.name}}">
+    		</div>
+		</div>
+  		<!-- <p>{{vehicle.name}}</p>
+		<p>{{vehicle.type}}</p>
+		<p>{{vehicle.class}}</p>
+		<p>{{vehicle.image_dir}}</p>
+		<p>{{vehicle.side}}</p>
+		<p>{{vehicle.nationality}}</p>
+		<p>{{vehicle.era}}</p>
+		<ul>
+			<li *ngFor="let image of vehicle.images">
+				{{image.img_sm}}
+			</li>
+		</ul> -->
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  	</div>
+
+
+<!-- export class Vehicle {
+  name: string;
+  type: string;
+  class: string;
+  image_dir: string;
+  side: string[];
+  nationality: string[];
+  era: string[];
+  images: [{
+  	img_lg: string,
+  	img_sm: string,
+  	perspective: string,
+  	optics: string,
+  	classification: string,
+  	distance: string,
+  	source: string
+  }];
+} -->
+
+
+<!-- Original modal template -->
+<!-- 
+<div inner-html-bind inner-html="modal_html_template">
+    <div class="modal-header">
+        <h3>{{vehicle.name}}</h3>
+    </div>
+    <div class="modal-body row">
+        <div class="col-sm-6" ng-repeat="image in vehicle.data.images">
+            <img ng-src="{{vehicle.image_dir}}/{{image.img_sm}}" alt="{{vehicle.getName()}}">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</div> 
+-->
+
+
+<!-- <button class="btn btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->

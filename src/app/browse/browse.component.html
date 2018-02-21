@@ -40,7 +40,7 @@
 					<div class="row">
 						<div class="col-sm-6 col-md-4" *ngFor="let vehicle of vehicles
 						| slice:(page-1)*6:(page)*6">
-							<a ng-click="$ctrl.open(vehicle)">
+							<a (click)="popUp(vehicle)">
 								<div class="thumbnail">
 									<div class="caption">
 										<h3>{{vehicle.name}}</h3>
