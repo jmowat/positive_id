@@ -42,9 +42,9 @@ export class BrowseFormComponent implements OnInit, OnChanges {
 	}
 
 	filter() {
-		 console.log(this.vehicles ? `In filter, vehicles[] has ${this.vehicles.length} items`: "In filter, vehicles undefined");
+		 // console.log(this.vehicles ? `In filter, vehicles[] has ${this.vehicles.length} items`: "In filter, vehicles undefined");
 		 this.vehicles = this.vehicles.filter(x => x.type == "aircraft");
-		 console.log(this.vehicles ? `Filtered vehicles[] has ${this.vehicles.length} items`: "In filter, vehicles still undefined");
+		 // console.log(this.vehicles ? `Filtered vehicles[] has ${this.vehicles.length} items`: "In filter, vehicles still undefined");
 	}
 
 	reset() {

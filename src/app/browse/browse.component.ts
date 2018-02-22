@@ -12,7 +12,6 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrls: ['./browse.component.css']
 })
 export class BrowseComponent implements OnInit {
-	vehicles: Vehicle[];
 	errorMessage: string;
 	page = 1;
 
