@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { VehicleService }  from '../vehicle.service';
 import { Vehicle }  from '../vehicle';
+import { FilterHelper }  from '../filter-helper';
 import { BrowseModel } from '../browse-model'
 
 @Component({
@@ -36,10 +37,9 @@ export class BrowseFormComponent implements OnInit {
 		}
 	}
 
-	filter() {
-		 // console.log(this.vehicles ? `In filter, vehicles[] has ${this.vehicles.length} items`: "In filter, vehicles undefined");
-		 this.vehicles = this.vehicles.filter(x => x.type == "aircraft");
-		 // console.log(this.vehicles ? `Filtered vehicles[] has ${this.vehicles.length} items`: "In filter, vehicles still undefined");
+	filter(constraint) {
+		let filterHelper = new FilterHelper(this.vehicles);
+		this.vehicles = filterHelper.filter(constraint);
 	}
 
 	reset() {
@@ -50,6 +50,9 @@ export class BrowseFormComponent implements OnInit {
 		this.vehicleService.getVehicles()
             .subscribe(x => {
             	this.vehicles = x;
+            	this.vehicles.sort(function(a:Vehicle, b:Vehicle) {
+				    return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
+				});
             	//console.log(`Fetched ${x.length} vehicles in browse-form`);
             },
             error => this.errorMessage = <any>error);
