@@ -7,30 +7,28 @@
         <div class="container">
 			<div class="row">
 				<div class="col-sm-2 col-md-4">
-					<form #browseForm="ngForm">
+					<form #browseForm="ngForm" *ngIf="vehicles">
 						<div class="form-group">
 							<label for="name">Name</label>
-							<input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name" #name="ngModel" >
-							<div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-						  		Name is required
-							</div>
+							<input type="text" class="form-control" id="name" name="name" >
 						</div>
 						<div class="form-group">
 							<label for="platform">Platform</label>
-							<select class="form-control" id="platform" required [(ngModel)]="model.platform" name="platform">
-								<option *ngFor="let platform of platforms" [value]="platform">{{platform}}</option>
+							<select class="form-control" id="platform" [(ngModel)]="platforms.selectedOption.id" name="platform" (change)="filter()">
+								<option *ngFor="let platform of platforms.availableOptions" [value]="platform.id">{{platform.name}}</option>
 							</select>
+							<!-- <app-platform-select [vehicles]="vehicles" (change)="platformChange($event)"></app-platform-select> -->
 						</div>
 						<div class="form-group">
 							<label for="side">Side</label>
-							<select class="form-control" id="side" required [(ngModel)]="model.side" name="side">
-								<option *ngFor="let side of sides" [value]="side">{{side}}</option>
+							<select class="form-control" id="side" [(ngModel)]="sides.selectedOption.id" name="side" (change)="filter()">
+								<option *ngFor="let side of sides.availableOptions" [value]="side.id">{{side.name}}</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label for="era">Era</label>
-							<select class="form-control" id="era" required [(ngModel)]="model.era" name="era">
-								<option *ngFor="let era of eras" [value]="era">{{era}}</option>
+							<select class="form-control" id="era" [(ngModel)]="eras.selectedOption.id" name="side" (change)="filter()">
+								<option *ngFor="let era of eras.availableOptions" [value]="era.id">{{era.name}}</option>
 							</select>
 						</div>
 					</form>
@@ -39,7 +37,7 @@
 							<button class="btn btn-default" (click)="reset()">Reset</button>
 						</div>
 						<div class="col-3">
-							<button class="btn btn-default" (click)="filter({type:'aircraft',era:'world war ii',side:'Allies'})">Test Filter</button>
+							<button class="btn btn-default" (click)="filter()">Test Filter</button>
 						</div>
 					</div>
 				</div>
