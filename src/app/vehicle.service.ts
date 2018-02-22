@@ -1,22 +1,14 @@
-import { EventEmitter } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/filter';
-import { BrowseModel } from './browse-model'
-
 
 import { Vehicle }  from './vehicle';
 
 @Injectable()
 export class VehicleService {
-    vehiclesUpdated: EventEmitter<Vehicle[]> = new EventEmitter<Vehicle[]>();
-    sidesUpdated: EventEmitter<string[]> = new EventEmitter<string[]>();
-    erasUpdated: EventEmitter<string[]> = new EventEmitter<string[]>();
 
 	constructor(private _http: HttpClient) { }
 
@@ -25,8 +17,6 @@ export class VehicleService {
     getVehicles(): Observable<Vehicle[]> {
         return this._http.get<Vehicle[]>(this._vehiclesUrl)
             .do(data =>  {
-                //console.log("data in service:", data);
-                //console.log("JSON.stringify(data):", JSON.stringify(data));
                 //JSON.stringify(data);
             })
             .catch(this.handleError);
@@ -46,54 +36,5 @@ export class VehicleService {
         }
         console.error(errorMessage);
         return Observable.throw(errorMessage);
-    }
-
-    // filterByType(type: string) {
-    //     let filteredValues: Vehicle[];
-    //     let sides: string[] = [];
-    //     let eras: string[] = [];
-
-    //     this.getVehicles().subscribe(data => {
-    //         filteredValues = data.filter(item => item.type == type);
-    //         sides = Array.from(new Set([].concat(...(filteredValues.map(x => x.side)))));
-    //         eras = Array.from(new Set([].concat(...(filteredValues.map(x => x.era)))));
-    //         console.log("sides after filter:",sides);
-    //         console.log("eras after filter:",eras);
-    //         this.vehiclesUpdated.emit(filteredValues);
-    //         this.sidesUpdated.emit(sides);
-    //         this.erasUpdated.emit(eras);
-    //     });
-    // }
-
-    filter(model: BrowseModel) {
-        let filteredValues: Vehicle[];
-        let sides: string[] = [];
-        let eras: string[] = [];
-
-        this.getVehicles().subscribe(data => {
-            console.log(model);
-            // combined filters are not seeming to work
-            filteredValues = data.filter(item =>
-                 item.type === model.platform 
-                 //&& item.side.includes(model.side) && item.era.includes(model.era)
-            );
-
-            console.log("filtered values:", filteredValues);
-
-            sides = Array.from(new Set([].concat(...(filteredValues.map(x => x.side)))));
-            eras = Array.from(new Set([].concat(...(filteredValues.map(x => x.era)))));
-            console.log("sides after filter:",sides);
-            console.log("eras after filter:",eras);
-            this.vehiclesUpdated.emit(filteredValues);
-            this.sidesUpdated.emit(sides);
-            this.erasUpdated.emit(eras);
-        });
-    }
-
-    reset() {
-        this.getVehicles().subscribe(data => {
-            //console.log("reset in service:");
-            this.vehiclesUpdated.emit(data);
-        });
     }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { VehicleService }  from '../vehicle.service';
 import { Vehicle }  from '../vehicle';
 import { BrowseModel } from '../browse-model'
@@ -8,8 +8,9 @@ import { BrowseModel } from '../browse-model'
   templateUrl: './browse-form.component.html',
   styleUrls: ['./browse-form.component.css']
 })
-export class BrowseFormComponent implements OnInit {
+export class BrowseFormComponent implements OnInit, OnChanges {
 	vehicles: Vehicle[];
+
 	errorMessage: string;
 
 	model = new BrowseModel("Aircraft");
@@ -24,6 +25,10 @@ export class BrowseFormComponent implements OnInit {
 		this.getVehicles();
 	}
 
+	ngOnChanges(changes: SimpleChanges) {
+
+	};
+
 	diagnostic() {
 		return JSON.stringify(this.model);
 	}
@@ -36,20 +41,21 @@ export class BrowseFormComponent implements OnInit {
 		}
 	}
 
-	testFilter() {
-		//console.log("execute testFilter in browse-form component.");
-		this.vehicleService.filter(this.model);
+	filter() {
+		 console.log(this.vehicles ? `In filter, vehicles[] has ${this.vehicles.length} items`: "In filter, vehicles undefined");
+		 this.vehicles = this.vehicles.filter(x => x.type == "aircraft");
+		 console.log(this.vehicles ? `Filtered vehicles[] has ${this.vehicles.length} items`: "In filter, vehicles still undefined");
 	}
 
 	reset() {
-		this.vehicleService.reset();
-		this.model = new BrowseModel("Ground Vehicles");
+		this.getVehicles();
 	}
 
 	getVehicles() {
 		this.vehicleService.getVehicles()
-            .subscribe(vehicles => {
-            	this.vehicles = vehicles;
+            .subscribe(x => {
+            	this.vehicles = x;
+            	//console.log(`Fetched ${x.length} vehicles in browse-form`);
             },
             error => this.errorMessage = <any>error);
 	}
