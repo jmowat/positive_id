@@ -5,11 +5,11 @@ import { AboutComponent } 		from './about/about.component';
 import { ContactComponent } 		from './contact/contact.component';
 import { PrivacyComponent } 		from './privacy/privacy.component';
 import { TermsComponent } 		from './terms/terms.component';
-import { BrowseComponent } 		from './browse/browse.component';
+import { BrowseFormComponent } 		from './browse-form/browse-form.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
-  { path: 'browse', component: BrowseComponent },
+  { path: 'browse', component: BrowseFormComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'main', component: MainComponent },
   { path: 'privacy', component: PrivacyComponent },
