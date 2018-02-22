@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { VehicleService }  from '../vehicle.service';
 import { Vehicle }  from '../vehicle';
 import { BrowseModel } from '../browse-model'
@@ -8,9 +8,8 @@ import { BrowseModel } from '../browse-model'
   templateUrl: './browse-form.component.html',
   styleUrls: ['./browse-form.component.css']
 })
-export class BrowseFormComponent implements OnInit, OnChanges {
+export class BrowseFormComponent implements OnInit {
 	vehicles: Vehicle[];
-
 	errorMessage: string;
 
 	model = new BrowseModel("Aircraft");
@@ -24,10 +23,6 @@ export class BrowseFormComponent implements OnInit, OnChanges {
 	ngOnInit() {
 		this.getVehicles();
 	}
-
-	ngOnChanges(changes: SimpleChanges) {
-
-	};
 
 	diagnostic() {
 		return JSON.stringify(this.model);

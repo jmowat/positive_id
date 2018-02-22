@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, OnChanges, Input} from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Vehicle }  from '../vehicle';
 
@@ -11,7 +11,7 @@ import { ModalComponent } from '../modal/modal.component';
   templateUrl: './browse.component.html',
   styleUrls: ['./browse.component.css']
 })
-export class BrowseComponent implements OnInit {
+export class BrowseComponent implements OnInit, OnChanges {
 	@Input()
 	vehicles: Vehicle[];
 
@@ -25,11 +25,19 @@ export class BrowseComponent implements OnInit {
 
 	}
 
+	ngOnChanges() {
+		this.page = 1;
+	}
+
 	popUp(vehicle: Vehicle) {
 		const modalRef = this.modalService.open(ModalComponent);
 		modalRef.componentInstance.vehicle = vehicle;
 		modalRef.result.then((result) => {
 		}).catch( (result) => {
 		});
+	}
+
+	dataChange(event) {
+		console.log("Trigger data change");
 	}
 }
