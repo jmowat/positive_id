@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { VehicleService }  from '../vehicle.service';
 import { Vehicle }  from '../vehicle';
 import { PaginationComponent } from '../pagination/pagination.component';
@@ -16,18 +16,19 @@ export class BrowseComponent implements OnInit {
 	errorMessage: string;
 	page = 1;
 
-  	constructor(private vehicleService: VehicleService, private modalService: NgbModal) {
+   	constructor(private vehicleService: VehicleService, private modalService: NgbModal) {
    	}
 
 	ngOnInit() {
-		/*
-		 * This grabs the entire array and it can't seem to be processed in a map as individual vehicle items
-		 */
 		this.vehicleService.getVehicles()
             .subscribe(vehicles => this.vehicles = vehicles,
                        error => this.errorMessage = <any>error);
-        // this.vehicles is also a promise that may not have returned by this point
-        //console.log(this.vehicles);
+        this.vehicleService.vehiclesUpdated
+            .subscribe(vehicles => {
+            	this.vehicles = vehicles;
+            	this.page = 1;
+            },
+                       error => this.errorMessage = <any>error);
 	}
 
 	getNumberOfItems() : number {
@@ -39,7 +40,6 @@ export class BrowseComponent implements OnInit {
 	}
 
 	popUp(vehicle: Vehicle) {
-		// console.log("try to open", vehicle.name);
 		const modalRef = this.modalService.open(ModalComponent);
 		modalRef.componentInstance.vehicle = vehicle;
 		modalRef.result.then((result) => {
@@ -51,5 +51,6 @@ export class BrowseComponent implements OnInit {
 		});
 
 	}
+
 
 }
