@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AboutComponent } from './about.component';
+import { HeaderNarrowComponent } from '../header-narrow/header-narrow.component';
+import { FooterComponent } from '../footer/footer.component';
+import { TopNavComponent } from '../top-nav/top-nav.component';
+
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -8,7 +12,8 @@ describe('AboutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutComponent ]
+      declarations: [ AboutComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent ],
+      imports: []
     })
     .compileComponents();
   }));

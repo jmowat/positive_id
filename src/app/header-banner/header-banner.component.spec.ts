@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderBannerComponent } from './header-banner.component';
+import { TopNavComponent } from '../top-nav/top-nav.component';
 
 describe('HeaderBannerComponent', () => {
   let component: HeaderBannerComponent;
@@ -8,7 +9,7 @@ describe('HeaderBannerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderBannerComponent ]
+      declarations: [ HeaderBannerComponent, TopNavComponent ]
     })
     .compileComponents();
   }));

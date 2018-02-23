@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input} from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Pipe, PipeTransform } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Vehicle }  from '../vehicle';
 
@@ -14,6 +14,9 @@ import { ModalComponent } from '../modal/modal.component';
 export class BrowseComponent implements OnInit, OnChanges {
 	@Input()
 	vehicles: Vehicle[];
+
+	@Input()
+	nameFilter: string;
 
 	errorMessage: string;
 	page = 1;

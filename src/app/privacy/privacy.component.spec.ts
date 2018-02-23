@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PrivacyComponent } from './privacy.component';
+import { HeaderNarrowComponent } from '../header-narrow/header-narrow.component';
+import { FooterComponent } from '../footer/footer.component';
+import { TopNavComponent } from '../top-nav/top-nav.component';
 
 describe('PrivacyComponent', () => {
   let component: PrivacyComponent;
@@ -8,7 +11,7 @@ describe('PrivacyComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PrivacyComponent ]
+      declarations: [ PrivacyComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent ]
     })
     .compileComponents();
   }));

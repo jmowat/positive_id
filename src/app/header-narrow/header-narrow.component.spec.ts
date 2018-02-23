@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderNarrowComponent } from './header-narrow.component';
+import { TopNavComponent } from '../top-nav/top-nav.component';
 
 describe('HeaderNarrowComponent', () => {
   let component: HeaderNarrowComponent;
@@ -8,7 +9,7 @@ describe('HeaderNarrowComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderNarrowComponent ]
+      declarations: [ HeaderNarrowComponent, TopNavComponent ]
     })
     .compileComponents();
   }));

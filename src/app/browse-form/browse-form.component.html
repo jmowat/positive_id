@@ -10,7 +10,7 @@
 					<form #browseForm="ngForm" *ngIf="vehicles">
 						<div class="form-group">
 							<label for="name">Name</label>
-							<input type="text" class="form-control" id="name" name="name" >
+							<input type="text" class="form-control" id="name" name="name" [(ngModel)]="nameFilter">
 						</div>
 						<div class="form-group">
 							<label for="platform">Platform</label>
@@ -36,13 +36,10 @@
 						<div class="col-3">
 							<button class="btn btn-default" (click)="reset()">Reset</button>
 						</div>
-						<div class="col-3">
-							<button class="btn btn-default" (click)="filter()">Test Filter</button>
-						</div>
 					</div>
 				</div>
 				<div class="col-sm-10 col-md-8">
-					<app-browse [vehicles]="vehicles"></app-browse>
+					<app-browse [vehicles]="vehicles" [(nameFilter)]="nameFilter"></app-browse>
 				</div>
 			</div>
         </div>

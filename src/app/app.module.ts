@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './/app-routing.module';
@@ -16,12 +16,12 @@ import { HeaderNarrowComponent } from './header-narrow/header-narrow.component';
 import { TermsComponent } from './terms/terms.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { BrowseComponent } from './browse/browse.component';
-import { PlatformSelectComponent } from './platform-select/platform-select.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ModalComponent } from './modal/modal.component';
 import { BrowseFormComponent } from './browse-form/browse-form.component';
 
 import { VehicleService }  from './vehicle.service';
+import { NameFilterPipe } from './name-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -36,10 +36,10 @@ import { VehicleService }  from './vehicle.service';
     TermsComponent,
     PrivacyComponent,
     BrowseComponent,
-    PlatformSelectComponent,
     PaginationComponent,
     ModalComponent,
-    BrowseFormComponent
+    BrowseFormComponent,
+    NameFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -48,6 +48,7 @@ import { VehicleService }  from './vehicle.service';
     AppRoutingModule,
     HttpClientModule
   ],
+  exports: [ PaginationComponent ],
   providers: [
     VehicleService
   ],
