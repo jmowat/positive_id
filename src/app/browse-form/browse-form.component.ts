@@ -50,7 +50,6 @@ export class BrowseFormComponent implements OnInit {
 		let constraint = {type: "",
 						  era: "",
 						  side: ""};
-		let filterHelper = new FilterHelper(this.vehicles);
 		console.log(this.platforms.selectedOption.id);
 		if(this.platforms.selectedOption.id ) {
 			constraint.type = this.platforms.selectedOption.id;
@@ -62,7 +61,10 @@ export class BrowseFormComponent implements OnInit {
 			constraint.side = this.sides.selectedOption.id;
 		}
 		console.log(constraint);
-		this.vehicles = filterHelper.filter(constraint);
+		this.vehicles = FilterHelper.filter(constraint, this.vehicles);
+		this.sides = SelectBoxFactory.createSelectBoxOptions("Any Side", FilterHelper.getSides(this.vehicles));
+		this.eras = SelectBoxFactory.createSelectBoxOptions("Any Era", FilterHelper.getEras(this.vehicles));
+
 	}
 
 	reset() {
@@ -85,9 +87,8 @@ export class BrowseFormComponent implements OnInit {
 				    return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
 		});
 
-		let filterHelper = new FilterHelper(this.vehicles);
-		this.sides = SelectBoxFactory.createSelectBoxOptions("Any Side", filterHelper.getSides());
-		this.eras = SelectBoxFactory.createSelectBoxOptions("Any Era", filterHelper.getEras());
+		this.sides = SelectBoxFactory.createSelectBoxOptions("Any Side", FilterHelper.getSides(this.vehicles));
+		this.eras = SelectBoxFactory.createSelectBoxOptions("Any Era", FilterHelper.getEras(this.vehicles));
 		this.filter();
 	}
 }
