@@ -45,12 +45,12 @@ export class FilterHelper {
 	 * E.g. {type:'aircraft',era:'world war ii',side:'Allies'}
 	 */
 	static filter(constraint, vehicles: Vehicle[]): Vehicle[] {
-		console.log("constraint in filter:",constraint);
+		//console.log("constraint in filter:",constraint);
 		let filteredVehicles: Vehicle[] = [];
 
 		let filterTest = x => {
-			console.log(x.name, "x.side",  x.side, "constraint.side", constraint.side);
-			console.log("x.side.includes(constraint.side)",  x.side.includes(constraint.side));
+			//console.log(x.name, "x.side",  x.side, "constraint.side", constraint.side);
+			//console.log("x.side.includes(constraint.side)",  x.side.includes(constraint.side));
 			return x.type == constraint.type && (constraint.side ? x.side.includes(constraint.side) : true) && (constraint.era ? x.era.includes(constraint.era) : true);
 		}
 

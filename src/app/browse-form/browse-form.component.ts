@@ -44,32 +44,9 @@ export class BrowseFormComponent implements OnInit {
 		this.getVehicles();
 	}
 
-	filter() {
-		//let constraint = {type:'aircraft',era:'world war ii',side:'Allies'};
-		this.vehicles = this.originalVehicles;
-		let constraint = {type: "",
-						  era: "",
-						  side: ""};
-		console.log(this.platforms.selectedOption.id);
-		if(this.platforms.selectedOption.id ) {
-			constraint.type = this.platforms.selectedOption.id;
-		}
-		if(this.eras.selectedOption.id ) {
-			constraint.era = this.eras.selectedOption.id;
-		}
-		if(this.sides.selectedOption.id ) {
-			constraint.side = this.sides.selectedOption.id;
-		}
-		console.log(constraint);
-		this.vehicles = FilterHelper.filter(constraint, this.vehicles);
-		this.sides = SelectBoxFactory.createSelectBoxOptions("Any Side", FilterHelper.getSides(this.vehicles));
-		this.eras = SelectBoxFactory.createSelectBoxOptions("Any Era", FilterHelper.getEras(this.vehicles));
-
-	}
-
 	reset() {
 		this.getVehicles();
-		this.filter();
+		this.changePlatform();
 	}
 
 	getVehicles() {
@@ -86,9 +63,45 @@ export class BrowseFormComponent implements OnInit {
 		this.vehicles.sort(function(a:Vehicle, b:Vehicle) {
 				    return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
 		});
+		this.changePlatform();
+	}
 
-		this.sides = SelectBoxFactory.createSelectBoxOptions("Any Side", FilterHelper.getSides(this.vehicles));
-		this.eras = SelectBoxFactory.createSelectBoxOptions("Any Era", FilterHelper.getEras(this.vehicles));
-		this.filter();
+
+	getVehiclesBySelectedPlatform() {
+		let constraint = {type: this.platforms.selectedOption.id};
+		this.vehicles = FilterHelper.filter(constraint, this.originalVehicles);
+	}
+
+	changePlatform() {
+		this.getVehiclesBySelectedPlatform();
+
+		this.sides = SelectBoxFactory.createSelectBoxOptions("Any Side", FilterHelper.getSides(FilterHelper.filter(this.getConstraints(), this.vehicles)));
+		this.eras = SelectBoxFactory.createSelectBoxOptions("Any Era", FilterHelper.getEras(FilterHelper.filter(this.getConstraints(), this.vehicles)));
+	}
+
+	changeSide() {
+		this.getVehiclesBySelectedPlatform();
+		this.vehicles = FilterHelper.filter(this.getConstraints(), this.vehicles);
+	}
+
+	changeEra() {
+		this.getVehiclesBySelectedPlatform();
+		this.vehicles = FilterHelper.filter(this.getConstraints(), this.vehicles);
+	}
+
+	getConstraints() {
+		let constraint = {type: "",
+						  era: "",
+						  side: ""};
+		if(this.platforms.selectedOption.id ) {
+			constraint.type = this.platforms.selectedOption.id;
+		}
+		if(this.eras.selectedOption.id ) {
+			constraint.era = this.eras.selectedOption.id;
+		}
+		if(this.sides.selectedOption.id ) {
+			constraint.side = this.sides.selectedOption.id;
+		}
+		return constraint;
 	}
 }
