@@ -12,8 +12,8 @@ describe('ModalComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ ModalComponent ],
       imports: [ NgbModule.forRoot() ],
-      providers: [ NgbActiveModal, NgbModal ]
-
+      providers: [ NgbActiveModal, NgbModal ],
+      schemas:      [  ]
     })
     .compileComponents();
   }));
@@ -24,7 +24,7 @@ describe('ModalComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

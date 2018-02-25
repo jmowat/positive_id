@@ -7,25 +7,25 @@
         <div class="container">
 			<div class="row">
 				<div class="col-sm-2 col-md-4">
-					<form #browseForm="ngForm" *ngIf="vehicles">
+					<form #browseForm="ngForm" >
 						<div class="form-group">
 							<label for="name">Name</label>
-							<input type="text" class="form-control" id="name" name="name" [(ngModel)]="nameFilter">
+							<input type="text" class="form-control" id="nameFilter" name="nameFilter" [(ngModel)]="nameFilter">
 						</div>
-						<div class="form-group">
+						<div class="form-group" *ngIf="vehicles">
 							<label for="platform">Platform</label>
 							<select class="form-control" id="platform" [(ngModel)]="platforms.selectedOption.id" name="platform" (change)="changePlatform()">
 								<option *ngFor="let platform of platforms.availableOptions" [value]="platform.id">{{platform.name}}</option>
 							</select>
 							<!-- <app-platform-select [vehicles]="vehicles" (change)="platformChange($event)"></app-platform-select> -->
 						</div>
-						<div class="form-group">
+						<div class="form-group" *ngIf="vehicles">
 							<label for="side">Side</label>
 							<select class="form-control" id="side" [(ngModel)]="sides.selectedOption.id" name="side" (change)="changeSide()">
 								<option *ngFor="let side of sides.availableOptions" [value]="side.id">{{side.name}}</option>
 							</select>
 						</div>
-						<div class="form-group">
+						<div class="form-group" *ngIf="vehicles">
 							<label for="era">Era</label>
 							<select class="form-control" id="era" [(ngModel)]="eras.selectedOption.id" name="side" (change)="changeEra()">
 								<option *ngFor="let era of eras.availableOptions" [value]="era.id">{{era.name}}</option>
@@ -34,7 +34,7 @@
 					</form>
 					<div class="row">
 						<div class="col-3">
-							<button class="btn btn-default" (click)="reset()">Reset</button>
+							<button id="reset" class="btn btn-default" (click)="reset()">Reset</button>
 						</div>
 					</div>
 				</div>

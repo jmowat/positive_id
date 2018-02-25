@@ -13,6 +13,7 @@ import { SelectBoxFactory } from '../select-box-factory'
 export class BrowseFormComponent implements OnInit {
 	vehicles: Vehicle[];
 	originalVehicles: Vehicle[];
+	nameFilter: string;
 
 	errorMessage: string;
 
@@ -45,6 +46,8 @@ export class BrowseFormComponent implements OnInit {
 	}
 
 	reset() {
+		console.log("in reset");
+		this.nameFilter = "";
 		this.getVehicles();
 		this.changePlatform();
 	}

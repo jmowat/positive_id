@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule }   from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DebugElement } from '@angular/core';
+import { By }           from '@angular/platform-browser';
+import { fakeAsync } from '@angular/core/testing';
+import { tick } from '@angular/core/testing';
+import { flush } from '@angular/core/testing';
 
 import { BrowseFormComponent } from './browse-form.component';
 import { HeaderNarrowComponent } from '../header-narrow/header-narrow.component';
@@ -20,6 +25,9 @@ describe('BrowseFormComponent', () => {
   let fixture: ComponentFixture<BrowseFormComponent>;
   let componentVehicleService: VehicleService; // the actually injected service
   let vehicleService: VehicleService; // the TestBed injected service
+
+  let resetEl: DebugElement;
+  let nameEl: DebugElement;
 
   let vehicleServiceStub: {
     getVehicles(): Observable<Vehicle[]>;
@@ -50,162 +58,62 @@ describe('BrowseFormComponent', () => {
     // VehicleService from the root injector
     vehicleService = TestBed.get(VehicleService);
 
+    resetEl = fixture.debugElement.query(By.css('button#reset'));
+    nameEl = fixture.debugElement.query(By.css('input#nameFilter'));
+
     fixture.detectChanges();
   });
+
+
+  beforeEach(async(() => {
+    // I need this block to run after the component and fixture are created for ngModel changes to be
+    // detected properly.
+  }));
+
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  let mockVehicles = [
+  xit('should two-way bind the name filter data');
 
-{
-  "name": "ASLAV",
-  "side": ["western"],
-  "type": "ground vehicle",
-  "class": "armored personnel carrier",
-  "nationality": ["Australia", "Canada"],
-  "era": ["modern"],
-  "image_dir": "img/ground/aslav",
-  "images": [{
-    "img_lg": "1.png",
-    "img_sm": "1sm.png",
-    "perspective": "side",
-    "optics": "naked eye",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  }, {
-    "img_lg": "2.png",
-    "img_sm": "2sm.png",
-    "perspective": "front",
-    "optics": "naked eye",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  }, {
-    "img_lg": "3.png",
-    "img_sm": "3sm.png",
-    "perspective": "oblique",
-    "optics": "naked eye",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  }, {
-    "img_lg": "4.png",
-    "img_sm": "4sm.png",
-    "perspective": "rear",
-    "optics": "naked eye",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  },{
-    "img_lg": "5.png",
-    "img_sm": "5sm.png",
-    "perspective": "side",
-    "optics": "naked eye",
-    "classification": "computer",
-    "distance": "far",
-    "source": "Steel Beasts"
-  },{
-    "img_lg": "6.png",
-    "img_sm": "6sm.png",
-    "perspective": "side",
-    "optics": "thermal",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  },{
-    "img_lg": "7.png",
-    "img_sm": "7sm.png",
-    "perspective": "front",
-    "optics": "thermal",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  },{
-    "img_lg": "8.png",
-    "img_sm": "8sm.png",
-    "perspective": "side",
-    "optics": "thermal",
-    "classification": "computer",
-    "distance": "far",
-    "source": "Steel Beasts"
-  }]
-},{
-  "name": "BM-21",
-  "side": ["eastern"],
-  "type": "ground vehicle",
-  "class": "multiple rocket launcher",
-  "nationality": ["Russia", "Soviet Union"],
-  "era": ["cold war","modern"],
-  "image_dir": "img/ground/bm21",
-  "images": [{
-    "img_lg": "1.png",
-    "img_sm": "1sm.png",
-    "perspective": "side",
-    "optics": "naked eye",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  }, {
-    "img_lg": "2.png",
-    "img_sm": "2sm.png",
-    "perspective": "front",
-    "optics": "naked eye",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  }, {
-    "img_lg": "3.png",
-    "img_sm": "3sm.png",
-    "perspective": "oblique",
-    "optics": "naked eye",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  }, {
-    "img_lg": "4.png",
-    "img_sm": "4sm.png",
-    "perspective": "rear",
-    "optics": "naked eye",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  },{
-    "img_lg": "5.png",
-    "img_sm": "5sm.png",
-    "perspective": "side",
-    "optics": "naked eye",
-    "classification": "computer",
-    "distance": "far",
-    "source": "Steel Beasts"
-  },{
-    "img_lg": "6.png",
-    "img_sm": "6sm.png",
-    "perspective": "side",
-    "optics": "thermal",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  },{
-    "img_lg": "7.png",
-    "img_sm": "7sm.png",
-    "perspective": "front",
-    "optics": "thermal",
-    "classification": "computer",
-    "distance": "near",
-    "source": "Steel Beasts"
-  },{
-    "img_lg": "8.png",
-    "img_sm": "8sm.png",
-    "perspective": "side",
-    "optics": "thermal",
-    "classification": "computer",
-    "distance": "far",
-    "source": "Steel Beasts"
-  }]
-}
+  xit('should pass the name filter data to the browse component');
 
-  ]
+  xit('should pass Vehicle[] to the browse component');
+
+  xit('should reset the name field when the reset button is pressed',fakeAsync(()=>{
+    /*
+     * For some reason, I can't seem to control the contents of the inputs this way. I might have
+     * to send some sort of input event for the change to be detected.
+     */
+    nameEl.nativeElement.value = "abc";
+    expect(nameEl.nativeElement.value).toBe("abc");
+    resetEl.triggerEventHandler('click', null);
+
+    tick();
+    expect(nameEl.nativeElement.value).toBeFalsy();
+    // let input = fixture.debugElement.query(By.css('input#nameFilter')).nativeElement;
+    // input.value = "abc";
+    // input.dispatchEvent(new Event('input'));
+    // tick();
+  }));
+
+  it('should register ngModel field change',fakeAsync(()=>{
+    let element = fixture.debugElement.query(By.css('input#nameFilter')).nativeElement;
+    element.value = 'test';
+    element.dispatchEvent(new Event('input'));
+    expect(component.nameFilter).toEqual('test');
+  }));
+
+  it('should reset the name field when the reset button is pressed',fakeAsync(()=>{
+    let element = fixture.debugElement.query(By.css('input#nameFilter')).nativeElement;
+    element.value = 'test';
+    element.dispatchEvent(new Event('input'));
+    expect(component.nameFilter).toEqual('test');
+    resetEl.triggerEventHandler('click', null);
+    fixture.detectChanges();
+    flush();
+    expect(element.value).toEqual('');
+    expect(component.nameFilter).toEqual('');
+  }));
 });
