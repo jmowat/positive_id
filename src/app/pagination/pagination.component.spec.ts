@@ -28,9 +28,11 @@ import { By }           from '@angular/platform-browser';
 // });
 
 describe('PaginationComponent when inside a test host', () => {
-  let testHost: TestHostComponent;
+  //let testHost: TestHostComponent;
+  let component: TestHostComponent;
   let fixture: ComponentFixture<TestHostComponent>;
-  let de, paginationEl, pageLinkEl: DebugElement;
+  let de: DebugElement;
+  let des: DebugElement[];
 
   beforeEach( async(() => {
     TestBed.configureTestingModule({
@@ -42,54 +44,52 @@ describe('PaginationComponent when inside a test host', () => {
   beforeEach(() => {
     // create TestHostComponent instead of DashboardHeroComponent
     fixture  = TestBed.createComponent(TestHostComponent);
-    testHost = fixture.componentInstance;
+    component = fixture.componentInstance;
     fixture.detectChanges(); // trigger initial data binding
   });
 
   it('should create', () => {
-    expect(testHost).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
   it('should have 4 page-items by default', () => {
     expect(fixture.debugElement.query(By.css('.pagination')).children.length).toEqual(4);
   });
 
-  it('should show 1 page with collectionSize of 5',()=>{
-    testHost.vehicles = ["a","b","c","d","e"];
+  it('should show 5 pages with collectionSize of 30', () => {
+    for(let i = 0; i < 30; i++) {
+      component.vehicles.push(i);
+    }
+    expect(component.vehicles.length).toEqual(30);
     fixture.detectChanges();
-    expect(fixture.debugElement.query(By.css('.pagination')).children.length).toEqual(5);
-    //let children = fixture.debugElement.query(By.css('.pagination')).children;
-    //let text = children.map((x)=>x.query(By.css('li')).nativeElement);
+    des = fixture.debugElement.queryAll(By.css('.page-link'));
+
+    let pageNumVals = [];
+    for(let child of des) {
+      pageNumVals.push(child.nativeElement.textContent);
+    }
+    expect(pageNumVals).toMatch('1');
+    expect(pageNumVals).toMatch('5');
+    expect(pageNumVals).not.toMatch('6');
   });
 
-  it('should show 1 page with collectionSize of 6',() => {
-    testHost.vehicles = ["a","b","c","d","e","f"];
+  it('should show 6 pages with collectionSize of 31',() => {
+
+    for(let i = 0; i < 31; i++) {
+      component.vehicles.push(i);
+    }
+    expect(component.vehicles.length).toEqual(31);
     fixture.detectChanges();
-    expect(fixture.debugElement.query(By.css('.pagination')).children.length).toEqual(5);
+    des = fixture.debugElement.queryAll(By.css('.page-link'));
+
+    let pageNumVals = [];
+    for(let child of des) {
+      pageNumVals.push(child.nativeElement.textContent);
+    }
+    expect(pageNumVals).toMatch('6');
   });
 
-  it('should show 2 pages with collectionSize of 7',() => {
-    testHost.vehicles = ["a","b","c","d","e","f","g"];
-    fixture.detectChanges();
-    expect(fixture.debugElement.query(By.css('.pagination')).children.length).toEqual(6);
-  });
-
-  xit('should show 5 pages with collectionSize of 30');
-  xit('should show 6 pages with collectionSize of 31');
-  xit('should start on page 1 at init');
   xit('should emit a page change of 2 when user clicks page 2');
-
-
-  // it('should display hero name', () => {
-  //   const expectedPipedName = testHost.hero.name.toUpperCase();
-  //   expect(heroEl.nativeElement.textContent).toContain(expectedPipedName);
-  // });
-
-  // it('should raise selected event when clicked', () => {
-  //   click(heroEl);
-  //   // selected hero should be the same data bound hero
-  //   expect(testHost.selectedHero).toBe(testHost.hero);
-  // });
 });
 
 ////// Test Host Component //////
