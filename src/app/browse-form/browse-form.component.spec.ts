@@ -64,39 +64,14 @@ describe('BrowseFormComponent', () => {
     fixture.detectChanges();
   });
 
-
   beforeEach(async(() => {
     // I need this block to run after the component and fixture are created for ngModel changes to be
     // detected properly.
   }));
 
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  xit('should two-way bind the name filter data');
-
-  xit('should pass the name filter data to the browse component');
-
-  xit('should pass Vehicle[] to the browse component');
-
-  xit('should reset the name field when the reset button is pressed',fakeAsync(()=>{
-    /*
-     * For some reason, I can't seem to control the contents of the inputs this way. I might have
-     * to send some sort of input event for the change to be detected.
-     */
-    nameEl.nativeElement.value = "abc";
-    expect(nameEl.nativeElement.value).toBe("abc");
-    resetEl.triggerEventHandler('click', null);
-
-    tick();
-    expect(nameEl.nativeElement.value).toBeFalsy();
-    // let input = fixture.debugElement.query(By.css('input#nameFilter')).nativeElement;
-    // input.value = "abc";
-    // input.dispatchEvent(new Event('input'));
-    // tick();
-  }));
 
   it('should register ngModel field change',fakeAsync(()=>{
     let element = fixture.debugElement.query(By.css('input#nameFilter')).nativeElement;
