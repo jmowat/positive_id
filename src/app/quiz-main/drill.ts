@@ -4,7 +4,7 @@ import { VehicleCard } from './vehicle-card';
 import { QuizQuestion } from './quiz';
 
 export class Drill extends Test {
-	constructor(private vehicles, options) {
+	constructor(private vehicles, options:DrillOptions) {
 		super();
 		let self = this;
 		options.vehicleList = [].concat(options.originalValues);
@@ -102,4 +102,16 @@ export class Drill extends Test {
 		// Randomize order of candidates
 		return Randomizer.shuffle(candidates);
 	}
+}
+
+interface DrillOptions {
+	optionsToShow: number;
+    numberOfQuestions: number;
+    distances: string[];
+    profiles: string[];
+    optics: string[];
+    platforms: string[];
+    originalValues: string[];
+    randomizeQuestions: boolean;
+    vehicleList?: any[];
 }

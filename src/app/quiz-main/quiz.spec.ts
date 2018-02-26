@@ -10,7 +10,7 @@ describe('Quiz', () => {
   	});
 
   	it('should create when passed some quiz parameters',() => {
-  		const quiz = new Quiz("",quizParms);
+  		const quiz = new Quiz([],quizParms);
   		expect(quiz).toBeTruthy();
   	});
 

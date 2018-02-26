@@ -37,16 +37,11 @@ describe('VehicleCard', () => {
 		expect(card.getImage()).toBe('1.png');
 	});
 
-	/*
-	 * TODO: Verify that default images work. I added size: "" and the test passes
-	 * but the functionality may require a default to kick in if size is not present.
-	 */
 	it('should allow override of default aspect', () => {
 		let card = new VehicleCard(bmp2[0],{});
 		expect(card.getImage({
 			perspective: "front",
-			distance: "near",
-			size: ""
+			distance: "near"
 		})).toBe('2.png');
 	});
 
