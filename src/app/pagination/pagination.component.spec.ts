@@ -2,30 +2,11 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { PaginationComponent } from './pagination.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { fakeAsync } from '@angular/core/testing';
+import { tick } from '@angular/core/testing';
+import { flush } from '@angular/core/testing';
 import { By }           from '@angular/platform-browser';
-
-// describe('PaginationComponent', () => {
-//   let component: PaginationComponent;
-//   let fixture: ComponentFixture<PaginationComponent>;
-
-//   beforeEach(async(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [ PaginationComponent, TestHostComponent ],
-//       imports: [ NgbModule.forRoot() ],
-//     })
-//     .compileComponents();
-//   }));
-
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(TestHostComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
-
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
 
 describe('PaginationComponent when inside a test host', () => {
   //let testHost: TestHostComponent;
@@ -74,7 +55,6 @@ describe('PaginationComponent when inside a test host', () => {
   });
 
   it('should show 6 pages with collectionSize of 31',() => {
-
     for(let i = 0; i < 31; i++) {
       component.vehicles.push(i);
     }
@@ -89,7 +69,19 @@ describe('PaginationComponent when inside a test host', () => {
     expect(pageNumVals).toMatch('6');
   });
 
-  xit('should emit a page change of 2 when user clicks page 2');
+  it('should emit a page change of 2 when user clicks page 2',fakeAsync(()=> {
+    for(let i = 0; i < 31; i++) {
+      component.vehicles.push(i);
+    }
+    fixture.detectChanges();
+    des = fixture.debugElement.queryAll(By.css('.page-link'));
+    // elements 0 and 1 are << and <, element 2 is page 1 (current), and element 3 is page 2
+    // assumes that the queryAll elements are returned in order as presented on HTML
+    de = des[3];
+    de.triggerEventHandler('click',null);
+    flush();
+    expect(component.page).toEqual(2);
+  }));
 });
 
 ////// Test Host Component //////
