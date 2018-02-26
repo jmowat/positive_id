@@ -2,7 +2,7 @@ import { Randomizer } from './randomizer';
 import { Vehicle } from '../vehicle';
 
 class Card {
-	constructor(public name) {
+	constructor(public name:string) {
 	}
 }
 
