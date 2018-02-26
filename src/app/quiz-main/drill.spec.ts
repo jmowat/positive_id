@@ -1,4 +1,4 @@
-import { Drill } from './drill';
+import { Drill, DrillOptions } from './drill';
 
 describe('Drill', () => {
   it('create an instance', () => {
@@ -8,7 +8,7 @@ describe('Drill', () => {
 
 });
 
-let drillParms = {
+let drillParms:DrillOptions = {
     optionsToShow: 5,
     numberOfQuestions: 20,
     distances: ["near"],

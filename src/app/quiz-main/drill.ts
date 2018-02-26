@@ -104,7 +104,7 @@ export class Drill extends Test {
 	}
 }
 
-interface DrillOptions {
+export interface DrillOptions {
 	optionsToShow: number;
     numberOfQuestions: number;
     distances: string[];
