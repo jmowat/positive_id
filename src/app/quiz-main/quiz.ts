@@ -50,16 +50,16 @@ export class Quiz extends Test {
 }
 
 export class QuizQuestion {
-	card: VehicleCard;
+	//card: VehicleCard;
 	imageOptions: any;
-	numToShow: number;
+	//numToShow: number;
 	possibleAnswers: any[];
 	currentImage: string;
 
-	constructor(card, supply, numToShow, randomize = true) {
-		this.card = card;
+	constructor(public card: VehicleCard, supply:any[], numToShow: number, randomize:boolean = true) {
+		//this.card: VehicleCard = card;
 		this.imageOptions = {};
-		this.numToShow = numToShow;
+		//this.numToShow = numToShow;
 		this.possibleAnswers = [];
 		this.setPossibleAnswers(supply, numToShow, randomize);
 		this.currentImage = "";

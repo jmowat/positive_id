@@ -86,16 +86,17 @@ export class VehicleCard extends Card {
 		return this.randomImage;
 	}
 
+
+
 	/**
 	 * Grab a stock image predictably every time. Used for the database lookup
 	 * screen.
 	 */
 	//let ImageOption = {perspective: string, distance: string, size: string};
-	getImage(imageOptions: {perspective: string, distance: string, size: string} = {
+	getImage(imageOptions: ImageOptions = {
 		perspective: "side",
 		distance: "near",
-		size: ""
-	}) {
+		size:""}) {
 	// getImage(imageOptions = {
 	// 	perspective: "side",
 	// 	distance: "near"
@@ -143,3 +144,8 @@ export class VehicleCard extends Card {
 	}
 }
 
+interface ImageOptions {
+	perspective: string;
+	distance: string;
+	size: string;
+}
