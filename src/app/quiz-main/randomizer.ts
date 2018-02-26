@@ -1,4 +1,9 @@
 export class Randomizer {
+	/*
+	 * This will randomize your passed variable, which is probably not a good design.
+	 *
+	 * TODO: return the modified array and leave the original intact.
+	 */
 	static shuffle(array) {
 		let currentIndex = array.length,
 			temporaryValue, randomIndex;

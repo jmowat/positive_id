@@ -1,6 +1,9 @@
 import { Randomizer } from './randomizer';
 import { QuizQuestion } from './quiz';
 
+/*
+ * Abstract base class for Quiz and Drill
+ */
 export class Test {
 
 	questions: QuizQuestion[];
