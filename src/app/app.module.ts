@@ -22,6 +22,7 @@ import { BrowseFormComponent } from './browse-form/browse-form.component';
 
 import { VehicleService }  from './vehicle.service';
 import { NameFilterPipe } from './name-filter.pipe';
+import { QuizComponent } from './quiz-main/quiz/quiz.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { NameFilterPipe } from './name-filter.pipe';
     PaginationComponent,
     ModalComponent,
     BrowseFormComponent,
-    NameFilterPipe
+    NameFilterPipe,
+    QuizComponent
   ],
   imports: [
     BrowserModule,
