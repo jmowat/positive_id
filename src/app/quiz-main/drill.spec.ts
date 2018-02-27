@@ -1,11 +1,162 @@
 import { Drill, DrillOptions } from './drill';
 
 describe('Drill', () => {
-  it('create an instance', () => {
-    const obj = new Drill(five,drillParms);
-    expect(obj).toBeTruthy();
-  });
+	it('create an instance', () => {
+	    const obj = new Drill(five,drillParms);
+	    expect(obj).toBeTruthy();
+	});
 
+  	it('should have 20 questions when passed 20 numberOfQuestions',()=>{
+  		const drill = new Drill(five,drillParms);
+  		expect(drill.questions.length).toEqual(20);
+  		expect(drill.getNumberOfQuestions()).toEqual(20);
+  	});
+
+  	it('should start on question 0', () => {
+		const drill = new Drill(five,drillParms);
+		expect(drill.getCurrentQuestionIndex()).toEqual(0);
+  	});
+
+	it('should have 5 possible answers as specified by optionsToShow', () => {
+		const drill = new Drill(five,drillParms);
+  		expect(drill.getQuestion().getPossibleAnswers().length).toBe(5);
+	});
+
+	it('should create even if provided with one target vehicle', () => {
+		let singleVehicleParms:DrillOptions = {
+		    optionsToShow: 5,
+		    numberOfQuestions: 10,
+		    distances: ["near"],
+		    profiles: ["side"],
+		    optics: ["naked eye"],
+		    platforms: ["ground vehicle"],
+		    originalValues: ["T-90"],
+		    randomizeQuestions: false
+		};
+		const drill = new Drill(five,singleVehicleParms);
+		expect(drill).toBeTruthy();
+		expect(drill.getNumberOfQuestions()).toEqual(10);
+	});
+
+	describe('ground vehicle drills', () => {
+		let testArray: any[];
+		beforeEach(() => {
+			testArray = five.concat(luchs).concat(challenger2);
+		});
+
+		it('should create questions with just thermal optics', () => {
+			let options = {
+				randomizeQuestions: false,
+				optionsToShow: 5,
+				numberOfQuestions: 5,
+				distances: ["far"],
+				profiles: ["side"],
+				optics: ["thermal"],
+				originalValues: ["T-90","T-80","T-72"]
+			};
+			const drill = new Drill(testArray,options);
+			expect(drill.getNumberOfQuestions()).toBe(5);
+			for (let i = 0; i < drill.questions.length; i++) {
+				expect(drill.getQuestion().getRandomImagePath()).toContain("8.png");
+				drill.nextQuestion();
+			}
+		});
+
+		it('should create questions with just far pictures', () => {
+			let options = {
+				randomizeQuestions: false,
+					optionsToShow: 5,
+					numberOfQuestions: 5,
+					distances: ["far"],
+					profiles: ["side"],
+					optics: ["naked eye"],
+					originalValues: ["T-90","T-80","T-72"],
+			};
+			const drill = new Drill(testArray,options);
+			expect(drill.getNumberOfQuestions()).toBe(5);
+			for (let i = 0; i < drill.questions.length; i++) {
+				expect(drill.getQuestion().getRandomImagePath()).toContain("5.png");
+				drill.nextQuestion();
+			}
+		});
+
+		it('should create questions with just near front, side, and oblique pictures', () => {
+			let options = {
+				randomizeQuestions: false,
+					optionsToShow: 5,
+					numberOfQuestions: 5,
+					distances: ["near"],
+					profiles: ["side", "front", "oblique"],
+					optics: ["naked eye"],
+					originalValues: ["T-90","T-80","T-72"],
+			};
+			const drill = new Drill(testArray,options);
+			expect(drill.getNumberOfQuestions()).toBe(5);
+			for (let i = 0; i < drill.questions.length; i++) {
+					expect(drill.getQuestion().getRandomImagePath()).not.toContain("4.png");
+					drill.nextQuestion();
+				}
+		});
+
+		it('should create a drill consisting of specified random questions', () => {
+			let options = {
+				randomizeQuestions: false,
+					optionsToShow: 5,
+					numberOfQuestions: 5,
+					sides: ["eastern"],
+					originalValues: ["T-90","T-80","T-72"],
+			};
+			const drill = new Drill(testArray,options);
+			expect(drill.getNumberOfQuestions()).toBe(5);
+		});
+
+		it('should create a drill consisting of just eastern vehicles', () => {
+			let options = {
+				randomizeQuestions: false,
+					optionsToShow: 5,
+					numberOfQuestions: 5,
+					sides: ["eastern"],
+					originalValues: ["T-90","T-80","T-72"],
+			};
+			const drill = new Drill(testArray,options);
+			expect(drill.getNumberOfQuestions()).toBe(5);
+			for (let i = 0; i < drill.questions.length; i++) {
+				expect(drill.questions[i].card.data.side).toContain("eastern");
+				expect(drill.questions[i].card.data.side).not.toContain("western");
+			}
+		});
+
+		it('should create a drill consisting of just western vehicles', () => {
+			let options = {
+				randomizeQuestions: false,
+					optionsToShow: 5,
+					numberOfQuestions: 5,
+					sides: ["western"],
+					originalValues: ["Challenger 2","SPz Luchs 2A2"],
+			};
+			const drill = new Drill(testArray,options);
+			expect(drill.getNumberOfQuestions()).toBe(5);
+			for (let i = 0; i < drill.questions.length; i++) {
+				expect(drill.questions[i].card.data.side).toContain("western");
+				expect(drill.questions[i].card.data.side).not.toContain("eastern");
+			}
+		});
+
+		it('should create a drill consisting of just modern era vehicles', () => {
+			let options = {
+				randomizeQuestions: false,
+					optionsToShow: 5,
+					numberOfQuestions: 5,
+					eras: ["modern"],
+					originalValues: ["T-90","T-80","T-72"],
+			};
+			const drill = new Drill(testArray,options);
+			expect(drill.getNumberOfQuestions()).toBe(5);
+			for (let i = 0; i < drill.questions.length; i++) {
+				expect(drill.questions[i].card.data.era).toContain("modern");
+			}
+		});
+	});
 });
 
 let drillParms:DrillOptions = {

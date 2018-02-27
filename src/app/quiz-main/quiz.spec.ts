@@ -109,7 +109,7 @@ describe('Quiz', () => {
 				}
 		});
 
-		it('should create a quiz consisting of x random questions', () => {
+		it('should create a quiz consisting of specified random questions', () => {
 			let options = {
 				randomizeQuestions: false,
 					optionsToShow: 5,

@@ -107,11 +107,11 @@ export class Drill extends Test {
 export interface DrillOptions {
 	optionsToShow: number;
     numberOfQuestions: number;
-    distances: string[];
-    profiles: string[];
-    optics: string[];
-    platforms: string[];
+    distances?: string[];
+    profiles?: string[];
+    optics?: string[];
+    platforms?: string[];
     originalValues: string[];
-    randomizeQuestions: boolean;
+    randomizeQuestions?: boolean;
     vehicleList?: any[];
 }
