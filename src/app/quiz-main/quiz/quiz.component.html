@@ -1,3 +1,76 @@
-<p>
-  quiz works!
-</p>
+<div class="site">
+  <div class="page">
+
+      <app-header-narrow></app-header-narrow>
+
+      <section class="quiz">
+		<section class="progress">
+          <div class="container">
+            <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+            </div>
+          </div>
+        </section> <!-- /end .progress -->
+
+        <section class="question">
+          <div class="container-fluid no-padding">
+            <div class="text-center">
+              <img class="img-fluid rounded " src="assets/img/air/su30/1.png">
+              <ol class="choices">
+                <div class="form-check form-check-inline">
+                  <li>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Bf 109
+                  </label>
+                  </li>
+                </div>
+                <div class="form-check form-check-inline">
+                  <li>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">Ju 88
+                  </label>
+                  </li>
+                </div>
+                <div class="form-check form-check-inline">
+                  <li>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">MiG-29
+                  </label>
+                  </li>
+                </div>
+                <div class="form-check form-check-inline">
+                  <li>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option4">Su-30
+                  </label>
+                  </li>
+                </div>
+                <div class="form-check form-check-inline">
+                  <li>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option5">F-15
+                  </label>
+                  </li>
+                </div>
+              </ol>
+            </div>
+          </div>
+        </section> <!-- end .question -->
+        <div class="container-fluid " style="background: #0f0; padding: 0.75rem;">
+          <div class="container ">
+            <div class="row " >
+              <div class="col-8 col-sm-10 align-self-center" style="color: black;">
+                Status message asd dfgfddfgdfg dfg dfgfdgssfgdfd sgf g ffdg saddsaasd
+              </div>
+              <div class="col-4 col-sm-2 ">
+                <button type="button" class="btn btn-lg btn-primary" id="nextButton">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> <!-- end .quiz -->
+
+      <app-footer></app-footer>
+
+  </div> <!-- /end .page -->
+</div> <!-- /end .site -->

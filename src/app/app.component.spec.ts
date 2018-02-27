@@ -18,6 +18,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { BrowseComponent } from './browse/browse.component';
 import { BrowseFormComponent } from './browse-form/browse-form.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { QuizComponent } from './quiz-main/quiz/quiz.component';
 
 import { NameFilterPipe } from './name-filter.pipe';
 import { Vehicle }  from './vehicle';
@@ -28,7 +29,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent, AboutComponent, BrowseFormComponent, ContactComponent, MainComponent, PrivacyComponent, TermsComponent,
         HeaderNarrowComponent, FooterComponent, BrowseComponent, HeaderBannerComponent, TopNavComponent, PaginationComponent,
-        NameFilterPipe
+        NameFilterPipe, QuizComponent
       ],
       imports: [ AppRoutingModule, FormsModule, NgbModule.forRoot() ],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }]
