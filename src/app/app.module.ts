@@ -25,7 +25,7 @@ import { QuizService }  from './quiz-main/quiz.service';
 import { VehicleService }  from './vehicle.service';
 import { NameFilterPipe } from './name-filter.pipe';
 
-import { DEFAULT_GROUND_QUIZ, DEFAULT_QUIZ_PARMS } from './quiz-main/default-quiz-parms';
+import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from './quiz-main/test-parms';
 
 @NgModule({
   declarations: [
@@ -58,7 +58,7 @@ import { DEFAULT_GROUND_QUIZ, DEFAULT_QUIZ_PARMS } from './quiz-main/default-qui
     VehicleService,
     QuizService,
     {
-      provide: DEFAULT_QUIZ_PARMS, useValue: DEFAULT_GROUND_QUIZ
+      provide: TEST_PARMS, useValue: DEFAULT_GROUND_QUIZ
     }
   ],
   entryComponents: [

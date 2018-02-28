@@ -6,5 +6,6 @@ export interface QuizParms {
     distances?: string[],
     optics?: string[],
     sides?: string[],
+    originalValues?: string[],
     randomizeQuestions?: boolean
 }

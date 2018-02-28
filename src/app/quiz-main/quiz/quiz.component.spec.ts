@@ -13,7 +13,7 @@ import { of } from 'rxjs/observable/of';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
 import { Vehicle } from '../../vehicle';
 import { QuizParms }  from '../quiz-parms';
-import { DEFAULT_GROUND_QUIZ, DEFAULT_QUIZ_PARMS } from '../default-quiz-parms';
+import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from '../test-parms';
 
 describe('QuizComponent', () => {
   let component: QuizComponent;
@@ -28,7 +28,7 @@ describe('QuizComponent', () => {
         useClass: MockVehicleService
       },
       {
-        provide: DEFAULT_QUIZ_PARMS,
+        provide: TEST_PARMS,
         useValue: DEFAULT_GROUND_QUIZ
       }],
     })

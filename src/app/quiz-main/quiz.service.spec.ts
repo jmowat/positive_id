@@ -8,7 +8,7 @@ import { Drill } from './drill';
 import { VehicleService } from '../vehicle.service';
 import { Vehicle } from '../vehicle';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../mock-vehicles';
-import { DEFAULT_GROUND_QUIZ, DEFAULT_QUIZ_PARMS } from '../quiz-main/default-quiz-parms';
+import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from '../quiz-main/test-parms';
 
 describe('QuizService', () => {
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('QuizService', () => {
       	useClass: MockVehicleService
       },
       {
-        provide: DEFAULT_QUIZ_PARMS,
+        provide: TEST_PARMS,
         useValue: DEFAULT_GROUND_QUIZ
       }]
     });
