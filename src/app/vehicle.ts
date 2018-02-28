@@ -1,11 +1,11 @@
 export class Vehicle {
   name: string;
+  side: string[];
   type: string;
   class: string;
-  image_dir: string;
-  side: string[];
   nationality: string[];
   era: string[];
+  image_dir: string;
   images: [{
   	img_lg: string,
   	img_sm: string,

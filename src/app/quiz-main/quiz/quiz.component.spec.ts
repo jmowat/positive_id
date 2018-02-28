@@ -31,6 +31,7 @@ describe('QuizComponent', () => {
         provide: TEST_PARMS,
         useValue: DEFAULT_GROUND_QUIZ
       }],
+      imports: [ NgbModule.forRoot() ]
     })
     .compileComponents();
   }));

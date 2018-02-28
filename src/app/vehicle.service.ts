@@ -9,17 +9,20 @@ import { Vehicle }  from './vehicle';
 
 @Injectable()
 export class VehicleService {
+    vehicles: Observable<Vehicle[]>;
 
-	constructor(private _http: HttpClient) { }
+	constructor(private _http: HttpClient) {
+        this.vehicles = this._http.get<Vehicle[]>(this._vehiclesUrl)
+            .do(res =>  {
+                JSON.stringify(res);
+            })
+            .catch(this.handleError);
+    }
 
 	_vehiclesUrl = 'assets/vehicles.json';
 
     getVehicles(): Observable<Vehicle[]> {
-        return this._http.get<Vehicle[]>(this._vehiclesUrl)
-            .do(data =>  {
-                //JSON.stringify(data);
-            })
-            .catch(this.handleError);
+        return this.vehicles;
     }
 
     private handleError(err: HttpErrorResponse) {

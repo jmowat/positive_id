@@ -4,10 +4,9 @@ import { QuizParms } from './quiz-parms';
 
 export const TEST_PARMS = new InjectionToken<QuizParms>('test.parms');
 
-@Injectable()
 export const DEFAULT_GROUND_QUIZ = {
 	optionsToShow: 5,
-    numberOfQuestions: 5,
+    numberOfQuestions: 10,
     platforms: ["ground vehicle"],
     profiles: ["side", "front", "oblique"],
     distances: ["near"],
@@ -16,7 +15,6 @@ export const DEFAULT_GROUND_QUIZ = {
     randomizeQuestions: true
 }
 
-@Injectable()
 export const THERMALS_GROUND_QUIZ = {
     optionsToShow: 5,
     numberOfQuestions: 20,
@@ -28,7 +26,6 @@ export const THERMALS_GROUND_QUIZ = {
     randomizeQuestions: true
 }
 
-@Injectable()
 export const FAR_GROUND_QUIZ = {
     optionsToShow: 5,
     numberOfQuestions: 20,
@@ -40,7 +37,6 @@ export const FAR_GROUND_QUIZ = {
     randomizeQuestions: true
 }
 
-@Injectable()
 export const EASTERN_GROUND_QUIZ = {
     optionsToShow: 5,
     numberOfQuestions: 20,
@@ -52,7 +48,6 @@ export const EASTERN_GROUND_QUIZ = {
     randomizeQuestions: true
 }
 
-@Injectable()
 export const WESTERN_GROUND_QUIZ = {
     optionsToShow: 5,
     numberOfQuestions: 20,
@@ -64,7 +59,6 @@ export const WESTERN_GROUND_QUIZ = {
     randomizeQuestions: true
 }
 
-@Injectable()
 export const REAR_GROUND_QUIZ = {
     optionsToShow: 5,
     numberOfQuestions: 20,
@@ -76,7 +70,6 @@ export const REAR_GROUND_QUIZ = {
     randomizeQuestions: true
 }
 
-@Injectable()
 export const WW2_AIRCRAFT_QUIZ = {
     optionsToShow: 5,
     numberOfQuestions: 10,
@@ -87,7 +80,6 @@ export const WW2_AIRCRAFT_QUIZ = {
     randomizeQuestions: true
 }
 
-@Injectable()
 export const WESTERN_AIRCRAFT_QUIZ = {
     optionsToShow: 5,
     numberOfQuestions: 10,
@@ -99,7 +91,6 @@ export const WESTERN_AIRCRAFT_QUIZ = {
     randomizeQuestions: true
 }
 
-@Injectable()
 export const EASTERN_AIRCRAFT_QUIZ = {
     optionsToShow: 5,
     numberOfQuestions: 10,
@@ -111,7 +102,6 @@ export const EASTERN_AIRCRAFT_QUIZ = {
     randomizeQuestions: true
 }
 
-@Injectable()
 export const FAR_MODERN_AIRCRAFT_QUIZ = {
     optionsToShow: 5,
     numberOfQuestions: 20,
@@ -123,7 +113,6 @@ export const FAR_MODERN_AIRCRAFT_QUIZ = {
     randomizeQuestions: true
 }
 
-@Injectable()
 export const WW2_AIRCRAFT_DRILL = {
     optionsToShow: 5,
     numberOfQuestions: 12,
@@ -135,7 +124,6 @@ export const WW2_AIRCRAFT_DRILL = {
     randomizeQuestions: true
 }
 
-@Injectable()
 export const WW2_SOVIET_AIRCRAFT_DRILL = {
     optionsToShow: 5,
     numberOfQuestions: 20,

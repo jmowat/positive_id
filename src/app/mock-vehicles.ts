@@ -1,4 +1,4 @@
-import { Vehicle } from '../vehicle';
+import { Vehicle } from './vehicle';
 
 export const FIVE_VEHICLES: Vehicle[] = [{
 	"name": "T-90",
@@ -442,8 +442,7 @@ export const CHALLENGER2: Vehicle[] =  [{
 	}]
 }];
 
-
-export const LUCHS: vehicle[] = [{
+export const LUCHS: Vehicle[] = [{
 	"name": "SPz Luchs 2A2",
 	"side": ["western"],
 	"type": "ground vehicle",

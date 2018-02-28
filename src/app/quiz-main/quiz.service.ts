@@ -12,17 +12,21 @@ import { QuizParms } from './quiz-parms';
 @Injectable()
 export class QuizService {
 	t:Test;
-	vehicles: Vehicle[];
+  vehicles: Observable<Vehicle[]>;
 
   constructor(private vehicleService: VehicleService,
-              @Inject(TEST_PARMS) quizParms: QuizParms) {
-      vehicleService.getVehicles().subscribe((vehicles) => {
-      this.vehicles = vehicles;
-      this.t = TestFactory.createTest(this.vehicles, quizParms);
-    });
+              @Inject(TEST_PARMS) private quizParms: QuizParms) {
+    this.createNewTest();
   }
 
   getTest(): Test {
-  	return this.t;
+    //console.log("getTest being called and test is", this.t);
+    return this.t;
+  }
+
+  createNewTest() {
+    this.vehicleService.getVehicles().subscribe(v => {
+      this.t = TestFactory.createTest(v, this.quizParms);
+    });
   }
 }

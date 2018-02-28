@@ -30,7 +30,8 @@ describe('QuizService', () => {
   }));
 
   it('should create a quiz by default', inject([QuizService], (service: QuizService) => {
-	 	let t:Test  = service.getTest();
+	 	let t:Test;
+    t = service.getTest();
 	 	expect(t).toBeTruthy();
 	 	expect(t instanceof Quiz).toBeTruthy();
 	  	expect(t instanceof Drill).toBeFalsy();
