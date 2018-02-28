@@ -19,10 +19,13 @@ import { BrowseComponent } from './browse/browse.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ModalComponent } from './modal/modal.component';
 import { BrowseFormComponent } from './browse-form/browse-form.component';
+import { QuizComponent } from './quiz-main/quiz/quiz.component';
 
+import { QuizService }  from './quiz-main/quiz.service';
 import { VehicleService }  from './vehicle.service';
 import { NameFilterPipe } from './name-filter.pipe';
-import { QuizComponent } from './quiz-main/quiz/quiz.component';
+
+import { DEFAULT_GROUND_QUIZ, DEFAULT_QUIZ_PARMS } from './quiz-main/default-quiz-parms';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,11 @@ import { QuizComponent } from './quiz-main/quiz/quiz.component';
   ],
   exports: [ PaginationComponent ],
   providers: [
-    VehicleService
+    VehicleService,
+    QuizService,
+    {
+      provide: DEFAULT_QUIZ_PARMS, useValue: DEFAULT_GROUND_QUIZ
+    }
   ],
   entryComponents: [
     ModalComponent

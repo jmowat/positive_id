@@ -3,11 +3,12 @@ import { Test } from './test';
 import { VehicleCard } from './vehicle-card';
 import { Randomizer } from './randomizer';
 import { Vehicle } from '../vehicle';
+import { QuizParms } from './quiz-parms';
 
 export class Quiz extends Test {
 	vehicles: any[];
 
-	constructor(vehicles, options = {
+	constructor(vehicles, options: QuizParms = {
 		optionsToShow: 5,
 		numberOfQuestions: 5,
 		randomizeQuestions: true
@@ -19,7 +20,12 @@ export class Quiz extends Test {
 		for (let i = 0; i < this.vehicles.length; i++) {
 			//console.log(vehicles[i]);
 			let vehicleCard = new VehicleCard(this.vehicles[i], options);
-			let quizQuestion = new QuizQuestion(vehicleCard, this.getNamesBySide(this.vehicles[i].side, this.vehicles[i].type), options.optionsToShow, options.randomizeQuestions);
+			let quizQuestion = new QuizQuestion(
+				vehicleCard,
+				this.getNamesBySide(this.vehicles[i].side, this.vehicles[i].type),
+				options.optionsToShow,
+				options.randomizeQuestions
+			);
 			this.questions.push(quizQuestion);
 		}
 

@@ -3,8 +3,8 @@
 
       <app-header-narrow></app-header-narrow>
 
-      <section class="quiz">
-		<section class="progress">
+      <section class="quiz" *ngIf="test">
+		    <section class="progress">
           <div class="container">
             <div class="progress">
               <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
@@ -15,7 +15,7 @@
         <section class="question">
           <div class="container-fluid no-padding">
             <div class="text-center">
-              <img class="img-fluid rounded " src="assets/img/air/su30/1.png">
+              <img class="img-fluid rounded " src="assets/{{test.getQuestion().getImagePath()}}">
               <ol class="choices">
                 <div class="form-check form-check-inline">
                   <li>

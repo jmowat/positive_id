@@ -67,7 +67,7 @@ export class Test {
 		return this.questions[index];
 	}
 
-	getQuestion() {
+	getQuestion(): QuizQuestion {
 		return this.questions[this.currentQuestion];
 	}
 
