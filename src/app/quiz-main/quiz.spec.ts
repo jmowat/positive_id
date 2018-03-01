@@ -1,7 +1,7 @@
 import { Quiz } from './quiz';
 import { Vehicle } from '../vehicle';
 import { VehicleCard } from './vehicle-card';
-import { QuizQuestion } from './quiz';
+import { QuizQuestion } from './quiz-question';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2, BMP2 } from '../mock-vehicles';
 
 describe('Quiz', () => {

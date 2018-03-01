@@ -1,4 +1,4 @@
-import { GrammarHelper } from './grammar-helper';
+import { GrammarHelper } from '../grammar-helper';
 
 export class State {
 	actionText: string;

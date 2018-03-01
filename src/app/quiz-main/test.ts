@@ -1,5 +1,5 @@
 import { Randomizer } from './randomizer';
-import { QuizQuestion } from './quiz';
+import { QuizQuestion } from './quiz-question';
 
 /*
  * Abstract base class for Quiz and Drill

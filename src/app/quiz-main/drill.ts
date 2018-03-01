@@ -1,7 +1,7 @@
 import { Test } from './test';
 import { Randomizer } from './randomizer';
 import { VehicleCard } from './vehicle-card';
-import { QuizQuestion } from './quiz';
+import { QuizQuestion } from './quiz-question';
 
 export class Drill extends Test {
 	constructor(private vehicles, options:DrillOptions) {
