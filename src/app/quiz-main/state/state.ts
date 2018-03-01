@@ -18,7 +18,7 @@ export class State {
 		this.name = "State";
 	}
 
-	goNext(context, userAnswer, quiz, $state) {
+	goNext(context, userAnswer, quiz) {
 		throw new Error('You have to implement the method doSomething!');
 	}
 
@@ -48,8 +48,6 @@ export class State {
 }
 
 export class BaseState extends State {
-	$state: any;
-
 	constructor() {
 		super();
 		this.actionText = "Next";
@@ -59,7 +57,7 @@ export class BaseState extends State {
 		this.name = "BaseState";
 	}
 
-	goNext(context, userAnswer, quiz, $state) {
+	goNext(context, userAnswer, quiz) {
 		// Logic to determine next state
 		if (userAnswer === "" || userAnswer === undefined) {
 			context.setState(new InvalidState());
@@ -68,7 +66,7 @@ export class BaseState extends State {
 				if (!quiz.onLastQuestion()) {
 					context.setState(new SuccessNextState(userAnswer));
 				} else {
-					context.setState(new SuccessFinishState(userAnswer, $state));
+					context.setState(new SuccessFinishState(userAnswer));
 				}
 			} else {
 				context.setState(new WrongState(userAnswer, quiz));
@@ -96,7 +94,7 @@ class SuccessNextState extends BaseState {
 }
 
 class SuccessFinishState extends BaseState {
-	constructor(userAnswer, $state) {
+	constructor(userAnswer) {
 		super();
 		this.actionText = "Finish";
 		this.statusText = "Correct, that is " + GrammarHelper.getIndefiniteArticle(userAnswer) +
@@ -105,8 +103,6 @@ class SuccessFinishState extends BaseState {
 		this.disableSelection = true;
 		this.name = "SuccessFinishState";
 		this.userAnswer = userAnswer;
-		//this.$location = $location;
-		this.$state = $state;
 	}
 
 	goNext(context, userAnswer, quiz) {

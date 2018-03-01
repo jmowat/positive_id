@@ -6,14 +6,7 @@ import { Context } from './context';
 describe('State', () => {
 	let context:Context;
 	beforeEach(() => {
-		let quizParms;// = $stateParams.quizParms;
-		// $state.current.name is some AngularJS name from the router, I think
-		let stateName;// = $state.current.name;
-		let quizStateDetails:any = {
-			stateName: stateName,
-			stateParams: quizParms
-		};
-		context = new Context(quizStateDetails);
+		context = new Context();
 	});
 
  	it('should create', () => {

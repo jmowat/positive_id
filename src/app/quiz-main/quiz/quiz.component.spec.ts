@@ -8,6 +8,7 @@ import { FooterComponent } from '../../footer/footer.component';
 import { TopNavComponent } from '../../top-nav/top-nav.component';
 import { VehicleService }  from '../../vehicle.service';
 import { QuizService }  from '../quiz.service';
+import { StateService }  from '../state/state.service';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
@@ -22,7 +23,7 @@ describe('QuizComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ QuizComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent ],
-      providers: [QuizService,
+      providers: [QuizService, StateService,
       {
         provide: VehicleService,
         useClass: MockVehicleService
@@ -31,7 +32,7 @@ describe('QuizComponent', () => {
         provide: TEST_PARMS,
         useValue: DEFAULT_GROUND_QUIZ
       }],
-      imports: [ NgbModule.forRoot() ]
+      imports: [ NgbModule.forRoot(), FormsModule ]
     })
     .compileComponents();
   }));

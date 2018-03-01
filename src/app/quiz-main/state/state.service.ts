@@ -7,17 +7,9 @@ import { Context } from './context';
 @Injectable()
 export class StateService {
 	context: Context;
-	state: string;
 
 	constructor(private quizService: QuizService) {
-		let quizParms;// = $stateParams.quizParms;
-		// $state.current.name is some AngularJS name from the router, I think
-		let stateName;// = $state.current.name;
-		let quizStateDetails:any = {
-			stateName: stateName,
-			stateParams: quizParms
-		};
-		this.context = new Context(quizStateDetails);
+		this.context = new Context();
 	}
 
 	getStatus(): string {
@@ -37,7 +29,7 @@ export class StateService {
 	}
 
 	acceptAnswer(answer:string) {
-		this.context.goNext(answer, this.getTest(), this.state);
+		this.context.goNext(answer, this.getTest());
 	}
 
 	getUserSelection(): string {
@@ -46,6 +38,21 @@ export class StateService {
 
 	getTest(): Test {
 		return this.quizService.getTest();
-		//return undefined;
+	}
+
+	createNewTest() {
+		this.quizService.createNewTest();
+	}
+
+	nextQuestion() {
+		this.quizService.getTest().nextQuestion();
+	}
+
+	previousQuestion() {
+		this.quizService.getTest().previousQuestion();
+	}
+
+	getPossibleAnswers(): any[] {
+		return this.quizService.getTest().getQuestion().getPossibleAnswers();
 	}
 }

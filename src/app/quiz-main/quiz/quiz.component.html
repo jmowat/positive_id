@@ -2,9 +2,8 @@
   <div class="page">
 
       <app-header-narrow></app-header-narrow>
-      <!-- <h1>{{getTest().getNumberOfQuestions() | async}}</h1> -->
 
-      <section class="quiz" *ngIf="getTest()">
+      <section class="quiz" *ngIf="service.getTest()">
 		    <section class="progress">
           <div class="container-fluid">
             <ngb-progressbar type="success" [value]="getCurrentQuestionNumber()" [max]="getTotalNumberOfQuestions()">
@@ -16,12 +15,12 @@
         <section class="question">
           <div class="container-fluid no-padding">
             <div class="text-center">
-              <img class="img-fluid rounded " src="assets/{{getTest().getQuestion().getImagePath()}}">
+              <img class="img-fluid rounded " src="assets/{{service.getTest().getQuestion().getImagePath()}}">
               <ol class="choices">
                 <div class="form-check form-check-inline" *ngFor="let possibleAnswer of getPossibleAnswers()">
                   <li>
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio" value="{{possibleAnswer}}">{{possibleAnswer}}
+                    <input class="form-check-input" type="radio" name="choice" value="{{possibleAnswer}}" [disabled]="service.isSelectionDisabled()" [(ngModel)]="userSelection">{{possibleAnswer}}
                   </label>
                   </li>
                 </div>
@@ -29,21 +28,19 @@
             </div>
           </div>
         </section> <!-- end .question -->
-        <div class="container-fluid " style="background: #0f0; padding: 0.75rem;">
-          <div class="container ">
-            <div class="row " >
-              <div class="col-8 col-sm-8 align-self-center" style="color: black;">
-                Status message
-              </div>
-              <div class="col-2 col-sm-2 ">
-                <button type="button" class="btn btn-lg btn-primary" id="nextButton" (click)="previousQuestion()">Prev</button>
-              </div>
-              <div class="col-2 col-sm-2 ">
-                <button type="button" class="btn btn-lg btn-primary" id="nextButton" (click)="nextQuestion()">Next</button>
+        <section class="status">
+          <div class="container-fluid " id="status-block" [ngClass]="statusClasses">
+            <div class="container ">
+              <div class="row " >
+                <div class="col-8 col-sm-8 align-self-center" [innerHTML]="service.getStatusMessage()">
+                </div>
+                <div class="col-4 col-sm-4 ">
+                  <button type="button" [ngClass]="buttonClasses" id="nextButton" (click)="next()">{{service.getActionText()}}</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section> <!-- end .status -->
       </section> <!-- end .quiz -->
 
       <app-footer></app-footer>

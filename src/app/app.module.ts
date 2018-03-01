@@ -22,6 +22,7 @@ import { BrowseFormComponent } from './browse-form/browse-form.component';
 import { QuizComponent } from './quiz-main/quiz/quiz.component';
 
 import { QuizService }  from './quiz-main/quiz.service';
+import { StateService }  from './quiz-main/state/state.service';
 import { VehicleService }  from './vehicle.service';
 import { NameFilterPipe } from './name-filter.pipe';
 
@@ -57,6 +58,7 @@ import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from './quiz-main/test-parms';
   providers: [
     VehicleService,
     QuizService,
+    StateService,
     {
       provide: TEST_PARMS, useValue: DEFAULT_GROUND_QUIZ
     }
