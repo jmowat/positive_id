@@ -1,4 +1,5 @@
 import { BaseState } from './state';
+import { Router } from '@angular/router';
 
 export class Context {
 	current: BaseState;
@@ -12,7 +13,7 @@ export class Context {
 		this.current = state;
 	}
 
-	goNext(answer, quiz) {
-		this.current.goNext(this, answer, quiz);
+	goNext(answer, quiz, router: Router) {
+		this.current.goNext(this, answer, quiz, router);
 	}
 }

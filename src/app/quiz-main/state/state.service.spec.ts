@@ -10,15 +10,24 @@ import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
 import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from '../../quiz-main/test-parms';
 import { State } from './state';
 import { Context } from './context';
+import { Router } from '@angular/router';
+import { AppRoutingModule } from '../../app-routing.module';
 
 import { StateService } from './state.service';
 import { VehicleService } from '../../vehicle.service';
 import { QuizService } from '../quiz.service';
 
 describe('StateService', () => {
+	const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
+
  	beforeEach(() => {
 	    TestBed.configureTestingModule({
+	      imports: [  ],
 	      providers: [StateService, QuizService,
+	      {
+	      	provide: Router,
+	      	useValue: routerSpy
+	      },
 	      {
 	      	provide: VehicleService,
 	      	useClass: MockVehicleService

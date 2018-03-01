@@ -6,7 +6,8 @@ import { ContactComponent } 		from './contact/contact.component';
 import { PrivacyComponent } 		from './privacy/privacy.component';
 import { TermsComponent } 		from './terms/terms.component';
 import { BrowseFormComponent } 		from './browse-form/browse-form.component';
-import { QuizComponent } 		from './quiz-main/quiz/quiz.component';
+import { QuizComponent }     from './quiz-main/quiz/quiz.component';
+import { ScoreComponent }     from './quiz-main/score/score.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -16,7 +17,9 @@ const routes: Routes = [
   { path: 'privacy', component: PrivacyComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'quiz', component: QuizComponent },
-  { path: '', redirectTo: '/main', pathMatch: 'full' }
+  { path: 'score', component: ScoreComponent },
+  { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: '**', redirectTo: '/main'}
 ];
 
 @NgModule({

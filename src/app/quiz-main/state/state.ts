@@ -1,5 +1,6 @@
 import { GrammarHelper } from '../grammar-helper';
 import { Context } from './context';
+import { Router } from '@angular/router';
 
 export class State {
 	actionText: string;
@@ -18,7 +19,7 @@ export class State {
 		this.name = "State";
 	}
 
-	goNext(context, userAnswer, quiz) {
+	goNext(context, userAnswer, quiz, router: Router) {
 		throw new Error('You have to implement the method doSomething!');
 	}
 
@@ -57,7 +58,7 @@ export class BaseState extends State {
 		this.name = "BaseState";
 	}
 
-	goNext(context, userAnswer, quiz) {
+	goNext(context, userAnswer, quiz, router: Router) {
 		// Logic to determine next state
 		if (userAnswer === "" || userAnswer === undefined) {
 			context.setState(new InvalidState());
@@ -105,13 +106,13 @@ class SuccessFinishState extends BaseState {
 		this.userAnswer = userAnswer;
 	}
 
-	goNext(context, userAnswer, quiz) {
-		console.log("Next click should redirect to score page");
+	goNext(context, userAnswer, quiz, router: Router) {
 		//console.log(context.quizStateDetails);
 		// this.$state.go('score', {
 		// 	quizStateDetails: context.quizStateDetails
 		// });
 		//this.$location.path('score');
+		router.navigateByUrl("/score");
 	}
 }
 

@@ -14,12 +14,13 @@ export class QuizComponent implements OnInit {
 	statusClasses: any;
 
   	constructor(public service: StateService) {
-  		this.setButtonClasses();
-  		this.setStatusClasses();
+
   	}
 
 	ngOnInit() {
 		this.service.createNewTest();
+		this.setButtonClasses();
+  		this.setStatusClasses();
 	}
 
 	getPossibleAnswers(): any[] {
@@ -39,6 +40,8 @@ export class QuizComponent implements OnInit {
 		this.service.acceptAnswer(this.userSelection);
 		this.setButtonClasses();
 		this.setStatusClasses();
+		// clear out previous user selection
+		this.userSelection = "";
 	};
 
 	setButtonClasses() {

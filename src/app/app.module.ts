@@ -27,6 +27,7 @@ import { VehicleService }  from './vehicle.service';
 import { NameFilterPipe } from './name-filter.pipe';
 
 import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from './quiz-main/test-parms';
+import { ScoreComponent } from './quiz-main/score/score.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from './quiz-main/test-parms';
     ModalComponent,
     BrowseFormComponent,
     NameFilterPipe,
-    QuizComponent
+    QuizComponent,
+    ScoreComponent
   ],
   imports: [
     BrowserModule,
