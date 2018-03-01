@@ -1,4 +1,5 @@
 import { GrammarHelper } from '../grammar-helper';
+import { Context } from './context';
 
 export class State {
 	actionText: string;
@@ -46,7 +47,7 @@ export class State {
 	}
 }
 
-class BaseState extends State {
+export class BaseState extends State {
 	$state: any;
 
 	constructor() {
@@ -109,10 +110,11 @@ class SuccessFinishState extends BaseState {
 	}
 
 	goNext(context, userAnswer, quiz) {
+		console.log("Next click should redirect to score page");
 		//console.log(context.quizStateDetails);
-		this.$state.go('score', {
-			quizStateDetails: context.quizStateDetails
-		});
+		// this.$state.go('score', {
+		// 	quizStateDetails: context.quizStateDetails
+		// });
 		//this.$location.path('score');
 	}
 }
@@ -142,19 +144,3 @@ class InvalidState extends BaseState {
 	}
 }
 
-class Context {
-	current: BaseState;
-	constructor(private quizStateDetails) {
-		// Starting state
-		this.current = new BaseState();
-		this.quizStateDetails = quizStateDetails;
-	}
-
-	setState(state) {
-		this.current = state;
-	}
-
-	goNext(answer, quiz, $state) {
-		this.current.goNext(this, answer, quiz, $state);
-	}
-}

@@ -9,6 +9,7 @@ import { Vehicle } from '../../vehicle';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
 import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from '../../quiz-main/test-parms';
 import { State } from './state';
+import { Context } from './context';
 
 import { StateService } from './state.service';
 import { VehicleService } from '../../vehicle.service';
@@ -38,12 +39,12 @@ describe('StateService', () => {
 	    });
 	});
 
-	it('create an instance', inject([StateService, QuizService], (stateService: StateService, quizService: QuizService) => {
+	it('create an instance', inject([StateService], (stateService: StateService) => {
 	    expect(stateService).toBeTruthy();
 	}));
 
 	describe('basic quiz functionality', () => {
-		xit('should detect a correct answer', inject([StateService], (service: StateService) => {
+		it('should detect a correct answer', inject([StateService], (service: StateService) => {
 			//console.log('should detect a correct answer',quizService.quiz.questions[0]);
 			service.acceptAnswer("T-90");
 			expect(service.getStatus()).toBe("success");
@@ -53,7 +54,7 @@ describe('StateService', () => {
 			expect(service.getActionText()).toBe("Next");
 		}));
 
-		xit('should detect a wrong answer', inject([StateService], (service: StateService) => {
+		it('should detect a wrong answer', inject([StateService], (service: StateService) => {
 			service.acceptAnswer("xyz");
 			expect(service.getStatus()).toBe("danger");
 			expect(service.getStatusMessage()).toBeTruthy();
@@ -61,7 +62,7 @@ describe('StateService', () => {
 			expect(service.getActionText()).toBe("Next");
 		}));
 
-		xit('should detect an empty answer', inject([StateService], (service: StateService) => {
+		it('should detect an empty answer', inject([StateService], (service: StateService) => {
 			service.acceptAnswer("");
 			expect(service.getStatus()).toBe("danger");
 			expect(service.getStatusMessage()).toBeTruthy();
@@ -69,7 +70,7 @@ describe('StateService', () => {
 			expect(service.getActionText()).toBe("Next");
 		}));
 
-		xit('should transition from a correct answer to the next question', inject([StateService], (service: StateService) => {
+		it('should transition from a correct answer to the next question', inject([StateService], (service: StateService) => {
 			expect(service.getTest().getQuestion().getName()).toBe("T-90");
 			service.acceptAnswer("T-90");
 			expect(service.getStatus()).toBe("success");
@@ -90,7 +91,7 @@ describe('StateService', () => {
 			expect(service.getTest().getQuestion().getName()).toBe("T-80");
 		}));
 
-		xit('should show Finish after correctly answering the last question', inject([StateService], (service: StateService) => {
+		it('should show Finish after correctly answering the last question', inject([StateService], (service: StateService) => {
 			let answers = ["T-90", "T-80", "T-72", "T-62", "T-55"];
 			for (let i = 0; i < answers.length; i++) {
 				service.acceptAnswer(answers[i]);
@@ -102,7 +103,7 @@ describe('StateService', () => {
 			expect(service.getTest().getNumWrong()).toBe(0);
 		}));
 
-		xit('should remember the question answered wrong', inject([StateService], (service: StateService) => {
+		it('should remember the question answered wrong', inject([StateService], (service: StateService) => {
 			expect(service.getTest().getQuestion().getName()).toBe("T-90");
 			expect(service.getTest().getNumWrong()).toBe(0);
 			service.acceptAnswer("xyz");
@@ -111,13 +112,13 @@ describe('StateService', () => {
 			expect(service.getTest().getWrongQuestions()[0].getName()).toBe("T-90");
 		}));
 
-		xit('should not consider an empty selection as being wrong', inject([StateService], (service: StateService) => {
+		it('should not consider an empty selection as being wrong', inject([StateService], (service: StateService) => {
 			expect(service.getTest().getNumWrong()).toBe(0);
 			service.acceptAnswer("");
 			expect(service.getTest().getNumWrong()).toBe(0);
 		}));
 
-		xit('should not move to next question until correct answer', inject([StateService], (service: StateService) => {
+		it('should not move to next question until correct answer', inject([StateService], (service: StateService) => {
 			expect(service.getTest().getCurrentQuestionIndex()).toBe(0);
 			service.acceptAnswer("xyz");
 			expect(service.getTest().getCurrentQuestionIndex()).toBe(0);
@@ -132,7 +133,7 @@ describe('StateService', () => {
 			expect(service.getTest().getCurrentQuestionIndex()).toBe(1);
 		}));
 
-		xit('should remember all of the wrongly answered questions', inject([StateService], (service: StateService) => {
+		it('should remember all of the wrongly answered questions', inject([StateService], (service: StateService) => {
 			expect(service.getTest().getNumWrong()).toBe(0);
 			service.acceptAnswer("xyz");
 			expect(service.getTest().getNumWrong()).toBe(1);
