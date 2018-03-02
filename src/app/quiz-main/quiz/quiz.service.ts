@@ -1,13 +1,12 @@
 import { Injectable, Inject } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import { TestFactory } from './test-factory';
-import { Test } from './test';
-import { Quiz } from './quiz';
-import { VehicleService } from '../vehicle.service';
-import { Vehicle } from '../vehicle';
-import { TEST_PARMS } from './test-parms';
-import { QuizParms } from './quiz-parms';
+import { TestFactory } from '../test-factory';
+import { Test } from '../test';
+import { VehicleService } from '../../vehicle.service';
+import { Vehicle } from '../../vehicle';
+import { TEST_PARMS } from '../test-parms';
+import { QuizParms } from '../quiz-parms';
 
 @Injectable()
 export class QuizService {

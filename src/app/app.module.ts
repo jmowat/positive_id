@@ -21,7 +21,7 @@ import { ModalComponent } from './modal/modal.component';
 import { BrowseFormComponent } from './browse-form/browse-form.component';
 import { QuizComponent } from './quiz-main/quiz/quiz.component';
 
-import { QuizService }  from './quiz-main/quiz.service';
+import { QuizService }  from './quiz-main/quiz/quiz.service';
 import { StateService }  from './quiz-main/state/state.service';
 import { VehicleService }  from './vehicle.service';
 import { NameFilterPipe } from './name-filter.pipe';

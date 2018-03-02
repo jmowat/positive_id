@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Test } from '../test';
-import { QuizService } from '../quiz.service';
+import { QuizService } from '../quiz/quiz.service';
 import { State } from './state';
 import { Context } from './context';
 
