@@ -53,6 +53,20 @@ describe('StateService', () => {
 	}));
 
 	describe('basic quiz functionality', () => {
+
+		beforeEach(inject([StateService], (service: StateService)=>{
+			service.createNewTest({
+							optionsToShow: 5,
+						    numberOfQuestions: 5,
+						    platforms: ["ground vehicle"],
+						    profiles: ["side", "front", "oblique"],
+						    distances: ["near"],
+						    optics: ["naked eye"],
+						    sides: ["eastern", "western"],
+						    randomizeQuestions: false
+						});
+		}));
+
 		it('should detect a correct answer', inject([StateService], (service: StateService) => {
 			//console.log('should detect a correct answer',quizService.quiz.questions[0]);
 			service.acceptAnswer("T-90");

@@ -3,7 +3,7 @@ import { Test } from '../test';
 import { QuizService } from '../quiz/quiz.service';
 import { State } from './state';
 import { Context } from './context';
-
+import { QuizParms } from '../quiz-parms';
 import { Router } from '@angular/router';
 
 @Injectable()
@@ -42,8 +42,8 @@ export class StateService {
 		return this.quizService.getTest();
 	}
 
-	createNewTest() {
-		this.quizService.createNewTest();
+	createNewTest(quizParms: QuizParms) {
+		this.quizService.createNewTest(quizParms);
 		this.context = new Context();
 	}
 

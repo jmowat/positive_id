@@ -13,9 +13,8 @@ export class QuizService {
 	t:Test;
   vehicles: Observable<Vehicle[]>;
 
-  constructor(private vehicleService: VehicleService,
-              @Inject(TEST_PARMS) private quizParms: QuizParms) {
-    this.createNewTest();
+  constructor(private vehicleService: VehicleService) {
+
   }
 
   getTest(): Test {
@@ -23,9 +22,9 @@ export class QuizService {
     return this.t;
   }
 
-  createNewTest() {
+  createNewTest(quizParms: QuizParms) {
     this.vehicleService.getVehicles().subscribe(v => {
-      this.t = TestFactory.createTest(v, this.quizParms);
+      this.t = TestFactory.createTest(v, quizParms);
     });
   }
 }
