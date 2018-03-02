@@ -29,17 +29,18 @@ describe('QuizService', () => {
    	expect(service).toBeTruthy();
   }));
 
-  it('should create a quiz by default', inject([QuizService], (service: QuizService) => {
+  it('should not create a quiz by default', inject([QuizService], (service: QuizService) => {
 	 	let t:Test;
     t = service.getTest();
-	 	expect(t).toBeTruthy();
-	 	expect(t instanceof Quiz).toBeTruthy();
+	 	expect(t).toBeFalsy();
+	 	expect(t instanceof Quiz).toBeFalsy();
 	  	expect(t instanceof Drill).toBeFalsy();
   }));
 
   describe('Quiz test in QuizService', () => {
   	let quiz:Test;
   	beforeEach(inject([QuizService], (service: QuizService) => {
+      service.createNewTest(DEFAULT_GROUND_QUIZ);
       quiz = service.getTest();
   	}));
 
