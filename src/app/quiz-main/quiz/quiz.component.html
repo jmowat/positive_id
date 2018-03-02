@@ -15,7 +15,7 @@
         <section class="question">
           <div class="container-fluid no-padding">
             <div class="text-center">
-              <img class="img-fluid rounded " src="assets/{{service.getTest().getQuestion().getImagePath()}}">
+              <img class="img-fluid rounded " src="assets/{{service.getTest().getQuestion().getRandomImagePath()}}">
               <ol class="choices">
                 <div class="form-check form-check-inline" *ngFor="let possibleAnswer of getPossibleAnswers()">
                   <li>

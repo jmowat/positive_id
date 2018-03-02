@@ -42,7 +42,7 @@ export class StateService {
 		return this.quizService.getTest();
 	}
 
-	createNewTest(quizParms: QuizParms) {
+	createNewTest(quizParms: any) {
 		this.quizService.createNewTest(quizParms);
 		this.context = new Context();
 	}
