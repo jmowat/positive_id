@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'privacy', component: PrivacyComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'quiz', component: QuizComponent },
+  { path: 'drill', component: QuizComponent },
   { path: 'score', component: ScoreComponent },
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: '**', redirectTo: '/main'}

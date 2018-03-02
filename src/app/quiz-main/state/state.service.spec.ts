@@ -15,7 +15,7 @@ import { AppRoutingModule } from '../../app-routing.module';
 
 import { StateService } from './state.service';
 import { VehicleService } from '../../vehicle.service';
-import { QuizService } from '../quiz.service';
+import { QuizService } from '../quiz/quiz.service';
 
 describe('StateService', () => {
 	const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);

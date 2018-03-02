@@ -2,13 +2,13 @@ import { TestBed, inject } from '@angular/core/testing';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { QuizService } from './quiz.service';
-import { Test } from './test';
-import { Quiz } from './quiz';
-import { Drill } from './drill';
-import { VehicleService } from '../vehicle.service';
-import { Vehicle } from '../vehicle';
-import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../mock-vehicles';
-import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from '../quiz-main/test-parms';
+import { Test } from '../test';
+import { Quiz } from '../quiz';
+import { Drill } from '../drill';
+import { VehicleService } from '../../vehicle.service';
+import { Vehicle } from '../../vehicle';
+import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
+import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from '../../quiz-main/test-parms';
 
 describe('QuizService', () => {
   beforeEach(() => {

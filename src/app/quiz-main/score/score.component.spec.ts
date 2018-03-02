@@ -6,7 +6,7 @@ import { FooterComponent } from '../../footer/footer.component';
 import { TopNavComponent } from '../../top-nav/top-nav.component';
 
 import { VehicleService }  from '../../vehicle.service';
-import { QuizService }  from '../quiz.service';
+import { QuizService }  from '../quiz/quiz.service';
 import { StateService }  from '../state/state.service';
 
 import { Observable } from 'rxjs/Observable';
