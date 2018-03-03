@@ -4,6 +4,7 @@ import { StateService }  from '../state/state.service';
 import { Test }  from '../test';
 import { QuizParms } from '../quiz-parms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-quiz',
@@ -15,15 +16,17 @@ export class QuizComponent implements OnInit {
 	buttonClasses: any;
 	statusClasses: any;
 	quizParms: QuizParms;
+	key: string;
 
-  	constructor(public service: StateService, private router:Router, private route:ActivatedRoute) {
+  	constructor(public service: StateService, private router:Router, private route:ActivatedRoute) {}
 
+	@HostListener('document:keypress', ['$event'])
+  		handleKeyboardEvent(event: KeyboardEvent) {
+    	this.key = event.key;
+    	console.log(this.key);
   	}
 
 	ngOnInit() {
-		//console.log("Router URL in quiz component",this.router.url);
-		//console.log("Data in quiz component",this.route.snapshot.data);
-		//this.quizParms = this.route.snapshot.data;
 		this.service.createNewTest(this.route.snapshot.data);
 		this.setButtonClasses();
   		this.setStatusClasses();
