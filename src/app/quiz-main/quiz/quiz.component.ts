@@ -24,6 +24,10 @@ export class QuizComponent implements OnInit {
   		handleKeyboardEvent(event: KeyboardEvent) {
     	this.key = event.key;
     	console.log(this.key);
+    	if(this.key == "Enter") {
+    		//console.log("do enter stuff");
+    		this.next();
+    	}
   	}
 
 	ngOnInit() {
