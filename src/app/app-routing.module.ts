@@ -7,6 +7,7 @@ import { PrivacyComponent } 		from './privacy/privacy.component';
 import { TermsComponent } 		from './terms/terms.component';
 import { BrowseFormComponent } 		from './browse-form/browse-form.component';
 import { QuizComponent }     from './quiz-main/quiz/quiz.component';
+import { RedoQuizComponent }     from './quiz-main/quiz/redo-quiz.component';
 import { ScoreComponent }     from './quiz-main/score/score.component';
 import { DEFAULT_GROUND_QUIZ,
          THERMALS_GROUND_QUIZ,
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'terms', component: TermsComponent },
   { path: 'quiz', component: QuizComponent,  data: DEFAULT_GROUND_QUIZ},
   { path: 'drill', component: QuizComponent, data: WW2_SOVIET_AIRCRAFT_DRILL},
+  { path: 'retry', component: RedoQuizComponent},
 
   { path: 'q-thermals-ground', component: QuizComponent, data: THERMALS_GROUND_QUIZ},
   { path: 'q-far-ground', component: QuizComponent, data: FAR_GROUND_QUIZ},

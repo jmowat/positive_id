@@ -14,7 +14,7 @@ let quizServiceFactory = (vehicleService: VehicleService) => {
 	/*
 	 * Use a canned set of parms to get the factory provider working
 	 */
-  	return new QuizService(vehicleService, getParms());
+  	return new QuizService(vehicleService);
 };
 
 function getParms() {

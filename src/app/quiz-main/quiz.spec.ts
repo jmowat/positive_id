@@ -224,6 +224,39 @@ describe('Quiz', () => {
 			expect(question.getPossibleAnswers().filter(word => word == "BMP-2").length).toBe(1);
 		});
 	});
+
+	describe('quiz reset', () => {
+		let quiz: Quiz;
+		beforeEach(() => {
+			quiz = new Quiz(FIVE_VEHICLES,{
+												    optionsToShow: 5,
+												    numberOfQuestions: 5,
+												    platforms: ["ground vehicle"],
+												    profiles: ["side", "front", "oblique"],
+												    distances: ["near"],
+												    optics: ["naked eye"],
+												    sides: ["eastern", "western"],
+												    randomizeQuestions: false
+												});
+			for(let i = 0; i < 5; i++) {
+				quiz.markQuestionWrong();
+				quiz.nextQuestion();
+			}
+		});
+
+		it('should remove wrong answers', () => {
+			expect(quiz.getNumWrong()).toEqual(5, 'all questions were wrong');
+			quiz.reset();
+			expect(quiz.getNumWrong()).toEqual(0, 'no questions are wrong');
+
+		});
+
+		it('should start back at question 0', () => {
+			expect(quiz.getCurrentQuestionIndex()).toEqual(4, 'at last question');
+			quiz.reset();
+			expect(quiz.getCurrentQuestionIndex()).toEqual(0,'back at first question');
+		});
+	});
 });
 
 let quizParms: {

@@ -110,5 +110,10 @@ export class Test {
 			}
 		}
 	}
+
+	reset() {
+		this.currentQuestion = 0;
+		this.mistakes = new Set();
+	}
 }
 

@@ -11,7 +11,7 @@ export class StateService {
 	context: Context;
 
 	constructor(private quizService: QuizService, private router:Router) {
-		this.context = new Context();
+		this.reset();
 	}
 
 	getStatus(): string {
@@ -57,5 +57,9 @@ export class StateService {
 
 	getPossibleAnswers(): any[] {
 		return this.quizService.getTest().getQuestion().getPossibleAnswers();
+	}
+
+	reset() {
+		this.context = new Context();
 	}
 }

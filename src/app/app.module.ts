@@ -20,6 +20,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { ModalComponent } from './modal/modal.component';
 import { BrowseFormComponent } from './browse-form/browse-form.component';
 import { QuizComponent } from './quiz-main/quiz/quiz.component';
+import { RedoQuizComponent } from './quiz-main/quiz/redo-quiz.component';
 
 import { QuizService }  from './quiz-main/quiz/quiz.service';
 import { StateService }  from './quiz-main/state/state.service';
@@ -47,6 +48,7 @@ import { ScoreComponent } from './quiz-main/score/score.component';
     BrowseFormComponent,
     NameFilterPipe,
     QuizComponent,
+    RedoQuizComponent,
     ScoreComponent
   ],
   imports: [
