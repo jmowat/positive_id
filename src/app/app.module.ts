@@ -30,6 +30,7 @@ import { NameFilterPipe } from './name-filter.pipe';
 import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from './quiz-main/test-parms';
 import { ScoreComponent } from './quiz-main/score/score.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
+import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { FocusDirective } from './quiz-main/quiz/focus.directive';
     QuizComponent,
     RedoQuizComponent,
     ScoreComponent,
-    FocusDirective
+    FocusDirective,
+    QuizBuilderComponent
   ],
   imports: [
     BrowserModule,

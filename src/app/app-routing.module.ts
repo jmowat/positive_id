@@ -9,6 +9,7 @@ import { BrowseFormComponent } 		from './browse-form/browse-form.component';
 import { QuizComponent }     from './quiz-main/quiz/quiz.component';
 import { RedoQuizComponent }     from './quiz-main/quiz/redo-quiz.component';
 import { ScoreComponent }     from './quiz-main/score/score.component';
+import { QuizBuilderComponent }     from './quiz-main/builder/quiz-builder/quiz-builder.component';
 import { DEFAULT_GROUND_QUIZ,
          THERMALS_GROUND_QUIZ,
          FAR_GROUND_QUIZ,
@@ -31,6 +32,8 @@ const routes: Routes = [
   { path: 'terms', component: TermsComponent },
   { path: 'quiz', component: QuizComponent,  data: DEFAULT_GROUND_QUIZ},
   { path: 'drill', component: QuizComponent, data: WW2_SOVIET_AIRCRAFT_DRILL},
+  { path: 'quiz-builder', component: QuizBuilderComponent,
+  { path: 'drill-builder', component: QuizBuilderComponent,
   { path: 'retry', component: RedoQuizComponent},
 
   { path: 'q-thermals-ground', component: QuizComponent, data: THERMALS_GROUND_QUIZ},
