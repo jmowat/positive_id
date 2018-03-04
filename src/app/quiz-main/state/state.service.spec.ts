@@ -175,6 +175,8 @@ describe('StateService', () => {
 			expect(service.getTest().getWrongQuestions()[0].getName()).toBe("T-90");
 			expect(service.getTest().getWrongQuestions()[1].getName()).toBe("T-80");
 		}));
+
+		
 	});
 });
 

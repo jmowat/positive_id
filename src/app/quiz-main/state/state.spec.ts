@@ -1,12 +1,12 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { State } from './state';
+import { State, BaseState, InvalidState, SuccessNextState } from './state';
 import { Context } from './context';
 import { Router } from '@angular/router';
 
 describe('State', () => {
 	let context:Context;
-
+	let quiz;
 
 	const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
 
@@ -23,6 +23,7 @@ describe('State', () => {
 
 
 	beforeEach(() => {
+		quiz = new MockQuiz();
 		context = new Context();
 	});
 
@@ -34,6 +35,37 @@ describe('State', () => {
 		expect(context).toBeTruthy();
  	});
 
+ 	it('should show success if next clicked with blank, number used to select right answer, and enter used to continue', inject([Router], (router: Router) => {
+		let startingState = new BaseState();
+		context.goNext(undefined, quiz, router);
+		expect(context.current instanceof InvalidState).toBeTruthy();
+		context.goNext("any", quiz, router);
+		expect(context.current instanceof SuccessNextState).toBeTruthy();
+		context.goNext(undefined, quiz, router);
+		expect(context.current instanceof BaseState).toBeTruthy();
+	}));
+
  	// Since state requires an active service, most of the testing will be done in StateService
 });
 
+class MockQuiz {
+	constructor() {}
+	getQuestion() {
+		return new MockQuizQuestion();
+	}
+
+	onLastQuestion() {
+		return false;
+	}
+
+	nextQuestion() {
+		return this;
+	}
+}
+
+class MockQuizQuestion {
+	constructor() {}
+	getName() {
+		return "any";
+	}
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { QuizService }  from '../quiz/quiz.service';
 import { QuizQuestion }  from '../quiz-question';
 import { StateService }  from '../state/state.service';
@@ -6,6 +6,7 @@ import { Test }  from '../test';
 import { QuizParms } from '../quiz-parms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HostListener } from '@angular/core';
+import { BrowseModel } from '../../browse-model'
 
 @Component({
   selector: 'app-quiz',
@@ -13,14 +14,12 @@ import { HostListener } from '@angular/core';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
-	//userSelection: string;
+	xxx: any;
 	buttonClasses: any;
 	statusClasses: any;
-	quizParms: QuizParms;
-	key: string;
 	selectedIndex: number;
-	value: number;
 	radioValues: {id: number, name:string}[] = [];
+	model: BrowseModel = new BrowseModel();
 
   	constructor(public service: StateService, private router:Router, private route:ActivatedRoute) {
 
@@ -28,14 +27,12 @@ export class QuizComponent implements OnInit {
 
 	@HostListener('document:keypress', ['$event'])
   		handleKeyboardEvent(event: KeyboardEvent) {
-    	this.key = event.key;
-    	//console.log(this.key);
-    	if(this.key == "Enter") {
-    		//console.log("do enter stuff");
+    	let key = event.key;
+    	if(key == "Enter") {
     		this.next();
-    	} else if(+this.key > 0 && +this.key <= 5  ) {
-    		//console.log("pressed ", this.key);
-    		this.selectedIndex = +this.key;
+    	} else if(+key > 0 && +key <= 5  ) {
+    		this.selectedIndex = +key;
+    		this.forceFocus();
     	}
   	}
 
@@ -46,7 +43,6 @@ export class QuizComponent implements OnInit {
 	}
 
 	getPossibleAnswers(): any[] {
-
 		// Load this into a friendly radio button structure with an index for ID
 		let possibleAnswers:string[] = this.service.getTest().getQuestion().getPossibleAnswers();
 		for(let i = 1; i < possibleAnswers.length + 1; i++) {
@@ -66,9 +62,8 @@ export class QuizComponent implements OnInit {
 	}
 
 	next() {
-		// fetch the text value of the ID value that is selected from the radio button
 		//this.service.acceptAnswer(this.userSelection);
-		let answerValue = "";
+		let answerValue;
 		if(this.selectedIndex) {
 			answerValue = this.radioValues[this.selectedIndex - 1].name;
 		}
@@ -76,7 +71,6 @@ export class QuizComponent implements OnInit {
 		this.setButtonClasses();
 		this.setStatusClasses();
 		// clear out previous user selection
-		//this.userSelection = "";
 		this.selectedIndex = undefined;
 	};
 
@@ -98,8 +92,12 @@ export class QuizComponent implements OnInit {
 	}
 
 	 onSelectionChange(entry) {
-        console.log("entry",entry);
         this.selectedIndex = entry.id;
-        console.log("selectedIndex",this.selectedIndex);
     }
+
+    public myFocusTriggeringEventEmitter = new EventEmitter<boolean>();
+
+	forceFocus(){
+	   this.myFocusTriggeringEventEmitter.emit(true);
+	}
 }

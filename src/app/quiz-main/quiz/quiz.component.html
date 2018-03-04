@@ -16,16 +16,19 @@
           <div class="container-fluid no-padding">
             <div class="text-center">
               <img class="img-fluid rounded " src="assets/{{service.getTest().getQuestion().getRandomImagePath()}}">
-              <ol class="choices">
-                <div class="form-check form-check-inline" *ngFor="let possibleAnswer of getPossibleAnswers()">
-                  <li>
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="choice" [value]="possibleAnswer.id" [disabled]="service.isSelectionDisabled()" (change)="onSelectionChange(possibleAnswer)" [checked]="possibleAnswer.id === selectedIndex">
-                      {{possibleAnswer.name}}
-                  </label>
-                  </li>
-                </div>
-              </ol>
+              <form #f="ngForm" >
+                <ol class="choices">
+                  <div class="form-check form-check-inline" *ngFor="let possibleAnswer of getPossibleAnswers()">
+                    <li>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="choice" [value]="possibleAnswer.id" [disabled]="service.isSelectionDisabled()" (change)="onSelectionChange(possibleAnswer)" [checked]="possibleAnswer.id === selectedIndex" [focus]="myFocusTriggeringEventEmitter">
+                      
+                        {{possibleAnswer.name}}
+                    </label>
+                    </li>
+                  </div>
+                </ol>
+              </form>
             </div>
           </div>
         </section> <!-- end .question -->

@@ -18,6 +18,7 @@ import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
 import { Vehicle } from '../../vehicle';
 import { QuizParms }  from '../quiz-parms';
 import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from '../test-parms';
+import { FocusDirective } from './focus.directive';
 
 describe('QuizComponent', () => {
   let component: QuizComponent;
@@ -30,7 +31,7 @@ describe('QuizComponent', () => {
     mockActivatedRoute.snapshot.data = DEFAULT_GROUND_QUIZ;
 
     TestBed.configureTestingModule({
-      declarations: [ QuizComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent ],
+      declarations: [ QuizComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, FocusDirective ],
       providers: [QuizService, StateService,
       {
           provide: Router,
@@ -63,6 +64,10 @@ describe('QuizComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  xit('should give the radio box focus when user keys a number for their selection',() => {
+    // Nasty bug that results in double-entries on enter keypress after user selects a value with keyboard
+  })
 });
 
 class MockVehicleService {
