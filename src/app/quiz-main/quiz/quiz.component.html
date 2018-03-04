@@ -20,7 +20,8 @@
                 <div class="form-check form-check-inline" *ngFor="let possibleAnswer of getPossibleAnswers()">
                   <li>
                   <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="choice" value="{{possibleAnswer}}" [disabled]="service.isSelectionDisabled()" [(ngModel)]="userSelection">{{possibleAnswer}}
+                    <input class="form-check-input" type="radio" name="choice" [value]="possibleAnswer.id" [disabled]="service.isSelectionDisabled()" (change)="onSelectionChange(possibleAnswer)" [checked]="possibleAnswer.id === selectedIndex">
+                      {{possibleAnswer.name}}
                   </label>
                   </li>
                 </div>
