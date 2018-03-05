@@ -4,9 +4,7 @@ import { QuizParms } from '../quiz-parms';
 @Injectable()
 export class TestParmsService {
     testParms: QuizParms;
-    constructor() {
-      console.log('Created TestParmsService');
-    }
+    constructor() {}
 
     setTestParms(parms: QuizParms) {
       this.testParms = parms;

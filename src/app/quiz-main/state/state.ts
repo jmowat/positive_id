@@ -78,7 +78,6 @@ export class BaseState extends State {
 
 export class SuccessNextState extends BaseState {
 	constructor(userAnswer) {
-		//console.log("SuccessNextState constructor",userAnswer);
 		super();
 		this.actionText = "Next";
 		this.statusText = "Correct, that is " + GrammarHelper.getIndefiniteArticle(userAnswer) +
@@ -90,7 +89,6 @@ export class SuccessNextState extends BaseState {
 	}
 
 	goNext(context, userAnswer, quiz) {
-		console.log("SuccessNextState goNext()",userAnswer);
 		quiz.nextQuestion();
 		context.setState(new BaseState());
 	}
@@ -109,18 +107,12 @@ export class SuccessFinishState extends BaseState {
 	}
 
 	goNext(context, userAnswer, quiz, router: Router) {
-		//console.log(context.quizStateDetails);
-		// this.$state.go('score', {
-		// 	quizStateDetails: context.quizStateDetails
-		// });
-		//this.$location.path('score');
 		router.navigateByUrl("/score");
 	}
 }
 
 export class WrongState extends BaseState {
 	constructor(userAnswer, quiz) {
-		//console.log("WrongState constructor",userAnswer);
 		super();
 		this.actionText = "Next";
 		this.statusText = ("That is not " + GrammarHelper.getIndefiniteArticle(userAnswer) +
@@ -135,7 +127,6 @@ export class WrongState extends BaseState {
 
 export class InvalidState extends BaseState {
 	constructor() {
-		//console.log("InvalidState constructor");
 		super();
 		this.actionText = "Next";
 		this.statusText = "Please choose an answer from the options above.";

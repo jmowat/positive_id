@@ -12,14 +12,12 @@ import { Router } from '@angular/router';
 export class MainComponent implements OnInit {
 
   constructor(public testParmsService: TestParmsService, private router:Router) {
-    console.log('Is testParms injected?', testParmsService);
   }
 
   ngOnInit() {
   }
 
   generateTest(parms: QuizParms) {
-    console.log('Route to test with', parms);
     this.testParmsService.setTestParms(parms);
     this.router.navigateByUrl('/quiz');
   }

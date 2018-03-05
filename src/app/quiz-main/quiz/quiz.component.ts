@@ -35,10 +35,6 @@ export class QuizComponent implements OnInit {
   	}
 
 	ngOnInit() {
-		//console.log('this.route.snapshot.data', this.route.snapshot.data);
-		//console.log('this.route.snapshot', this.route.snapshot);
-    	console.log('TestParmsService in QuizComponent', this.parms.getParms());
-		//this.service.createNewTest(this.route.snapshot.data);
 		this.service.createNewTest(this.parms.getParms());
 		this.setButtonClasses();
   		this.setStatusClasses();
