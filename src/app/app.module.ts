@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,15 +22,16 @@ import { BrowseFormComponent } from './browse-form/browse-form.component';
 import { QuizComponent } from './quiz-main/quiz/quiz.component';
 import { RedoQuizComponent } from './quiz-main/quiz/redo-quiz.component';
 
-import { QuizService }  from './quiz-main/quiz/quiz.service';
-import { StateService }  from './quiz-main/state/state.service';
-import { VehicleService }  from './vehicle.service';
+import { QuizService } from './quiz-main/quiz/quiz.service';
+import { StateService } from './quiz-main/state/state.service';
+import { VehicleService } from './vehicle.service';
 import { NameFilterPipe } from './name-filter.pipe';
 
 import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from './quiz-main/test-parms';
 import { ScoreComponent } from './quiz-main/score/score.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
 import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
+import { TestParmsService } from './quiz-main/quiz/test-parms.service';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-buil
     VehicleService,
     QuizService,
     StateService,
+    TestParmsService,
     {
       provide: TEST_PARMS, useValue: DEFAULT_GROUND_QUIZ
     }

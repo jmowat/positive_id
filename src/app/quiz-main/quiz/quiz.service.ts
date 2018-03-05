@@ -10,7 +10,7 @@ import { QuizParms } from '../quiz-parms';
 
 @Injectable()
 export class QuizService {
-	t:Test;
+	t: Test;
   vehicles: Observable<Vehicle[]>;
 
   constructor(private vehicleService: VehicleService) {
@@ -18,7 +18,7 @@ export class QuizService {
   }
 
   getTest(): Test {
-    //console.log("getTest being called and test is", this.t);
+    // console.log("getTest being called and test is", this.t);
     return this.t;
   }
 
