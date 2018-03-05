@@ -30,14 +30,14 @@ export class TestParmsService {
 
     THERMALS_GROUND_QUIZ() {
         return {
-        optionsToShow: 5,
-        numberOfQuestions: 20,
-        platforms: ['ground vehicle'],
-        profiles: ['side', 'front', 'oblique'],
-        distances: ['near'],
-        optics: ['thermal'],
-        sides: ['eastern', 'western'],
-        randomizeQuestions: true
+            optionsToShow: 5,
+            numberOfQuestions: 20,
+            platforms: ['ground vehicle'],
+            profiles: ['side', 'front', 'oblique'],
+            distances: ['near'],
+            optics: ['thermal'],
+            sides: ['eastern', 'western'],
+            randomizeQuestions: true
         }
     }
 
