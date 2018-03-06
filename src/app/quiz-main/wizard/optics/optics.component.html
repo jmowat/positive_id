@@ -1,0 +1,30 @@
+<div class="site">
+  <div class="page">
+
+    <app-header-narrow></app-header-narrow>
+
+    <div class="container">
+      <section id="quiz-builder">
+        <h2>Quiz Builder</h2>
+        <p>You may now choose any available optics. Often, this will be limited to Naked Eye, but some platforms can be viewed through specialized optics.</p>
+        <form name="quizBuilderForm" class="form-horizontal">
+          <div class="form-group">
+            <label for="opticsFilter">Optics</label>
+            <select class="form-control" name="opticsFilter" id="opticsFilter" ng-model="$ctrl.optics.selectedOption" ng-options="optics.name for optics in $ctrl.optics.availableOptions track by optics.id" ng-change="$ctrl.filterAvailablePerspectives()">
+					</select>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
+            <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+          </div>
+        </form>
+      </section>
+      <!-- end .quiz-builder -->
+    </div>
+
+    <app-footer></app-footer>
+
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->

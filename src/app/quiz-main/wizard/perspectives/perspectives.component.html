@@ -1,0 +1,30 @@
+<div class="site">
+  <div class="page">
+
+    <app-header-narrow></app-header-narrow>
+
+    <div class="container">
+      <section id="quiz-builder">
+        <h2>Quiz Builder</h2>
+        <p>Which perspectives would you like to view from?</p>
+        <form name="quizBuilderForm" class="form-horizontal">
+          <div class="form-group">
+            <label for="multipleSelect">Perspectives</label>
+            <select class="form-control" name="perspectiveFilter" id="perspectiveFilter" ng-model="$ctrl.perspectives.selectedOption" multiple ng-options="perspective.name for perspective in $ctrl.perspectives.availableOptions track by perspective.id">
+					</select>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
+            <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+          </div>
+        </form>
+      </section>
+      <!-- end .quiz-builder -->
+    </div>
+
+    <app-footer></app-footer>
+
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->
