@@ -25,21 +25,21 @@ describe('QuizComponent', () => {
   beforeEach(async(() => {
 
     TestBed.configureTestingModule({
-      declarations: [ QuizComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, FocusDirective ],
+      declarations: [QuizComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, FocusDirective],
       providers: [QuizService, StateService, TestParmsService,
-      {
+        {
           provide: Router,
           useValue: routerSpy
-      },
-      {
-        provide: VehicleService,
-        useClass: MockVehicleService
-      }
+        },
+        {
+          provide: VehicleService,
+          useClass: MockVehicleService
+        }
       ],
-      imports: [ NgbModule.forRoot() ],
+      imports: [NgbModule.forRoot()],
 
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -58,7 +58,7 @@ describe('QuizComponent', () => {
 });
 
 class MockVehicleService {
-  constructor() {}
+  constructor() { }
   getVehicles(): Observable<Vehicle[]> {
     return of(FIVE_VEHICLES);
   }

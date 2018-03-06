@@ -14,15 +14,15 @@ describe('QuizBuilderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuizBuilderComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent ],
-       providers: [TestParmsService, 
-      {
-        provide: Router,
-        useValue: routerSpy
-      }
-        ]
+      declarations: [QuizBuilderComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent],
+      providers: [TestParmsService,
+        {
+          provide: Router,
+          useValue: routerSpy
+        }
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -4,38 +4,43 @@
     <app-header-narrow></app-header-narrow>
 
     <section class="score" *ngIf="service.getTest()">
-		<div class="container">
-			<blockquote class="blockquote">Congratulations on completing a Positive ID quiz!</blockquote>
-			<h2>Score</h2>
-			<p>You scored {{service.getTest().getNumRight()}} out of {{service.getTest().getNumberOfQuestions()}} ({{(service.getTest().getNumRight() / service.getTest().getNumberOfQuestions()) | percent }})</p>
-			<div *ngIf="service.getTest().getWrongQuestions().length > 0">
-				<h3>Areas to Review</h3>
-				<div class="card-deck">
-                  <div class="card my-3" *ngFor="let option of service.getTest().getWrongQuestions()">
-                    <img src="assets/{{option.getImagePath()}}" class="card-img-top">
-                    <div class="card-body text-center">
-                      <h5 class="card-title">{{option.getName()}}</h5>
-                    </div>
-                  </div>
-              	</div> <!-- end .card-deck -->
-			</div>
+      <div class="container">
+        <blockquote class="blockquote">Congratulations on completing a Positive ID quiz!</blockquote>
+        <h2>Score</h2>
+        <p>You scored {{service.getTest().getNumRight()}} out of {{service.getTest().getNumberOfQuestions()}} ({{(service.getTest().getNumRight() / service.getTest().getNumberOfQuestions()) | percent }})</p>
+        <div *ngIf="service.getTest().getWrongQuestions().length > 0">
+          <h3>Areas to Review</h3>
+          <div class="card-deck">
+            <div class="card my-3" *ngFor="let option of service.getTest().getWrongQuestions()">
+              <img src="assets/{{option.getImagePath()}}" class="card-img-top">
+              <div class="card-body text-center">
+                <h5 class="card-title">{{option.getName()}}</h5>
+              </div>
+            </div>
+          </div>
+          <!-- end .card-deck -->
+        </div>
 
-			<div class="container-fluid" id="status-block" ng-class="{'alert-danger':$ctrl.wrong, 'alert-success':$ctrl.right}">
-				<div>
-					<div id="status" ng-bind-html="$ctrl.message" ></div>
-				</div>
-				<div>
-					<button type="button" class="btn btn-lg btn-primary float-left" routerLink="/retry">Try Again</button>
-					<button type="button" class="btn btn-lg btn-info float-right" routerLink="/home">Continue</button>
-				</div>
-			</div>
-			<br>
+        <div class="container-fluid" id="status-block" ng-class="{'alert-danger':$ctrl.wrong, 'alert-success':$ctrl.right}">
+          <div>
+            <div id="status" ng-bind-html="$ctrl.message"></div>
+          </div>
+          <div>
+            <button type="button" class="btn btn-lg btn-primary float-left" routerLink="/retry">Try Again</button>
+            <button type="button" class="btn btn-lg btn-info float-right" routerLink="/home">Continue</button>
+          </div>
+        </div>
+        <br>
 
-		</div> <!-- end .container -->
+      </div>
+      <!-- end .container -->
 
-    </section> <!-- end .score -->
+    </section>
+    <!-- end .score -->
 
     <app-footer></app-footer>
 
-  </div> <!-- /end .page -->
-</div> <!-- /end .site -->
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->

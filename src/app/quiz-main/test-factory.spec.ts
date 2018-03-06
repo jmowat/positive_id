@@ -4,5 +4,4 @@ describe('TestFactory', () => {
   it('verify static class exists', () => {
     expect(TestFactory).toBeTruthy();
   });
-
 });

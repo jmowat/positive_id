@@ -9,25 +9,24 @@ import { QuizParms } from '../../quiz-parms';
   styleUrls: ['./quiz-builder.component.css']
 })
 export class QuizBuilderComponent implements OnInit {
-	customParms: QuizParms;
-	numberOfQuestions: number;
+  customParms: QuizParms;
+  numberOfQuestions: number;
 
-  	constructor(public parms: TestParmsService, private router:Router) { }
+  constructor(public parms: TestParmsService, private router: Router) { }
 
-  	ngOnInit() {
+  ngOnInit() {
 
-  	}
+  }
 
+  build() {
+    // assemble real parms and set TestParmsService and then show quiz in QuizComponent
+    this.marshal();
+    this.parms.setTestParms(this.parms.THERMALS_GROUND_QUIZ());
+    this.router.navigateByUrl('/quiz');
+  }
 
-  	build() {
-	  	// assemble real parms and set TestParmsService and then show quiz in QuizComponent
-	  	this.marshal();
-	  	this.parms.setTestParms(this.parms.THERMALS_GROUND_QUIZ());
-		this.router.navigateByUrl('/quiz');
-  	}
-
-  	private marshal() {
-  	// {
+  private marshal() {
+    // {
     // 	optionsToShow: 5,
     //  numberOfQuestions: 20,
     //  platforms: ['ground vehicle'],
@@ -38,17 +37,17 @@ export class QuizBuilderComponent implements OnInit {
     //  randomizeQuestions: true
     // }
 
-  		this.customParms.distances = [];
-  		this.customParms.eras = [];
-  		this.customParms.numberOfQuestions = this.numberOfQuestions;
-  		this.customParms.optics = [];
+    this.customParms.distances = [];
+    this.customParms.eras = [];
+    this.customParms.numberOfQuestions = this.numberOfQuestions;
+    this.customParms.optics = [];
 
-  		//this.customParms.originalValues = [];
-  		this.customParms.platforms = [];
-  		this.customParms.profiles = [];
-  		this.customParms.sides = [];
+    // this.customParms.originalValues = [];
+    this.customParms.platforms = [];
+    this.customParms.profiles = [];
+    this.customParms.sides = [];
 
-  		this.customParms.randomizeQuestions = true;
-  		this.customParms.optionsToShow = 5;
-  	}
+    this.customParms.randomizeQuestions = true;
+    this.customParms.optionsToShow = 5;
+  }
 }

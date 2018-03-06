@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DebugElement } from '@angular/core';
-import { By }           from '@angular/platform-browser';
+import { By } from '@angular/platform-browser';
 import { fakeAsync } from '@angular/core/testing';
 import { tick } from '@angular/core/testing';
 import { flush } from '@angular/core/testing';
@@ -15,10 +15,10 @@ import { BrowseComponent } from '../browse/browse.component';
 import { PaginationComponent } from '../pagination/pagination.component';
 
 import { NameFilterPipe } from '../name-filter.pipe';
-import { VehicleService }  from '../vehicle.service';
+import { VehicleService } from '../vehicle.service';
 
-import { Observable } from 'rxjs/Rx';
-import { Vehicle }  from '../vehicle';
+import { Observable } from 'rxjs/Observable';
+import { Vehicle } from '../vehicle';
 
 describe('BrowseFormComponent', () => {
   let component: BrowseFormComponent;
@@ -40,12 +40,12 @@ describe('BrowseFormComponent', () => {
     };
 
     TestBed.configureTestingModule({
-      declarations: [ BrowseFormComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, NameFilterPipe,
-      BrowseComponent, PaginationComponent ],
-      imports: [ FormsModule, NgbModule.forRoot() ],
-      providers: [{provide: VehicleService, useValue: vehicleServiceStub }]
+      declarations: [BrowseFormComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, NameFilterPipe,
+        BrowseComponent, PaginationComponent],
+      imports: [FormsModule, NgbModule.forRoot()],
+      providers: [{ provide: VehicleService, useValue: vehicleServiceStub }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -73,15 +73,15 @@ describe('BrowseFormComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should register ngModel field change',fakeAsync(()=>{
-    let element = fixture.debugElement.query(By.css('input#nameFilter')).nativeElement;
+  it('should register ngModel field change', fakeAsync(() => {
+    const element = fixture.debugElement.query(By.css('input#nameFilter')).nativeElement;
     element.value = 'test';
     element.dispatchEvent(new Event('input'));
     expect(component.nameFilter).toEqual('test');
   }));
 
-  it('should reset the name field when the reset button is pressed',fakeAsync(()=>{
-    let element = fixture.debugElement.query(By.css('input#nameFilter')).nativeElement;
+  it('should reset the name field when the reset button is pressed', fakeAsync(() => {
+    const element = fixture.debugElement.query(By.css('input#nameFilter')).nativeElement;
     element.value = 'test';
     element.dispatchEvent(new Event('input'));
     expect(component.nameFilter).toEqual('test');

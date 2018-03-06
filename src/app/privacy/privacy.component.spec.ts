@@ -11,9 +11,9 @@ describe('PrivacyComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PrivacyComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent ]
+      declarations: [PrivacyComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

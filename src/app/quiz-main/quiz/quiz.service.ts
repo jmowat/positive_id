@@ -10,7 +10,7 @@ import { QuizParms } from '../quiz-parms';
 
 @Injectable()
 export class QuizService {
-	t: Test;
+  t: Test;
   vehicles: Observable<Vehicle[]>;
 
   constructor(private vehicleService: VehicleService) {

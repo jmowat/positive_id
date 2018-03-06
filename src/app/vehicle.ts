@@ -7,12 +7,12 @@ export class Vehicle {
   era: string[];
   image_dir: string;
   images: [{
-  	img_lg: string,
-  	img_sm: string,
-  	perspective: string,
-  	optics: string,
-  	classification: string,
-  	distance: string,
-  	source: string
+    img_lg: string,
+    img_sm: string,
+    perspective: string,
+    optics: string,
+    classification: string,
+    distance: string,
+    source: string
   }];
 }

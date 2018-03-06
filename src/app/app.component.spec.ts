@@ -24,6 +24,14 @@ import { RedoQuizComponent }     from './quiz-main/quiz/redo-quiz.component';
 import { QuizBuilderComponent }     from './quiz-main/builder/quiz-builder/quiz-builder.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
 
+import { PlatformComponent }     from './quiz-main/wizard/platform/platform.component';
+import { EraComponent } from './quiz-main/wizard/era/era.component';
+import { SideComponent } from './quiz-main/wizard/side/side.component';
+import { DistanceComponent } from './quiz-main/wizard/distance/distance.component';
+import { OpticsComponent } from './quiz-main/wizard/optics/optics.component';
+import { PerspectivesComponent } from './quiz-main/wizard/perspectives/perspectives.component';
+import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
+
 import { NameFilterPipe } from './name-filter.pipe';
 import { Vehicle }  from './vehicle';
 
@@ -33,7 +41,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent, AboutComponent, BrowseFormComponent, ContactComponent, MainComponent, PrivacyComponent, TermsComponent,
         HeaderNarrowComponent, FooterComponent, BrowseComponent, HeaderBannerComponent, TopNavComponent, PaginationComponent,
-        NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective, QuizBuilderComponent
+        NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective, QuizBuilderComponent,
+        PlatformComponent, EraComponent, SideComponent, DistanceComponent, OpticsComponent, PerspectivesComponent, SummaryComponent
       ],
       imports: [ AppRoutingModule, FormsModule, NgbModule.forRoot() ],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }]

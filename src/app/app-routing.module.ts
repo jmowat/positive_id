@@ -11,6 +11,14 @@ import { RedoQuizComponent }     from './quiz-main/quiz/redo-quiz.component';
 import { ScoreComponent }     from './quiz-main/score/score.component';
 import { QuizBuilderComponent }     from './quiz-main/builder/quiz-builder/quiz-builder.component';
 
+import { PlatformComponent }     from './quiz-main/wizard/platform/platform.component';
+import { EraComponent } from './quiz-main/wizard/era/era.component';
+import { SideComponent } from './quiz-main/wizard/side/side.component';
+import { DistanceComponent } from './quiz-main/wizard/distance/distance.component';
+import { OpticsComponent } from './quiz-main/wizard/optics/optics.component';
+import { PerspectivesComponent } from './quiz-main/wizard/perspectives/perspectives.component';
+import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
+
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'browse', component: BrowseFormComponent },
@@ -21,9 +29,18 @@ const routes: Routes = [
   { path: 'quiz', component: QuizComponent },
   { path: 'custom-quiz', component: QuizComponent },
   { path: 'drill', component: QuizComponent },
-  { path: 'quiz-builder', component: QuizBuilderComponent },
+  { path: 'quiz-builder', component: PlatformComponent },
   { path: 'drill-builder', component: QuizBuilderComponent },
   { path: 'retry', component: RedoQuizComponent },
+
+
+  { path: 'platform', component: PlatformComponent },
+  { path: 'era', component: EraComponent },
+  { path: 'side', component: SideComponent },
+  { path: 'distance', component: DistanceComponent },
+  { path: 'optics', component: OpticsComponent },
+  { path: 'perspectives', component: PerspectivesComponent },
+  { path: 'summary', component: SummaryComponent },
 
   { path: 'score', component: ScoreComponent },
   { path: '', redirectTo: '/main', pathMatch: 'full' },

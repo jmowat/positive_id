@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
-  constructor(public testParmsService: TestParmsService, private router:Router) {
+  constructor(public testParmsService: TestParmsService, private router: Router) {
   }
 
   ngOnInit() {

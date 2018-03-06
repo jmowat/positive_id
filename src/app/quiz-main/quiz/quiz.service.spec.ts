@@ -14,54 +14,54 @@ describe('QuizService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [QuizService,
-      {
-      	provide: VehicleService,
-      	useClass: MockVehicleService
-      },
-      {
-        provide: TEST_PARMS,
-        useValue: DEFAULT_GROUND_QUIZ
-      }]
+        {
+          provide: VehicleService,
+          useClass: MockVehicleService
+        },
+        {
+          provide: TEST_PARMS,
+          useValue: DEFAULT_GROUND_QUIZ
+        }]
     });
   });
 
-	it('should be created', inject([QuizService], (service: QuizService) => {
-   	expect(service).toBeTruthy();
+  it('should be created', inject([QuizService], (service: QuizService) => {
+    expect(service).toBeTruthy();
   }));
 
   it('should not create a quiz by default', inject([QuizService], (service: QuizService) => {
-	 	let t:Test;
+    let t: Test;
     t = service.getTest();
-	 	expect(t).toBeFalsy();
-	 	expect(t instanceof Quiz).toBeFalsy();
-	  	expect(t instanceof Drill).toBeFalsy();
+    expect(t).toBeFalsy();
+    expect(t instanceof Quiz).toBeFalsy();
+    expect(t instanceof Drill).toBeFalsy();
   }));
 
   describe('Quiz test in QuizService', () => {
-  	let quiz:Test;
-  	beforeEach(inject([QuizService], (service: QuizService) => {
+    let quiz: Test;
+    beforeEach(inject([QuizService], (service: QuizService) => {
       service.createNewTest(DEFAULT_GROUND_QUIZ);
       quiz = service.getTest();
-  	}));
+    }));
 
-	  it('should have 5 quiz questions when passed enough vehicles and numberOfQuestions set to 5', ()=>{
-	  	expect(quiz.questions.length).toEqual(5);
-	  	expect(quiz.getNumberOfQuestions()).toEqual(5);
-	  });
+    it('should have 5 quiz questions when passed enough vehicles and numberOfQuestions set to 5', () => {
+      expect(quiz.questions.length).toEqual(5);
+      expect(quiz.getNumberOfQuestions()).toEqual(5);
+    });
 
-	  it('should start on question 0',  () => {
-			expect(quiz.getCurrentQuestionIndex()).toEqual(0);
-	  });
+    it('should start on question 0', () => {
+      expect(quiz.getCurrentQuestionIndex()).toEqual(0);
+    });
 
-		it('should have 5 possible answers as specified by optionsToShow',  () => {
-	  		expect(quiz.getQuestion().getPossibleAnswers().length).toBe(5);
-		});
-	});
+    it('should have 5 possible answers as specified by optionsToShow', () => {
+      expect(quiz.getQuestion().getPossibleAnswers().length).toBe(5);
+    });
+  });
 });
 
 class MockVehicleService {
-	constructor() {}
-	getVehicles(): Observable<Vehicle[]> {
-		return of(FIVE_VEHICLES);
-	}
+  constructor() { }
+  getVehicles(): Observable<Vehicle[]> {
+    return of(FIVE_VEHICLES);
+  }
 }

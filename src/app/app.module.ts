@@ -32,6 +32,13 @@ import { ScoreComponent } from './quiz-main/score/score.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
 import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
 import { TestParmsService } from './quiz-main/quiz/test-parms.service';
+import { PlatformComponent } from './quiz-main/wizard/platform/platform.component';
+import { EraComponent } from './quiz-main/wizard/era/era.component';
+import { SideComponent } from './quiz-main/wizard/side/side.component';
+import { DistanceComponent } from './quiz-main/wizard/distance/distance.component';
+import { OpticsComponent } from './quiz-main/wizard/optics/optics.component';
+import { PerspectivesComponent } from './quiz-main/wizard/perspectives/perspectives.component';
+import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +61,14 @@ import { TestParmsService } from './quiz-main/quiz/test-parms.service';
     RedoQuizComponent,
     ScoreComponent,
     FocusDirective,
-    QuizBuilderComponent
+    QuizBuilderComponent,
+    PlatformComponent,
+    EraComponent,
+    SideComponent,
+    DistanceComponent,
+    OpticsComponent,
+    PerspectivesComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,

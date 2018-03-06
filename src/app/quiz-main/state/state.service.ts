@@ -8,58 +8,58 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class StateService {
-	context: Context;
+  context: Context;
 
-	constructor(private quizService: QuizService, private router:Router) {
-		this.reset();
-	}
+  constructor(private quizService: QuizService, private router: Router) {
+    this.reset();
+  }
 
-	getStatus(): string {
-		return this.context.current.getStatus();
-	}
+  getStatus(): string {
+    return this.context.current.getStatus();
+  }
 
-	getStatusMessage(): string {
-		return this.context.current.getStatusText();
-	}
+  getStatusMessage(): string {
+    return this.context.current.getStatusText();
+  }
 
-	isSelectionDisabled(): boolean {
-		return this.context.current.getDisableSelection();
-	}
+  isSelectionDisabled(): boolean {
+    return this.context.current.getDisableSelection();
+  }
 
-	getActionText(): string {
-		return this.context.current.getActionText();
-	}
+  getActionText(): string {
+    return this.context.current.getActionText();
+  }
 
-	acceptAnswer(answer:string) {
-		this.context.goNext(answer, this.getTest(), this.router);
-	}
+  acceptAnswer(answer: string) {
+    this.context.goNext(answer, this.getTest(), this.router);
+  }
 
-	getUserSelection(): string {
-		return this.context.current.getUserAnswer();
-	}
+  getUserSelection(): string {
+    return this.context.current.getUserAnswer();
+  }
 
-	getTest(): Test {
-		return this.quizService.getTest();
-	}
+  getTest(): Test {
+    return this.quizService.getTest();
+  }
 
-	createNewTest(quizParms: any) {
-		this.quizService.createNewTest(quizParms);
-		this.context = new Context();
-	}
+  createNewTest(quizParms: any) {
+    this.quizService.createNewTest(quizParms);
+    this.context = new Context();
+  }
 
-	nextQuestion() {
-		this.quizService.getTest().nextQuestion();
-	}
+  nextQuestion() {
+    this.quizService.getTest().nextQuestion();
+  }
 
-	previousQuestion() {
-		this.quizService.getTest().previousQuestion();
-	}
+  previousQuestion() {
+    this.quizService.getTest().previousQuestion();
+  }
 
-	getPossibleAnswers(): any[] {
-		return this.quizService.getTest().getQuestion().getPossibleAnswers();
-	}
+  getPossibleAnswers(): any[] {
+    return this.quizService.getTest().getQuestion().getPossibleAnswers();
+  }
 
-	reset() {
-		this.context = new Context();
-	}
+  reset() {
+    this.context = new Context();
+  }
 }

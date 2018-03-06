@@ -3,13 +3,14 @@ import { Directive, Input, EventEmitter, ElementRef, Renderer, Inject } from '@a
 import { TestBed, inject } from '@angular/core/testing';
 
 describe('FocusDirective', () => {
-	const elementRefSpy = jasmine.createSpyObj('ElementRef', ['nativeElement']);
-	beforeEach(() => {
+  const elementRefSpy = jasmine.createSpyObj('ElementRef', ['nativeElement']);
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ Renderer,
-      	{	provide: ElementRef,
-      		useValue: elementRefSpy
-      	}
+      providers: [Renderer,
+        {
+          provide: ElementRef,
+          useValue: elementRefSpy
+        }
       ]
     });
   });

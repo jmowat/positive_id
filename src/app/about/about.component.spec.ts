@@ -5,17 +5,16 @@ import { HeaderNarrowComponent } from '../header-narrow/header-narrow.component'
 import { FooterComponent } from '../footer/footer.component';
 import { TopNavComponent } from '../top-nav/top-nav.component';
 
-
 describe('AboutComponent', () => {
   let component: AboutComponent;
   let fixture: ComponentFixture<AboutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent ],
+      declarations: [AboutComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent],
       imports: []
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

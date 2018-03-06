@@ -9,9 +9,9 @@ describe('HeaderBannerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderBannerComponent, TopNavComponent ]
+      declarations: [HeaderBannerComponent, TopNavComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

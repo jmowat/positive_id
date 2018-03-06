@@ -14,15 +14,15 @@ describe('MainComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainComponent, HeaderBannerComponent, FooterComponent, TopNavComponent ],
-      providers: [TestParmsService, 
-      {
-        provide: Router,
-        useValue: routerSpy
-      }
-        ]
+      declarations: [MainComponent, HeaderBannerComponent, FooterComponent, TopNavComponent],
+      providers: [TestParmsService,
+        {
+          provide: Router,
+          useValue: routerSpy
+        }
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

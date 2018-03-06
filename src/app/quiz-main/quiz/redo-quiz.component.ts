@@ -13,16 +13,16 @@ import { TestParmsService } from './test-parms.service';
 })
 
 export class RedoQuizComponent extends QuizComponent implements OnInit {
-  	constructor(service: StateService, parms: TestParmsService) {
-  		super(service, parms);
-  	}
+  constructor(service: StateService, parms: TestParmsService) {
+    super(service, parms);
+  }
 
-	ngOnInit() {
-		if (this.service.getTest()) {
-			this.service.getTest().reset();
-			this.service.reset();
-		}
-		this.setButtonClasses();
-  		this.setStatusClasses();
-	}
+  ngOnInit() {
+    if (this.service.getTest()) {
+      this.service.getTest().reset();
+      this.service.reset();
+    }
+    this.setButtonClasses();
+    this.setStatusClasses();
+  }
 }
