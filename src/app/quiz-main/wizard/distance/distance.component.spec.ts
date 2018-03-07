@@ -15,6 +15,8 @@ import { Vehicle } from '../../../vehicle';
 import { WizardService } from '../wizard.service';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
 import { GrammarHelper } from '../../grammar-helper';
+import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
+import { QuizParms } from '../../quiz-parms';
 
 describe('DistanceComponent', () => {
   let component: DistanceComponent;
@@ -33,12 +35,20 @@ describe('DistanceComponent', () => {
   };
 
   const wizardServiceStub = {
-    getData: () => ([testVehicle])
+    getData: () => ([testVehicle]),
+    getQuizParms: () => dummyParms
+  };
+
+  const dummyParms: QuizParms = {
+    platforms: ['ground vehicles'],
+    optionsToShow: 5,
+    randomizeQuestions: true,
+    numberOfQuestions: 5
   };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [DistanceComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent],
+      declarations: [DistanceComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, QuizParmDisplayComponent],
       providers: [
         {
           provide: Router,

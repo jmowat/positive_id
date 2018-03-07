@@ -30,6 +30,7 @@ import { DistanceComponent } from './quiz-main/wizard/distance/distance.componen
 import { OpticsComponent } from './quiz-main/wizard/optics/optics.component';
 import { PerspectivesComponent } from './quiz-main/wizard/perspectives/perspectives.component';
 import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
+import { QuizParmDisplayComponent } from './quiz-main/wizard/quiz-parm-display/quiz-parm-display.component';
 
 import { NameFilterPipe } from './name-filter.pipe';
 import { Vehicle } from './vehicle';
@@ -40,7 +41,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent, AboutComponent, BrowseFormComponent, ContactComponent, MainComponent, PrivacyComponent, TermsComponent,
         HeaderNarrowComponent, FooterComponent, BrowseComponent, HeaderBannerComponent, TopNavComponent, PaginationComponent,
-        NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective,
+        NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective, QuizParmDisplayComponent,
         PlatformComponent, EraComponent, SideComponent, DistanceComponent, OpticsComponent, PerspectivesComponent, SummaryComponent
       ],
       imports: [AppRoutingModule, FormsModule, NgbModule.forRoot()],

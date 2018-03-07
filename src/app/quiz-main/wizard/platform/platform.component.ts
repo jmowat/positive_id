@@ -5,6 +5,8 @@ import { VehicleService } from '../../../vehicle.service';
 import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 import { GrammarHelper } from '../../grammar-helper';
+import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
+import { QuizParms } from '../../quiz-parms';
 
 @Component({
   selector: 'app-platform',

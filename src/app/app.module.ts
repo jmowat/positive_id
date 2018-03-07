@@ -38,6 +38,7 @@ import { DistanceComponent } from './quiz-main/wizard/distance/distance.componen
 import { OpticsComponent } from './quiz-main/wizard/optics/optics.component';
 import { PerspectivesComponent } from './quiz-main/wizard/perspectives/perspectives.component';
 import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
+import { QuizParmDisplayComponent } from './quiz-main/wizard/quiz-parm-display/quiz-parm-display.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
     DistanceComponent,
     OpticsComponent,
     PerspectivesComponent,
-    SummaryComponent
+    SummaryComponent,
+    QuizParmDisplayComponent
   ],
   imports: [
     BrowserModule,

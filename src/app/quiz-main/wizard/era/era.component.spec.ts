@@ -15,6 +15,8 @@ import { WizardService } from '../wizard.service';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
 import { FormsModule } from '@angular/forms';
 import { GrammarHelper } from '../../grammar-helper';
+import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
+import { QuizParms } from '../../quiz-parms';
 
 describe('EraComponent', () => {
   let component: EraComponent;
@@ -25,12 +27,20 @@ describe('EraComponent', () => {
     getVehicles: () => Observable.of([new Vehicle()])
   };
   const wizardServiceStub = {
-    getData: () => ([new Vehicle()])
+    getData: () => ([new Vehicle()]),
+    getQuizParms: () => dummyParms
+  };
+
+  const dummyParms: QuizParms = {
+    platforms: ['ground vehicles'],
+    optionsToShow: 5,
+    randomizeQuestions: true,
+    numberOfQuestions: 5
   };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [EraComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent],
+      declarations: [EraComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, QuizParmDisplayComponent],
       providers: [
         {
           provide: Router,

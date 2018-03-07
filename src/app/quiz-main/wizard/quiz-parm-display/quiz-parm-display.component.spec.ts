@@ -1,11 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SummaryComponent } from './summary.component';
-import { HeaderNarrowComponent } from '../../../header-narrow/header-narrow.component';
-import { FooterComponent } from '../../../footer/footer.component';
-import { TopNavComponent } from '../../../top-nav/top-nav.component';
-import { Router } from '@angular/router';
-import { Location } from '@angular/common';
+import { QuizParmDisplayComponent } from './quiz-parm-display.component';
 import { VehicleService } from '../../../vehicle.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
@@ -14,16 +9,13 @@ import { of } from 'rxjs/observable/of';
 import { Vehicle } from '../../../vehicle';
 import { WizardService } from '../wizard.service';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
-import { TestParmsService } from '../../quiz/test-parms.service';
 import { GrammarHelper } from '../../grammar-helper';
-import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../quiz-parms';
 
-describe('SummaryComponent', () => {
-  let component: SummaryComponent;
-  let fixture: ComponentFixture<SummaryComponent>;
-  const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
-  const locationSpy = jasmine.createSpyObj('Location', ['back']);
+describe('QuizParmDisplayComponent', () => {
+  let component: QuizParmDisplayComponent;
+  let fixture: ComponentFixture<QuizParmDisplayComponent>;
+
   const vehicleServiceStub = {
     getVehicles: () => Observable.of([new Vehicle()])
   };
@@ -42,12 +34,8 @@ describe('SummaryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SummaryComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, QuizParmDisplayComponent],
-      providers: [ TestParmsService,
-        {
-          provide: Router,
-          useValue: routerSpy
-        },
+      declarations: [QuizParmDisplayComponent],
+      providers: [
         {
           provide: VehicleService,
           useValue: vehicleServiceStub
@@ -55,18 +43,15 @@ describe('SummaryComponent', () => {
         {
           provide: WizardService,
           useValue: wizardServiceStub
-        },
-        {
-          provide: Location,
-          useValue: locationSpy
-        }],
+        }
+      ],
       imports: [FormsModule]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SummaryComponent);
+    fixture = TestBed.createComponent(QuizParmDisplayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

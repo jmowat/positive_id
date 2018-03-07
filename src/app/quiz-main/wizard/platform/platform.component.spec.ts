@@ -15,6 +15,8 @@ import { Vehicle } from '../../../vehicle';
 import { WizardService } from '../wizard.service';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
 import { GrammarHelper } from '../../grammar-helper';
+import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
+import { QuizParms } from '../../quiz-parms';
 
 describe('PlatformComponent', () => {
   let component: PlatformComponent;
@@ -22,12 +24,20 @@ describe('PlatformComponent', () => {
   const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
   const locationSpy = jasmine.createSpyObj('Location', ['back']);
   const vehicleServiceStub = {
-    getVehicles: () => Observable.of([new Vehicle()])
+    getVehicles: () => Observable.of([new Vehicle()]),
+    getQuizParms: () => dummyParms
+  };
+
+  const dummyParms: QuizParms = {
+    platforms: ['ground vehicles'],
+    optionsToShow: 5,
+    randomizeQuestions: true,
+    numberOfQuestions: 5
   };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PlatformComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent],
+      declarations: [PlatformComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, QuizParmDisplayComponent],
       providers: [WizardService,
         {
           provide: VehicleService,

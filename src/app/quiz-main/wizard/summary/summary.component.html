@@ -5,27 +5,28 @@
 
     <div class="container">
       <section id="quiz-builder">
-        <h2>Quiz Builder</h2>
-        <p>Congratulations, you are ready to run your test.</p>
-        <p>Feel free to limit the number of questions, or accept the default for every available platform that matches your selected criteria.</p>
-        <form name="quizBuilderForm" class="form-horizontal">
-          <div class="form-group">
-            <!-- TODO: add form validation -->
-            <label for="maxQuestionsFilter">Maximum number of questions</label>
-            <input class="form-control" type="number" value="10" id="maxQuestions" name="maxQuestions" [(ngModel)]="maxQuestions" required>
+        <div class="row">
+          <div class="col-4">
+            <app-quiz-parm-display></app-quiz-parm-display>
           </div>
+          <div class="col-8">
+            <h2>Quiz Builder</h2>
+            <p>Congratulations, you are ready to run your test.</p>
+            <p>Feel free to limit the number of questions, or accept the default for every available platform that matches your selected criteria.</p>
+            <form name="quizBuilderForm" class="form-horizontal">
+              <div class="form-group">
+                <!-- TODO: add form validation -->
+                <label for="maxQuestionsFilter">Maximum number of questions</label>
+                <input class="form-control" type="number" value="10" id="maxQuestions" name="maxQuestions" [(ngModel)]="maxQuestions" required>
+              </div>
+              <div class="clearfix">
+                <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
+                <button type="button" class="btn btn-success float-right" (click)="next()">Take Quiz!</button>
+              </div>
+            </form>
+          </div>
+        </div>
 
-          <div>
-            <p>Here is what you have chosen for your test:
-          </div>
-          <!-- TODO: Format results better -->
-          <pre>{{wizardService.getQuizParms() | json}}</pre>
-
-          <div class="clearfix">
-            <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
-            <button type="button" class="btn btn-success float-right" (click)="next()">Take Quiz</button>
-          </div>
-        </form>
       </section>
       <!-- end .quiz-builder -->
     </div>

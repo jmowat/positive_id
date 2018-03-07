@@ -4,22 +4,29 @@
     <app-header-narrow></app-header-narrow>
 
     <div class="container">
-      <section id="quiz-builder">
-        <h2>Quiz Builder</h2>
-        <p>Which perspectives would you like to view from? Chosee all that apply.</p>
-        <form name="quizBuilderForm" class="form-horizontal">
-          <div class="form-group">
-            <label for="multipleSelect">Perspectives</label>
-            <!-- TODO: add form validation -->
-            <select class="form-control" id="perspectives" [(ngModel)]="perspectives.selectedOption" name="perspectives" multiple>
-              <option *ngFor="let perspective of getPerspectives().availableOptions" [value]="perspective.id">{{perspective.name}}</option>
-					</select>
+      <section id="quiz-builder">        
+        <div class="row">
+          <div class="col-4">
+            <app-quiz-parm-display></app-quiz-parm-display>
           </div>
-          <div class="clearfix">
-            <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
-            <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+          <div class="col-8">
+            <h2>Quiz Builder</h2>
+            <p>Which perspectives would you like to view from? Chosee all that apply.</p>
+            <form name="quizBuilderForm" class="form-horizontal">
+              <div class="form-group">
+                <label for="multipleSelect">Perspectives</label>
+                <!-- TODO: add form validation -->
+                <select class="form-control" id="perspectives" [(ngModel)]="perspectives.selectedOption" name="perspectives" multiple>
+                  <option *ngFor="let perspective of getPerspectives().availableOptions" [value]="perspective.id">{{perspective.name}}</option>
+    					</select>
+              </div>
+              <div class="clearfix">
+                <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
+                <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </section>
       <!-- end .quiz-builder -->
     </div>

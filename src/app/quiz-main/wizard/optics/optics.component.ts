@@ -5,6 +5,8 @@ import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 import { FilterHelper } from '../../../filter-helper';
 import { GrammarHelper } from '../../grammar-helper';
+import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
+import { QuizParms } from '../../quiz-parms';
 
 @Component({
   selector: 'app-optics',

@@ -4,7 +4,6 @@ import { VehicleService } from '../../vehicle.service';
 import { Vehicle } from '../../vehicle';
 import { QuizParms } from '../quiz-parms';
 
-// TODO: get back functionality working
 @Injectable()
 export class WizardService {
   filteredVehicles: Vehicle[];

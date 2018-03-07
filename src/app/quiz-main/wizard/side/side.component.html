@@ -5,20 +5,27 @@
 
     <div class="container">
       <section id="quiz-builder">
-        <h2>Quiz Builder</h2>
-        <p>Which sides would you like to view?</p>
-        <form name="quizBuilderForm" class="form-horizontal">
-          <div class="form-group">
-            <label for="sideFilter">Side</label>
-            <select class="form-control" id="side" [(ngModel)]="sides.selectedOption.id" name="side">
-              <option *ngFor="let side of getSides().availableOptions" [value]="side.id">{{side.name}}</option>
-					  </select>
+        <div class="row">
+          <div class="col-4">
+            <app-quiz-parm-display></app-quiz-parm-display>
           </div>
-          <div class="clearfix">
-            <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
-            <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+          <div class="col-8">
+            <h2>Quiz Builder</h2>
+            <p>Which sides would you like to view?</p>
+            <form name="quizBuilderForm" class="form-horizontal">
+              <div class="form-group">
+                <label for="sideFilter">Side</label>
+                <select class="form-control" id="side" [(ngModel)]="sides.selectedOption.id" name="side">
+                  <option *ngFor="let side of getSides().availableOptions" [value]="side.id">{{side.name}}</option>
+    					  </select>
+              </div>
+              <div class="clearfix">
+                <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
+                <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </section>
       <!-- end .quiz-builder -->
     </div>
