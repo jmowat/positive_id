@@ -7,11 +7,13 @@ export class TestParmsService {
   constructor() { }
 
   setTestParms(parms: QuizParms) {
+    console.log('parms set in service', parms);
     this.testParms = parms;
   }
 
   getParms() {
     // maybe return DEFAULT_GROUND_QUIZ if nothing specified
+    console.log('parms fetched from service', this.testParms);
     return this.testParms;
   }
 

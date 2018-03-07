@@ -9,7 +9,12 @@ import { Location } from '@angular/common';
 import { VehicleService } from '../../../vehicle.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
+import { FormsModule } from '@angular/forms';
+import { of } from 'rxjs/observable/of';
 import { Vehicle } from '../../../vehicle';
+import { WizardService } from '../wizard.service';
+import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
+import { TestParmsService } from '../../quiz/test-parms.service';
 
 describe('SummaryComponent', () => {
   let component: SummaryComponent;
@@ -20,21 +25,32 @@ describe('SummaryComponent', () => {
     getVehicles: () => Observable.of([new Vehicle()])
   };
 
+  const wizardServiceStub = {
+    getData: () => ([new Vehicle()]),
+    getQuizParms: () => {}
+  };
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SummaryComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent],
-      providers: [VehicleService, {
-        provide: Router,
-        useValue: routerSpy
-      },
+      providers: [ TestParmsService,
+        {
+          provide: Router,
+          useValue: routerSpy
+        },
         {
           provide: VehicleService,
           useValue: vehicleServiceStub
         },
         {
+          provide: WizardService,
+          useValue: wizardServiceStub
+        },
+        {
           provide: Location,
           useValue: locationSpy
-        }]
+        }],
+      imports: [FormsModule]
     })
       .compileComponents();
   }));

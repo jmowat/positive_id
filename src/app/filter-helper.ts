@@ -33,6 +33,7 @@ export class FilterHelper {
   }
 
   private static isolateImageAttribute(attr: string, vehicles: Vehicle[]): string[] {
+    // console.log('isolateImageAttribute', attr, vehicles);
     const attrs = [];
     for (const vehicle of vehicles) {
       attrs.push(vehicle.images.map(x => x[attr]));

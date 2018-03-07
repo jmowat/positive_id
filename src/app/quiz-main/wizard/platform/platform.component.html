@@ -7,10 +7,11 @@
       <section id="quiz-builder">
         <h2>Quiz Builder</h2>
         <p>Which platform would you like to base your test off of?</p>
-        <form name="quizBuilderForm" class="form-horizontal">
+        <form name="quizBuilderForm" class="form-horizontal" #form="ngForm">
           <div class="form-group">
             <label for="platformFilter">Platform</label>
-            <select class="form-control" name="platformFilter" id="platformFilter">
+            <select class="form-control" id="platform" [(ngModel)]="platforms.selectedOption.id" name="platform">
+            <option *ngFor="let platform of platforms.availableOptions" [value]="platform.id">{{platform.name}}</option>
 					</select>
           </div>
           <div class="form-group">

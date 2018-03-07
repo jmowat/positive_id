@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { VehicleService } from '../../../vehicle.service';
+import { WizardService } from '../wizard.service';
+import { Vehicle } from '../../../vehicle';
+import { FilterHelper } from '../../../filter-helper';
 
 @Component({
   selector: 'app-era',
@@ -9,17 +12,36 @@ import { VehicleService } from '../../../vehicle.service';
   styleUrls: ['./era.component.css']
 })
 export class EraComponent implements OnInit {
+  vehicles: Vehicle[];
+  eras = {
+    availableOptions: [],
+    selectedOption: { id: '' }
+  };
 
-  constructor(private router: Router, private location: Location, private vehicleService: VehicleService) { }
+  constructor(private router: Router, private location: Location, private vehicleService: VehicleService,
+    private wizardService: WizardService) { }
 
   ngOnInit() {
+    this.vehicles = this.wizardService.getData();
   }
 
   next() {
+    this.wizardService.era = this.eras.selectedOption.id;
+    this.wizardService.setData(
+      WizardService.filter(this.vehicles, 'era', this.eras.selectedOption.id));
     this.router.navigateByUrl('/side');
   }
 
   back() {
     this.location.back();
+  }
+
+  getEras() {
+    const eras = FilterHelper.getEras(this.vehicles);
+    this.eras.availableOptions = [];
+    for (const era of eras) {
+      this.eras.availableOptions.push({id: era, name: era});
+    }
+    return this.eras;
   }
 }

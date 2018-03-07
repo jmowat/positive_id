@@ -6,11 +6,12 @@
     <div class="container">
       <section id="quiz-builder">
         <h2>Quiz Builder</h2>
-        <p>Which perspectives would you like to view from?</p>
+        <p>Which perspectives would you like to view from? Chosee all that apply.</p>
         <form name="quizBuilderForm" class="form-horizontal">
           <div class="form-group">
             <label for="multipleSelect">Perspectives</label>
-            <select class="form-control" name="perspectiveFilter" id="perspectiveFilter" ng-model="$ctrl.perspectives.selectedOption" multiple ng-options="perspective.name for perspective in $ctrl.perspectives.availableOptions track by perspective.id">
+            <select class="form-control" id="perspectives" [(ngModel)]="perspectives.selectedOption" name="perspectives" multiple>
+              <option *ngFor="let perspective of getPerspectives().availableOptions" [value]="perspective.id">{{perspective.name}}</option>
 					</select>
           </div>
           <div class="form-group">

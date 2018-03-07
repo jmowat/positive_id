@@ -6,7 +6,7 @@ export const TEST_PARMS = new InjectionToken<QuizParms>('test.parms');
 
 export const DEFAULT_GROUND_QUIZ = {
 	optionsToShow: 5,
-    numberOfQuestions: 5,
+    numberOfQuestions: 10,
     platforms: ['ground vehicle'],
     profiles: ['side', 'front', 'oblique'],
     distances: ['near'],

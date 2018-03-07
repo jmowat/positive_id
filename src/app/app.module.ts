@@ -25,6 +25,7 @@ import { RedoQuizComponent } from './quiz-main/quiz/redo-quiz.component';
 import { QuizService } from './quiz-main/quiz/quiz.service';
 import { StateService } from './quiz-main/state/state.service';
 import { VehicleService } from './vehicle.service';
+import { WizardService } from './quiz-main/wizard/wizard.service';
 import { NameFilterPipe } from './name-filter.pipe';
 
 import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from './quiz-main/test-parms';
@@ -83,6 +84,7 @@ import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
     QuizService,
     StateService,
     TestParmsService,
+    WizardService,
     {
       provide: TEST_PARMS, useValue: DEFAULT_GROUND_QUIZ
     }

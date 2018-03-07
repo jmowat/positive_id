@@ -9,7 +9,11 @@ import { Location } from '@angular/common';
 import { VehicleService } from '../../../vehicle.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
+import { FormsModule } from '@angular/forms';
+import { of } from 'rxjs/observable/of';
 import { Vehicle } from '../../../vehicle';
+import { WizardService } from '../wizard.service';
+import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
 
 describe('PlatformComponent', () => {
   let component: PlatformComponent;
@@ -23,10 +27,15 @@ describe('PlatformComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [PlatformComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent],
-      providers: [VehicleService, {
-        provide: Router,
-        useValue: routerSpy
-      },
+      providers: [WizardService,
+        {
+          provide: VehicleService,
+          useClass: MockVehicleService
+        },
+        {
+          provide: Router,
+          useValue: routerSpy
+        },
         {
           provide: VehicleService,
           useValue: vehicleServiceStub
@@ -34,7 +43,8 @@ describe('PlatformComponent', () => {
         {
           provide: Location,
           useValue: locationSpy
-        }]
+        }],
+        imports: [ FormsModule ]
     })
       .compileComponents();
   }));
@@ -49,3 +59,10 @@ describe('PlatformComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+class MockVehicleService {
+  constructor() { }
+  getVehicles(): Observable<Vehicle[]> {
+    return of(FIVE_VEHICLES);
+  }
+}
