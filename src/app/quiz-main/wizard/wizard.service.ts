@@ -8,6 +8,7 @@ import { QuizParms } from '../quiz-parms';
 @Injectable()
 export class WizardService {
   filteredVehicles: Vehicle[];
+  dataHistory: any[] = [];
 
   platform: string;
   era: string;
@@ -24,7 +25,7 @@ export class WizardService {
   static filterImages(vehicles: Vehicle[], type: string, value: string) {
     for (const v of vehicles) {
       const filteredImages = v.images.filter((img) => img[type] === value);
-      console.log('filtered images', filteredImages);
+      // console.log('filtered images', filteredImages);
       v.images = filteredImages;
     }
     return vehicles;
@@ -36,6 +37,13 @@ export class WizardService {
 
   setData(filteredData: Vehicle[]) {
     this.filteredVehicles = filteredData;
+    this.dataHistory.push(JSON.parse(JSON.stringify(filteredData)));
+    // console.log('data history', this.dataHistory);
+  }
+
+  resetLastDataFromHistory() {
+    this.dataHistory.pop();
+    this.filteredVehicles = this.dataHistory[this.dataHistory.length - 1];
   }
 
   getData() {

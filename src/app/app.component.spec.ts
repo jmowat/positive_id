@@ -21,7 +21,6 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { QuizComponent } from './quiz-main/quiz/quiz.component';
 import { ScoreComponent } from './quiz-main/score/score.component';
 import { RedoQuizComponent } from './quiz-main/quiz/redo-quiz.component';
-import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
 
 import { PlatformComponent } from './quiz-main/wizard/platform/platform.component';
@@ -41,7 +40,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent, AboutComponent, BrowseFormComponent, ContactComponent, MainComponent, PrivacyComponent, TermsComponent,
         HeaderNarrowComponent, FooterComponent, BrowseComponent, HeaderBannerComponent, TopNavComponent, PaginationComponent,
-        NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective, QuizBuilderComponent,
+        NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective,
         PlatformComponent, EraComponent, SideComponent, DistanceComponent, OpticsComponent, PerspectivesComponent, SummaryComponent
       ],
       imports: [AppRoutingModule, FormsModule, NgbModule.forRoot()],

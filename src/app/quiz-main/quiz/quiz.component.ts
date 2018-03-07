@@ -33,7 +33,7 @@ export class QuizComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('quizComponent fetch parms from parm service', this.parms.getParms());
+    // console.log('quizComponent fetch parms from parm service', this.parms.getParms());
     this.service.createNewTest(this.parms.getParms());
     this.setButtonClasses();
     this.setStatusClasses();

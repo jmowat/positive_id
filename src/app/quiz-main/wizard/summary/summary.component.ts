@@ -32,6 +32,7 @@ export class SummaryComponent implements OnInit {
   }
 
   back() {
+    this.wizardService.resetLastDataFromHistory();
     this.location.back();
   }
 

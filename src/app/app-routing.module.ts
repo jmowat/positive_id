@@ -9,7 +9,6 @@ import { BrowseFormComponent } from './browse-form/browse-form.component';
 import { QuizComponent } from './quiz-main/quiz/quiz.component';
 import { RedoQuizComponent } from './quiz-main/quiz/redo-quiz.component';
 import { ScoreComponent } from './quiz-main/score/score.component';
-import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
 
 import { PlatformComponent } from './quiz-main/wizard/platform/platform.component';
 import { EraComponent } from './quiz-main/wizard/era/era.component';
@@ -31,7 +30,6 @@ const routes: Routes = [
   { path: 'custom-quiz', component: QuizComponent },
   { path: 'drill', component: QuizComponent },
   { path: 'quiz-builder', component: PlatformComponent },
-  { path: 'drill-builder', component: QuizBuilderComponent },
   { path: 'retry', component: RedoQuizComponent },
   { path: 'score', component: ScoreComponent },
 

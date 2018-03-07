@@ -36,6 +36,7 @@ export class OpticsComponent implements OnInit {
   }
 
   back() {
+    this.wizardService.resetLastDataFromHistory();
     this.location.back();
   }
 

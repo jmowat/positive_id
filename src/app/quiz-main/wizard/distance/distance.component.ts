@@ -31,11 +31,11 @@ export class DistanceComponent implements OnInit {
     this.wizardService.setData(this.distances.selectedOption.id ?
       WizardService.filterImages(this.vehicles, 'distance', this.distances.selectedOption.id) :
       this.vehicles);
-    this.wizardService.setData(this.vehicles);
     this.router.navigateByUrl('/optics');
   }
 
   back() {
+    this.wizardService.resetLastDataFromHistory();
     this.location.back();
   }
 

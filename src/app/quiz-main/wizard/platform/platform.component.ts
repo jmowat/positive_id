@@ -33,6 +33,8 @@ export class PlatformComponent implements OnInit {
   ngOnInit() {
     this.vehicleService.getVehicles().subscribe((data) => {
       this.vehicles = data;
+      // add this so the original history can be preserved
+      this.wizardService.setData(this.vehicles);
     });
   }
 
@@ -41,10 +43,6 @@ export class PlatformComponent implements OnInit {
     this.wizardService.setData(this.platforms.selectedOption.id ? WizardService
       .filter(this.vehicles, 'type', this.platforms.selectedOption.id) : this.vehicles);
     this.router.navigateByUrl('/era');
-  }
-
-  back() {
-    this.location.back();
   }
 
 }

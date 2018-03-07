@@ -35,6 +35,7 @@ export class SideComponent implements OnInit {
   }
 
   back() {
+    this.wizardService.resetLastDataFromHistory();
     this.location.back();
   }
 

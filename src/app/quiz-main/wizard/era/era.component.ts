@@ -33,6 +33,7 @@ export class EraComponent implements OnInit {
   }
 
   back() {
+    this.wizardService.resetLastDataFromHistory();
     this.location.back();
   }
 

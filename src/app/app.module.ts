@@ -30,7 +30,6 @@ import { NameFilterPipe } from './name-filter.pipe';
 
 import { ScoreComponent } from './quiz-main/score/score.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
-import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
 import { TestParmsService } from './quiz-main/quiz/test-parms.service';
 import { PlatformComponent } from './quiz-main/wizard/platform/platform.component';
 import { EraComponent } from './quiz-main/wizard/era/era.component';
@@ -61,7 +60,6 @@ import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
     RedoQuizComponent,
     ScoreComponent,
     FocusDirective,
-    QuizBuilderComponent,
     PlatformComponent,
     EraComponent,
     SideComponent,
