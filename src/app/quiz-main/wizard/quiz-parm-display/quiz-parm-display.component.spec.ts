@@ -59,7 +59,12 @@ class MockWizardService extends WizardService {
       platforms: ['ground vehicles'],
       optionsToShow: 5,
       randomizeQuestions: true,
-      numberOfQuestions: 5
+      numberOfQuestions: 5,
+      profiles: [''],
+      distances: [''],
+      optics: [''],
+      sides: [''],
+      eras: ['']
     };
   }
 }

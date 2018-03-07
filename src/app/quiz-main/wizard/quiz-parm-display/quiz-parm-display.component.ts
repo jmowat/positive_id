@@ -15,4 +15,28 @@ export class QuizParmDisplayComponent implements OnInit {
   ngOnInit() {
   }
 
+  getSides() {
+    return this.wizardService.getQuizParms().sides.map((v) => GrammarHelper.toTitleCase(v));
+  }
+
+  getDistances() {
+    return this.wizardService.getQuizParms().distances.map((v) => GrammarHelper.toTitleCase(v));
+  }
+
+  getEras() {
+    return this.wizardService.getQuizParms().eras.map((v) => GrammarHelper.toTitleCase(v));
+  }
+
+  getOptics() {
+    return this.wizardService.getQuizParms().optics.map((v) => GrammarHelper.toTitleCase(v));
+  }
+
+  getPerspectives() {
+    return this.wizardService.getQuizParms().profiles;
+  }
+
+  getPlatforms() {
+    return this.wizardService.getQuizParms().platforms.map((v) => GrammarHelper.toTitleCase(v));
+  }
+
 }
