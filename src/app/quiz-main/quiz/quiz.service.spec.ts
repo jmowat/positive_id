@@ -8,7 +8,6 @@ import { Drill } from '../drill';
 import { VehicleService } from '../../vehicle.service';
 import { Vehicle } from '../../vehicle';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
-import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from '../../quiz-main/test-parms';
 
 describe('QuizService', () => {
   beforeEach(() => {
@@ -17,11 +16,8 @@ describe('QuizService', () => {
         {
           provide: VehicleService,
           useClass: MockVehicleService
-        },
-        {
-          provide: TEST_PARMS,
-          useValue: DEFAULT_GROUND_QUIZ
-        }]
+        }
+      ]
     });
   });
 
@@ -40,7 +36,16 @@ describe('QuizService', () => {
   describe('Quiz test in QuizService', () => {
     let quiz: Test;
     beforeEach(inject([QuizService], (service: QuizService) => {
-      service.createNewTest(DEFAULT_GROUND_QUIZ);
+      service.createNewTest({
+        optionsToShow: 5,
+        numberOfQuestions: 10,
+        platforms: ['ground vehicle'],
+        profiles: ['side', 'front', 'oblique'],
+        distances: ['near'],
+        optics: ['naked eye'],
+        sides: ['eastern', 'western'],
+        randomizeQuestions: true
+      });
       quiz = service.getTest();
     }));
 

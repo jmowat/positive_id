@@ -5,7 +5,6 @@ import { TestFactory } from '../test-factory';
 import { Test } from '../test';
 import { VehicleService } from '../../vehicle.service';
 import { Vehicle } from '../../vehicle';
-import { TEST_PARMS } from '../test-parms';
 import { QuizParms } from '../quiz-parms';
 
 @Injectable()

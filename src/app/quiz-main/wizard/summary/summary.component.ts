@@ -7,6 +7,9 @@ import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 import { FilterHelper } from '../../../filter-helper';
 
+// TODO: add Any options
+// TODO: sort options
+// TODO: format options
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',

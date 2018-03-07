@@ -10,6 +10,7 @@
         <form name="quizBuilderForm" class="form-horizontal">
           <div class="form-group">
             <label for="multipleSelect">Perspectives</label>
+            <!-- TODO: add form validation -->
             <select class="form-control" id="perspectives" [(ngModel)]="perspectives.selectedOption" name="perspectives" multiple>
               <option *ngFor="let perspective of getPerspectives().availableOptions" [value]="perspective.id">{{perspective.name}}</option>
 					</select>

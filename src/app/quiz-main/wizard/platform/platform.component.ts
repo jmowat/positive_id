@@ -5,6 +5,9 @@ import { VehicleService } from '../../../vehicle.service';
 import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 
+// TODO: add Any options
+// TODO: sort options
+// TODO: format options
 @Component({
   selector: 'app-platform',
   templateUrl: './platform.component.html',

@@ -7,7 +7,6 @@ import { Quiz } from '../quiz';
 import { Drill } from '../drill';
 import { Vehicle } from '../../vehicle';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
-import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from '../../quiz-main/test-parms';
 import { State } from './state';
 import { Context } from './context';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -36,20 +35,8 @@ describe('StateService', () => {
         {
           provide: VehicleService,
           useClass: MockVehicleService
-        },
-        {
-          provide: TEST_PARMS,
-          useValue: {
-            optionsToShow: 5,
-            numberOfQuestions: 5,
-            platforms: ['ground vehicle'],
-            profiles: ['side', 'front', 'oblique'],
-            distances: ['near'],
-            optics: ['naked eye'],
-            sides: ['eastern', 'western'],
-            randomizeQuestions: false
-          }
-        }]
+        }
+      ]
     });
   });
 

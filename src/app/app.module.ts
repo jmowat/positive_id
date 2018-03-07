@@ -28,7 +28,6 @@ import { VehicleService } from './vehicle.service';
 import { WizardService } from './quiz-main/wizard/wizard.service';
 import { NameFilterPipe } from './name-filter.pipe';
 
-import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from './quiz-main/test-parms';
 import { ScoreComponent } from './quiz-main/score/score.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
 import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
@@ -84,10 +83,7 @@ import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
     QuizService,
     StateService,
     TestParmsService,
-    WizardService,
-    {
-      provide: TEST_PARMS, useValue: DEFAULT_GROUND_QUIZ
-    }
+    WizardService
   ],
   entryComponents: [
     ModalComponent

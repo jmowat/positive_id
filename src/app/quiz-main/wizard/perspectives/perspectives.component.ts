@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { VehicleService } from '../../../vehicle.service';
 import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 import { FilterHelper } from '../../../filter-helper';
 
+// TODO: add Any options
+// TODO: sort options
+// TODO: format options
+// TODO: distance will influence which perspectives are available
 @Component({
   selector: 'app-perspectives',
   templateUrl: './perspectives.component.html',
@@ -19,8 +22,7 @@ export class PerspectivesComponent implements OnInit {
     selectedOption: []
   };
 
-  constructor(private router: Router, private location: Location, private vehicleService: VehicleService,
-    private wizardService: WizardService) { }
+  constructor(private router: Router, private location: Location, private wizardService: WizardService) { }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
@@ -38,7 +40,6 @@ export class PerspectivesComponent implements OnInit {
   }
 
   getPerspectives(): any {
-    // TODO: distance will influence which perspectives are available
     const perspectives = FilterHelper.getPerspectives(this.vehicles);
     this.perspectives.availableOptions = [];
     for (const perspective of perspectives) {

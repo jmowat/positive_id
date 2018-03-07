@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { VehicleService } from '../../../vehicle.service';
 import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 import { FilterHelper } from '../../../filter-helper';
 
+// TODO: add Any options
+// TODO: sort options
+// TODO: format options
 @Component({
   selector: 'app-side',
   templateUrl: './side.component.html',
@@ -18,8 +20,7 @@ export class SideComponent implements OnInit {
     selectedOption: { id: '' }
   };
 
-  constructor(private router: Router, private location: Location, private vehicleService: VehicleService,
-    private wizardService: WizardService) { }
+  constructor(private router: Router, private location: Location, private wizardService: WizardService) { }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
