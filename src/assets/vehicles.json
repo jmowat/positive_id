@@ -1,6 +1,6 @@
 [{
 	"name": "ASLAV",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "armored personnel carrier",
 	"nationality": ["Australia", "Canada"],
@@ -146,7 +146,7 @@
 	}]
 },{
 	"name": "Challenger 2",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "main battle tank",
 	"nationality": ["United Kingdom"],
@@ -219,7 +219,7 @@
 	}]
 },{
 	"name": "Chieftain",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "main battle tank",
 	"nationality": ["United Kingdom"],
@@ -365,7 +365,7 @@
 	}]
 },{
 	"name": "Fennek",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "light armored reconnaissance vehicle",
 	"nationality": ["Germany", "Netherlands"],
@@ -438,7 +438,7 @@
 	}]
 },{
 	"name": "Jaguar",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "tank destroyer",
 	"nationality": ["Germany"],
@@ -511,7 +511,7 @@
 	}]
 },{
 	"name": "LAV-25",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "armored reconnaissance vehicle",
 	"nationality": ["Canada","United States"],
@@ -584,7 +584,7 @@
 	}]
 },{
 	"name": "Leclerc",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "main battle tank",
 	"nationality": ["France"],
@@ -657,7 +657,7 @@
 	}]
 },{
 	"name": "Leopard 1",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "main battle tank",
 	"nationality": ["Germany"],
@@ -730,7 +730,7 @@
 	}]
 },{
 	"name": "Leopard 2",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "main battle tank",
 	"nationality": ["Germany"],
@@ -803,7 +803,7 @@
 	}]
 },{
 	"name": "M1A1",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "main battle tank",
 	"nationality": ["United States"],
@@ -876,7 +876,7 @@
 	}]
 },{
 	"name": "M1A2",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "main battle tank",
 	"nationality": ["United States"],
@@ -949,7 +949,7 @@
 	}]
 },{
 	"name": "M2A3",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "infantry fighting vehicle",
 	"nationality": ["United States"],
@@ -1022,7 +1022,7 @@
 	}]
 },{
 	"name": "M60A3",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "main battle tank",
 	"nationality": ["United States"],
@@ -1095,7 +1095,7 @@
 	}]
 },{
 	"name": "HMMWV M966",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "light armored car",
 	"nationality": ["United States"],
@@ -1168,7 +1168,7 @@
 	}]
 },{
 	"name": "M113A3",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "armored personnel carrier",
 	"nationality": ["United States"],
@@ -1241,7 +1241,7 @@
 	}]
 },{
 	"name": "M901 ITV",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "tank destroyer",
 	"nationality": ["United States"],
@@ -1314,7 +1314,7 @@
 	}]
 },{
 	"name": "Marder",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "infantry fighting vehicle",
 	"nationality": ["Germany"],
@@ -1606,7 +1606,7 @@
 	}]
 },{
 	"name": "Pizarro",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "armored fighting vehicle",
 	"nationality": ["Spain"],
@@ -1679,7 +1679,7 @@
 	}]
 },{
 	"name": "Scimitar",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "reconnaissance vehicle",
 	"nationality": ["United Kingdom"],
@@ -1752,7 +1752,7 @@
 	}]
 },{
 	"name": "Scorpion",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "reconnaissance vehicle",
 	"nationality": ["United Kingdom"],
@@ -1825,7 +1825,7 @@
 	}]
 },{
 	"name": "SPz Luchs",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "reconnaissance vehicle",
 	"nationality": ["Germany"],
@@ -2336,7 +2336,7 @@
 	}]
 },{
 	"name": "TPz Fuchs",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "armored personnel carrier",
 	"nationality": ["Germany"],
@@ -2409,7 +2409,7 @@
 	}]
 },{
 	"name": "Warrior",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "infantry fighting vehicle",
 	"nationality": ["United Kingdom"],
@@ -2482,7 +2482,7 @@
 	}]
 },{
 	"name": "Wiesel",
-	"side": ["western"],
+	"side": ["western", "NATO"],
 	"type": "ground vehicle",
 	"class": "tankette",
 	"nationality": ["Germany"],
