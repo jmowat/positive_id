@@ -6,7 +6,6 @@ import { Vehicle } from '../../../vehicle';
 import { FilterHelper } from '../../../filter-helper';
 import { GrammarHelper } from '../../grammar-helper';
 
-// TODO: optics will influence distances
 @Component({
   selector: 'app-distance',
   templateUrl: './distance.component.html',

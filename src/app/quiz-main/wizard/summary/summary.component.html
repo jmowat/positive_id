@@ -19,9 +19,7 @@
             <p>Here is what you have chosen for your test:
           </div>
           <!-- TODO: Format results better -->
-          <pre>
-            {{wizardService.getQuizParms() | json}}
-          </pre>
+          <pre>{{wizardService.getQuizParms() | json}}</pre>
 
           <div class="clearfix">
             <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>

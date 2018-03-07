@@ -45,16 +45,18 @@ export class WizardService {
   getQuizParms(): QuizParms {
     const parms: QuizParms = {
       platforms: [this.platform],
-      profiles: this.perspectives,
-      numberOfQuestions: this.maxQuestions,
       optionsToShow: 5,
-      randomizeQuestions: true
+      randomizeQuestions: true,
+      numberOfQuestions: this.maxQuestions
     };
+
+    parms.numberOfQuestions = this.maxQuestions;
 
     this.era ? parms.eras = [this.era] : parms.eras = undefined;
     this.distance ? parms.distances = [this.distance] : parms.distances = undefined;
     this.optics ? parms.optics = [this.optics] : parms.optics = undefined;
     this.side ? parms.sides = [this.side] : parms.sides = undefined;
+    this.perspectives ? parms.profiles = this.perspectives : parms.profiles = undefined;
     return parms;
   }
 }
