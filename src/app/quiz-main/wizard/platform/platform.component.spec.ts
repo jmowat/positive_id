@@ -14,6 +14,7 @@ import { of } from 'rxjs/observable/of';
 import { Vehicle } from '../../../vehicle';
 import { WizardService } from '../wizard.service';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
+import { GrammarHelper } from '../../grammar-helper';
 
 describe('PlatformComponent', () => {
   let component: PlatformComponent;

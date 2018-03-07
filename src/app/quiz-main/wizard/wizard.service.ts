@@ -21,6 +21,15 @@ export class WizardService {
     return vehicles.filter((v: Vehicle) => v[type] === value || v[type].includes(value));
   }
 
+  static filterImages(vehicles: Vehicle[], type: string, value: string) {
+    for (const v of vehicles) {
+      const filteredImages = v.images.filter((img) => img[type] === value);
+      console.log('filtered images', filteredImages);
+      v.images = filteredImages;
+    }
+    return vehicles;
+  }
+
   constructor(private vehicleService: VehicleService) {
 
   }
@@ -34,16 +43,18 @@ export class WizardService {
   }
 
   getQuizParms(): QuizParms {
-    return {
+    const parms: QuizParms = {
       platforms: [this.platform],
-      eras: [this.era],
-      sides: [this.side],
-      distances: [this.distance],
-      optics: [this.optics],
       profiles: this.perspectives,
       numberOfQuestions: this.maxQuestions,
       optionsToShow: 5,
       randomizeQuestions: true
     };
+
+    this.era ? parms.eras = [this.era] : parms.eras = undefined;
+    this.distance ? parms.distances = [this.distance] : parms.distances = undefined;
+    this.optics ? parms.optics = [this.optics] : parms.optics = undefined;
+    this.side ? parms.sides = [this.side] : parms.sides = undefined;
+    return parms;
   }
 }

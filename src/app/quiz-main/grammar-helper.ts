@@ -92,4 +92,19 @@ export class GrammarHelper {
     }
     return 'a';
   }
+
+  static toTitleCase(str: string) {
+    if (!str) {
+      return undefined;
+    }
+    if (str.toLowerCase() === 'world war ii') {
+      return 'World War II';
+    }
+    if (str.toLowerCase() === 'nato') {
+      return 'NATO';
+    }
+    return str.replace(/\w\S*/g, function(txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  }
 }

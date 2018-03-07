@@ -4,10 +4,8 @@ import { Location } from '@angular/common';
 import { VehicleService } from '../../../vehicle.service';
 import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
+import { GrammarHelper } from '../../grammar-helper';
 
-// TODO: add Any options
-// TODO: sort options
-// TODO: format options
 @Component({
   selector: 'app-platform',
   templateUrl: './platform.component.html',
@@ -39,10 +37,10 @@ export class PlatformComponent implements OnInit {
   }
 
   next() {
-      this.wizardService.platform = this.platforms.selectedOption.id;
-      this.wizardService.setData(WizardService
-        .filter(this.vehicles, 'type', this.platforms.selectedOption.id));
-      this.router.navigateByUrl('/era');
+    this.wizardService.platform = this.platforms.selectedOption.id;
+    this.wizardService.setData(this.platforms.selectedOption.id ? WizardService
+      .filter(this.vehicles, 'type', this.platforms.selectedOption.id) : this.vehicles);
+    this.router.navigateByUrl('/era');
   }
 
   back() {

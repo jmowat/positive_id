@@ -14,6 +14,7 @@ import { of } from 'rxjs/observable/of';
 import { WizardService } from '../wizard.service';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
 import { FormsModule } from '@angular/forms';
+import { GrammarHelper } from '../../grammar-helper';
 
 describe('EraComponent', () => {
   let component: EraComponent;

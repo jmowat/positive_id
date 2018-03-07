@@ -15,6 +15,7 @@ import { Vehicle } from '../../../vehicle';
 import { WizardService } from '../wizard.service';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
 import { TestParmsService } from '../../quiz/test-parms.service';
+import { GrammarHelper } from '../../grammar-helper';
 
 describe('SummaryComponent', () => {
   let component: SummaryComponent;

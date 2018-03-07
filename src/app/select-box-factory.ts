@@ -32,6 +32,7 @@ export class SelectBoxFactory {
     return selectBoxData;
   }
 
+  // TODO: Move to a formatter object. Currently in GrammarHelper
   static toTitleCase(str) {
     if (str.toLowerCase() === 'world war ii') {
       return 'World War II';

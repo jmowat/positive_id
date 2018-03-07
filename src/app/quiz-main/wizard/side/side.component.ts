@@ -4,10 +4,8 @@ import { Location } from '@angular/common';
 import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 import { FilterHelper } from '../../../filter-helper';
+import { GrammarHelper } from '../../grammar-helper';
 
-// TODO: add Any options
-// TODO: sort options
-// TODO: format options
 @Component({
   selector: 'app-side',
   templateUrl: './side.component.html',
@@ -28,8 +26,11 @@ export class SideComponent implements OnInit {
 
   next() {
     this.wizardService.side = this.sides.selectedOption.id;
+
     this.wizardService.setData(
-      WizardService.filter(this.vehicles, 'side', this.sides.selectedOption.id));
+      this.sides.selectedOption.id ?
+        WizardService.filter(this.vehicles, 'side', this.sides.selectedOption.id) :
+        this.vehicles);
     this.router.navigateByUrl('/distance');
   }
 
@@ -41,8 +42,10 @@ export class SideComponent implements OnInit {
     const sides = FilterHelper.getSides(this.vehicles);
     this.sides.availableOptions = [];
     for (const side of sides) {
-      this.sides.availableOptions.push({ id: side, name: side });
+      this.sides.availableOptions.push({ id: side, name: GrammarHelper.toTitleCase(side) });
     }
+    this.sides.availableOptions.sort((a, b) => a.name.localeCompare(b.name));
+    this.sides.availableOptions.unshift({ id: '', name: 'Any' });
     return this.sides;
   }
 }

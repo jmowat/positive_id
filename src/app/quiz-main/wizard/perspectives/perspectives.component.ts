@@ -4,11 +4,9 @@ import { Location } from '@angular/common';
 import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 import { FilterHelper } from '../../../filter-helper';
+import { GrammarHelper } from '../../grammar-helper';
 
-// TODO: add Any options
-// TODO: sort options
-// TODO: format options
-// TODO: distance will influence which perspectives are available
+// TODO: form validation - user must select at least one perspective
 @Component({
   selector: 'app-perspectives',
   templateUrl: './perspectives.component.html',
@@ -43,8 +41,9 @@ export class PerspectivesComponent implements OnInit {
     const perspectives = FilterHelper.getPerspectives(this.vehicles);
     this.perspectives.availableOptions = [];
     for (const perspective of perspectives) {
-      this.perspectives.availableOptions.push({ id: perspective, name: perspective });
+      this.perspectives.availableOptions.push({ id: perspective, name: GrammarHelper.toTitleCase(perspective) });
     }
+    this.perspectives.availableOptions.sort((a, b) => a.name.localeCompare(b.name));
     return this.perspectives;
   }
 }

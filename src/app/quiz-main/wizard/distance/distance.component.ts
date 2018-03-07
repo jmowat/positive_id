@@ -4,10 +4,9 @@ import { Location } from '@angular/common';
 import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 import { FilterHelper } from '../../../filter-helper';
+import { GrammarHelper } from '../../grammar-helper';
 
-// TODO: add Any options
-// TODO: sort options
-// TODO: format options
+// TODO: optics will influence distances
 @Component({
   selector: 'app-distance',
   templateUrl: './distance.component.html',
@@ -28,8 +27,11 @@ export class DistanceComponent implements OnInit {
   }
 
   next() {
-    // not a filter criteria, but rather a display attribute
+    // filter images based on distance selection
     this.wizardService.distance = this.distances.selectedOption.id;
+    this.wizardService.setData(this.distances.selectedOption.id ?
+      WizardService.filterImages(this.vehicles, 'distance', this.distances.selectedOption.id) :
+      this.vehicles);
     this.wizardService.setData(this.vehicles);
     this.router.navigateByUrl('/optics');
   }
@@ -42,8 +44,10 @@ export class DistanceComponent implements OnInit {
     const distances = FilterHelper.getDistances(this.vehicles);
     this.distances.availableOptions = [];
     for (const distance of distances) {
-      this.distances.availableOptions.push({id: distance, name: distance});
+      this.distances.availableOptions.push({ id: distance, name: GrammarHelper.toTitleCase(distance) });
     }
+    this.distances.availableOptions.sort((a, b) => a.name.localeCompare(b.name));
+    this.distances.availableOptions.unshift({ id: '', name: 'Any' });
     return this.distances;
   }
 }

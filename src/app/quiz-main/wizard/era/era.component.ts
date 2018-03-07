@@ -4,10 +4,8 @@ import { Location } from '@angular/common';
 import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 import { FilterHelper } from '../../../filter-helper';
+import { GrammarHelper } from '../../grammar-helper';
 
-// TODO: add Any options
-// TODO: sort options
-// TODO: format options
 @Component({
   selector: 'app-era',
   templateUrl: './era.component.html',
@@ -28,8 +26,9 @@ export class EraComponent implements OnInit {
 
   next() {
     this.wizardService.era = this.eras.selectedOption.id;
-    this.wizardService.setData(
-      WizardService.filter(this.vehicles, 'era', this.eras.selectedOption.id));
+    this.wizardService.setData(this.eras.selectedOption.id ?
+      WizardService.filter(this.vehicles, 'era', this.eras.selectedOption.id) :
+      this.vehicles);
     this.router.navigateByUrl('/side');
   }
 
@@ -41,8 +40,10 @@ export class EraComponent implements OnInit {
     const eras = FilterHelper.getEras(this.vehicles);
     this.eras.availableOptions = [];
     for (const era of eras) {
-      this.eras.availableOptions.push({id: era, name: era});
+      this.eras.availableOptions.push({ id: era, name: GrammarHelper.toTitleCase(era) });
     }
+    this.eras.availableOptions.sort((a, b) => a.name.localeCompare(b.name));
+    this.eras.availableOptions.unshift({ id: '', name: 'Any' });
     return this.eras;
   }
 }
