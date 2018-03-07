@@ -4,7 +4,7 @@
     <app-header-narrow></app-header-narrow>
 
     <div class="container">
-      <section id="quiz-builder">        
+      <section id="quiz-builder">
         <div class="row">
           <div class="col-4">
             <app-quiz-parm-display></app-quiz-parm-display>
@@ -16,7 +16,7 @@
               <div class="form-group">
                 <label for="multipleSelect">Perspectives</label>
                 <!-- TODO: add form validation -->
-                <select class="form-control" id="perspectives" [(ngModel)]="perspectives.selectedOption" name="perspectives" multiple>
+                <select class="form-control" id="perspectives" [(ngModel)]="wizardService.perspectives.selectedOption" name="perspectives" multiple>
                   <option *ngFor="let perspective of getPerspectives().availableOptions" [value]="perspective.id">{{perspective.name}}</option>
     					</select>
               </div>

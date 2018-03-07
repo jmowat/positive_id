@@ -10,12 +10,39 @@ export class WizardService {
   dataHistory: any[] = [];
 
   platform: string;
-  era: string;
-  side: string;
-  distance: string;
-  optics: string;
-  perspectives: string[];
+  // era: string;
+  // side: string;
+  // distance: string;
+  // optics: string;
+  // perspectives: string[];
   maxQuestions: number;
+
+  platforms = {
+    selectedOption: {
+      id: 'ground vehicle',
+      name: 'Ground Vehicles'
+    }
+  };
+
+  eras = {
+    selectedOption: { id: '' }
+  };
+
+  sides = {
+    selectedOption: { id: '' }
+  };
+
+  distances = {
+    selectedOption: { id: '' }
+  };
+
+  optics = {
+    selectedOption: { id: '' }
+  };
+
+  perspectives = {
+    selectedOption: []
+  };
 
   static filter(vehicles: Vehicle[], type: string, value: string) {
     return vehicles.filter((v: Vehicle) => v[type] === value || v[type].includes(value));
@@ -51,7 +78,7 @@ export class WizardService {
 
   getQuizParms(): QuizParms {
     const parms: QuizParms = {
-      platforms: [this.platform],
+      platforms: [this.platforms.selectedOption.id],
       optionsToShow: 5,
       randomizeQuestions: true,
       numberOfQuestions: this.maxQuestions
@@ -59,11 +86,11 @@ export class WizardService {
 
     parms.numberOfQuestions = this.maxQuestions;
 
-    this.era ? parms.eras = [this.era] : parms.eras = undefined;
-    this.distance ? parms.distances = [this.distance] : parms.distances = undefined;
-    this.optics ? parms.optics = [this.optics] : parms.optics = undefined;
-    this.side ? parms.sides = [this.side] : parms.sides = undefined;
-    this.perspectives ? parms.profiles = this.perspectives : parms.profiles = undefined;
+    this.eras.selectedOption.id ? parms.eras = [this.eras.selectedOption.id] : parms.eras = undefined;
+    this.distances.selectedOption.id ? parms.distances = [this.distances.selectedOption.id] : parms.distances = undefined;
+    this.optics.selectedOption.id ? parms.optics = [this.optics.selectedOption.id] : parms.optics = undefined;
+    this.sides.selectedOption.id ? parms.sides = [this.sides.selectedOption.id] : parms.sides = undefined;
+    this.perspectives.selectedOption ? parms.profiles = this.perspectives.selectedOption : parms.profiles = undefined;
     return parms;
   }
 }

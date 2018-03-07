@@ -17,8 +17,7 @@ export class DistanceComponent implements OnInit {
   vehicles: Vehicle[];
 
   distances = {
-    availableOptions: [],
-    selectedOption: { id: '' }
+    availableOptions: []
   };
 
   constructor(private router: Router, private location: Location, private wizardService: WizardService) { }
@@ -29,9 +28,9 @@ export class DistanceComponent implements OnInit {
 
   next() {
     // filter images based on distance selection
-    this.wizardService.distance = this.distances.selectedOption.id;
-    this.wizardService.setData(this.distances.selectedOption.id ?
-      WizardService.filterImages(this.vehicles, 'distance', this.distances.selectedOption.id) :
+    // this.wizardService.distance = this.distances.selectedOption.id;
+    this.wizardService.setData(this.wizardService.distances.selectedOption.id ?
+      WizardService.filterImages(this.vehicles, 'distance', this.wizardService.distances.selectedOption.id) :
       this.vehicles);
     this.router.navigateByUrl('/optics');
   }

@@ -16,8 +16,7 @@ import { QuizParms } from '../../quiz-parms';
 export class SideComponent implements OnInit {
   vehicles: Vehicle[];
   sides = {
-    availableOptions: [],
-    selectedOption: { id: '' }
+    availableOptions: []
   };
 
   constructor(private router: Router, private location: Location, private wizardService: WizardService) { }
@@ -27,11 +26,11 @@ export class SideComponent implements OnInit {
   }
 
   next() {
-    this.wizardService.side = this.sides.selectedOption.id;
+    // this.wizardService.side = this.sides.selectedOption.id;
 
     this.wizardService.setData(
-      this.sides.selectedOption.id ?
-        WizardService.filter(this.vehicles, 'side', this.sides.selectedOption.id) :
+      this.wizardService.sides.selectedOption.id ?
+        WizardService.filter(this.vehicles, 'side', this.wizardService.sides.selectedOption.id) :
         this.vehicles);
     this.router.navigateByUrl('/distance');
   }

@@ -15,7 +15,7 @@
             <form name="quizBuilderForm" class="form-horizontal">
               <div class="form-group">
                 <label for="opticsFilter">Optics</label>
-                <select class="form-control" id="optics" [(ngModel)]="optics.selectedOption.id" name="optics">
+                <select class="form-control" id="optics" [(ngModel)]="wizardService.optics.selectedOption.id" name="optics">
                   <option *ngFor="let optic of getOptics().availableOptions" [value]="optic.id">{{optic.name}}</option>
     					</select>
               </div>

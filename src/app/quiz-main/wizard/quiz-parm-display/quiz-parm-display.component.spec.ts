@@ -20,18 +20,6 @@ describe('QuizParmDisplayComponent', () => {
     getVehicles: () => Observable.of([new Vehicle()])
   };
 
-  const wizardServiceStub = {
-    getData: () => ([new Vehicle()]),
-    getQuizParms: () => dummyParms
-  };
-
-  const dummyParms: QuizParms = {
-    platforms: ['ground vehicles'],
-    optionsToShow: 5,
-    randomizeQuestions: true,
-    numberOfQuestions: 5
-  };
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [QuizParmDisplayComponent],
@@ -42,7 +30,7 @@ describe('QuizParmDisplayComponent', () => {
         },
         {
           provide: WizardService,
-          useValue: wizardServiceStub
+          useClass: MockWizardService
         }
       ],
       imports: [FormsModule]
@@ -60,3 +48,18 @@ describe('QuizParmDisplayComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+class MockWizardService extends WizardService {
+  getData() {
+    return [new Vehicle()];
+  }
+
+  getQuizParms() {
+    return {
+      platforms: ['ground vehicles'],
+      optionsToShow: 5,
+      randomizeQuestions: true,
+      numberOfQuestions: 5
+    };
+  }
+}

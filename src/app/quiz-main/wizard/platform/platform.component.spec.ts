@@ -24,8 +24,7 @@ describe('PlatformComponent', () => {
   const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
   const locationSpy = jasmine.createSpyObj('Location', ['back']);
   const vehicleServiceStub = {
-    getVehicles: () => Observable.of([new Vehicle()]),
-    getQuizParms: () => dummyParms
+    getVehicles: () => Observable.of([new Vehicle()])
   };
 
   const dummyParms: QuizParms = {
@@ -75,5 +74,20 @@ class MockVehicleService {
   constructor() { }
   getVehicles(): Observable<Vehicle[]> {
     return of(FIVE_VEHICLES);
+  }
+}
+
+class MockWizardService extends WizardService {
+  getData() {
+    return [new Vehicle()];
+  }
+
+  getQuizParms() {
+    return {
+      platforms: ['ground vehicles'],
+      optionsToShow: 5,
+      randomizeQuestions: true,
+      numberOfQuestions: 5
+    };
   }
 }

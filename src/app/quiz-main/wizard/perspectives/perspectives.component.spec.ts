@@ -34,18 +34,6 @@ describe('PerspectivesComponent', () => {
     getVehicles: () => Observable.of([testVehicle])
   };
 
-  const wizardServiceStub = {
-    getData: () => ([testVehicle]),
-    getQuizParms: () => dummyParms
-  };
-
-  const dummyParms: QuizParms = {
-    platforms: ['ground vehicles'],
-    optionsToShow: 5,
-    randomizeQuestions: true,
-    numberOfQuestions: 5
-  };
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [PerspectivesComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, QuizParmDisplayComponent],
@@ -60,7 +48,7 @@ describe('PerspectivesComponent', () => {
         },
         {
           provide: WizardService,
-          useValue: wizardServiceStub
+          useClass: MockWizardService
         },
         {
           provide: Location,
@@ -81,3 +69,25 @@ describe('PerspectivesComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+class MockWizardService extends WizardService {
+  getData() {
+    const testVehicle = new Vehicle();
+    testVehicle.images = [{
+      img_lg: '', img_sm: '', perspective: 'oblique', optics: 'naked eye', classification: '',
+      distance: 'near', source: ''},
+      {
+        img_lg: '', img_sm: '', perspective: 'side', optics: 'thermals', classification: '',
+        distance: 'far', source: ''}];
+    return [testVehicle];
+  }
+
+  getQuizParms() {
+    return {
+      platforms: ['ground vehicles'],
+      optionsToShow: 5,
+      randomizeQuestions: true,
+      numberOfQuestions: 5
+    };
+  }
+}

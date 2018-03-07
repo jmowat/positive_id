@@ -10,7 +10,7 @@
         <form name="quizBuilderForm" class="form-horizontal" #form="ngForm">
           <div class="form-group">
             <label for="platformFilter">Platform</label>
-            <select class="form-control" id="platform" [(ngModel)]="platforms.selectedOption.id" name="platform">
+            <select class="form-control" id="platform" [(ngModel)]="wizardService.platforms.selectedOption.id" name="platform">
             <option *ngFor="let platform of platforms.availableOptions" [value]="platform.id">{{platform.name}}</option>
 					</select>
           </div>

@@ -17,8 +17,7 @@ export class OpticsComponent implements OnInit {
   vehicles: Vehicle[];
 
   optics = {
-    availableOptions: [],
-    selectedOption: { id: '' }
+    availableOptions: []
   };
 
   constructor(private router: Router, private location: Location,
@@ -30,9 +29,9 @@ export class OpticsComponent implements OnInit {
 
   next() {
     // filter images based on optics selection
-    this.wizardService.optics = this.optics.selectedOption.id;
-    this.wizardService.setData(this.optics.selectedOption.id ?
-      WizardService.filterImages(this.vehicles, 'optics', this.optics.selectedOption.id) :
+    // this.wizardService.optics = this.optics.selectedOption.id;
+    this.wizardService.setData(this.wizardService.optics.selectedOption.id ?
+      WizardService.filterImages(this.vehicles, 'optics', this.wizardService.optics.selectedOption.id) :
       this.vehicles);
     this.router.navigateByUrl('/perspectives');
   }

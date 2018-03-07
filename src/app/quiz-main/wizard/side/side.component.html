@@ -15,7 +15,7 @@
             <form name="quizBuilderForm" class="form-horizontal">
               <div class="form-group">
                 <label for="sideFilter">Side</label>
-                <select class="form-control" id="side" [(ngModel)]="sides.selectedOption.id" name="side">
+                <select class="form-control" id="side" [(ngModel)]="wizardService.sides.selectedOption.id" name="side">
                   <option *ngFor="let side of getSides().availableOptions" [value]="side.id">{{side.name}}</option>
     					  </select>
               </div>

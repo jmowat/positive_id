@@ -18,8 +18,7 @@ export class PerspectivesComponent implements OnInit {
   vehicles: Vehicle[];
 
   perspectives = {
-    availableOptions: [],
-    selectedOption: []
+    availableOptions: []
   };
 
   constructor(private router: Router, private location: Location, private wizardService: WizardService) { }
@@ -30,7 +29,7 @@ export class PerspectivesComponent implements OnInit {
 
   next() {
     // not a filter criteria, but rather a display attribute
-    this.wizardService.perspectives = this.perspectives.selectedOption;
+    // this.wizardService.perspectives = this.perspectives.selectedOption;
     this.wizardService.setData(this.vehicles);
     this.router.navigateByUrl('/summary');
   }

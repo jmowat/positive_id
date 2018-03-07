@@ -15,7 +15,7 @@
             <form name="quizBuilderForm" class="form-horizontal">
               <div class="form-group">
                 <label for="distanceFilter">Distance</label>
-                <select class="form-control" id="distance" [(ngModel)]="distances.selectedOption.id" name="distance">
+                <select class="form-control" id="distance" [(ngModel)]="wizardService.distances.selectedOption.id" name="distance">
                   <option *ngFor="let distance of getDistances().availableOptions" [value]="distance.id">{{distance.name}}</option>
     					  </select>
               </div>

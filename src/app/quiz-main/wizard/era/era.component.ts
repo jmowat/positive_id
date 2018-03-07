@@ -16,8 +16,7 @@ import { QuizParms } from '../../quiz-parms';
 export class EraComponent implements OnInit {
   vehicles: Vehicle[];
   eras = {
-    availableOptions: [],
-    selectedOption: { id: '' }
+    availableOptions: []
   };
 
   constructor(private router: Router, private location: Location, private wizardService: WizardService) { }
@@ -27,9 +26,9 @@ export class EraComponent implements OnInit {
   }
 
   next() {
-    this.wizardService.era = this.eras.selectedOption.id;
-    this.wizardService.setData(this.eras.selectedOption.id ?
-      WizardService.filter(this.vehicles, 'era', this.eras.selectedOption.id) :
+    // this.wizardService.era = this.eras.selectedOption.id;
+    this.wizardService.setData(this.wizardService.eras.selectedOption.id ?
+      WizardService.filter(this.vehicles, 'era', this.wizardService.eras.selectedOption.id) :
       this.vehicles);
     this.router.navigateByUrl('/side');
   }
