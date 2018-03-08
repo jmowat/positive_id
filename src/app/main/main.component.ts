@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderBannerComponent } from '../header-banner/header-banner.component';
 import { QuizParms } from '../quiz-main/quiz-parms';
-import { TestParmsService } from '../quiz-main/quiz/test-parms.service';
+import { GameParmsService } from '../quiz-main/quiz/game-parms.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
-  constructor(public testParmsService: TestParmsService, private router: Router) {
+  constructor(public testParmsService: GameParmsService, private router: Router) {
   }
 
   ngOnInit() {

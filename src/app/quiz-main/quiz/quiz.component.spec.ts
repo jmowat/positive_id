@@ -8,14 +8,14 @@ import { FooterComponent } from '../../footer/footer.component';
 import { TopNavComponent } from '../../top-nav/top-nav.component';
 import { VehicleService } from '../../vehicle.service';
 import { QuizService } from '../quiz/quiz.service';
-import { StateService } from '../state/state.service';
+import { GameStateService } from '../state/game-state.service';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
 import { Vehicle } from '../../vehicle';
 import { QuizParms } from '../quiz-parms';
 import { FocusDirective } from './focus.directive';
-import { TestParmsService } from './test-parms.service';
+import { GameParmsService } from './game-parms.service';
 
 describe('QuizComponent', () => {
   let component: QuizComponent;
@@ -26,7 +26,7 @@ describe('QuizComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [QuizComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, FocusDirective],
-      providers: [QuizService, StateService, TestParmsService,
+      providers: [QuizService, GameStateService, GameParmsService,
         {
           provide: Router,
           useValue: routerSpy

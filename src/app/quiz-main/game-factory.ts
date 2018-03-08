@@ -1,7 +1,7 @@
 import { Quiz } from './quiz';
 import { Drill } from './drill';
 
-export class TestFactory {
+export class GameFactory {
   static createTest(vehicles, options) {
     if (options && options.hasOwnProperty('originalValues')) {
       // console.log("Return drill");

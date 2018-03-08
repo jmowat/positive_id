@@ -1,11 +1,11 @@
-import { Test } from './test';
+import { Game } from './game';
 import { VehicleCard } from './vehicle-card';
 import { Randomizer } from './randomizer';
 import { Vehicle } from '../vehicle';
 import { QuizParms } from './quiz-parms';
 import { QuizQuestion } from './quiz-question';
 
-export class Quiz extends Test {
+export class Quiz extends Game {
   vehicles: any[];
 
   constructor(vehicles, options: QuizParms = {

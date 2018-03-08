@@ -4,7 +4,7 @@ import { MainComponent } from './main.component';
 import { HeaderBannerComponent } from '../header-banner/header-banner.component';
 import { FooterComponent } from '../footer/footer.component';
 import { TopNavComponent } from '../top-nav/top-nav.component';
-import { TestParmsService } from '../quiz-main/quiz/test-parms.service';
+import { GameParmsService } from '../quiz-main/quiz/game-parms.service';
 import { Router } from '@angular/router';
 
 describe('MainComponent', () => {
@@ -15,7 +15,7 @@ describe('MainComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [MainComponent, HeaderBannerComponent, FooterComponent, TopNavComponent],
-      providers: [TestParmsService,
+      providers: [GameParmsService,
         {
           provide: Router,
           useValue: routerSpy

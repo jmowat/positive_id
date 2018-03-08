@@ -1,4 +1,4 @@
-import { BaseState } from './state';
+import { BaseState } from './game-state';
 import { Router } from '@angular/router';
 
 export class Context {

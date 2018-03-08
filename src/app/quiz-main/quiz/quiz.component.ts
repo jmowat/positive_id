@@ -1,11 +1,10 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { QuizService } from '../quiz/quiz.service';
 import { QuizQuestion } from '../quiz-question';
-import { StateService } from '../state/state.service';
-import { Test } from '../test';
+import { GameStateService } from '../state/game-state.service';
 import { QuizParms } from '../quiz-parms';
 import { HostListener } from '@angular/core';
-import { TestParmsService } from './test-parms.service';
+import { GameParmsService } from './game-parms.service';
 
 @Component({
   selector: 'app-quiz',
@@ -19,7 +18,7 @@ export class QuizComponent implements OnInit {
   radioValues: { id: number, name: string }[] = [];
   public myFocusTriggeringEventEmitter = new EventEmitter<boolean>();
 
-  constructor(public service: StateService, public parms: TestParmsService) { }
+  constructor(public service: GameStateService, public parms: GameParmsService) { }
 
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {

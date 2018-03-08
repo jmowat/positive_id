@@ -2,7 +2,7 @@ import { TestBed, inject } from '@angular/core/testing';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { QuizService } from './quiz.service';
-import { Test } from '../test';
+import { Game } from '../game';
 import { Quiz } from '../quiz';
 import { Drill } from '../drill';
 import { VehicleService } from '../../vehicle.service';
@@ -26,7 +26,7 @@ describe('QuizService', () => {
   }));
 
   it('should not create a quiz by default', inject([QuizService], (service: QuizService) => {
-    let t: Test;
+    let t: Game;
     t = service.getTest();
     expect(t).toBeFalsy();
     expect(t instanceof Quiz).toBeFalsy();
@@ -34,7 +34,7 @@ describe('QuizService', () => {
   }));
 
   describe('Quiz test in QuizService', () => {
-    let quiz: Test;
+    let quiz: Game;
     beforeEach(inject([QuizService], (service: QuizService) => {
       service.createNewTest({
         optionsToShow: 5,

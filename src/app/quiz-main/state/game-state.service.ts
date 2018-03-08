@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Test } from '../test';
+import { Game } from '../game';
 import { QuizService } from '../quiz/quiz.service';
-import { State } from './state';
+import { GameState } from './game-state';
 import { Context } from './context';
 import { QuizParms } from '../quiz-parms';
 import { Router } from '@angular/router';
 
 @Injectable()
-export class StateService {
+export class GameStateService {
   context: Context;
 
   constructor(private quizService: QuizService, private router: Router) {
@@ -38,7 +38,7 @@ export class StateService {
     return this.context.current.getUserAnswer();
   }
 
-  getTest(): Test {
+  getTest(): Game {
     return this.quizService.getTest();
   }
 

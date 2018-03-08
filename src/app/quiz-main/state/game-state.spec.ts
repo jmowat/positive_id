@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { State, BaseState, InvalidState, SuccessNextState } from './state';
+import { GameState, BaseState, InvalidState, SuccessNextState } from './game-state';
 import { Context } from './context';
 import { Router } from '@angular/router';
 
@@ -28,7 +28,7 @@ describe('State', () => {
   });
 
   it('should create', inject([Router], (router: Router) => {
-    expect(new State()).toBeTruthy();
+    expect(new GameState()).toBeTruthy();
   }));
 
   it('should kick things off with a context', () => {

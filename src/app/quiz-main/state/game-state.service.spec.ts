@@ -2,17 +2,17 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import { Test } from '../test';
+import { Game } from '../game';
 import { Quiz } from '../quiz';
 import { Drill } from '../drill';
 import { Vehicle } from '../../vehicle';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
-import { State } from './state';
+import { GameState } from './game-state';
 import { Context } from './context';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AppRoutingModule } from '../../app-routing.module';
 
-import { StateService } from './state.service';
+import { GameStateService } from './game-state.service';
 import { VehicleService } from '../../vehicle.service';
 import { QuizService } from '../quiz/quiz.service';
 
@@ -23,7 +23,7 @@ describe('StateService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [],
-      providers: [StateService, QuizService,
+      providers: [GameStateService, QuizService,
         {
           provide: Router,
           useValue: routerSpy
@@ -40,13 +40,13 @@ describe('StateService', () => {
     });
   });
 
-  it('create an instance', inject([StateService], (stateService: StateService) => {
+  it('create an instance', inject([GameStateService], (stateService: GameStateService) => {
     expect(stateService).toBeTruthy();
   }));
 
   describe('basic quiz functionality', () => {
 
-    beforeEach(inject([StateService], (service: StateService) => {
+    beforeEach(inject([GameStateService], (service: GameStateService) => {
       service.createNewTest({
         optionsToShow: 5,
         numberOfQuestions: 5,
@@ -59,7 +59,7 @@ describe('StateService', () => {
       });
     }));
 
-    it('should detect a correct answer', inject([StateService], (service: StateService) => {
+    it('should detect a correct answer', inject([GameStateService], (service: GameStateService) => {
       // console.log('should detect a correct answer',quizService.quiz.questions[0]);
       service.acceptAnswer('T-90');
       expect(service.getStatus()).toBe('success');
@@ -69,7 +69,7 @@ describe('StateService', () => {
       expect(service.getActionText()).toBe('Next');
     }));
 
-    it('should detect a wrong answer', inject([StateService], (service: StateService) => {
+    it('should detect a wrong answer', inject([GameStateService], (service: GameStateService) => {
       service.acceptAnswer('xyz');
       expect(service.getStatus()).toBe('danger');
       expect(service.getStatusMessage()).toBeTruthy();
@@ -77,7 +77,7 @@ describe('StateService', () => {
       expect(service.getActionText()).toBe('Next');
     }));
 
-    it('should detect an empty answer', inject([StateService], (service: StateService) => {
+    it('should detect an empty answer', inject([GameStateService], (service: GameStateService) => {
       service.acceptAnswer('');
       expect(service.getStatus()).toBe('danger');
       expect(service.getStatusMessage()).toBeTruthy();
@@ -85,7 +85,7 @@ describe('StateService', () => {
       expect(service.getActionText()).toBe('Next');
     }));
 
-    it('should transition from a correct answer to the next question', inject([StateService], (service: StateService) => {
+    it('should transition from a correct answer to the next question', inject([GameStateService], (service: GameStateService) => {
       expect(service.getTest().getQuestion().getName()).toBe('T-90');
       service.acceptAnswer('T-90');
       expect(service.getStatus()).toBe('success');
@@ -106,7 +106,7 @@ describe('StateService', () => {
       expect(service.getTest().getQuestion().getName()).toBe('T-80');
     }));
 
-    it('should show Finish after correctly answering the last question', inject([StateService], (service: StateService) => {
+    it('should show Finish after correctly answering the last question', inject([GameStateService], (service: GameStateService) => {
       const answers = ['T-90', 'T-80', 'T-72', 'T-62', 'T-55'];
       for (let i = 0; i < answers.length; i++) {
         service.acceptAnswer(answers[i]);
@@ -118,7 +118,7 @@ describe('StateService', () => {
       expect(service.getTest().getNumWrong()).toBe(0);
     }));
 
-    it('should remember the question answered wrong', inject([StateService], (service: StateService) => {
+    it('should remember the question answered wrong', inject([GameStateService], (service: GameStateService) => {
       expect(service.getTest().getQuestion().getName()).toBe('T-90');
       expect(service.getTest().getNumWrong()).toBe(0);
       service.acceptAnswer('xyz');
@@ -127,13 +127,13 @@ describe('StateService', () => {
       expect(service.getTest().getWrongQuestions()[0].getName()).toBe('T-90');
     }));
 
-    it('should not consider an empty selection as being wrong', inject([StateService], (service: StateService) => {
+    it('should not consider an empty selection as being wrong', inject([GameStateService], (service: GameStateService) => {
       expect(service.getTest().getNumWrong()).toBe(0);
       service.acceptAnswer('');
       expect(service.getTest().getNumWrong()).toBe(0);
     }));
 
-    it('should not move to next question until correct answer', inject([StateService], (service: StateService) => {
+    it('should not move to next question until correct answer', inject([GameStateService], (service: GameStateService) => {
       expect(service.getTest().getCurrentQuestionIndex()).toBe(0);
       service.acceptAnswer('xyz');
       expect(service.getTest().getCurrentQuestionIndex()).toBe(0);
@@ -148,7 +148,7 @@ describe('StateService', () => {
       expect(service.getTest().getCurrentQuestionIndex()).toBe(1);
     }));
 
-    it('should remember all of the wrongly answered questions', inject([StateService], (service: StateService) => {
+    it('should remember all of the wrongly answered questions', inject([GameStateService], (service: GameStateService) => {
       expect(service.getTest().getNumWrong()).toBe(0);
       service.acceptAnswer('xyz');
       expect(service.getTest().getNumWrong()).toBe(1);
@@ -175,7 +175,7 @@ class MockVehicleService {
 class MockQuizService {
   constructor() { }
 
-  getTest(): Test {
+  getTest(): Game {
     return undefined;
   }
 

@@ -1,9 +1,9 @@
-import { Test } from './test';
+import { Game } from './game';
 import { Randomizer } from './randomizer';
 import { VehicleCard } from './vehicle-card';
 import { QuizQuestion } from './quiz-question';
 
-export class Drill extends Test {
+export class Drill extends Game {
   constructor(private vehicles, options: DrillOptions) {
     super();
     const self = this;

@@ -4,7 +4,7 @@ import { QuizQuestion } from './quiz-question';
 /*
  * Abstract base class for Quiz and Drill
  */
-export class Test {
+export class Game {
 
   questions: QuizQuestion[];
   currentQuestion: number;

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { QuizParms } from '../quiz-parms';
 
 @Injectable()
-export class TestParmsService {
+export class GameParmsService {
   testParms: QuizParms;
   constructor() { }
 

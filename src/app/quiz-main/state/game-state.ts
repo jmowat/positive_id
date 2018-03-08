@@ -2,7 +2,7 @@ import { GrammarHelper } from '../grammar-helper';
 import { Context } from './context';
 import { Router } from '@angular/router';
 
-export class State {
+export class GameState {
   actionText: string;
   statusText: string;
   status: string;
@@ -48,7 +48,7 @@ export class State {
   }
 }
 
-export class BaseState extends State {
+export class BaseState extends GameState {
   constructor() {
     super();
     this.actionText = 'Next';
