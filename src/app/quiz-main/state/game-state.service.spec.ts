@@ -8,7 +8,7 @@ import { Drill } from '../game/drill';
 import { Vehicle } from '../../vehicle';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
 import { GameState } from './game-state';
-import { Context } from './context';
+import { GameContext } from './game-context';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AppRoutingModule } from '../../app-routing.module';
 

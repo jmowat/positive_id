@@ -1,5 +1,5 @@
 import { GrammarHelper } from '../grammar-helper';
-import { Context } from './context';
+import { GameContext } from './game-context';
 import { Router } from '@angular/router';
 
 export class GameState {

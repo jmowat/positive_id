@@ -1,7 +1,7 @@
 import { BaseState } from './game-state';
 import { Router } from '@angular/router';
 
-export class Context {
+export class GameContext {
 	current: BaseState;
 
 	constructor() {

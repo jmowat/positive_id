@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { Game } from '../game/game';
 import { QuizService } from '../quiz/quiz.service';
 import { GameState } from './game-state';
-import { Context } from './context';
+import { GameContext } from './game-context';
 import { QuizParms } from '../game/quiz-parms';
 import { Router } from '@angular/router';
 
 @Injectable()
 export class GameStateService {
-  context: Context;
+  context: GameContext;
 
   constructor(private quizService: QuizService, private router: Router) {
     this.reset();
@@ -44,7 +44,7 @@ export class GameStateService {
 
   createNewTest(quizParms: any) {
     this.quizService.createNewTest(quizParms);
-    this.context = new Context();
+    this.context = new GameContext();
   }
 
   nextQuestion() {
@@ -60,6 +60,6 @@ export class GameStateService {
   }
 
   reset() {
-    this.context = new Context();
+    this.context = new GameContext();
   }
 }

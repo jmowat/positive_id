@@ -1,11 +1,11 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { GameState, BaseState, InvalidState, SuccessNextState } from './game-state';
-import { Context } from './context';
+import { GameContext } from './game-context';
 import { Router } from '@angular/router';
 
 describe('State', () => {
-  let context: Context;
+  let context: GameContext;
   let quiz;
 
   const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
@@ -24,7 +24,7 @@ describe('State', () => {
 
   beforeEach(() => {
     quiz = new MockQuiz();
-    context = new Context();
+    context = new GameContext();
   });
 
   it('should create', inject([Router], (router: Router) => {
