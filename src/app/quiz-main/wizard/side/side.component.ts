@@ -7,6 +7,7 @@ import { FilterHelper } from '../../../filter-helper';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
+import { GameBuilderStateService } from '../state/game-builder-state.service';
 
 @Component({
   selector: 'app-side',
@@ -19,7 +20,8 @@ export class SideComponent implements OnInit {
     availableOptions: []
   };
 
-  constructor(private router: Router, private location: Location, private wizardService: WizardService) { }
+  constructor(private router: Router, private location: Location, private wizardService: WizardService,
+  private stateService: GameBuilderStateService) { }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
@@ -32,12 +34,14 @@ export class SideComponent implements OnInit {
       this.wizardService.sides.selectedOption.id ?
         WizardService.filter(this.vehicles, 'side', this.wizardService.sides.selectedOption.id) :
         this.vehicles);
-    this.router.navigateByUrl('/distance');
+    // this.router.navigateByUrl('/distance');
+    this.stateService.next();
   }
 
   back() {
     this.wizardService.resetLastDataFromHistory();
-    this.location.back();
+    // this.location.back();
+    this.stateService.previous();
   }
 
   getSides(): any {

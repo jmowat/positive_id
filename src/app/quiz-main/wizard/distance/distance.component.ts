@@ -7,6 +7,7 @@ import { FilterHelper } from '../../../filter-helper';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
+import { GameBuilderStateService } from '../state/game-builder-state.service';
 
 @Component({
   selector: 'app-distance',
@@ -20,7 +21,8 @@ export class DistanceComponent implements OnInit {
     availableOptions: []
   };
 
-  constructor(private router: Router, private location: Location, private wizardService: WizardService) { }
+  constructor(private router: Router, private location: Location, private wizardService: WizardService,
+  private stateService: GameBuilderStateService) { }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
@@ -32,12 +34,14 @@ export class DistanceComponent implements OnInit {
     this.wizardService.setData(this.wizardService.distances.selectedOption.id ?
       WizardService.filterImages(this.vehicles, 'distance', this.wizardService.distances.selectedOption.id) :
       this.vehicles);
-    this.router.navigateByUrl('/optics');
+      this.stateService.next();
+    // this.router.navigateByUrl('/optics');
   }
 
   back() {
     this.wizardService.resetLastDataFromHistory();
-    this.location.back();
+    // this.location.back();
+    this.stateService.previous();
   }
 
   getDistances(): any {

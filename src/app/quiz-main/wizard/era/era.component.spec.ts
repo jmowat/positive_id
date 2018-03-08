@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
+import { GameBuilderStateService } from '../state/game-builder-state.service';
 
 describe('EraComponent', () => {
   let component: EraComponent;
@@ -30,7 +31,7 @@ describe('EraComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [EraComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, QuizParmDisplayComponent],
-      providers: [
+      providers: [ GameBuilderStateService,
         {
           provide: Router,
           useValue: routerSpy

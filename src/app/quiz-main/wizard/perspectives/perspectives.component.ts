@@ -7,6 +7,7 @@ import { FilterHelper } from '../../../filter-helper';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
+import { GameBuilderStateService } from '../state/game-builder-state.service';
 
 // TODO: form validation - user must select at least one perspective
 @Component({
@@ -21,7 +22,8 @@ export class PerspectivesComponent implements OnInit {
     availableOptions: []
   };
 
-  constructor(private router: Router, private location: Location, private wizardService: WizardService) { }
+  constructor(private router: Router, private location: Location, private wizardService: WizardService,
+  private stateService: GameBuilderStateService) { }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
@@ -31,12 +33,14 @@ export class PerspectivesComponent implements OnInit {
     // not a filter criteria, but rather a display attribute
     // this.wizardService.perspectives = this.perspectives.selectedOption;
     this.wizardService.setData(this.vehicles);
-    this.router.navigateByUrl('/summary');
+    // this.router.navigateByUrl('/summary');
+    this.stateService.next();
   }
 
   back() {
     this.wizardService.resetLastDataFromHistory();
-    this.location.back();
+    // this.location.back();
+    this.stateService.previous();
   }
 
   getPerspectives(): any {

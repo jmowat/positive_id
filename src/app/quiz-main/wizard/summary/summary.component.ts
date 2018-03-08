@@ -9,6 +9,7 @@ import { FilterHelper } from '../../../filter-helper';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
+import { GameBuilderStateService } from '../state/game-builder-state.service';
 
 @Component({
   selector: 'app-summary',
@@ -20,7 +21,7 @@ export class SummaryComponent implements OnInit {
   maxQuestions: number;
 
   constructor(private router: Router, private location: Location, private parmsService: GameParmsService,
-    public wizardService: WizardService) { }
+    public wizardService: WizardService, private stateService: GameBuilderStateService) { }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
@@ -30,11 +31,13 @@ export class SummaryComponent implements OnInit {
   next() {
     this.wizardService.maxQuestions = this.maxQuestions;
     this.parmsService.setTestParms(this.wizardService.getQuizParms());
-    this.router.navigateByUrl('/quiz');
+    // this.router.navigateByUrl('/quiz');
+    this.stateService.next();
   }
 
   back() {
     this.wizardService.resetLastDataFromHistory();
-    this.location.back();
+    // this.location.back();
+    this.stateService.previous();
   }
 }

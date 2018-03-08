@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameBuilderStateService } from '../state/game-builder-state.service';
 
 @Component({
   selector: 'app-vehicle-selection',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehicleSelectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private stateService: GameBuilderStateService) { }
 
   ngOnInit() {
   }

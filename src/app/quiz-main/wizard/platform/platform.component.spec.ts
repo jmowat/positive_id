@@ -17,6 +17,7 @@ import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
+import { GameBuilderStateService } from '../state/game-builder-state.service';
 
 describe('PlatformComponent', () => {
   let component: PlatformComponent;
@@ -37,7 +38,7 @@ describe('PlatformComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [PlatformComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, QuizParmDisplayComponent],
-      providers: [WizardService,
+      providers: [WizardService, GameBuilderStateService,
         {
           provide: VehicleService,
           useClass: MockVehicleService

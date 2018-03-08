@@ -7,6 +7,7 @@ import { Vehicle } from '../../../vehicle';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
+import { GameBuilderStateService } from '../state/game-builder-state.service';
 
 @Component({
   selector: 'app-platform',
@@ -26,7 +27,7 @@ export class PlatformComponent implements OnInit {
   };
 
   constructor(private router: Router, private location: Location, private vehicleService: VehicleService,
-    private wizardService: WizardService) { }
+    private wizardService: WizardService, private stateService: GameBuilderStateService) { }
 
   ngOnInit() {
     this.vehicleService.getVehicles().subscribe((data) => {
@@ -41,7 +42,8 @@ export class PlatformComponent implements OnInit {
     this.wizardService.platform = this.wizardService.platforms.selectedOption.id;
     this.wizardService.setData(this.wizardService.platforms.selectedOption.id ? WizardService
       .filter(this.vehicles, 'type', this.wizardService.platforms.selectedOption.id) : this.vehicles);
-    this.router.navigateByUrl('/era');
+      this.stateService.next();
+    // this.router.navigateByUrl('/era');
   }
 
 }

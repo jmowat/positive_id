@@ -18,6 +18,7 @@ import { GameParmsService } from '../../game/game-parms.service';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
+import { GameBuilderStateService } from '../state/game-builder-state.service';
 
 describe('SummaryComponent', () => {
   let component: SummaryComponent;
@@ -31,7 +32,7 @@ describe('SummaryComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SummaryComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, QuizParmDisplayComponent],
-      providers: [ GameParmsService,
+      providers: [ GameParmsService, GameBuilderStateService,
         {
           provide: Router,
           useValue: routerSpy

@@ -7,6 +7,7 @@ import { FilterHelper } from '../../../filter-helper';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
+import { GameBuilderStateService } from '../state/game-builder-state.service';
 
 @Component({
   selector: 'app-optics',
@@ -21,7 +22,7 @@ export class OpticsComponent implements OnInit {
   };
 
   constructor(private router: Router, private location: Location,
-    private wizardService: WizardService) { }
+    private wizardService: WizardService, private stateService: GameBuilderStateService) { }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
@@ -33,12 +34,14 @@ export class OpticsComponent implements OnInit {
     this.wizardService.setData(this.wizardService.optics.selectedOption.id ?
       WizardService.filterImages(this.vehicles, 'optics', this.wizardService.optics.selectedOption.id) :
       this.vehicles);
-    this.router.navigateByUrl('/perspectives');
+      this.stateService.next();
+    // this.router.navigateByUrl('/perspectives');
   }
 
   back() {
     this.wizardService.resetLastDataFromHistory();
-    this.location.back();
+    // this.location.back();
+    this.stateService.previous();
   }
 
   getOptics(): any {

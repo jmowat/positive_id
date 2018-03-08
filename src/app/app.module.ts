@@ -40,6 +40,7 @@ import { PerspectivesComponent } from './quiz-main/wizard/perspectives/perspecti
 import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
 import { QuizParmDisplayComponent } from './quiz-main/wizard/quiz-parm-display/quiz-parm-display.component';
 import { VehicleSelectionComponent } from './quiz-main/wizard/vehicle-selection/vehicle-selection.component';
+import { GameBuilderStateService } from './quiz-main/wizard/state/game-builder-state.service';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { VehicleSelectionComponent } from './quiz-main/wizard/vehicle-selection/
     QuizService,
     GameStateService,
     GameParmsService,
-    WizardService
+    WizardService,
+    GameBuilderStateService
   ],
   entryComponents: [
     ModalComponent
