@@ -33,6 +33,7 @@ export class PlatformComponent implements OnInit {
       this.vehicles = data;
       // add this so the original history can be preserved
       this.wizardService.setData(this.vehicles);
+      this.wizardService.resetUserSelections();
     });
   }
 

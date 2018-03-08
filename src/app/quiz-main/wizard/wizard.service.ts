@@ -76,6 +76,22 @@ export class WizardService {
     return this.filteredVehicles;
   }
 
+  getStateData(): QuizParms {
+    const parms: QuizParms = {
+      platforms: [this.platforms.selectedOption.id],
+      optionsToShow: 5,
+      randomizeQuestions: true,
+      numberOfQuestions: this.maxQuestions
+    };
+
+    parms.eras = [this.eras.selectedOption.id];
+    parms.distances = [this.distances.selectedOption.id];
+    parms.optics = [this.optics.selectedOption.id];
+    parms.sides = [this.sides.selectedOption.id];
+    parms.profiles = this.perspectives.selectedOption;
+    return parms;
+  }
+
   getQuizParms(): QuizParms {
     const parms: QuizParms = {
       platforms: [this.platforms.selectedOption.id],
@@ -84,13 +100,45 @@ export class WizardService {
       numberOfQuestions: this.maxQuestions
     };
 
-    parms.numberOfQuestions = this.maxQuestions;
-
     this.eras.selectedOption.id ? parms.eras = [this.eras.selectedOption.id] : parms.eras = undefined;
     this.distances.selectedOption.id ? parms.distances = [this.distances.selectedOption.id] : parms.distances = undefined;
     this.optics.selectedOption.id ? parms.optics = [this.optics.selectedOption.id] : parms.optics = undefined;
     this.sides.selectedOption.id ? parms.sides = [this.sides.selectedOption.id] : parms.sides = undefined;
     this.perspectives.selectedOption ? parms.profiles = this.perspectives.selectedOption : parms.profiles = undefined;
+    // parms.eras = [this.eras.selectedOption.id];
+    // parms.distances = [this.distances.selectedOption.id];
+    // parms.optics = [this.optics.selectedOption.id];
+    // parms.sides = [this.sides.selectedOption.id];
+    // parms.profiles = this.perspectives.selectedOption;
     return parms;
+  }
+
+  resetUserSelections() {
+    this.platforms = {
+      selectedOption: {
+        id: 'ground vehicle',
+        name: 'Ground Vehicles'
+      }
+    };
+
+    this.eras = {
+      selectedOption: { id: '' }
+    };
+
+    this.sides = {
+      selectedOption: { id: '' }
+    };
+
+    this.distances = {
+      selectedOption: { id: '' }
+    };
+
+    this.optics = {
+      selectedOption: { id: '' }
+    };
+
+    this.perspectives = {
+      selectedOption: []
+    };
   }
 }
