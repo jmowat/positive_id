@@ -14,7 +14,7 @@ import { of } from 'rxjs/observable/of';
 import { Vehicle } from '../../../vehicle';
 import { WizardService } from '../wizard.service';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
-import { TestParmsService } from '../../quiz/test-parms.service';
+import { GameParmsService } from '../../quiz/game-parms.service';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../quiz-parms';
@@ -31,7 +31,7 @@ describe('SummaryComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SummaryComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, QuizParmDisplayComponent],
-      providers: [ TestParmsService,
+      providers: [ GameParmsService,
         {
           provide: Router,
           useValue: routerSpy

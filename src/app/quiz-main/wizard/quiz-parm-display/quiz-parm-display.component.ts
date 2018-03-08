@@ -32,7 +32,7 @@ export class QuizParmDisplayComponent implements OnInit {
   }
 
   getPerspectives() {
-    return this.wizardService.getStateData().profiles;
+    return this.wizardService.getStateData().profiles.map((v) => GrammarHelper.toTitleCase(v));
   }
 
   getPlatforms() {

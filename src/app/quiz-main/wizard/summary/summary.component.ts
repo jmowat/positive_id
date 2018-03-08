@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { VehicleService } from '../../../vehicle.service';
-import { TestParmsService } from '../../quiz/test-parms.service';
+import { GameParmsService } from '../../quiz/game-parms.service';
 import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 import { FilterHelper } from '../../../filter-helper';
@@ -19,7 +19,7 @@ export class SummaryComponent implements OnInit {
   vehicles: Vehicle[];
   maxQuestions: number;
 
-  constructor(private router: Router, private location: Location, private parmsService: TestParmsService,
+  constructor(private router: Router, private location: Location, private parmsService: GameParmsService,
     public wizardService: WizardService) { }
 
   ngOnInit() {
