@@ -10,7 +10,7 @@ export class GameBuilderStateService {
   context: BuilderContext;
 
   constructor(private router: Router) {
-    this.reset();
+    console.log('initialize GameBuilderStateService');
   }
 
   next() {
@@ -21,7 +21,8 @@ export class GameBuilderStateService {
     this.context.goPrevious(this.router);
   }
 
-  reset() {
-    this.context = new DrillBuilderContext();
+  setContext(context: BuilderContext) {
+    console.log('set context ', context);
+    this.context = context;
   }
 }

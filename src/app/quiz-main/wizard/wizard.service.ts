@@ -86,6 +86,7 @@ export class WizardService {
     parms.optics = [this.optics.selectedOption.id];
     parms.sides = [this.sides.selectedOption.id];
     parms.profiles = this.perspectives.selectedOption;
+    parms.originalValues = this.vehicleSelections.selectedOption;
     return parms;
   }
 
@@ -102,7 +103,10 @@ export class WizardService {
     this.optics.selectedOption.id ? parms.optics = [this.optics.selectedOption.id] : parms.optics = undefined;
     this.sides.selectedOption.id ? parms.sides = [this.sides.selectedOption.id] : parms.sides = undefined;
     this.perspectives.selectedOption ? parms.profiles = this.perspectives.selectedOption : parms.profiles = undefined;
-    this.vehicleSelections.selectedOption ? parms.originalValues = this.vehicleSelections.selectedOption : parms.originalValues = undefined;
+
+    this.vehicleSelections.selectedOption.length > 0 ?
+      parms.originalValues = this.vehicleSelections.selectedOption : delete parms.originalValues;
+
     return parms;
   }
 

@@ -39,14 +39,14 @@
             <img class="ctaImage" src="assets/img\crosshair_white 200x200.png">
             <h4><strong>Quiz</strong></h4>
             <p>Test your ability to recognize different platforms from a variety of nations. A standard recognition test where a platform will only appear once.</p>
-            <button type="button" class="btn btn-warning btn-lg" routerLink="/quiz-builder">Create a quiz</button>
+            <button type="button" class="btn btn-warning btn-lg" (click)="generateQuiz()">Create a quiz</button>
           </div>
 
           <div class="col-sm-6 my-sm-2 my-md-3">
             <img class="ctaImage" src="assets/img\crosshair_white 200x200.png">
             <h4><strong>Drill</strong></h4>
             <p>Focus on a few select platforms and practice differentiating between them. A platform can appear multiple times in this test and will help you remember specific platforms.</p>
-            <button type="button" class="btn btn-warning btn-lg" routerLink="/quiz-builder">Create a drill</button>
+            <button type="button" class="btn btn-warning btn-lg" (click)="generateDrill()">Create a drill</button>
           </div>
 
         </div>

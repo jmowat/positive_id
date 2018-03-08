@@ -26,7 +26,7 @@ describe('GameBuilderStateService', () => {
   describe('basic builder functionality', () => {
 
     beforeEach(inject([GameBuilderStateService], (service: GameBuilderStateService) => {
-
+      service.setContext(new QuizBuilderContext());
     }));
 
     it('should start with a platform state', inject([GameBuilderStateService], (service: GameBuilderStateService) => {

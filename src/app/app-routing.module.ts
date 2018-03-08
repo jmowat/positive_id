@@ -31,6 +31,7 @@ const routes: Routes = [
   { path: 'custom-quiz', component: QuizComponent },
   { path: 'drill', component: QuizComponent },
   { path: 'quiz-builder', component: PlatformComponent },
+  { path: 'drill-builder', component: PlatformComponent },
   { path: 'retry', component: RedoQuizComponent },
   { path: 'score', component: ScoreComponent },
 
