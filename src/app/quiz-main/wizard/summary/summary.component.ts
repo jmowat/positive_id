@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { VehicleService } from '../../../vehicle.service';
-import { GameParmsService } from '../../quiz/game-parms.service';
+import { GameParmsService } from '../../game/game-parms.service';
 import { WizardService } from '../wizard.service';
 import { Vehicle } from '../../../vehicle';
 import { FilterHelper } from '../../../filter-helper';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
-import { QuizParms } from '../../quiz-parms';
+import { QuizParms } from '../../game/quiz-parms';
 
 @Component({
   selector: 'app-summary',

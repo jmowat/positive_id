@@ -1,5 +1,5 @@
 import { Drill, DrillOptions } from './drill';
-import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../mock-vehicles';
+import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
 
 describe('Drill', () => {
   it('create an instance', () => {

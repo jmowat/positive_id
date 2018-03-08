@@ -2,9 +2,9 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import { Game } from '../game';
-import { Quiz } from '../quiz';
-import { Drill } from '../drill';
+import { Game } from '../game/game';
+import { Quiz } from '../game/quiz';
+import { Drill } from '../game/drill';
 import { Vehicle } from '../../vehicle';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
 import { GameState } from './game-state';

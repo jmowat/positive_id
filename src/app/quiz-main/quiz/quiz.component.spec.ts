@@ -13,9 +13,9 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
 import { Vehicle } from '../../vehicle';
-import { QuizParms } from '../quiz-parms';
+import { QuizParms } from '../game/quiz-parms';
 import { FocusDirective } from './focus.directive';
-import { GameParmsService } from './game-parms.service';
+import { GameParmsService } from '../game/game-parms.service';
 
 describe('QuizComponent', () => {
   let component: QuizComponent;

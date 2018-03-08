@@ -16,7 +16,7 @@ import { WizardService } from '../wizard.service';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
-import { QuizParms } from '../../quiz-parms';
+import { QuizParms } from '../../game/quiz-parms';
 
 describe('DistanceComponent', () => {
   let component: DistanceComponent;

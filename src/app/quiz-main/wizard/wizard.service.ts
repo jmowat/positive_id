@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { FilterHelper } from '../../filter-helper';
 import { VehicleService } from '../../vehicle.service';
 import { Vehicle } from '../../vehicle';
-import { QuizParms } from '../quiz-parms';
+import { QuizParms } from '../game/quiz-parms';
 
 @Injectable()
 export class WizardService {

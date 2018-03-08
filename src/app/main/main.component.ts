@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderBannerComponent } from '../header-banner/header-banner.component';
-import { QuizParms } from '../quiz-main/quiz-parms';
-import { GameParmsService } from '../quiz-main/quiz/game-parms.service';
+import { QuizParms } from '../quiz-main/game/quiz-parms';
+import { GameParmsService } from '../quiz-main/game/game-parms.service';
 import { Router } from '@angular/router';
 
 @Component({

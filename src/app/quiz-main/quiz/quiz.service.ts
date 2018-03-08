@@ -1,11 +1,11 @@
 import { Injectable, Inject } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import { GameFactory } from '../game-factory';
-import { Game } from '../game';
+import { GameFactory } from '../game/game-factory';
+import { Game } from '../game/game';
 import { VehicleService } from '../../vehicle.service';
 import { Vehicle } from '../../vehicle';
-import { QuizParms } from '../quiz-parms';
+import { QuizParms } from '../game/quiz-parms';
 
 @Injectable()
 export class QuizService {

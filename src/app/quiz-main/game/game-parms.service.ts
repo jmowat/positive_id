@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { QuizParms } from '../quiz-parms';
+import { QuizParms } from './quiz-parms';
 
 @Injectable()
 export class GameParmsService {

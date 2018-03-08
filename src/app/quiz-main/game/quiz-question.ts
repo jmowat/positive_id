@@ -1,5 +1,5 @@
-import { VehicleCard } from './vehicle-card';
-import { Randomizer } from './randomizer';
+import { VehicleCard } from '../vehicle-card';
+import { Randomizer } from '../randomizer';
 
 export class QuizQuestion {
   // card: VehicleCard;

@@ -30,7 +30,7 @@ import { NameFilterPipe } from './name-filter.pipe';
 
 import { ScoreComponent } from './quiz-main/score/score.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
-import { GameParmsService } from './quiz-main/quiz/game-parms.service';
+import { GameParmsService } from './quiz-main/game/game-parms.service';
 import { PlatformComponent } from './quiz-main/wizard/platform/platform.component';
 import { EraComponent } from './quiz-main/wizard/era/era.component';
 import { SideComponent } from './quiz-main/wizard/side/side.component';

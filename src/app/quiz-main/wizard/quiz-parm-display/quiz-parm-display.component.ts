@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WizardService } from '../wizard.service';
 import { GrammarHelper } from '../../grammar-helper';
-import { QuizParms } from '../../quiz-parms';
+import { QuizParms } from '../../game/quiz-parms';
 
 @Component({
   selector: 'app-quiz-parm-display',

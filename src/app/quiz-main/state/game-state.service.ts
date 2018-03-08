@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Game } from '../game';
+import { Game } from '../game/game';
 import { QuizService } from '../quiz/quiz.service';
 import { GameState } from './game-state';
 import { Context } from './context';
-import { QuizParms } from '../quiz-parms';
+import { QuizParms } from '../game/quiz-parms';
 import { Router } from '@angular/router';
 
 @Injectable()

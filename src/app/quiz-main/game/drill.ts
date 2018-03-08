@@ -1,6 +1,6 @@
 import { Game } from './game';
-import { Randomizer } from './randomizer';
-import { VehicleCard } from './vehicle-card';
+import { Randomizer } from '../randomizer';
+import { VehicleCard } from '../vehicle-card';
 import { QuizQuestion } from './quiz-question';
 
 export class Drill extends Game {

@@ -16,7 +16,7 @@ import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../../mock-vehicles';
 import { FormsModule } from '@angular/forms';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
-import { QuizParms } from '../../quiz-parms';
+import { QuizParms } from '../../game/quiz-parms';
 
 describe('EraComponent', () => {
   let component: EraComponent;

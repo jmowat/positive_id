@@ -1,10 +1,10 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { QuizService } from '../quiz/quiz.service';
-import { QuizQuestion } from '../quiz-question';
+import { QuizQuestion } from '../game/quiz-question';
 import { GameStateService } from '../state/game-state.service';
-import { QuizParms } from '../quiz-parms';
+import { QuizParms } from '../game/quiz-parms';
 import { HostListener } from '@angular/core';
-import { GameParmsService } from './game-parms.service';
+import { GameParmsService } from '../game/game-parms.service';
 
 @Component({
   selector: 'app-quiz',

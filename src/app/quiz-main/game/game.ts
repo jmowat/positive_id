@@ -1,4 +1,4 @@
-import { Randomizer } from './randomizer';
+import { Randomizer } from '../randomizer';
 import { QuizQuestion } from './quiz-question';
 
 /*

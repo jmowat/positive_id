@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../quiz/quiz.service';
 import { GameStateService } from '../state/game-state.service';
-import { QuizParms } from '../quiz-parms';
+import { QuizParms } from '../game/quiz-parms';
 import { QuizComponent } from '../quiz/quiz.component';
-import { GameParmsService } from './game-parms.service';
+import { GameParmsService } from '../game/game-parms.service';
 
 @Component({
   selector: 'app-quiz',
