@@ -10,7 +10,7 @@ export class GameBuilderStateService {
   context: BuilderContext;
 
   constructor(private router: Router) {
-    console.log('initialize GameBuilderStateService');
+    // console.log('initialize GameBuilderStateService');
   }
 
   next() {
@@ -22,11 +22,15 @@ export class GameBuilderStateService {
   }
 
   setContext(context: BuilderContext) {
-    console.log('set context ', context);
+    // console.log('set context ', context);
     this.context = context;
   }
 
   getTitle(): string {
     return this.context.current.getTitle();
+  }
+
+  getNextLabel(): string {
+    return this.context.current.getNextLabel();
   }
 }

@@ -26,7 +26,6 @@ describe('SummaryComponent', () => {
   let fixture: ComponentFixture<SummaryComponent>;
   const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
   const locationSpy = jasmine.createSpyObj('Location', ['back']);
-  let gameBuilderStateSpy;
   let gameBuilderStateService: GameBuilderStateService;
   let debugElement: DebugElement;
 
@@ -64,7 +63,8 @@ describe('SummaryComponent', () => {
     component = fixture.componentInstance;
     debugElement = fixture.debugElement;
     gameBuilderStateService = debugElement.injector.get(GameBuilderStateService);
-    gameBuilderStateSpy = spyOn(gameBuilderStateService, 'getTitle').and.returnValue('a title');
+    spyOn(gameBuilderStateService, 'getTitle').and.returnValue('a title');
+    spyOn(gameBuilderStateService, 'getNextLabel').and.returnValue('next something');
     fixture.detectChanges();
   });
 

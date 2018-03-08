@@ -145,6 +145,7 @@ export class VehicleSelectionState extends DrillBuilderState {
 export class SummaryState extends DrillBuilderState {
   constructor() {
     super();
+    this.nextLabel = 'Take Drill!';
     this.name = 'SummaryState';
   }
 

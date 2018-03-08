@@ -3,8 +3,10 @@ import { Router } from '@angular/router';
 export class BuilderState {
   title: string;
   name: string;
+  nextLabel: string;
 
   constructor() {
+    this.nextLabel = 'Next';
   }
 
   goNext(context, router: Router) {
@@ -21,5 +23,9 @@ export class BuilderState {
 
   getTitle() {
     return this.title;
+  }
+
+  getNextLabel() {
+    return this.nextLabel;
   }
 }

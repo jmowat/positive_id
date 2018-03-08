@@ -130,6 +130,7 @@ export class PerspectivesSelectionState extends QuizBuilderState {
 export class SummaryState extends QuizBuilderState {
   constructor() {
     super();
+    this.nextLabel = 'Take Quiz!';
     this.name = 'SummaryState';
   }
 

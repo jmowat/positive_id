@@ -30,7 +30,7 @@ export class SummaryComponent implements OnInit {
 
   next() {
     this.wizardService.maxQuestions = this.maxQuestions;
-    console.log('Summary fetched the following parms from wizard:', this.wizardService.getQuizParms());
+    // console.log('Summary fetched the following parms from wizard:', this.wizardService.getQuizParms());
     this.parmsService.setTestParms(this.wizardService.getQuizParms());
     // this.router.navigateByUrl('/quiz');
     this.stateService.next();
