@@ -25,4 +25,8 @@ export class GameBuilderStateService {
     console.log('set context ', context);
     this.context = context;
   }
+
+  getTitle(): string {
+    return this.context.current.getTitle();
+  }
 }

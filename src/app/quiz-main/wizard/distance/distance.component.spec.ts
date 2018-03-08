@@ -18,6 +18,7 @@ import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
 import { GameBuilderStateService } from '../state/game-builder-state.service';
+import { DebugElement } from '@angular/core';
 
 describe('DistanceComponent', () => {
   let component: DistanceComponent;
@@ -25,6 +26,10 @@ describe('DistanceComponent', () => {
   const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
   const locationSpy = jasmine.createSpyObj('Location', ['back']);
   const testVehicle = new Vehicle();
+  let gameBuilderStateSpy;
+  let gameBuilderStateService: GameBuilderStateService;
+  let debugElement: DebugElement;
+
   testVehicle.images = [{
     img_lg: '', img_sm: '', perspective: '', optics: '', classification: '',
     distance: 'near', source: ''},
@@ -59,6 +64,10 @@ describe('DistanceComponent', () => {
       imports: [FormsModule]
     })
       .compileComponents();
+      fixture = TestBed.createComponent(DistanceComponent);
+      debugElement = fixture.debugElement;
+      gameBuilderStateService = debugElement.injector.get(GameBuilderStateService);
+      gameBuilderStateSpy = spyOn(gameBuilderStateService, 'getTitle').and.returnValue('a title');
   }));
 
   beforeEach(() => {

@@ -18,12 +18,17 @@ import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
 import { GameBuilderStateService } from '../state/game-builder-state.service';
+import { DebugElement } from '@angular/core';
 
 describe('PlatformComponent', () => {
   let component: PlatformComponent;
   let fixture: ComponentFixture<PlatformComponent>;
   const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
   const locationSpy = jasmine.createSpyObj('Location', ['back']);
+  let gameBuilderStateSpy;
+  let gameBuilderStateService: GameBuilderStateService;
+  let debugElement: DebugElement;
+
   const vehicleServiceStub = {
     getVehicles: () => Observable.of([new Vehicle()])
   };
@@ -58,6 +63,10 @@ describe('PlatformComponent', () => {
         imports: [ FormsModule ]
     })
       .compileComponents();
+      fixture = TestBed.createComponent(PlatformComponent);
+      debugElement = fixture.debugElement;
+      gameBuilderStateService = debugElement.injector.get(GameBuilderStateService);
+      gameBuilderStateSpy = spyOn(gameBuilderStateService, 'getTitle').and.returnValue('a title');
   }));
 
   beforeEach(() => {

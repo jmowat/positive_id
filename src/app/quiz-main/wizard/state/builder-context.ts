@@ -1,6 +1,10 @@
 import { Router } from '@angular/router';
+import { BuilderState } from './builder-state';
 
 export class BuilderContext {
+
+  current: BuilderState;
+
   constructor() {
 
   }

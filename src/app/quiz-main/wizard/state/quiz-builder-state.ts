@@ -1,12 +1,15 @@
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizBuilderContext } from './quiz-builder-context';
 import { Router } from '@angular/router';
+import { BuilderState } from './builder-state';
 
-export class QuizBuilderState {
+export class QuizBuilderState extends BuilderState {
 
   name: string;
 
   constructor() {
+    super();
+    this.title = 'Quiz Builder';
     this.name = 'State';
   }
 
@@ -137,6 +140,7 @@ export class SummaryState extends QuizBuilderState {
   }
 
   goPrevious(context, router: Router) {
+    context.setState(new PerspectivesSelectionState());
     router.navigateByUrl('/perspectives');
   }
 }

@@ -18,12 +18,17 @@ import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
 import { GameBuilderStateService } from '../state/game-builder-state.service';
+import { DebugElement } from '@angular/core';
 
 describe('OpticsComponent', () => {
   let component: OpticsComponent;
   let fixture: ComponentFixture<OpticsComponent>;
   const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
   const locationSpy = jasmine.createSpyObj('Location', ['back']);
+  let gameBuilderStateSpy;
+  let gameBuilderStateService: GameBuilderStateService;
+  let debugElement: DebugElement;
+
   const testVehicle = new Vehicle();
   testVehicle.images = [{
     img_lg: '', img_sm: '', perspective: '', optics: 'naked eye', classification: '',
@@ -63,6 +68,9 @@ describe('OpticsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(OpticsComponent);
     component = fixture.componentInstance;
+    debugElement = fixture.debugElement;
+    gameBuilderStateService = debugElement.injector.get(GameBuilderStateService);
+    gameBuilderStateSpy = spyOn(gameBuilderStateService, 'getTitle').and.returnValue('a title');
     fixture.detectChanges();
   });
 

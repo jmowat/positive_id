@@ -1,12 +1,13 @@
 import { GrammarHelper } from '../../grammar-helper';
 import { DrillBuilderContext } from './drill-builder-context';
 import { Router } from '@angular/router';
+import { BuilderState } from './builder-state';
 
-export class DrillBuilderState {
-
-  name: string;
+export class DrillBuilderState extends BuilderState {
 
   constructor() {
+    super();
+    this.title = 'Drill Builder';
     this.name = 'drill.DrillBuilderState';
   }
 

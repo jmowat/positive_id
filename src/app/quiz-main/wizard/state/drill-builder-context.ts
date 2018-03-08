@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { BuilderContext } from './builder-context';
 
 export class DrillBuilderContext extends BuilderContext {
-	current: DrillBuilderState;
 
 	constructor() {
 		// Starting state
