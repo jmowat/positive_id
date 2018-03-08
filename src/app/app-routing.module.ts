@@ -16,6 +16,7 @@ import { SideComponent } from './quiz-main/wizard/side/side.component';
 import { DistanceComponent } from './quiz-main/wizard/distance/distance.component';
 import { OpticsComponent } from './quiz-main/wizard/optics/optics.component';
 import { PerspectivesComponent } from './quiz-main/wizard/perspectives/perspectives.component';
+import { VehicleSelectionComponent } from './quiz-main/wizard/vehicle-selection/vehicle-selection.component';
 import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
 
 const routes: Routes = [
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: 'distance', component: DistanceComponent },
   { path: 'optics', component: OpticsComponent },
   { path: 'perspectives', component: PerspectivesComponent },
+  { path: 'vehicle-selection', component: VehicleSelectionComponent },
   { path: 'summary', component: SummaryComponent },
 
   { path: '', redirectTo: '/main', pathMatch: 'full' },

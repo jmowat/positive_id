@@ -8,13 +8,7 @@ import { QuizParms } from '../game/quiz-parms';
 export class WizardService {
   filteredVehicles: Vehicle[];
   dataHistory: any[] = [];
-
   platform: string;
-  // era: string;
-  // side: string;
-  // distance: string;
-  // optics: string;
-  // perspectives: string[];
   maxQuestions: number;
 
   platforms = {
@@ -44,6 +38,10 @@ export class WizardService {
     selectedOption: []
   };
 
+  vehicleSelections = {
+    selectedOption: []
+  };
+
   static filter(vehicles: Vehicle[], type: string, value: string) {
     return vehicles.filter((v: Vehicle) => v[type] === value || v[type].includes(value));
   }
@@ -64,7 +62,6 @@ export class WizardService {
   setData(filteredData: Vehicle[]) {
     this.filteredVehicles = filteredData;
     this.dataHistory.push(JSON.parse(JSON.stringify(filteredData)));
-    // console.log('data history', this.dataHistory);
   }
 
   resetLastDataFromHistory() {
@@ -105,11 +102,7 @@ export class WizardService {
     this.optics.selectedOption.id ? parms.optics = [this.optics.selectedOption.id] : parms.optics = undefined;
     this.sides.selectedOption.id ? parms.sides = [this.sides.selectedOption.id] : parms.sides = undefined;
     this.perspectives.selectedOption ? parms.profiles = this.perspectives.selectedOption : parms.profiles = undefined;
-    // parms.eras = [this.eras.selectedOption.id];
-    // parms.distances = [this.distances.selectedOption.id];
-    // parms.optics = [this.optics.selectedOption.id];
-    // parms.sides = [this.sides.selectedOption.id];
-    // parms.profiles = this.perspectives.selectedOption;
+    this.vehicleSelections.selectedOption ? parms.originalValues = this.vehicleSelections.selectedOption : parms.originalValues = undefined;
     return parms;
   }
 
@@ -138,6 +131,10 @@ export class WizardService {
     };
 
     this.perspectives = {
+      selectedOption: []
+    };
+
+    this.vehicleSelections = {
       selectedOption: []
     };
   }

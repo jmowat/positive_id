@@ -1,9 +1,9 @@
-import { QuizBuilderState, PlatformSelectionState } from './quiz-builder-state';
+import { DrillBuilderState, PlatformSelectionState } from './drill-builder-state';
 import { Router } from '@angular/router';
 import { BuilderContext } from './builder-context';
 
-export class QuizBuilderContext extends BuilderContext {
-	current: QuizBuilderState;
+export class DrillBuilderContext extends BuilderContext {
+	current: DrillBuilderState;
 
 	constructor() {
 		// Starting state
@@ -24,6 +24,6 @@ export class QuizBuilderContext extends BuilderContext {
 	}
 
 	reset() {
-		return new QuizBuilderContext();
+		return new DrillBuilderContext();
 	}
 }

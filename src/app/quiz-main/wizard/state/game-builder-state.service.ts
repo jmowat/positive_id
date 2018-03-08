@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 
 import { QuizBuilderContext } from './quiz-builder-context';
+import { BuilderContext } from './builder-context';
+import { DrillBuilderContext } from './drill-builder-context';
 import { Router } from '@angular/router';
 
 @Injectable()
 export class GameBuilderStateService {
-  context: QuizBuilderContext;
+  context: BuilderContext;
 
   constructor(private router: Router) {
     this.reset();
@@ -20,6 +22,6 @@ export class GameBuilderStateService {
   }
 
   reset() {
-    this.context = new QuizBuilderContext();
+    this.context = new DrillBuilderContext();
   }
 }

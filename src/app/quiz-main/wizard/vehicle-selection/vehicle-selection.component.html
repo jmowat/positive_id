@@ -1,3 +1,39 @@
-<p>
-  vehicle-selection works!
-</p>
+<div class="site">
+  <div class="page">
+
+    <app-header-narrow></app-header-narrow>
+
+    <div class="container">
+      <section id="quiz-builder">
+        <div class="row">
+          <div class="col-4">
+            <app-quiz-parm-display></app-quiz-parm-display>
+          </div>
+          <div class="col-8">
+            <h2>Quiz Builder</h2>
+            <p>Which vehicles would you like to isolate the drill to?</p>
+            <form name="quizBuilderForm" class="form-horizontal">
+              <div class="form-group">
+                <label for="multipleSelect">Vehicles</label>
+                <!-- TODO: add form validation -->
+                <select class="form-control" id="vehicles" [(ngModel)]="wizardService.vehicleSelections.selectedOption" name="vehicles" multiple>
+                  <option *ngFor="let vehicle of getVehicles().availableOptions" [value]="vehicle.id">{{vehicle.name}}</option>
+    					</select>
+              </div>
+              <div class="clearfix">
+                <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
+                <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- end .quiz-builder -->
+    </div>
+
+    <app-footer></app-footer>
+
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->
