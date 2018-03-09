@@ -5,5 +5,4 @@ describe('SelectBoxFactory', () => {
     const factory = new SelectBoxFactory();
     expect(factory).toBeTruthy();
   });
-
 });

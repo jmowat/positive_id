@@ -6,7 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./top-nav.component.css']
 })
 export class TopNavComponent implements OnInit {
-	@Input() public showBrand: boolean = false;
+  @Input()
+  public showBrand = false;
+
   constructor() { }
 
   ngOnInit() {

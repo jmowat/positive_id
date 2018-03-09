@@ -1,3 +1,5 @@
+import { Image } from './image';
+
 export class Vehicle {
   name: string;
   side: string[];
@@ -6,13 +8,5 @@ export class Vehicle {
   nationality: string[];
   era: string[];
   image_dir: string;
-  images: [{
-  	img_lg: string,
-  	img_sm: string,
-  	perspective: string,
-  	optics: string,
-  	classification: string,
-  	distance: string,
-  	source: string
-  }];
+  images: Image[];
 }

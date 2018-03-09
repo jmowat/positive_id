@@ -1,25 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 body {
-	background: url("assets/img/black-texture.jpg") repeat, #CECECE;
-	color: #fff;
+  background: url("assets/img/black-texture.jpg") repeat, #CECECE;
+  color: #fff;
 }
 
 .bannerBox {
-	padding: 28px 0;
-	background: url("assets/img/banner_ww2.png") no-repeat center;
-	background-size: cover;
+  padding: 28px 0;
+  background: url("assets/img/banner_ww2.png") no-repeat center;
+  background-size: cover;
 }
-
 
 .ctaBox {
-	padding: 28px 0;
-	background: url("assets/img/cta_1.png") no-repeat center;
-	background-size: cover;
+  padding: 28px 0;
+  background: url("assets/img/cta_1.png") no-repeat center;
+  background-size: cover;
 }
 
-
 .productBox {
-	padding: 28px 0;
-	background: url("assets/img/banner_ww2.png") no-repeat center;
-	background-size: cover;
+  padding: 28px 0;
+  background: url("assets/img/banner_ww2.png") no-repeat center;
+  background-size: cover;
 }

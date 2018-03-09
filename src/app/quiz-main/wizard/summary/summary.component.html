@@ -1,0 +1,49 @@
+<div class="site">
+  <div class="page">
+
+    <app-header-narrow></app-header-narrow>
+
+    <div class="container">
+      <section id="quiz-builder">
+        <div class="row">
+          <div class="col-4">
+            <app-quiz-parm-display [type]="stateService.getType()"></app-quiz-parm-display>
+          </div>
+          <div class="col-8">
+            <h2>{{stateService.getTitle()}}</h2>
+            <p>Congratulations, you are ready to run your test.</p>
+            <p>{{stateService.getMaxQuestionsText()}}</p>
+            <form #thisForm="ngForm" class="form-horizontal">
+              <div class="form-group">
+                <label for="maxQuestions">Maximum number of questions</label>
+                <input class="form-control" type="number" id="maxQuestions" name="maxQuestions" [(ngModel)]="maxQuestions" #userInput="ngModel"
+                  customMin="1" required>
+                <!-- <div [hidden]="userInput.valid || userInput.pristine" class="alert alert-danger"> -->
+                <div *ngIf="userInput.invalid && (userInput.dirty || userInput.touched)"
+                       class="alert alert-danger">
+                  <div *ngIf="userInput.errors.required">
+                    You must specify a number
+                  </div>
+                  <div *ngIf="userInput.errors?.customMin">
+                    You must choose a number greater than 0
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix">
+                <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
+                <button type="button" class="btn btn-success float-right" (click)="next()" [disabled]="!thisForm.form.valid">{{stateService.getNextLabel()}}</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </section>
+      <!-- end .quiz-builder -->
+    </div>
+
+    <app-footer></app-footer>
+
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->

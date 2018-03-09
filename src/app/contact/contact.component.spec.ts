@@ -11,9 +11,9 @@ describe('ContactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent  ]
+      declarations: [ContactComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

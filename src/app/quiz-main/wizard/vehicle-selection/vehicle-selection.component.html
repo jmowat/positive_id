@@ -1,0 +1,49 @@
+<div class="site">
+  <div class="page">
+
+    <app-header-narrow></app-header-narrow>
+
+    <div class="container">
+      <section id="quiz-builder">
+        <div class="row">
+          <div class="col-4">
+            <app-quiz-parm-display [type]="stateService.getType()"></app-quiz-parm-display>
+          </div>
+          <div class="col-8">
+            <h2>{{stateService.getTitle()}}</h2>
+            <p>Which vehicles would you like to limit the drill to?</p>
+            <p>
+              To make multiple selections, hold down <kbd>CTRL</kbd> and click on each vehicle you would
+              like to include. You can also drag-select multiple values, if you prefer.
+            </p>
+            <form #thisForm="ngForm" class="form-horizontal">
+              <div class="form-group">
+                <label for="vehicles">Vehicles</label>
+                <select class="form-control" id="vehicles" [(ngModel)]="wizardService.vehicleSelections.selectedOption"
+                  name="vehicles" multiple required #userInput="ngModel">
+                  <option *ngFor="let vehicle of getVehicles().availableOptions" [value]="vehicle.id">{{vehicle.name}}</option>
+    					  </select>
+              <div *ngIf="userInput.invalid && (userInput.dirty || userInput.touched)"
+                     class="alert alert-danger">
+                <div *ngIf="userInput.errors.required">
+                  You must choose at least one vehicle for your test
+                </div>
+              </div>
+              </div>
+              <div class="clearfix">
+                <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
+                <button type="button" class="btn btn-primary float-right" (click)="next()" [disabled]="!thisForm.form.valid">Next</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- end .quiz-builder -->
+    </div>
+
+    <app-footer></app-footer>
+
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->

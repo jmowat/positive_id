@@ -9,9 +9,9 @@ describe('HeaderNarrowComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderNarrowComponent, TopNavComponent ]
+      declarations: [HeaderNarrowComponent, TopNavComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

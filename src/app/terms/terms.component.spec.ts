@@ -11,9 +11,9 @@ describe('TermsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TermsComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent ]
+      declarations: [TermsComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../quiz/quiz.service';
-import { StateService } from '../state/state.service';
-import { Test } from '../test';
-import { QuizParms } from '../quiz-parms';
+import { GameStateService } from '../state/game-state.service';
+import { QuizParms } from '../game/quiz-parms';
 import { QuizComponent } from '../quiz/quiz.component';
-import { TestParmsService } from './test-parms.service';
+import { GameParmsService } from '../game/game-parms.service';
 
 @Component({
   selector: 'app-quiz',
@@ -13,16 +12,16 @@ import { TestParmsService } from './test-parms.service';
 })
 
 export class RedoQuizComponent extends QuizComponent implements OnInit {
-  	constructor(service: StateService, parms: TestParmsService) {
-  		super(service, parms);
-  	}
+  constructor(service: GameStateService, parms: GameParmsService) {
+    super(service, parms);
+  }
 
-	ngOnInit() {
-		if (this.service.getTest()) {
-			this.service.getTest().reset();
-			this.service.reset();
-		}
-		this.setButtonClasses();
-  		this.setStatusClasses();
-	}
+  ngOnInit() {
+    if (this.service.getTest()) {
+      this.service.getTest().reset();
+      this.service.reset();
+    }
+    this.setButtonClasses();
+    this.setStatusClasses();
+  }
 }

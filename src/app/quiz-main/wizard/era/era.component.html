@@ -1,0 +1,40 @@
+<div class="site">
+  <div class="page">
+
+    <app-header-narrow></app-header-narrow>
+
+    <div class="container">
+      <section id="quiz-builder">
+
+        <div class="row">
+          <div class="col-4">
+            <app-quiz-parm-display [type]="stateService.getType()"></app-quiz-parm-display>
+          </div>
+          <div class="col-8">
+            <h2>{{stateService.getTitle()}}</h2>
+            <p>Choose the time period.</p>
+            <form name="quizBuilderForm" class="form-horizontal">
+              <div class="form-group">
+                <label for="sideFilter">Era</label>
+                <select class="form-control" id="era" [(ngModel)]="wizardService.eras.selectedOption.id" name="era">
+                  <option *ngFor="let era of getEras().availableOptions" [value]="era.id">{{era.name}}</option>
+    					</select>
+              </div>
+              <div class="clearfix">
+                <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
+                <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </section>
+      <!-- end .quiz-builder -->
+    </div>
+
+    <app-footer></app-footer>
+
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->

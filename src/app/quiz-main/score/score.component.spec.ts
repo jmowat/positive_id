@@ -5,16 +5,15 @@ import { HeaderNarrowComponent } from '../../header-narrow/header-narrow.compone
 import { FooterComponent } from '../../footer/footer.component';
 import { TopNavComponent } from '../../top-nav/top-nav.component';
 
-import { VehicleService }  from '../../vehicle.service';
-import { QuizService }  from '../quiz/quiz.service';
-import { StateService }  from '../state/state.service';
+import { VehicleService } from '../../vehicle.service';
+import { QuizService } from '../quiz/quiz.service';
+import { GameStateService } from '../state/game-state.service';
 
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { FIVE_VEHICLES, LUCHS, CHALLENGER2 } from '../../mock-vehicles';
 import { Vehicle } from '../../vehicle';
-import { QuizParms }  from '../quiz-parms';
-import { DEFAULT_GROUND_QUIZ, TEST_PARMS } from '../test-parms';
+import { QuizParms } from '../game/quiz-parms';
 
 describe('ScoreComponent', () => {
   let component: ScoreComponent;
@@ -22,18 +21,15 @@ describe('ScoreComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ScoreComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent ],
-      providers: [ QuizService,
-      {
-        provide: VehicleService,
-        useClass: MockVehicleService
-      },
-      {
-        provide: TEST_PARMS,
-        useValue: DEFAULT_GROUND_QUIZ
-      } ]
+      declarations: [ScoreComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent],
+      providers: [QuizService,
+        {
+          provide: VehicleService,
+          useClass: MockVehicleService
+        }
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -48,7 +44,7 @@ describe('ScoreComponent', () => {
 });
 
 class MockVehicleService {
-  constructor() {}
+  constructor() { }
   getVehicles(): Observable<Vehicle[]> {
     return of(FIVE_VEHICLES);
   }
