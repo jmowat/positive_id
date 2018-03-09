@@ -33,4 +33,8 @@ export class GameBuilderStateService {
   getNextLabel(): string {
     return this.context.current.getNextLabel();
   }
+
+  getDefaultMaxQuestions(): number {
+    return this.context.current.getDefaultMaxQuestions();
+  }
 }

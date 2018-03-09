@@ -4,6 +4,7 @@ export class BuilderState {
   title: string;
   name: string;
   nextLabel: string;
+  defaultMaxQuestions: number;
 
   constructor() {
     this.nextLabel = 'Next';
@@ -27,5 +28,9 @@ export class BuilderState {
 
   getNextLabel() {
     return this.nextLabel;
+  }
+
+  getDefaultMaxQuestions(): number {
+      return this.defaultMaxQuestions;
   }
 }

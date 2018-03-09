@@ -146,6 +146,7 @@ export class SummaryState extends DrillBuilderState {
   constructor() {
     super();
     this.nextLabel = 'Take Drill!';
+    this.defaultMaxQuestions = 10;
     this.name = 'SummaryState';
   }
 

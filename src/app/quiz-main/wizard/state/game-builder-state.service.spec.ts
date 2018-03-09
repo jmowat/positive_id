@@ -5,17 +5,25 @@ import {
   SummaryState
 } from './quiz-builder-state';
 import { QuizBuilderContext } from './quiz-builder-context';
-import { RouterTestingModule } from '@angular/router/testing';
+// import { RouterTestingModule } from '@angular/router/testing';
 import { GameBuilderStateService } from './game-builder-state.service';
+import { Router } from '@angular/router';
+// import { QuizComponent } from '../../quiz/quiz.component';
 
 describe('GameBuilderStateService', () => {
-
+  const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule.withRoutes([])
+         // RouterTestingModule.withRoutes([{path: '/quiz', component: QuizComponent}])
       ],
-      providers: [GameBuilderStateService]
+      providers: [GameBuilderStateService,
+        {
+          provide: Router,
+          useValue: routerSpy
+        },
+      ],
+      // declarations: [ QuizComponent ]
     });
   });
 

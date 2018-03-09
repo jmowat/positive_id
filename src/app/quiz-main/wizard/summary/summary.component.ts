@@ -25,7 +25,7 @@ export class SummaryComponent implements OnInit {
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
-    this.maxQuestions = this.vehicles.length;
+    this.maxQuestions = this.getDefaultMaxQuestions();
   }
 
   next() {
@@ -40,5 +40,13 @@ export class SummaryComponent implements OnInit {
     this.wizardService.resetLastDataFromHistory();
     // this.location.back();
     this.stateService.previous();
+  }
+
+  getDefaultMaxQuestions(): number {
+    if (this.stateService.getDefaultMaxQuestions()) {
+      return 10;
+    } else {
+      return this.vehicles.length;
+    }
   }
 }
