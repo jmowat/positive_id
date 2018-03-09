@@ -12,7 +12,7 @@
           <div class="col-8">
             <h2>{{stateService.getTitle()}}</h2>
             <p>Congratulations, you are ready to run your test.</p>
-            <p>Feel free to limit the number of questions, or accept the default for every available platform that matches your selected criteria.</p>
+            <p>{{stateService.getMaxQuestionsText()}}</p>
             <form name="quizBuilderForm" class="form-horizontal">
               <div class="form-group">
                 <!-- TODO: add form validation -->

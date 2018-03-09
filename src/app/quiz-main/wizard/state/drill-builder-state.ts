@@ -147,6 +147,9 @@ export class SummaryState extends DrillBuilderState {
     super();
     this.nextLabel = 'Take Drill!';
     this.defaultMaxQuestions = 10;
+    this.maxQuestionsText = `How many questions do you want in your drill? If you set this number
+      high you can expect to see repeats of your selected vehicles, which is great for
+      improving your recognition and memorization.`;
     this.name = 'SummaryState';
   }
 

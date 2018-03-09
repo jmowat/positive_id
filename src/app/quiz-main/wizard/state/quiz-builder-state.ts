@@ -131,6 +131,8 @@ export class SummaryState extends QuizBuilderState {
   constructor() {
     super();
     this.nextLabel = 'Take Quiz!';
+    this.maxQuestionsText = `Feel free to limit the number of questions, or accept the
+      default for every available platform that matches your selected criteria.`;
     this.name = 'SummaryState';
   }
 

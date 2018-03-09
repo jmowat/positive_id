@@ -66,6 +66,7 @@ describe('SummaryComponent', () => {
     spyOn(gameBuilderStateService, 'getTitle').and.returnValue('a title');
     spyOn(gameBuilderStateService, 'getNextLabel').and.returnValue('next something');
     spyOn(gameBuilderStateService, 'getDefaultMaxQuestions').and.returnValue(10);
+    spyOn(gameBuilderStateService, 'getMaxQuestionsText').and.returnValue('blah blah');
     fixture.detectChanges();
   });
 
