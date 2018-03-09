@@ -9,6 +9,7 @@ export class DrillBuilderState extends BuilderState {
     super();
     this.title = 'Drill Builder';
     this.name = 'drill.DrillBuilderState';
+    this.type = 'drill';
   }
 
   goNext(context, router: Router) {

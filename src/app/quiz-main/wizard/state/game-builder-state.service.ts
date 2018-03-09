@@ -45,4 +45,8 @@ export class GameBuilderStateService {
   getIntroText(): string {
     return this.context.current.getIntroText();
   }
+
+  getType(): string {
+    return this.context.current.getType();
+  }
 }

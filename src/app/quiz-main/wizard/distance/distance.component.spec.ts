@@ -68,6 +68,7 @@ describe('DistanceComponent', () => {
       debugElement = fixture.debugElement;
       gameBuilderStateService = debugElement.injector.get(GameBuilderStateService);
       gameBuilderStateSpy = spyOn(gameBuilderStateService, 'getTitle').and.returnValue('a title');
+      gameBuilderStateSpy = spyOn(gameBuilderStateService, 'getType').and.returnValue('quiz');
   }));
 
   beforeEach(() => {

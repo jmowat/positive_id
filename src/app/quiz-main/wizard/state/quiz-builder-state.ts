@@ -11,6 +11,7 @@ export class QuizBuilderState extends BuilderState {
     super();
     this.title = 'Quiz Builder';
     this.name = 'State';
+    this.type = 'quiz';
   }
 
   goNext(context, router: Router) {

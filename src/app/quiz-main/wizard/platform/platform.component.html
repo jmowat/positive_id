@@ -7,7 +7,7 @@
       <section id="quiz-builder">
         <div class="row">
           <div class="col-4">
-            <app-quiz-parm-display></app-quiz-parm-display>
+            <app-quiz-parm-display [type]="stateService.getType()"></app-quiz-parm-display>
           </div>
           <div class="col-8">
             <h2>{{stateService.getTitle()}}</h2>

@@ -2,41 +2,47 @@
   <h3>Test selections</h3>
   <p>Here is what you have chosen for your test:
     <dl class="row">
-      <dt class="col-md-4">
+      <dt class="col-12 col-md-6">
       Platform
     </dt>
-      <dd class="col-md-8">
+      <dd class="col-12 col-md-6">
         {{getPlatforms()}}
       </dd>
-      <dt class="col-md-4">
+      <dt class="col-12 col-md-6">
     Era
     </dt>
-      <dd class="col-md-8">
+      <dd class="col-12 col-md-6">
         {{getEras()}}
       </dd>
-      <dt class="col-md-4">
+      <dt class="col-12 col-md-6">
     Side
     </dt>
-      <dd class="col-md-8">
+      <dd class="col-12 col-md-6">
         {{getSides()}}
       </dd>
-      <dt class="col-md-4">
+      <dt class="col-12 col-md-6">
     Distance
     </dt>
-      <dd class="col-md-8">
+      <dd class="col-12 col-md-6">
         {{getDistances()}}
       </dd>
-      <dt class="col-md-4">
+      <dt class="col-12 col-md-6">
     Optics
     </dt>
-      <dd class="col-md-8">
+      <dd class="col-12 col-md-6">
         {{getOptics()}}
       </dd>
-      <dt class="col-md-4">
-    Perspectives
-    </dt>
-      <dd class="col-md-8">
+      <dt class="col-12 col-md-6">
+      Perspectives
+      </dt>
+      <dd class="col-12 col-md-6">
         {{getPerspectives()}}
       </dd>
+        <dt class="col-12 col-md-6" *ngIf="isDrill()">
+          Vehicles
+          </dt>
+        <dd class="col-12 col-md-6 vehicles" *ngIf="isDrill()">
+          {{getVehicles()}}
+        </dd>
     </dl>
 </div>

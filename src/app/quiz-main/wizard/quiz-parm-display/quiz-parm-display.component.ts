@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WizardService } from '../wizard.service';
 import { GrammarHelper } from '../../grammar-helper';
 import { QuizParms } from '../../game/quiz-parms';
@@ -9,6 +9,8 @@ import { QuizParms } from '../../game/quiz-parms';
   styleUrls: ['./quiz-parm-display.component.css']
 })
 export class QuizParmDisplayComponent implements OnInit {
+  @Input()
+  type: string;
 
   constructor(private wizardService: WizardService) { }
 
@@ -37,6 +39,14 @@ export class QuizParmDisplayComponent implements OnInit {
 
   getPlatforms() {
     return this.wizardService.getStateData().platforms.map((v) => GrammarHelper.toTitleCase(v));
+  }
+
+  getVehicles() {
+    return this.wizardService.getStateData().originalValues;
+  }
+
+  isDrill(): boolean {
+    return this.type.toLowerCase() === 'drill';
   }
 
 }

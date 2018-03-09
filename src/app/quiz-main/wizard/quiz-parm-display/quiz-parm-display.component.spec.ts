@@ -41,6 +41,7 @@ describe('QuizParmDisplayComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(QuizParmDisplayComponent);
     component = fixture.componentInstance;
+    component.type = 'drill';
     fixture.detectChanges();
   });
 
@@ -64,7 +65,8 @@ class MockWizardService extends WizardService {
       distances: [''],
       optics: [''],
       sides: [''],
-      eras: ['']
+      eras: [''],
+      originalValues: ['']
     };
   }
 }
