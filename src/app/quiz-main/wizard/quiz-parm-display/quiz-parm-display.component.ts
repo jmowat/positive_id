@@ -18,18 +18,34 @@ export class QuizParmDisplayComponent implements OnInit {
   }
 
   getSides() {
+    if (this.wizardService.getStateData().sides.length === 1
+      && this.wizardService.getStateData().sides[0] === '') {
+      return 'Any';
+    }
     return this.wizardService.getStateData().sides.map((v) => GrammarHelper.toTitleCase(v));
   }
 
   getDistances() {
+    if (this.wizardService.getStateData().distances.length === 1
+      && this.wizardService.getStateData().distances[0] === '') {
+      return 'Any';
+    }
     return this.wizardService.getStateData().distances.map((v) => GrammarHelper.toTitleCase(v));
   }
 
   getEras() {
+    if (this.wizardService.getStateData().eras.length === 1
+      && this.wizardService.getStateData().eras[0] === '') {
+      return 'Any';
+    }
     return this.wizardService.getStateData().eras.map((v) => GrammarHelper.toTitleCase(v));
   }
 
   getOptics() {
+    if (this.wizardService.getStateData().optics.length === 1
+      && this.wizardService.getStateData().optics[0] === '') {
+      return 'Any';
+    }
     return this.wizardService.getStateData().optics.map((v) => GrammarHelper.toTitleCase(v));
   }
 
