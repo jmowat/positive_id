@@ -11,7 +11,11 @@
           </div>
           <div class="col-8">
             <h2>{{stateService.getTitle()}}</h2>
-            <p>Which vehicles would you like to isolate the drill to?</p>
+            <p>Which vehicles would you like to limit the drill to?</p>
+            <p>
+              To make multiple selections, hold down <kbd>CTRL</kbd> and click on each vehicle you would
+              like to include. You can also drag-select multiple values, if you prefer.
+            </p>
             <form #thisForm="ngForm" class="form-horizontal">
               <div class="form-group">
                 <label for="vehicles">Vehicles</label>

@@ -11,7 +11,11 @@
           </div>
           <div class="col-8">
             <h2>{{stateService.getTitle()}}</h2>
-            <p>Which perspectives would you like to view from? Chosee all that apply.</p>
+            <p>Which perspectives would you like to view from? Chose all that apply.</p>
+            <p>
+              To make multiple selections, hold down <kbd>CTRL</kbd> and click on each perspective you would
+              like to include. You can also drag-select multiple values, if you prefer.
+            </p>
             <form #thisForm="ngForm" class="form-horizontal">
               <div class="form-group">
                 <label for="perspectives">Perspectives</label>

@@ -29,6 +29,10 @@ export class QuizBuilderState extends BuilderState {
 export class PlatformSelectionState extends QuizBuilderState {
   constructor() {
     super();
+    this.introText = `You have chosen to create a custom quiz. Limited by filter
+    criteria that you specify here, you will be shown each qualifying vehicle at
+    least once. This test is ideal for quickly becoming familiar with large groups
+    of vehicles or testing your overall knowledge.`;
     this.name = 'PlatformSelectionState';
   }
 

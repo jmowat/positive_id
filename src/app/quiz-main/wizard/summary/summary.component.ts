@@ -11,6 +11,7 @@ import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display
 import { QuizParms } from '../../game/quiz-parms';
 import { GameBuilderStateService } from '../state/game-builder-state.service';
 import { Validators } from '@angular/forms';
+import { CustomMinDirective } from '../../../custom-min-validator.directive';
 
 @Component({
   selector: 'app-summary',

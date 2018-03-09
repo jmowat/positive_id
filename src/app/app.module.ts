@@ -27,9 +27,11 @@ import { GameStateService } from './quiz-main/state/game-state.service';
 import { VehicleService } from './vehicle.service';
 import { WizardService } from './quiz-main/wizard/wizard.service';
 import { NameFilterPipe } from './name-filter.pipe';
+import { GameBuilderStateService } from './quiz-main/wizard/state/game-builder-state.service';
 
 import { ScoreComponent } from './quiz-main/score/score.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
+import { CustomMinDirective } from './custom-min-validator.directive';
 import { GameParmsService } from './quiz-main/game/game-parms.service';
 import { PlatformComponent } from './quiz-main/wizard/platform/platform.component';
 import { EraComponent } from './quiz-main/wizard/era/era.component';
@@ -40,7 +42,7 @@ import { PerspectivesComponent } from './quiz-main/wizard/perspectives/perspecti
 import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
 import { QuizParmDisplayComponent } from './quiz-main/wizard/quiz-parm-display/quiz-parm-display.component';
 import { VehicleSelectionComponent } from './quiz-main/wizard/vehicle-selection/vehicle-selection.component';
-import { GameBuilderStateService } from './quiz-main/wizard/state/game-builder-state.service';
+
 
 @NgModule({
   declarations: [
@@ -63,6 +65,7 @@ import { GameBuilderStateService } from './quiz-main/wizard/state/game-builder-s
     RedoQuizComponent,
     ScoreComponent,
     FocusDirective,
+    CustomMinDirective,
     PlatformComponent,
     EraComponent,
     SideComponent,

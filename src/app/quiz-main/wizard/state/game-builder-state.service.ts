@@ -41,4 +41,8 @@ export class GameBuilderStateService {
   getMaxQuestionsText(): string {
     return this.context.current.getMaxQuestionsText();
   }
+
+  getIntroText(): string {
+    return this.context.current.getIntroText();
+  }
 }

@@ -22,6 +22,7 @@ import { QuizComponent } from './quiz-main/quiz/quiz.component';
 import { ScoreComponent } from './quiz-main/score/score.component';
 import { RedoQuizComponent } from './quiz-main/quiz/redo-quiz.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
+import { CustomMinDirective } from './custom-min-validator.directive';
 
 import { PlatformComponent } from './quiz-main/wizard/platform/platform.component';
 import { EraComponent } from './quiz-main/wizard/era/era.component';
@@ -44,7 +45,7 @@ describe('AppComponent', () => {
         HeaderNarrowComponent, FooterComponent, BrowseComponent, HeaderBannerComponent, TopNavComponent, PaginationComponent,
         NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective, QuizParmDisplayComponent,
         VehicleSelectionComponent, PlatformComponent, EraComponent, SideComponent, DistanceComponent, OpticsComponent,
-        PerspectivesComponent, SummaryComponent
+        PerspectivesComponent, SummaryComponent, CustomMinDirective
       ],
       imports: [AppRoutingModule, FormsModule, NgbModule.forRoot()],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
