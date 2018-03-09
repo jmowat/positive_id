@@ -15,7 +15,6 @@
             <p>{{stateService.getMaxQuestionsText()}}</p>
             <form #thisForm="ngForm" class="form-horizontal">
               <div class="form-group">
-                <!-- TODO: add form validation -->
                 <label for="maxQuestions">Maximum number of questions</label>
                 <input class="form-control" type="number" id="maxQuestions" name="maxQuestions" [(ngModel)]="maxQuestions" #userInput="ngModel"
                   customMin="1" required>

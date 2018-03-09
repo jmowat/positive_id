@@ -1,3 +1,5 @@
+import { GrammarHelper } from './quiz-main/grammar-helper';
+
 export class SelectBoxFactory {
   constructor() {
 
@@ -18,7 +20,7 @@ export class SelectBoxFactory {
     for (const value of valuesToSort) {
       sortedOptions.push({
         id: value,
-        name: SelectBoxFactory.toTitleCase(value)
+        name: GrammarHelper.toTitleCase(value)
       });
     }
 
@@ -30,18 +32,5 @@ export class SelectBoxFactory {
       name: defaultValue
     };
     return selectBoxData;
-  }
-
-  // TODO: Move to a formatter object. Currently in GrammarHelper
-  static toTitleCase(str) {
-    if (str.toLowerCase() === 'world war ii') {
-      return 'World War II';
-    }
-    if (str.toLowerCase() === 'nato') {
-      return 'NATO';
-    }
-    return str.replace(/\w\S*/g, function(txt) {
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
   }
 }

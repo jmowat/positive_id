@@ -20,7 +20,6 @@ import { VehicleService } from '../vehicle.service';
 import { Observable } from 'rxjs/Observable';
 import { Vehicle } from '../vehicle';
 
-
 // BUG: setting side and then switching platforms messes up the side filter when you go back to it
 describe('BrowseFormComponent', () => {
   let component: BrowseFormComponent;

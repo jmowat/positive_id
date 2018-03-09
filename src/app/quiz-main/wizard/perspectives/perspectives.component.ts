@@ -9,7 +9,6 @@ import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display
 import { QuizParms } from '../../game/quiz-parms';
 import { GameBuilderStateService } from '../state/game-builder-state.service';
 
-// TODO: form validation - user must select at least one perspective
 @Component({
   selector: 'app-perspectives',
   templateUrl: './perspectives.component.html',
