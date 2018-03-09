@@ -25,6 +25,11 @@ export class EraComponent implements OnInit {
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
+    // reset user selection if it is no longer in the list
+    if (this.wizardService.eras.selectedOption.id &&
+      !this.getEras().availableOptions.map(v => v.id).includes(this.wizardService.eras.selectedOption.id)) {
+      this.wizardService.eras.selectedOption.id = '';
+    }
   }
 
   next() {

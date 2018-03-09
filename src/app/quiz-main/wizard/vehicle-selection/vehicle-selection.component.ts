@@ -27,6 +27,14 @@ export class VehicleSelectionComponent implements OnInit {
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
+    // reset user selection if it is no longer in the list
+    const cleanSelections = [];
+    for (const selection of this.wizardService.vehicleSelections.selectedOption) {
+      if (this.getVehicles().availableOptions.map(v => v.id).includes(selection)) {
+        cleanSelections.push(selection);
+      }
+    }
+    this.wizardService.vehicleSelections.selectedOption = cleanSelections;
   }
 
   next() {

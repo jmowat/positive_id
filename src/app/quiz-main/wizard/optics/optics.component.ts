@@ -26,6 +26,11 @@ export class OpticsComponent implements OnInit {
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
+    // reset user selection if it is no longer in the list
+    if (this.wizardService.eras.selectedOption.id &&
+      !this.getOptics().availableOptions.map(v => v.id).includes(this.wizardService.optics.selectedOption.id)) {
+      this.wizardService.optics.selectedOption.id = '';
+    }
   }
 
   next() {

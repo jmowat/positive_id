@@ -26,6 +26,11 @@ export class DistanceComponent implements OnInit {
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
+    // reset user selection if it is no longer in the list
+    if (this.wizardService.eras.selectedOption.id &&
+      !this.getDistances().availableOptions.map(v => v.id).includes(this.wizardService.distances.selectedOption.id)) {
+      this.wizardService.distances.selectedOption.id = '';
+    }
   }
 
   next() {

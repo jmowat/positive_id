@@ -25,6 +25,11 @@ export class SideComponent implements OnInit {
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
+    // reset user selection if it is no longer in the list
+    if (this.wizardService.eras.selectedOption.id &&
+      !this.getSides().availableOptions.map(v => v.id).includes(this.wizardService.sides.selectedOption.id)) {
+      this.wizardService.sides.selectedOption.id = '';
+    }
   }
 
   next() {

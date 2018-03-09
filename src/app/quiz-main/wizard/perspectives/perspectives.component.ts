@@ -27,6 +27,14 @@ export class PerspectivesComponent implements OnInit {
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
+    // reset user selection if it is no longer in the list
+    const cleanSelections = [];
+    for (const selection of this.wizardService.perspectives.selectedOption) {
+      if (this.getPerspectives().availableOptions.map(v => v.id).includes(selection)) {
+        cleanSelections.push(selection);
+      }
+    }
+    this.wizardService.perspectives.selectedOption = cleanSelections;
   }
 
   next() {
@@ -43,7 +51,7 @@ export class PerspectivesComponent implements OnInit {
     this.stateService.previous();
   }
 
-  getPerspectives(): any {
+  getPerspectives() {
     const perspectives = FilterHelper.getPerspectives(this.vehicles);
     this.perspectives.availableOptions = [];
     for (const perspective of perspectives) {
