@@ -12,17 +12,23 @@
           <div class="col-8">
             <h2>{{stateService.getTitle()}}</h2>
             <p>Which vehicles would you like to isolate the drill to?</p>
-            <form name="quizBuilderForm" class="form-horizontal">
+            <form #thisForm="ngForm" class="form-horizontal">
               <div class="form-group">
-                <label for="multipleSelect">Vehicles</label>
-                <!-- TODO: add form validation -->
-                <select class="form-control" id="vehicles" [(ngModel)]="wizardService.vehicleSelections.selectedOption" name="vehicles" multiple>
+                <label for="vehicles">Vehicles</label>
+                <select class="form-control" id="vehicles" [(ngModel)]="wizardService.vehicleSelections.selectedOption"
+                  name="vehicles" multiple required #userInput="ngModel">
                   <option *ngFor="let vehicle of getVehicles().availableOptions" [value]="vehicle.id">{{vehicle.name}}</option>
-    					</select>
+    					  </select>
+              <div *ngIf="userInput.invalid && (userInput.dirty || userInput.touched)"
+                     class="alert alert-danger">
+                <div *ngIf="userInput.errors.required">
+                  You must choose at least one vehicle for your test
+                </div>
+              </div>
               </div>
               <div class="clearfix">
                 <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
-                <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+                <button type="button" class="btn btn-primary float-right" (click)="next()" [disabled]="!thisForm.form.valid">Next</button>
               </div>
             </form>
           </div>

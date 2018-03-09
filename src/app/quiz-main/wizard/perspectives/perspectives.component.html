@@ -12,17 +12,23 @@
           <div class="col-8">
             <h2>{{stateService.getTitle()}}</h2>
             <p>Which perspectives would you like to view from? Chosee all that apply.</p>
-            <form name="quizBuilderForm" class="form-horizontal">
+            <form #thisForm="ngForm" class="form-horizontal">
               <div class="form-group">
-                <label for="multipleSelect">Perspectives</label>
-                <!-- TODO: add form validation -->
-                <select class="form-control" id="perspectives" [(ngModel)]="wizardService.perspectives.selectedOption" name="perspectives" multiple>
+                <label for="perspectives">Perspectives</label>
+                <select class="form-control" id="perspectives" [(ngModel)]="wizardService.perspectives.selectedOption"
+                  #userInput="ngModel" name="perspectives" multiple required>
                   <option *ngFor="let perspective of getPerspectives().availableOptions" [value]="perspective.id">{{perspective.name}}</option>
     					</select>
+              <div *ngIf="userInput.invalid && (userInput.dirty || userInput.touched)"
+                     class="alert alert-danger">
+                <div *ngIf="userInput.errors.required">
+                  You must choose at least one vehicle for your test
+                </div>
+              </div>
               </div>
               <div class="clearfix">
                 <button type="button" class="btn btn-primary float-left" (click)="back()">Previous</button>
-                <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+                <button type="button" class="btn btn-primary float-right" (click)="next()" [disabled]="!thisForm.form.valid">Next</button>
               </div>
             </form>
           </div>

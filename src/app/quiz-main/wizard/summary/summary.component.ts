@@ -10,6 +10,7 @@ import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
 import { GameBuilderStateService } from '../state/game-builder-state.service';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-summary',
