@@ -66,7 +66,9 @@ export class WizardService {
 
   resetLastDataFromHistory() {
     this.dataHistory.pop();
-    this.filteredVehicles = this.dataHistory[this.dataHistory.length - 1];
+    // this.filteredVehicles = this.dataHistory[this.dataHistory.length - 1];
+    this.filteredVehicles =
+      JSON.parse(JSON.stringify(this.dataHistory[this.dataHistory.length - 1]));
   }
 
   getData() {
