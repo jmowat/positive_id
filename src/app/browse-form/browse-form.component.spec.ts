@@ -77,18 +77,6 @@ describe('BrowseFormComponent', () => {
     expect(component.nameFilter).toEqual('test');
   }));
 
-  it('should reset the name field when the reset button is pressed', fakeAsync(() => {
-    const element = fixture.debugElement.query(By.css('input#nameFilter')).nativeElement;
-    element.value = 'test';
-    element.dispatchEvent(new Event('input'));
-    expect(component.nameFilter).toEqual('test');
-    resetEl.triggerEventHandler('click', null);
-    fixture.detectChanges();
-    flush();
-    expect(element.value).toEqual('');
-    expect(component.nameFilter).toEqual('');
-  }));
-
   describe('filter functionality', () => {
     it('should reset side and era on platform change', () => {
       // should return 7 side options on platform change to aircraft

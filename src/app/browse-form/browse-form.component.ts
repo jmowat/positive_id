@@ -58,7 +58,14 @@ export class BrowseFormComponent implements OnInit {
   }
 
   onKey(event: any) { // without type info
-      this.vehicles = this.platformVehicles.filter((v) => v.name.toLowerCase().startsWith(event.target.value));
+    let onKeyList: Vehicle[] = this.platformVehicles;
+    if (this.sides.selectedOption.id) {
+      onKeyList = onKeyList.filter((v) => v.side.includes(this.sides.selectedOption.id));
+    }
+    if (this.eras.selectedOption.id) {
+      onKeyList = onKeyList.filter((v) => v.era.includes(this.eras.selectedOption.id));
+    }
+      this.vehicles = onKeyList.filter((v) => v.name.toLowerCase().startsWith(event.target.value));
   }
 
   onChange() {
