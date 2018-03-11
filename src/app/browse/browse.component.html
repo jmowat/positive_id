@@ -2,7 +2,7 @@
 <p>Here are the current vehicles in Positive ID</p>
 <div class="row">
 	<div class="col-sm-6 col-md-4" *ngFor="let vehicle of vehicles
-	| nameFilter: 'name' : nameFilter | slice:(page-1)*6:(page)*6">
+	| slice:(page-1)*6:(page)*6">
 		<a (click)="popUp(vehicle)">
 			<div class="thumbnail">
 				<div class="caption">

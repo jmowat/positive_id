@@ -41,6 +41,8 @@ export class BrowseFormComponent implements OnInit {
     selectedOption: { id: '' }
   };
 
+  values = '';
+
   constructor(private vehicleService: VehicleService) { }
 
   ngOnInit() {
@@ -55,7 +57,12 @@ export class BrowseFormComponent implements OnInit {
     this.onChange();
   }
 
+  onKey(event: any) { // without type info
+      this.vehicles = this.platformVehicles.filter((v) => v.name.toLowerCase().startsWith(event.target.value));
+  }
+
   onChange() {
+    this.nameFilter = '';
     this.vehicleService.getVehicles()
       .subscribe(x => {
         this.vehicles = x.filter((v) => v.type === this.platforms.selectedOption.id);

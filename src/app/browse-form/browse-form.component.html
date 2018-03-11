@@ -9,8 +9,8 @@
           <div class="col-sm-2 col-md-4">
             <form #browseForm="ngForm">
               <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="nameFilter" name="nameFilter" [(ngModel)]="nameFilter">
+                <label for="nameFilter">Name</label>
+                <input type="text" class="form-control" id="nameFilter" name="nameFilter" [(ngModel)]="nameFilter" (keyup)="onKey($event)">
               </div>
               <div class="form-group" *ngIf="vehicles">
                 <label for="platform">Platform</label>
