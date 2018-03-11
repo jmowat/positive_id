@@ -14,20 +14,19 @@
               </div>
               <div class="form-group" *ngIf="vehicles">
                 <label for="platform">Platform</label>
-                <select class="form-control" id="platform" [(ngModel)]="platforms.selectedOption.id" name="platform" (change)="changePlatform()">
+                <select class="form-control" id="platform" [(ngModel)]="platforms.selectedOption.id" name="platform" (change)="onChange()">
 								<option *ngFor="let platform of platforms.availableOptions" [value]="platform.id">{{platform.name}}</option>
 							</select>
-                <!-- <app-platform-select [vehicles]="vehicles" (change)="platformChange($event)"></app-platform-select> -->
               </div>
               <div class="form-group" *ngIf="vehicles">
                 <label for="side">Side</label>
-                <select class="form-control" id="side" [(ngModel)]="sides.selectedOption.id" name="side" (change)="changeSide()">
+                <select class="form-control" id="side" [(ngModel)]="sides.selectedOption.id" name="side" (change)="onChange()">
 								<option *ngFor="let side of sides.availableOptions" [value]="side.id">{{side.name}}</option>
 							</select>
               </div>
               <div class="form-group" *ngIf="vehicles">
                 <label for="era">Era</label>
-                <select class="form-control" id="era" [(ngModel)]="eras.selectedOption.id" name="side" (change)="changeEra()">
+                <select class="form-control" id="era" [(ngModel)]="eras.selectedOption.id" name="side" (change)="onChange()">
 								<option *ngFor="let era of eras.availableOptions" [value]="era.id">{{era.name}}</option>
 							</select>
               </div>

@@ -17,8 +17,10 @@ import { PaginationComponent } from '../pagination/pagination.component';
 import { NameFilterPipe } from '../name-filter.pipe';
 import { VehicleService } from '../vehicle.service';
 
+import { of } from 'rxjs/observable/of';
 import { Observable } from 'rxjs/Observable';
 import { Vehicle } from '../vehicle';
+import { MIXED } from '../mock-vehicles';
 
 // BUG: setting side and then switching platforms messes up the side filter when you go back to it
 describe('BrowseFormComponent', () => {
@@ -30,21 +32,15 @@ describe('BrowseFormComponent', () => {
   let resetEl: DebugElement;
   let nameEl: DebugElement;
 
-  let vehicleServiceStub: {
-    getVehicles(): Observable<Vehicle[]>;
-  };
-
   beforeEach(async(() => {
-    // stub VehicleService for test purposes
-    vehicleServiceStub = {
-      getVehicles: () => Observable.of([new Vehicle()])
-    };
-
     TestBed.configureTestingModule({
       declarations: [BrowseFormComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, NameFilterPipe,
         BrowseComponent, PaginationComponent],
       imports: [FormsModule, NgbModule.forRoot()],
-      providers: [{ provide: VehicleService, useValue: vehicleServiceStub }]
+      providers: [{
+        provide: VehicleService,
+        useClass: MockVehicleService
+      }]
     })
       .compileComponents();
   }));
@@ -92,4 +88,22 @@ describe('BrowseFormComponent', () => {
     expect(element.value).toEqual('');
     expect(component.nameFilter).toEqual('');
   }));
+
+  describe('filter functionality', () => {
+    it('should reset side and era on platform change', () => {
+      // should return 7 side options on platform change to aircraft
+      // default is ground
+      expect(component.vehicles.length).toBe(3);
+      component.platforms.selectedOption.id = 'aircraft';
+      component.onChange();
+      expect(component.vehicles.length).toBe(5);
+    });
+  });
 });
+
+class MockVehicleService {
+  constructor() { }
+  getVehicles(): Observable<Vehicle[]> {
+    return of(MIXED);
+  }
+}
