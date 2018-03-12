@@ -818,7 +818,7 @@ export const MIXED: Vehicle[] = [
 {
 	'name': 'Bf 109',
 	'side': ['Axis'],
-	'type': 'aircraft',
+	'type': 'fixed wing aircraft',
 	'class': 'fighter',
 	'nationality': ['Germany'],
 	'era': ['world war ii'],
@@ -900,7 +900,7 @@ export const MIXED: Vehicle[] = [
 {
 	'name': 'Il-2',
 	'side': ['Allies'],
-	'type': 'aircraft',
+	'type': 'fixed wing aircraft',
 	'class': 'fighter bomber',
 	'nationality': ['Soviet Union'],
 	'era': ['world war ii'],
@@ -982,7 +982,7 @@ export const MIXED: Vehicle[] = [
 {
 	'name': 'F/A-18',
 	'side': ['NATO', 'western'],
-	'type': 'aircraft',
+	'type': 'fixed wing aircraft',
 	'class': 'multirole',
 	'nationality': ['United States'],
 	'era': ['cold war', 'modern'],
@@ -1064,7 +1064,7 @@ export const MIXED: Vehicle[] = [
 {
 	'name': 'MiG-19',
 	'side': ['Warsaw Pact', 'eastern'],
-	'type': 'aircraft',
+	'type': 'fixed wing aircraft',
 	'class': 'fighter',
 	'nationality': ['Soviet Union'],
 	'era': ['cold war'],
@@ -1146,7 +1146,7 @@ export const MIXED: Vehicle[] = [
 {
 	'name': 'MiG-29',
 	'side': ['Warsaw Pact', 'eastern'],
-	'type': 'aircraft',
+	'type': 'fixed wing aircraft',
 	'class': 'multirole',
 	'nationality': ['Soviet Union', 'Russia'],
 	'era': ['cold war', 'modern'],

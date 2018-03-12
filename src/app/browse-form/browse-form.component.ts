@@ -21,8 +21,8 @@ export class BrowseFormComponent implements OnInit {
       id: 'ground vehicle',
       name: 'Ground Vehicles'
     }, {
-      id: 'aircraft',
-      name: 'Aircraft'
+      id: 'fixed wing aircraft',
+      name: 'Fixed Wing Aircraft'
     }],
     selectedOption: {
       id: 'ground vehicle',

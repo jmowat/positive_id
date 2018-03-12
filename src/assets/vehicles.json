@@ -3140,7 +3140,7 @@
 }, {
 	"name": "Bf 109",
 	"side": ["Axis"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Germany"],
 	"era": ["world war ii"],
@@ -3221,7 +3221,7 @@
 }, {
 	"name": "He 111",
 	"side": ["Axis"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "bomber",
 	"nationality": ["Germany"],
 	"era": ["world war ii"],
@@ -3302,7 +3302,7 @@
 }, {
 	"name": "Ju 88",
 	"side": ["Axis"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "multirole",
 	"nationality": ["Germany"],
 	"era": ["world war ii"],
@@ -3383,7 +3383,7 @@
 }, {
 	"name": "MC.202",
 	"side": ["Axis"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Italy"],
 	"era": ["world war ii"],
@@ -3464,7 +3464,7 @@
 }, {
 	"name": "Il-2",
 	"side": ["Allies"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter bomber",
 	"nationality": ["Soviet Union"],
 	"era": ["world war ii"],
@@ -3545,7 +3545,7 @@
 }, {
 	"name": "La-5",
 	"side": ["Allies"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Soviet Union"],
 	"era": ["world war ii"],
@@ -3626,7 +3626,7 @@
 }, {
 	"name": "MiG-3",
 	"side": ["Allies"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Soviet Union"],
 	"era": ["world war ii"],
@@ -3707,7 +3707,7 @@
 }, {
 	"name": "P-40",
 	"side": ["Allies"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Soviet Union", "United States"],
 	"era": ["world war ii"],
@@ -3788,7 +3788,7 @@
 }, {
 	"name": "Ju 87",
 	"side": ["Axis"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "bomber",
 	"nationality": ["Germany"],
 	"era": ["world war ii"],
@@ -3869,7 +3869,7 @@
 }, {
 	"name": "Bf 110",
 	"side": ["Axis"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter bomber",
 	"nationality": ["Germany"],
 	"era": ["world war ii"],
@@ -3950,7 +3950,7 @@
 }, {
 	"name": "Fw 190",
 	"side": ["Axis"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Germany"],
 	"era": ["world war ii"],
@@ -4031,7 +4031,7 @@
 }, {
 	"name": "I-16",
 	"side": ["Allies"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Soviet Union"],
 	"era": ["world war ii"],
@@ -4112,7 +4112,7 @@
 }, {
 	"name": "LaGG 3",
 	"side": ["Allies"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Soviet Union"],
 	"era": ["world war ii"],
@@ -4193,7 +4193,7 @@
 }, {
 	"name": "Pe-2",
 	"side": ["Allies"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "bomber",
 	"nationality": ["Soviet Union"],
 	"era": ["world war ii"],
@@ -4274,7 +4274,7 @@
 }, {
 	"name": "Spitfire Mk V",
 	"side": ["Allies"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Soviet Union", "United Kingdom"],
 	"era": ["world war ii"],
@@ -4355,7 +4355,7 @@
 }, {
 	"name": "Yak-1",
 	"side": ["Allies"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Soviet Union"],
 	"era": ["world war ii"],
@@ -4436,7 +4436,7 @@
 }, {
 	"name": "F/A-18",
 	"side": ["NATO", "western"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "multirole",
 	"nationality": ["United States"],
 	"era": ["cold war", "modern"],
@@ -4517,7 +4517,7 @@
 }, {
 	"name": "F-4",
 	"side": ["NATO", "western"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "interceptor",
 	"nationality": ["United States"],
 	"era": ["cold war", "modern"],
@@ -4598,7 +4598,7 @@
 }, {
 	"name": "EF2000",
 	"side": ["NATO", "western"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "multirole",
 	"nationality": ["United Kingdom", "Germany", "Italy", "Spain"],
 	"era": ["modern"],
@@ -4679,7 +4679,7 @@
 }, {
 	"name": "F-5",
 	"side": ["NATO", "western"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "light fighter",
 	"nationality": ["United States"],
 	"era": ["cold war", "modern"],
@@ -4760,7 +4760,7 @@
 }, {
 	"name": "B-1",
 	"side": ["NATO", "western"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "strategic bomber",
 	"nationality": ["United States"],
 	"era": ["cold war", "modern"],
@@ -4841,7 +4841,7 @@
 }, {
 	"name": "F-16",
 	"side": ["NATO", "western"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "multirole",
 	"nationality": ["United States"],
 	"era": ["cold war", "modern"],
@@ -4922,7 +4922,7 @@
 }, {
 	"name": "F-15",
 	"side": ["NATO", "western"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "air superiority fighter",
 	"nationality": ["United States"],
 	"era": ["cold war", "modern"],
@@ -5003,7 +5003,7 @@
 }, {
 	"name": "Rafale",
 	"side": ["NATO", "western"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "multirole",
 	"nationality": ["France", "Egypt"],
 	"era": ["modern"],
@@ -5084,7 +5084,7 @@
 }, {
 	"name": "Mirage 2000",
 	"side": ["NATO", "western"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "multirole",
 	"nationality": ["France"],
 	"era": ["cold war", "modern"],
@@ -5165,7 +5165,7 @@
 }, {
 	"name": "F-14",
 	"side": ["NATO", "western"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "multirole",
 	"nationality": ["United States"],
 	"era": ["cold war", "modern"],
@@ -5246,7 +5246,7 @@
 }, {
 	"name": "MiG-19",
 	"side": ["Warsaw Pact", "eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Soviet Union"],
 	"era": ["cold war"],
@@ -5327,7 +5327,7 @@
 }, {
 	"name": "MiG-21",
 	"side": ["Warsaw Pact", "eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter",
 	"nationality": ["Soviet Union"],
 	"era": ["cold war"],
@@ -5408,7 +5408,7 @@
 }, {
 	"name": "MiG-23",
 	"side": ["Warsaw Pact", "eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "fighter-bomber",
 	"nationality": ["Soviet Union", "Russia"],
 	"era": ["cold war", "modern"],
@@ -5489,7 +5489,7 @@
 }, {
 	"name": "MiG-25",
 	"side": ["Warsaw Pact", "eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "interceptor",
 	"nationality": ["Soviet Union", "Russia"],
 	"era": ["cold war", "modern"],
@@ -5570,7 +5570,7 @@
 }, {
 	"name": "MiG-27",
 	"side": ["Warsaw Pact", "eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "ground attack",
 	"nationality": ["Soviet Union", "Russia"],
 	"era": ["cold war", "modern"],
@@ -5651,7 +5651,7 @@
 }, {
 	"name": "MiG-29",
 	"side": ["Warsaw Pact", "eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "multirole",
 	"nationality": ["Soviet Union", "Russia"],
 	"era": ["cold war", "modern"],
@@ -5732,7 +5732,7 @@
 }, {
 	"name": "MiG-31",
 	"side": ["Warsaw Pact", "eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "interceptor",
 	"nationality": ["Soviet Union", "Russia"],
 	"era": ["cold war", "modern"],
@@ -5813,7 +5813,7 @@
 }, {
 	"name": "Su-24",
 	"side": ["Warsaw Pact", "eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "attack",
 	"nationality": ["Soviet Union", "Russia"],
 	"era": ["cold war", "modern"],
@@ -5894,7 +5894,7 @@
 }, {
 	"name": "Su-25",
 	"side": ["Warsaw Pact", "eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "close air support",
 	"nationality": ["Soviet Union", "Russia"],
 	"era": ["cold war", "modern"],
@@ -5975,7 +5975,7 @@
 }, {
 	"name": "Su-27",
 	"side": ["Warsaw Pact", "eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "multirole",
 	"nationality": ["Soviet Union", "Russia"],
 	"era": ["cold war", "modern"],
@@ -6056,7 +6056,7 @@
 }, {
 	"name": "Su-30",
 	"side": ["eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "multirole",
 	"nationality": ["Russia"],
 	"era": ["modern"],
@@ -6137,7 +6137,7 @@
 }, {
 	"name": "Su-33",
 	"side": ["eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "multirole",
 	"nationality": ["Russia"],
 	"era": ["modern"],
@@ -6218,7 +6218,7 @@
 }, {
 	"name": "Tu-16",
 	"side": ["eastern", "Warsaw Pact"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "strategic bomber",
 	"nationality": ["Soviet Union"],
 	"era": ["cold war"],
@@ -6299,7 +6299,7 @@
 }, {
 	"name": "Tu-22",
 	"side": ["eastern", "Warsaw Pact"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "strategic bomber",
 	"nationality": ["Soviet Union", "Russia"],
 	"era": ["cold war", "modern"],
@@ -6380,7 +6380,7 @@
 }, {
 	"name": "Tu-160",
 	"side": ["eastern"],
-	"type": "aircraft",
+	"type": "fixed wing aircraft",
 	"class": "strategic bomber",
 	"nationality": ["Russia"],
 	"era": ["modern"],
