@@ -20,7 +20,7 @@ export class GameParmsService {
   DEFAULT_GROUND_QUIZ() {
     return {
       optionsToShow: 5,
-      numberOfQuestions: 10,
+      numberOfQuestions: 20,
       platforms: ['ground vehicle'],
       profiles: ['side', 'front', 'oblique'],
       distances: ['near'],
@@ -98,7 +98,7 @@ export class GameParmsService {
   WW2_AIRCRAFT_QUIZ() {
     return {
       optionsToShow: 5,
-      numberOfQuestions: 10,
+      numberOfQuestions: 20,
       distances: ['near'],
       optics: ['naked eye'],
       platforms: ['aircraft'],
@@ -110,7 +110,7 @@ export class GameParmsService {
   WESTERN_AIRCRAFT_QUIZ() {
     return {
       optionsToShow: 5,
-      numberOfQuestions: 10,
+      numberOfQuestions: 20,
       distances: ['near'],
       profiles: ['side', 'front', 'oblique', 'top'],
       optics: ['naked eye'],
@@ -123,7 +123,7 @@ export class GameParmsService {
   EASTERN_AIRCRAFT_QUIZ() {
     return {
       optionsToShow: 5,
-      numberOfQuestions: 10,
+      numberOfQuestions: 20,
       distances: ['near'],
       profiles: ['side', 'front', 'oblique', 'top'],
       optics: ['naked eye'],
@@ -149,7 +149,7 @@ export class GameParmsService {
   WW2_AIRCRAFT_FAR_DRILL() {
     return {
       optionsToShow: 5,
-      numberOfQuestions: 12,
+      numberOfQuestions: 20,
       distances: ['far'],
       profiles: ['side', 'oblique'],
       optics: ['naked eye'],
