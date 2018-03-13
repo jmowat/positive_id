@@ -29,14 +29,11 @@ export class PlatformSelectionState extends DrillBuilderState {
   constructor() {
     super();
 
-    this.introText = `
-    <lead>
-      <h2>What is a drill?</h2>
+    this.introText = `<h2>What is a drill?</h2>
       A drill allows you to select the specific vehicles you want to see and will repeat
       these vehicles randomly among themselves. <strong>Vehicles can and will appear more than once.</strong>
       This is an excellent way to practice differentiating between specific vehicles that you
-      control.
-    </lead>`;
+      control.`;
 
     // this.introText = `You have chosen to create a custom drill. A drill allows you
     // to select the specific vehicles you want to see and will repeat those vehciles
