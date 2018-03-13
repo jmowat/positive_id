@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderNarrowComponent } from '../header-narrow/header-narrow.component';
 import { FooterComponent } from '../footer/footer.component';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -8,10 +9,24 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  name: string;
+  email: string;
+  message: string;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
 
+  onSubmit() {
+    console.log('Form Submitted!');
+    const message = {
+      from: this.email,
+      subject: 'Positive ID - contact from ' + this.name,
+      text: this.message,
+      html: '<p>' + this.message + '</p>'
+    };
+    const url = `http://localhost:4300/sendmail`;
+    this.http.post(url, message).subscribe(res => console.log(res));
+  }
 }

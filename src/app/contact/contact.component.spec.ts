@@ -6,6 +6,8 @@ import { FooterComponent } from '../footer/footer.component';
 import { TopNavComponent } from '../top-nav/top-nav.component';
 import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -19,7 +21,8 @@ describe('ContactComponent', () => {
         {
           provide: Router,
           useValue: routerSpy
-        }]
+        }],
+        imports: [FormsModule, HttpClientTestingModule]
     })
       .compileComponents();
   }));
