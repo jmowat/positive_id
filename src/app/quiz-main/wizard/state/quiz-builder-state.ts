@@ -30,10 +30,20 @@ export class QuizBuilderState extends BuilderState {
 export class PlatformSelectionState extends QuizBuilderState {
   constructor() {
     super();
-    this.introText = `You have chosen to create a custom quiz. Limited by filter
-    criteria that you specify here, you will be shown each qualifying vehicle at
-    least once. This test is ideal for quickly becoming familiar with large groups
-    of vehicles or testing your overall knowledge.`;
+
+    this.introText = `
+    <lead>
+      <h2>What is a quiz?</h2>
+      A test that will show you each vehicle that matches
+      your criteria only once. <strong>You will not get repeat vehicles
+      in a quiz.</strong> This test is ideal for quickly becoming familiar with large groups
+      of vehicles or testing your overall knowledge.
+    </lead>`;
+
+    // this.introText = `You have chosen to create a custom quiz. Limited by filter
+    // criteria that you specify here, you will be shown each qualifying vehicle at
+    // least once. This test is ideal for quickly becoming familiar with large groups
+    // of vehicles or testing your overall knowledge.`;
     this.name = 'PlatformSelectionState';
   }
 
