@@ -3,16 +3,24 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { TopNavComponent } from './top-nav.component';
+import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
+import { Router } from '@angular/router';
 
 describe('TopNavComponent', () => {
   let component: TopNavComponent;
   let fixture: ComponentFixture<TopNavComponent>;
   let de: DebugElement;
   let el: HTMLElement;
+  const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TopNavComponent]
+      declarations: [TopNavComponent],
+      providers: [GameBuilderStateService,
+        {
+          provide: Router,
+          useValue: routerSpy
+        }]
     })
       .compileComponents();
   }));

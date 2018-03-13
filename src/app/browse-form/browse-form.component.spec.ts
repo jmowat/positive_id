@@ -21,6 +21,8 @@ import { of } from 'rxjs/observable/of';
 import { Observable } from 'rxjs/Observable';
 import { Vehicle } from '../vehicle';
 import { MIXED } from '../mock-vehicles';
+import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
+import { Router } from '@angular/router';
 
 // BUG: setting side and then switching platforms messes up the side filter when you go back to it
 describe('BrowseFormComponent', () => {
@@ -31,13 +33,19 @@ describe('BrowseFormComponent', () => {
 
   let resetEl: DebugElement;
   let nameEl: DebugElement;
+  const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [BrowseFormComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, NameFilterPipe,
         BrowseComponent, PaginationComponent],
       imports: [FormsModule, NgbModule.forRoot()],
-      providers: [{
+      providers: [GameBuilderStateService,
+        {
+          provide: Router,
+          useValue: routerSpy
+        },
+        {
         provide: VehicleService,
         useClass: MockVehicleService
       }]
