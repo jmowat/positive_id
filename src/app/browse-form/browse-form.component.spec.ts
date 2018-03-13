@@ -82,7 +82,7 @@ describe('BrowseFormComponent', () => {
       // should return 7 side options on platform change to aircraft
       // default is ground
       expect(component.vehicles.length).toBe(3);
-      component.platforms.selectedOption.id = 'aircraft';
+      component.platforms.selectedOption.id = 'fixed wing aircraft';
       component.onChange();
       expect(component.vehicles.length).toBe(5);
     });
