@@ -22,8 +22,8 @@ export class SummaryComponent implements OnInit {
   vehicles: Vehicle[];
   maxQuestions: number;
 
-  constructor(private router: Router, private location: Location, private parmsService: GameParmsService,
-    public wizardService: WizardService, private stateService: GameBuilderStateService) { }
+  constructor(private router: Router, private location: Location, public parmsService: GameParmsService,
+    public wizardService: WizardService, public stateService: GameBuilderStateService) { }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();

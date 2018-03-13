@@ -26,8 +26,8 @@ export class PlatformComponent implements OnInit {
     }]
   };
 
-  constructor(private router: Router, private location: Location, private vehicleService: VehicleService,
-    private wizardService: WizardService, private stateService: GameBuilderStateService) { }
+  constructor(private router: Router, private location: Location, public vehicleService: VehicleService,
+    public wizardService: WizardService, public stateService: GameBuilderStateService) { }
 
   ngOnInit() {
     this.vehicleService.getVehicles().subscribe((data) => {

@@ -22,7 +22,7 @@ export class OpticsComponent implements OnInit {
   };
 
   constructor(private router: Router, private location: Location,
-    private wizardService: WizardService, private stateService: GameBuilderStateService) { }
+    public wizardService: WizardService, public stateService: GameBuilderStateService) { }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
