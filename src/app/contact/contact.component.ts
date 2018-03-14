@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HeaderNarrowComponent } from '../header-narrow/header-narrow.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-
+import { CustomEmailValidatorDirective } from '../custom-email-validator.directive';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
