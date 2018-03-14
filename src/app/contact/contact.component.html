@@ -19,12 +19,10 @@
                 <div class="panel-body">
                   <div class="form-group">
                     <div class="input-group">
-                      <span class="input-group-addon"><i class="glyphicon glyphicon-user blue"></i></span>
-                      <input type="text" name="name" id="name" autocomplete="name" [(ngModel)]="name"
-                      placeholder="Name" class="form-control" autofocus="autofocus" required #nameInput="ngModel">
+                      <span class="input-group-addon"><i class="far fa-user fa-lg"></i></span>
+                      <input type="text" name="name" id="name" autocomplete="name" [(ngModel)]="name" placeholder="Name" class="form-control" autofocus="autofocus" required #nameInput="ngModel">
                     </div>
-                    <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)"
-                           class="alert alert-danger">
+                    <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="error-box alert alert-danger">
                       <div *ngIf="nameInput.errors.required">
                         You must enter your name
                       </div>
@@ -32,12 +30,10 @@
                   </div>
                   <div class="form-group">
                     <div class="input-group">
-                      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope blue"></i></span>
-                      <input type="email" name="email" id="email" autocomplete="email" [(ngModel)]="email"
-                      placeholder="Email Address" class="form-control" required #emailInput="ngModel" emailvalidator>
+                      <span class="input-group-addon"><i class="far fa-envelope fa-lg"></i></span>
+                      <input type="email" name="email" id="email" autocomplete="email" [(ngModel)]="email" placeholder="Email Address" class="form-control" required #emailInput="ngModel" emailvalidator>
                     </div>
-                    <div *ngIf="emailInput.errors && (emailInput.dirty || emailInput.touched)"
-                           class="alert alert-danger">
+                    <div *ngIf="emailInput.errors && (emailInput.dirty || emailInput.touched)" class="error-box alert alert-danger">
                       <div *ngIf="emailInput.errors.required">
                         You must enter an email address
                       </div>
@@ -48,23 +44,25 @@
                   </div>
                   <div class="form-group">
                     <div class="input-group">
-                      <span class="input-group-addon"><i class="glyphicon glyphicon-comment blue"></i></span>
-                      <textarea name="message" id="message" [(ngModel)]="message" rows="6" class="form-control"
-                      type="text" required #messageInput="ngModel"></textarea>
+                      <span class="input-group-addon"><i class="far fa-comment fa-lg"></i></span>
+                      <textarea name="message" id="message" [(ngModel)]="message" rows="6" class="form-control" type="text" required #messageInput="ngModel"></textarea>
                     </div>
-                    <div *ngIf="messageInput.invalid && (messageInput.dirty || messageInput.touched)"
-                           class="alert alert-danger">
+                    <div *ngIf="messageInput.invalid && (messageInput.dirty || messageInput.touched)" class="error-box alert alert-danger">
                       <div *ngIf="messageInput.errors.required">
                         You must enter a message
                       </div>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <div class="g-recaptcha" data-sitekey="6Lf0pzoUAAAAAGDqvSIkYwb31CaAmSxXHDE6R0-M"></div>
+                  </div> -->
+                  <div class="buttons">
+                    <button type="reset" value="Reset" name="reset" class="btn reset-button">Reset <span class="far fa-square"></span></button>
+
+                    <button type="submit" class="btn btn-info float-right" [disabled]="!contactForm.form.valid">Send <span class="far fa-paper-plane"></span></button>
                   </div>
-                  <div class="">
-                    <button type="submit" class="btn btn-info pull-right" [disabled]="!contactForm.form.valid">Send <span class="glyphicon glyphicon-send"></span></button>
-                    <button type="reset" value="Reset" name="reset" class="btn">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+                  <div class="status-message text-center">
+                    {{statusMessage}}
                   </div>
                 </div>
 

@@ -48,7 +48,7 @@ app.post('/sendmail', (req, res) => {
   console.log("config:", smtpConfig);
   const transporter = nodemailer.createTransport(smtpConfig);
   const data = req.body;
-  data.to = "to: jmowat@digitalpraxis.com";
+  data.to = "jmowat@digitalpraxis.com";
   // verify connection configuration
   transporter.verify((error, success) => {
     console.log("test verification...");

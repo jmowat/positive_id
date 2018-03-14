@@ -12,6 +12,7 @@ export class ContactComponent implements OnInit {
   name: string;
   email: string;
   message: string;
+  statusMessage: string;
 
   constructor(private http: HttpClient) { }
 
@@ -19,7 +20,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('Form Submitted!');
+    // console.log('Form Submitted!');
     const message = {
       from: this.email,
       subject: 'Positive ID - contact from ' + this.name,
@@ -28,7 +29,8 @@ export class ContactComponent implements OnInit {
     };
     const url = `http://localhost:4300/sendmail`;
     this.http.post(url, message).subscribe(res => {
-      console.log('Data received by contact component:', res);
+      // console.log('Data received by contact component:', res);
+      this.statusMessage = 'Your message was sent. Thanks!';
     });
   }
 }
