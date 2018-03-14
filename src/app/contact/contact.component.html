@@ -15,7 +15,7 @@
               <!-- <div class="panel-heading">
                 <h1>Contact Us</h1>
               </div> -->
-              <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+              <form #contactForm="ngForm" (ngSubmit)="onSubmit(); contactForm.reset()">
                 <div class="panel-body">
                   <div class="form-group">
                     <div class="input-group">
@@ -55,7 +55,7 @@
                     <div *ngIf="messageInput.invalid && (messageInput.dirty || messageInput.touched)"
                            class="alert alert-danger">
                       <div *ngIf="messageInput.errors.required">
-                        You must enter an email address
+                        You must enter a message
                       </div>
                     </div>
                   </div>
