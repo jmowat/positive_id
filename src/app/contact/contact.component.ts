@@ -26,7 +26,9 @@ export class ContactComponent implements OnInit {
       text: this.message,
       html: '<p>' + this.message + '</p>'
     };
-    const url = `http://localhost:4200/sendmail`;
-    this.http.post(url, message).subscribe(res => console.log(res));
+    const url = `http://localhost:4300/sendmail`;
+    this.http.post(url, message).subscribe(res => {
+      console.log('Data received by contact component:', res);
+    });
   }
 }
