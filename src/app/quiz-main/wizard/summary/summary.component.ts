@@ -22,8 +22,8 @@ export class SummaryComponent implements OnInit {
   vehicles: Vehicle[];
   maxQuestions: number;
 
-  constructor(private router: Router, private location: Location, private parmsService: GameParmsService,
-    public wizardService: WizardService, private stateService: GameBuilderStateService) { }
+  constructor(private router: Router, private location: Location, public parmsService: GameParmsService,
+    public wizardService: WizardService, public stateService: GameBuilderStateService) { }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();
@@ -31,7 +31,8 @@ export class SummaryComponent implements OnInit {
   }
 
   next() {
-    this.wizardService.maxQuestions = this.maxQuestions;
+    // defensive max cap to prevent DoS. 1000 is arbitrary
+    this.wizardService.maxQuestions = this.maxQuestions > 1000  ? 1000 : this.maxQuestions;
     // console.log('Summary fetched the following parms from wizard:', this.wizardService.getQuizParms());
     this.parmsService.setTestParms(this.wizardService.getQuizParms());
     // this.router.navigateByUrl('/quiz');

@@ -21,8 +21,8 @@ export class DistanceComponent implements OnInit {
     availableOptions: []
   };
 
-  constructor(private router: Router, private location: Location, private wizardService: WizardService,
-  private stateService: GameBuilderStateService) { }
+  constructor(private router: Router, private location: Location, public wizardService: WizardService,
+  public stateService: GameBuilderStateService) { }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();

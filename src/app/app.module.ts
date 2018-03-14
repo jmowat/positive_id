@@ -32,6 +32,7 @@ import { GameBuilderStateService } from './quiz-main/wizard/state/game-builder-s
 import { ScoreComponent } from './quiz-main/score/score.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
 import { CustomMinDirective } from './custom-min-validator.directive';
+import { CustomEmailValidatorDirective } from './custom-email-validator.directive';
 import { GameParmsService } from './quiz-main/game/game-parms.service';
 import { PlatformComponent } from './quiz-main/wizard/platform/platform.component';
 import { EraComponent } from './quiz-main/wizard/era/era.component';
@@ -66,6 +67,7 @@ import { VehicleSelectionComponent } from './quiz-main/wizard/vehicle-selection/
     ScoreComponent,
     FocusDirective,
     CustomMinDirective,
+    CustomEmailValidatorDirective,
     PlatformComponent,
     EraComponent,
     SideComponent,
