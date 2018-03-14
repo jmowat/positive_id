@@ -31,7 +31,8 @@ export class SummaryComponent implements OnInit {
   }
 
   next() {
-    this.wizardService.maxQuestions = this.maxQuestions;
+    // defensive max cap to prevent DoS. 1000 is arbitrary
+    this.wizardService.maxQuestions = this.maxQuestions > 1000  ? 1000 : this.maxQuestions;
     // console.log('Summary fetched the following parms from wizard:', this.wizardService.getQuizParms());
     this.parmsService.setTestParms(this.wizardService.getQuizParms());
     // this.router.navigateByUrl('/quiz');
