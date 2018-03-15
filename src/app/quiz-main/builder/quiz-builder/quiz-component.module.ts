@@ -16,6 +16,7 @@ import { LayoutModule } from '../../../layout/layout.module';
   ],
   declarations: [DistanceComponent, EraComponent, OpticsComponent, PerspectivesComponent,
     PlatformComponent, SideComponent],
-  exports: [DistanceComponent, EraComponent, OpticsComponent, PlatformComponent, SideComponent]
+  exports: [DistanceComponent, EraComponent, OpticsComponent, PerspectivesComponent,
+    PlatformComponent, SideComponent]
 })
 export class QuizComponentModule { }

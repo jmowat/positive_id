@@ -6,15 +6,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { APP_BASE_HREF } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
-import { HeaderBannerComponent } from './layout/header-banner/header-banner.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { ContactComponent } from './contact/contact.component';
-import { TopNavComponent } from './layout/top-nav/top-nav.component';
-import { HeaderNarrowComponent } from './layout/header-narrow/header-narrow.component';
-import { TermsComponent } from './terms/terms.component';
-import { PrivacyComponent } from './privacy/privacy.component';
+
 import { BrowseComponent } from './browse/browse.component';
 import { BrowseFormComponent } from './browse-form/browse-form.component';
 import { PaginationComponent } from './pagination/pagination.component';
@@ -35,6 +28,10 @@ import { QuizParmDisplayComponent } from './quiz-main/wizard/quiz-parm-display/q
 import { VehicleSelectionComponent } from './quiz-main/wizard/vehicle-selection/vehicle-selection.component';
 import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
 
+import { LayoutModule } from './layout/layout.module';
+import { QuizComponentModule } from './quiz-main/builder/quiz-builder/quiz-component.module';
+
+
 import { NameFilterPipe } from './name-filter.pipe';
 import { Vehicle } from './vehicle';
 
@@ -42,13 +39,13 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent, AboutComponent, BrowseFormComponent, ContactComponent, MainComponent, PrivacyComponent, TermsComponent,
-        HeaderNarrowComponent, FooterComponent, BrowseComponent, HeaderBannerComponent, TopNavComponent, PaginationComponent,
-        NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective, QuizParmDisplayComponent,
-        VehicleSelectionComponent, PlatformComponent, EraComponent, SideComponent, DistanceComponent, OpticsComponent,
-        PerspectivesComponent, SummaryComponent, CustomMinDirective, QuizBuilderComponent
+        AppComponent, BrowseFormComponent, MainComponent, BrowseComponent, PaginationComponent,
+        NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective,
+        QuizParmDisplayComponent, VehicleSelectionComponent, PlatformComponent, EraComponent,
+        SideComponent, DistanceComponent, OpticsComponent, PerspectivesComponent, SummaryComponent,
+        CustomMinDirective, QuizBuilderComponent
       ],
-      imports: [AppRoutingModule, FormsModule, NgbModule.forRoot()],
+      imports: [AppRoutingModule, FormsModule, NgbModule.forRoot(), QuizComponentModule, LayoutModule],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
     }).compileComponents();
   }));

@@ -6,7 +6,7 @@
     <div class="container">
       <section id="quiz-builder">
         <div class="row">
-          <div class="intro col-sm-4">
+          <div class="intro col-md-4">
             <h2>What is a quiz?</h2>
             <p>
               A test that will show you each vehicle that matches
@@ -15,16 +15,16 @@
               of vehicles or testing your overall knowledge.
             </p>
           </div>
-          <div class="col-sm-8">
+          <div class="col-md-8">
             <h2>Quiz Builder</h2>
             <form name="quizBuilderForm" class="form-horizontal" #form="ngForm">
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="platformFilter">Platform</label>
                 <select class="form-control" id="platform" [(ngModel)]="platforms.selectedOption.id" name="platform">
                 <option *ngFor="let platform of platforms.availableOptions">{{platform.name}}</option>
     					</select>
-              </div>
-
+              </div> -->
+              <app-platform-control></app-platform-control>
 
               <div class="clearfix">
                 <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
