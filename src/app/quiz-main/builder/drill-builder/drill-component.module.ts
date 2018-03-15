@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { QuizBuilderComponent } from './quiz-builder.component';
 import { LayoutModule } from '../../../layout/layout.module';
 import { FormsModule } from '@angular/forms';
+import { VehicleSelectionComponent } from '../controls/vehicle-selection/vehicle-selection.component';
 
 @NgModule({
   imports: [
     CommonModule, LayoutModule, FormsModule
   ],
-  declarations: [QuizBuilderComponent],
-  exports: [QuizBuilderComponent]
+  declarations: [VehicleSelectionComponent],
+  exports: [VehicleSelectionComponent]
 })
-export class QuizBuilderModule { }
+export class DrillComponentModule { }

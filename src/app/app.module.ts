@@ -9,16 +9,6 @@ import { AppComponent } from './app.component';
 
 import { MainComponent } from './main/main.component';
 
-// import { AboutComponent } from './about/about.component';
-// import { ContactComponent } from './contact/contact.component';
-// import { TermsComponent } from './terms/terms.component';
-// import { PrivacyComponent } from './privacy/privacy.component';
-
-// import { HeaderBannerComponent } from './layout/header-banner/header-banner.component';
-// import { FooterComponent } from './layout/footer/footer.component';
-// import { TopNavComponent } from './layout/top-nav/top-nav.component';
-// import { HeaderNarrowComponent } from './layout/header-narrow/header-narrow.component';
-
 import { BrowseComponent } from './browse/browse.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ModalComponent } from './modal/modal.component';
@@ -47,25 +37,19 @@ import { PerspectivesComponent } from './quiz-main/wizard/perspectives/perspecti
 import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
 import { QuizParmDisplayComponent } from './quiz-main/wizard/quiz-parm-display/quiz-parm-display.component';
 import { VehicleSelectionComponent } from './quiz-main/wizard/vehicle-selection/vehicle-selection.component';
-import { QuizBuilderModule } from './quiz-main/builder/quiz-builder/quiz-builder.module';
-import { DrillBuilderModule } from './quiz-main/builder/drill-builder/drill-builder.module';
+
+import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
+import { DrillBuilderComponent } from './quiz-main/builder/drill-builder/drill-builder.component';
+
 import { LayoutModule } from './layout/layout.module';
+import { QuizComponentModule } from './quiz-main/builder/quiz-builder/quiz-component.module';
+import { DrillComponentModule } from './quiz-main/builder/drill-builder/drill-component.module';
 
 @NgModule({
   declarations: [
     AppComponent,
 
     MainComponent,
-
-    // ContactComponent,
-    // AboutComponent,
-    // TermsComponent,
-    // PrivacyComponent,
-
-    // HeaderBannerComponent,
-    // FooterComponent,
-    // TopNavComponent,
-    // HeaderNarrowComponent,
 
     BrowseComponent,
     PaginationComponent,
@@ -86,17 +70,19 @@ import { LayoutModule } from './layout/layout.module';
     PerspectivesComponent,
     SummaryComponent,
     QuizParmDisplayComponent,
-    VehicleSelectionComponent
+    VehicleSelectionComponent,
+    QuizBuilderComponent,
+    DrillBuilderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     NgbModule.forRoot(),
     HttpClientModule,
-    QuizBuilderModule,
-    DrillBuilderModule,
+    QuizComponentModule,
+    DrillComponentModule,
     LayoutModule,
-    AppRoutingModule
+    AppRoutingModule  // keep at the end!
   ],
   exports: [PaginationComponent],
   providers: [
