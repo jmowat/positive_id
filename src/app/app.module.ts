@@ -44,6 +44,7 @@ import { DrillBuilderComponent } from './quiz-main/builder/drill-builder/drill-b
 import { LayoutModule } from './layout/layout.module';
 import { QuizComponentModule } from './quiz-main/builder/quiz-builder/quiz-component.module';
 import { DrillComponentModule } from './quiz-main/builder/drill-builder/drill-component.module';
+import { MaxQuestionsComponent } from './quiz-main/builder/controls/max-questions/max-questions.component';
 
 @NgModule({
   declarations: [

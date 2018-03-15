@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-perspectives',
+  selector: 'app-perspectives-control',
   templateUrl: './perspectives.component.html',
   styleUrls: ['./perspectives.component.css']
 })

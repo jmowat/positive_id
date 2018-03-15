@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-side',
+  selector: 'app-side-control',
   templateUrl: './side.component.html',
   styleUrls: ['./side.component.css']
 })

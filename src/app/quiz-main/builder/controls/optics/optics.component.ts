@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-optics',
+  selector: 'app-optics-control',
   templateUrl: './optics.component.html',
   styleUrls: ['./optics.component.css']
 })

@@ -8,6 +8,7 @@ import { OpticsComponent } from '../controls/optics/optics.component';
 import { PerspectivesComponent } from '../controls/perspectives/perspectives.component';
 import { PlatformComponent } from '../controls/platform/platform.component';
 import { SideComponent } from '../controls/side/side.component';
+import { MaxQuestionsComponent } from '../controls/max-questions/max-questions.component';
 import { LayoutModule } from '../../../layout/layout.module';
 
 @NgModule({
@@ -15,8 +16,8 @@ import { LayoutModule } from '../../../layout/layout.module';
     CommonModule, FormsModule, LayoutModule
   ],
   declarations: [DistanceComponent, EraComponent, OpticsComponent, PerspectivesComponent,
-    PlatformComponent, SideComponent],
+    PlatformComponent, SideComponent, MaxQuestionsComponent],
   exports: [DistanceComponent, EraComponent, OpticsComponent, PerspectivesComponent,
-    PlatformComponent, SideComponent]
+    PlatformComponent, SideComponent, MaxQuestionsComponent]
 })
 export class QuizComponentModule { }
