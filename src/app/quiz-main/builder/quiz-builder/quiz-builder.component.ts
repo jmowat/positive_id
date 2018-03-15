@@ -100,8 +100,14 @@ export class QuizBuilderComponent implements OnInit {
     if (this.distances.selectedOption.id) { parms.distances = [this.distances.selectedOption.id]; }
     if (this.optics.selectedOption.id) { parms.optics = [this.optics.selectedOption.id]; }
     if (this.sides.selectedOption.id) { parms.sides = [this.sides.selectedOption.id]; }
-    if (this.perspectives.selectedOptions.filter(v => v).length > 0) {
-      parms.profiles = this.perspectives.selectedOptions.filter(v => v);
+
+    // delete blank entries from perspectives
+    const perspectives = this.perspectives.selectedOptions.filter(v => v.id !== '' && v !== '');
+    console.log('filtered perspectives', perspectives);
+    if (perspectives.length > 0) {
+      parms.profiles = perspectives;
+    } else {
+      delete parms.profiles;
     }
     return parms;
   }
@@ -127,9 +133,15 @@ export class QuizBuilderComponent implements OnInit {
 
   onSideChange(newValue) {
     if (!this.sides.selectedOption.id) {
-      this.maxQuestions = this.vehicles.length;
+      this.maxQuestions = this.vehicles.filter(v => v.era.includes(this.eras.selectedOption.id)).length;
     } else {
-      const vehiclesBySide = this.vehicles.filter(v => v.side.includes(this.sides.selectedOption.id));
+      let vehiclesBySide;
+      if (!this.eras.selectedOption.id) {
+        vehiclesBySide = this.vehicles.filter(v => v.side.includes(this.sides.selectedOption.id));
+      } else {
+        vehiclesBySide = this.vehicles.filter(v => v.side.includes(this.sides.selectedOption.id) &&
+        v.era.includes(this.eras.selectedOption.id));
+      }
       this.maxQuestions = vehiclesBySide.length;
     }
   }
@@ -143,7 +155,12 @@ export class QuizBuilderComponent implements OnInit {
       // distance will influence vehicle images and therefore perspectives
       const vehiclesByDistance = JSON.parse(JSON.stringify(this.vehicles));
       for (const v of vehiclesByDistance) {
-        v.images = v.images.filter(i => i.distance === this.distances.selectedOption.id);
+        if (!this.optics.selectedOption.id) {
+          v.images = v.images.filter(i => i.distance === this.distances.selectedOption.id);
+        } else {
+          v.images = v.images.filter(i => i.distance === this.distances.selectedOption.id
+          && i.optics === this.optics.selectedOption.id);
+        }
       }
       this.populatePerspectives(vehiclesByDistance);
       // this.maxQuestions = vehiclesByDistance.length;
@@ -248,7 +265,7 @@ export class QuizBuilderComponent implements OnInit {
       this.perspectives.availableOptions.sort((a, b) => a.name.localeCompare(b.name));
       this.perspectives.availableOptions.unshift({ id: '', name: 'Any' });
       // select the default
-      this.perspectives.selectedOptions.push({ id: '', name: 'Any' });
+      this.perspectives.selectedOptions = [this.perspectives.availableOptions[0]];
     }
   }
 
