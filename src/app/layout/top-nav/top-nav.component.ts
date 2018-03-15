@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HeaderBannerComponent } from '../header-banner/header-banner.component';
-import { QuizParms } from '../quiz-main/game/quiz-parms';
-import { GameParmsService } from '../quiz-main/game/game-parms.service';
-import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
-import { QuizBuilderContext } from '../quiz-main/wizard/state/quiz-builder-context';
-import { DrillBuilderContext } from '../quiz-main/wizard/state/drill-builder-context';
+import { QuizParms } from '../../quiz-main/game/quiz-parms';
+import { GameParmsService } from '../../quiz-main/game/game-parms.service';
+import { GameBuilderStateService } from '../../quiz-main/wizard/state/game-builder-state.service';
+import { QuizBuilderContext } from '../../quiz-main/wizard/state/quiz-builder-context';
+import { DrillBuilderContext } from '../../quiz-main/wizard/state/drill-builder-context';
 
 @Component({
   selector: 'app-top-nav',

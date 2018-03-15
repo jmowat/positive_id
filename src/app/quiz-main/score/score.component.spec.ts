@@ -2,10 +2,10 @@ import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing'
 
 import { ScoreComponent } from './score.component';
 import { MainComponent } from '../../main/main.component';
-import { HeaderNarrowComponent } from '../../header-narrow/header-narrow.component';
-import { HeaderBannerComponent } from '../../header-banner/header-banner.component';
-import { FooterComponent } from '../../footer/footer.component';
-import { TopNavComponent } from '../../top-nav/top-nav.component';
+import { HeaderNarrowComponent } from '../../layout/header-narrow/header-narrow.component';
+import { HeaderBannerComponent } from '../../layout/header-banner/header-banner.component';
+import { FooterComponent } from '../../layout/footer/footer.component';
+import { TopNavComponent } from '../../layout/top-nav/top-nav.component';
 
 import { VehicleService } from '../../vehicle.service';
 import { QuizService } from '../quiz/quiz.service';

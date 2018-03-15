@@ -3,9 +3,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
 import { QuizComponent } from './quiz.component';
-import { HeaderNarrowComponent } from '../../header-narrow/header-narrow.component';
-import { FooterComponent } from '../../footer/footer.component';
-import { TopNavComponent } from '../../top-nav/top-nav.component';
+import { HeaderNarrowComponent } from '../../layout/header-narrow/header-narrow.component';
+import { FooterComponent } from '../../layout/footer/footer.component';
+import { TopNavComponent } from '../../layout/top-nav/top-nav.component';
 import { VehicleService } from '../../vehicle.service';
 import { QuizService } from '../quiz/quiz.service';
 import { GameStateService } from '../state/game-state.service';

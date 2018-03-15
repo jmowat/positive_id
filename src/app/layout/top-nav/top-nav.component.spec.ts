@@ -3,7 +3,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { TopNavComponent } from './top-nav.component';
-import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
+import { GameBuilderStateService } from '../../quiz-main/wizard/state/game-builder-state.service';
 import { Router } from '@angular/router';
 
 describe('TopNavComponent', () => {

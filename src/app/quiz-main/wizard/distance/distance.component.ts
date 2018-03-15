@@ -8,6 +8,7 @@ import { GrammarHelper } from '../../grammar-helper';
 import { QuizParmDisplayComponent } from '../quiz-parm-display/quiz-parm-display.component';
 import { QuizParms } from '../../game/quiz-parms';
 import { GameBuilderStateService } from '../state/game-builder-state.service';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-distance',
@@ -23,6 +24,12 @@ export class DistanceComponent implements OnInit {
 
   constructor(private router: Router, private location: Location, public wizardService: WizardService,
   public stateService: GameBuilderStateService) { }
+
+  // @HostListener('window:popstate', ['$event'])
+  //  onPopState(event) {
+  //    console.log('Back button pressed');
+  //    console.log(event);
+  //  }
 
   ngOnInit() {
     this.vehicles = this.wizardService.getData();

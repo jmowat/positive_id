@@ -1,0 +1,44 @@
+<div class="site">
+  <div class="page">
+
+    <app-header-narrow></app-header-narrow>
+
+    <div class="container">
+      <section id="quiz-builder">
+        <div class="row">
+          <div class="intro col-sm-4">
+            <h2>What is a quiz?</h2>
+            <p>
+              A test that will show you each vehicle that matches
+              your criteria only once. <strong>You will not get repeat vehicles
+              in a quiz.</strong> This test is ideal for quickly becoming familiar with large groups
+              of vehicles or testing your overall knowledge.
+            </p>
+          </div>
+          <div class="col-sm-8">
+            <h2>Quiz Builder</h2>
+            <form name="quizBuilderForm" class="form-horizontal" #form="ngForm">
+              <div class="form-group">
+                <label for="platformFilter">Platform</label>
+                <select class="form-control" id="platform" [(ngModel)]="platforms.selectedOption.id" name="platform">
+                <option *ngFor="let platform of platforms.availableOptions">{{platform.name}}</option>
+    					</select>
+              </div>
+
+
+              <div class="clearfix">
+                <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- end .quiz-builder -->
+    </div>
+
+    <app-footer></app-footer>
+
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->

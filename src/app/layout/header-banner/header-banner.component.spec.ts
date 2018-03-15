@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderBannerComponent } from './header-banner.component';
 import { TopNavComponent } from '../top-nav/top-nav.component';
-import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
+import { GameBuilderStateService } from '../../quiz-main/wizard/state/game-builder-state.service';
 import { Router } from '@angular/router';
 
 describe('HeaderBannerComponent', () => {

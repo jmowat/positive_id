@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SideComponent } from './side.component';
-import { HeaderNarrowComponent } from '../../../header-narrow/header-narrow.component';
-import { FooterComponent } from '../../../footer/footer.component';
-import { TopNavComponent } from '../../../top-nav/top-nav.component';
+import { HeaderNarrowComponent } from '../../../layout/header-narrow/header-narrow.component';
+import { FooterComponent } from '../../../layout/footer/footer.component';
+import { TopNavComponent } from '../../../layout/top-nav/top-nav.component';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { VehicleService } from '../../../vehicle.service';

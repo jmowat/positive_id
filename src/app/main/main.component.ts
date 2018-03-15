@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderBannerComponent } from '../header-banner/header-banner.component';
+import { HeaderBannerComponent } from '../layout/header-banner/header-banner.component';
 import { QuizParms } from '../quiz-main/game/quiz-parms';
 import { GameParmsService } from '../quiz-main/game/game-parms.service';
 import { Router } from '@angular/router';

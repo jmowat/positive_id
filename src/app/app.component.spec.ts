@@ -8,11 +8,11 @@ import { APP_BASE_HREF } from '@angular/common';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
-import { HeaderBannerComponent } from './header-banner/header-banner.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderBannerComponent } from './layout/header-banner/header-banner.component';
+import { FooterComponent } from './layout/footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
-import { TopNavComponent } from './top-nav/top-nav.component';
-import { HeaderNarrowComponent } from './header-narrow/header-narrow.component';
+import { TopNavComponent } from './layout/top-nav/top-nav.component';
+import { HeaderNarrowComponent } from './layout/header-narrow/header-narrow.component';
 import { TermsComponent } from './terms/terms.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { BrowseComponent } from './browse/browse.component';
@@ -33,6 +33,7 @@ import { PerspectivesComponent } from './quiz-main/wizard/perspectives/perspecti
 import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
 import { QuizParmDisplayComponent } from './quiz-main/wizard/quiz-parm-display/quiz-parm-display.component';
 import { VehicleSelectionComponent } from './quiz-main/wizard/vehicle-selection/vehicle-selection.component';
+import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
 
 import { NameFilterPipe } from './name-filter.pipe';
 import { Vehicle } from './vehicle';
@@ -45,7 +46,7 @@ describe('AppComponent', () => {
         HeaderNarrowComponent, FooterComponent, BrowseComponent, HeaderBannerComponent, TopNavComponent, PaginationComponent,
         NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective, QuizParmDisplayComponent,
         VehicleSelectionComponent, PlatformComponent, EraComponent, SideComponent, DistanceComponent, OpticsComponent,
-        PerspectivesComponent, SummaryComponent, CustomMinDirective
+        PerspectivesComponent, SummaryComponent, CustomMinDirective, QuizBuilderComponent
       ],
       imports: [AppRoutingModule, FormsModule, NgbModule.forRoot()],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
