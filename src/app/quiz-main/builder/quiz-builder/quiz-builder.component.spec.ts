@@ -11,6 +11,7 @@ import { GameBuilderStateService } from '../../wizard/state/game-builder-state.s
 import { RouterTestingModule } from '@angular/router/testing';
 import { LayoutModule } from '../../../layout/layout.module';
 import { QuizComponentModule } from './quiz-component.module';
+import { GameParmsService } from '../../../quiz-main/game/game-parms.service';
 
 describe('QuizBuilderComponent', () => {
   let component: QuizBuilderComponent;
@@ -19,7 +20,7 @@ describe('QuizBuilderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [QuizBuilderComponent],
-      providers: [GameBuilderStateService,
+      providers: [GameBuilderStateService, GameParmsService,
         {
           provide: VehicleService,
           useClass: MockVehicleService

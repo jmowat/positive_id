@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Vehicle } from '../../../../vehicle';
+import { FilterHelper } from '../../../../filter-helper';
+import { GrammarHelper } from '../../../grammar-helper';
 
 @Component({
   selector: 'app-platform-control',
@@ -7,27 +9,35 @@ import { Vehicle } from '../../../../vehicle';
   styleUrls: ['./platform.component.css']
 })
 export class PlatformComponent implements OnInit {
-  vehicles: Vehicle[];
+
+  private _vehicles: Vehicle[];
+
   platforms = {
-    availableOptions: [{
-      id: 'ground vehicle',
-      name: 'Ground Vehicles'
-    }, {
-      id: 'fixed wing aircraft',
-      name: 'Fixed Wing Aircraft'
-    }, {
-      id: 'rotary wing aircraft',
-      name: 'Rotary Wing Aircraft'
-    }],
-    selectedOption: {
-      id: 'ground vehicle',
-      name: 'Ground Vehicles'
-    }
+    availableOptions: [],
+    selectedOption: {id: '', name: ''}
   };
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  @Input()
+  set vehicles(vehicles: Vehicle[]) {
+    this._vehicles = vehicles;
+    if (this._vehicles) {
+      // dynamically populate the available options
+      const types = FilterHelper.getTypes(this._vehicles);
+      for (const type of types) {
+        this.platforms.availableOptions.push({id: type, name: GrammarHelper.toTitleCase(type)});
+      }
+      // select the default
+      this.platforms.selectedOption = {id: 'ground vehicle', name: 'ground vehicle'};
+    }
+  }
+
+  get vehicles(): Vehicle[] {
+    return this._vehicles;
   }
 
 }

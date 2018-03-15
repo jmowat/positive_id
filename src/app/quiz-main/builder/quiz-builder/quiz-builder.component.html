@@ -9,24 +9,81 @@
           <div class="intro col-md-4">
             <h2>What is a quiz?</h2>
             <p>
-              A test that will show you each vehicle that matches
-              your criteria only once. <strong>You will not get repeat vehicles
-              in a quiz.</strong> This test is ideal for quickly becoming familiar with large groups
-              of vehicles or testing your overall knowledge.
+              A test that will show you each vehicle that matches your criteria only once. <strong>You will not get repeat vehicles
+              in a quiz.</strong> This test is ideal for quickly becoming familiar with large groups of vehicles or testing your overall knowledge.
             </p>
           </div>
           <div class="col-md-8">
             <h2>Quiz Builder</h2>
-            <form name="quizBuilderForm" class="form-horizontal" #thisForm="ngForm">
-              <app-platform-control></app-platform-control>
-              <app-era-control></app-era-control>
-              <app-side-control></app-side-control>
-              <app-distance-control></app-distance-control>
-              <app-optics-control></app-optics-control>
-              <app-perspectives-control></app-perspectives-control>
-              <app-max-questions-control></app-max-questions-control>
+            <form class="form-horizontal" #f="ngForm">
+              <div class="form-group">
+                <label for="platform">Platform</label>
+                  <select class="form-control" id="platform" [(ngModel)]="platforms.selectedOption.id" name="platform"
+                    (ngModelChange)="onPlatformChange($event)">
+                  <option *ngFor="let platform of platforms.availableOptions" [value]="platform.id">{{platform.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="era">Era</label>
+                <select class="form-control" id="era" [(ngModel)]="eras.selectedOption.id" name="era"
+                  (ngModelChange)="onEraChange($event)">
+                  <option *ngFor="let era of eras.availableOptions" [value]="era.id">{{era.name}}</option>
+              </select>
+              </div>
+
+              <div class="form-group">
+                <label for="side">Side</label>
+                <select class="form-control" id="side" [(ngModel)]="sides.selectedOption.id" name="side"
+                  (ngModelChange)="onSideChange($event)">
+                  <option *ngFor="let side of sides.availableOptions" [value]="side.id">{{side.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="distance">Distance</label>
+                <select class="form-control" id="distance" [(ngModel)]="distances.selectedOption.id" name="distance"
+                  #userInput="ngModel" (ngModelChange)="onDistanceChange($event)">
+                  <option *ngFor="let distance of distances.availableOptions" [value]="distance.id">{{distance.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="optics">Optics</label>
+                <select class="form-control" id="optics" [(ngModel)]="optics.selectedOption.id" name="optics"
+                  (ngModelChange)="onOpticsChange($event)">
+                  <option *ngFor="let optic of optics.availableOptions" [value]="optic.id">{{optic.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="perspectives">Perspectives</label>
+                <select class="form-control" id="perspectives" [(ngModel)]="perspectives.selectedOptions" #userInputPerspectives="ngModel" name="perspectives" multiple required>
+                  <option *ngFor="let perspective of perspectives.availableOptions" [value]="perspective.id">{{perspective.name}}</option>
+                </select>
+                <div *ngIf="userInputPerspectives.invalid && (userInputPerspectives.dirty || userInputPerspectives.touched)" class="alert alert-danger">
+                  <div *ngIf="userInputPerspectives.errors.required">
+                    You must choose at least one perspective option
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="maxQuestions">Maximum number of questions</label>
+                <input class="form-control" type="number" id="maxQuestions" name="maxQuestions" [(ngModel)]="maxQuestions" #userInputMaxQuestions="ngModel" customMin="1" required>
+                <div *ngIf="userInputMaxQuestions.invalid && (userInputMaxQuestions.dirty || userInputMaxQuestions.touched)" class="alert alert-danger">
+                  <div *ngIf="userInputMaxQuestions.errors.required">
+                    You must specify a number
+                  </div>
+                  <div *ngIf="userInputMaxQuestions.errors?.customMin">
+                    You must choose a number greater than 0
+                  </div>
+                </div>
+              </div>
+
+              <pre style="color: white;">{{ f.value | json }}</pre>
               <div class="clearfix">
-                <button type="button" class="btn btn-success float-right" (click)="next()" [disabled]="!thisForm.form.valid">Take Quiz!</button>
+                <button type="button" class="btn btn-success float-right" (click)="next()" [disabled]="!f.form.valid">Take Quiz!</button>
               </div>
             </form>
           </div>
