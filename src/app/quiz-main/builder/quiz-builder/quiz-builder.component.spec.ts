@@ -10,7 +10,6 @@ import { of } from 'rxjs/observable/of';
 import { GameBuilderStateService } from '../../wizard/state/game-builder-state.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { LayoutModule } from '../../../layout/layout.module';
-import { QuizComponentModule } from './quiz-component.module';
 import { GameParmsService } from '../../../quiz-main/game/game-parms.service';
 
 describe('QuizBuilderComponent', () => {
@@ -26,7 +25,7 @@ describe('QuizBuilderComponent', () => {
           useClass: MockVehicleService
         },
       ],
-      imports: [ FormsModule, RouterTestingModule, LayoutModule, QuizComponentModule ]
+      imports: [ FormsModule, RouterTestingModule, LayoutModule ]
     })
     .compileComponents();
   }));
