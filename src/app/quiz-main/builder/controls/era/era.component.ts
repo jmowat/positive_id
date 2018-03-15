@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Vehicle } from '../../../../vehicle';
 
 @Component({
   selector: 'app-era-control',
@@ -6,6 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./era.component.css']
 })
 export class EraComponent implements OnInit {
+  vehicles: Vehicle[];
+  eras = {
+    availableOptions: [
+      {
+        id: '',
+        name: ''
+      }
+    ],
+    selectedOption: {
+      id: '',
+      name: ''
+    }
+  };
 
   constructor() { }
 

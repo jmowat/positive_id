@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./max-questions.component.css']
 })
 export class MaxQuestionsComponent implements OnInit {
+  maxQuestions: number;
 
   constructor() { }
 

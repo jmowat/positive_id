@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Vehicle } from '../../../../vehicle';
 
 @Component({
   selector: 'app-perspectives-control',
@@ -6,6 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./perspectives.component.css']
 })
 export class PerspectivesComponent implements OnInit {
+  vehicles: Vehicle[];
+
+  perspectives = {
+    availableOptions: [
+      {
+        id: '',
+        name: ''
+      }
+    ],
+    selectedOption: {
+      id: '',
+      name: ''
+    }
+  };
 
   constructor() { }
 

@@ -1,3 +1,6 @@
-<p>
-  optics works!
-</p>
+<div class="form-group">
+  <label for="opticsFilter">Optics</label>
+  <select class="form-control" id="optics" [(ngModel)]="optics.selectedOption.id" name="optics">
+    <option *ngFor="let optic of optics.availableOptions">{{optic.name}}</option>
+  </select>
+</div>

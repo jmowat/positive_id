@@ -1,3 +1,13 @@
-<p>
-  max-questions works!
-</p>
+<div class="form-group">
+  <label for="maxQuestions">Maximum number of questions</label>
+  <input class="form-control" type="number" id="maxQuestions" name="maxQuestions" [(ngModel)]="maxQuestions" #userInput="ngModel" customMin="1" required>
+  <!-- <div [hidden]="userInput.valid || userInput.pristine" class="alert alert-danger"> -->
+  <div *ngIf="userInput.invalid && (userInput.dirty || userInput.touched)" class="alert alert-danger">
+    <div *ngIf="userInput.errors.required">
+      You must specify a number
+    </div>
+    <div *ngIf="userInput.errors?.customMin">
+      You must choose a number greater than 0
+    </div>
+  </div>
+</div>

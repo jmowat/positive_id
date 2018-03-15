@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { SideComponent } from './side.component';
 
@@ -8,7 +9,8 @@ describe('SideComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SideComponent ]
+      declarations: [ SideComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));

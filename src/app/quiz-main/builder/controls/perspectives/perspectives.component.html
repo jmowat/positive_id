@@ -1,3 +1,12 @@
-<p>
-  perspectives works!
-</p>
+<div class="form-group">
+  <label for="perspectives">Perspectives</label>
+  <select class="form-control" id="perspectives" [(ngModel)]="perspectives.selectedOption"
+    #userInput="ngModel" name="perspectives" multiple required>
+    <option *ngFor="let perspective of perspectives.availableOptions">{{perspective.name}}</option>
+</select>
+<div *ngIf="userInput.invalid && (userInput.dirty || userInput.touched)"
+       class="alert alert-danger">
+  <div *ngIf="userInput.errors.required">
+    You must choose at least one vehicle for your test
+  </div>
+</div>

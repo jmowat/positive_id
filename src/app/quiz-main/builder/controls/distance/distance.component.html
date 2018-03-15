@@ -1,3 +1,7 @@
-<p>
-  distance works!
-</p>
+<div class="form-group">
+  <label for="distance">Distance</label>
+  <select class="form-control" id="distance" [(ngModel)]="distances.selectedOption.id" name="distance"
+    #userInput="ngModel">
+    <option *ngFor="let distance of distances.availableOptions">{{distance.name}}</option>
+  </select>
+</div>

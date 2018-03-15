@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Vehicle } from '../../../../vehicle';
 
 @Component({
   selector: 'app-distance-control',
@@ -6,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./distance.component.css']
 })
 export class DistanceComponent implements OnInit {
-
+  vehicles: Vehicle[];
+  distances = {
+    availableOptions: [
+      {
+        id: '',
+        name: ''
+      }
+    ],
+    selectedOption: {
+      id: '',
+      name: ''
+    }
+  };
   constructor() { }
 
   ngOnInit() {

@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { MaxQuestionsComponent } from './max-questions.component';
 
@@ -8,7 +9,8 @@ describe('MaxQuestionsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MaxQuestionsComponent ]
+      declarations: [ MaxQuestionsComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));

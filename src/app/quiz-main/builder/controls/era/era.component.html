@@ -1,3 +1,6 @@
-<p>
-  era works!
-</p>
+<div class="form-group">
+  <label for="sideFilter">Era</label>
+  <select class="form-control" id="era" [(ngModel)]="eras.selectedOption.id" name="era">
+    <option *ngFor="let era of eras.availableOptions">{{era.name}}</option>
+</select>
+</div>
