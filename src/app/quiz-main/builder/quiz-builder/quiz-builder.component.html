@@ -17,7 +17,7 @@
           </div>
           <div class="col-md-8">
             <h2>Quiz Builder</h2>
-            <form name="quizBuilderForm" class="form-horizontal" #form="ngForm">
+            <form name="quizBuilderForm" class="form-horizontal" #thisForm="ngForm">
               <app-platform-control></app-platform-control>
               <app-era-control></app-era-control>
               <app-side-control></app-side-control>
@@ -26,7 +26,7 @@
               <app-perspectives-control></app-perspectives-control>
               <app-max-questions-control></app-max-questions-control>
               <div class="clearfix">
-                <button type="button" class="btn btn-primary float-right" (click)="next()">Next</button>
+                <button type="button" class="btn btn-success float-right" (click)="next()" [disabled]="!thisForm.form.valid">Take Quiz!</button>
               </div>
             </form>
           </div>
