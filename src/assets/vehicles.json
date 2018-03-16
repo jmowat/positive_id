@@ -4176,7 +4176,7 @@
 	},{
 		"img_lg": "8.png",
 		"img_sm": "8sm.png",
-		"perspective": "oblique",
+		"perspective": "side",
 		"optics": "naked eye",
 		"classification": "computer",
 		"distance": "far",

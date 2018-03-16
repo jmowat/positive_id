@@ -15,12 +15,12 @@ app.disable("x-powered-by");
 app.use(json());
 app.use(compression());
 app.use(urlencoded({ extended: true }));
-app.use(cors());
+// app.use(cors());
 app.use(helmet());
 
 if (app.get("env") === "production") {
   // in production mode run application from dist folder
-  // console.log("hosting app in production mode from target " + __dirname + "/../client");
+  console.log("hosting app in production mode from target " + __dirname + "/../client");
   app.use(express.static(path.join(__dirname, "/../client")));
 }
 
@@ -59,6 +59,10 @@ app.post("/sendmail", (req, res) => {
     // console.log("Data:" + data.name);
   });
   res.end();
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/../client/index.html'));
 });
 
 // catch 404 and forward to error handler
