@@ -19,7 +19,6 @@ import { Observable } from 'rxjs/Observable';
 import { Vehicle } from '../vehicle';
 import { MIXED } from '../mock-vehicles';
 
-import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
 import { LayoutModule } from '../layout/layout.module';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -36,7 +35,7 @@ describe('BrowseFormComponent', () => {
     TestBed.configureTestingModule({
       declarations: [BrowseFormComponent, NameFilterPipe, BrowseComponent, PaginationComponent],
       imports: [FormsModule, LayoutModule, RouterTestingModule, NgbModule.forRoot()],
-      providers: [GameBuilderStateService,
+      providers: [
         {
         provide: VehicleService,
         useClass: MockVehicleService

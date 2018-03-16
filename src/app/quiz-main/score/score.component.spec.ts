@@ -22,7 +22,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import {Routes} from '@angular/router';
 
 import { GameParmsService } from '../game/game-parms.service';
-import { GameBuilderStateService } from '../../quiz-main/wizard/state/game-builder-state.service';
 
 describe('ScoreComponent', () => {
   let component: ScoreComponent;
@@ -40,7 +39,7 @@ describe('ScoreComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ScoreComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent,
         MainComponent, HeaderBannerComponent],
-      providers: [GameBuilderStateService,
+      providers: [
         {
           provide: VehicleService,
           useClass: MockVehicleService

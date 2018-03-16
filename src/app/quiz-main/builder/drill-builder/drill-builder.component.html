@@ -61,9 +61,9 @@
               <div class="form-group">
                 <label for="perspectives">Perspectives</label>
                 <ss-multiselect-dropdown id="perspectives" name="perspectives" [settings]="mySettings" [options]="perspectives.availableOptions" [(ngModel)]="perspectives.selectedOptions"
-                  (ngModelChange)="onMultiChange($event)" #newMulti="ngModel" required></ss-multiselect-dropdown>
-                <div *ngIf="newMulti.invalid && (newMulti.dirty || newMulti.touched)" class="alert alert-danger">
-                  <div *ngIf="newMulti.errors.required">
+                  #perspectiveMulti="ngModel" required></ss-multiselect-dropdown>
+                <div *ngIf="perspectiveMulti.invalid && (perspectiveMulti.dirty || perspectiveMulti.touched)" class="alert alert-danger">
+                  <div *ngIf="perspectiveMulti.errors.required">
                     You must choose at least one perspective option
                   </div>
                 </div>
@@ -72,7 +72,7 @@
               <div class="form-group">
                 <label for="vehicleSelections">Vehicles</label>
                 <ss-multiselect-dropdown id="vehicleSelections" name="vehicleSelections" [settings]="vehicleSettings" [options]="vehicleSelections.availableOptions" [(ngModel)]="vehicleSelections.selectedOptions"
-                  (ngModelChange)="onMultiChange($event)" #vehicleMulti="ngModel" required></ss-multiselect-dropdown>
+                  #vehicleMulti="ngModel" required></ss-multiselect-dropdown>
                 <div *ngIf="vehicleMulti.invalid && (vehicleMulti.dirty || vehicleMulti.touched)" class="alert alert-danger">
                   <div *ngIf="vehicleMulti.errors.required">
                     You must choose at least one vehicle

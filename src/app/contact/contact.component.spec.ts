@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactComponent } from './contact.component';
-import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { LayoutModule } from '../layout/layout.module';
@@ -14,7 +13,7 @@ describe('ContactComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [],
-      providers: [GameBuilderStateService],
+      providers: [],
         imports: [FormsModule, HttpClientTestingModule, LayoutModule, RouterTestingModule]
     })
       .compileComponents();

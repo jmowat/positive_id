@@ -2,7 +2,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderBannerComponent } from './header-banner.component';
 import { TopNavComponent } from '../top-nav/top-nav.component';
-import { GameBuilderStateService } from '../../quiz-main/wizard/state/game-builder-state.service';
 import { Router } from '@angular/router';
 
 describe('HeaderBannerComponent', () => {
@@ -13,7 +12,7 @@ describe('HeaderBannerComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderBannerComponent, TopNavComponent],
-      providers: [GameBuilderStateService,
+      providers: [
         {
           provide: Router,
           useValue: routerSpy

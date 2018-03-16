@@ -3,9 +3,6 @@ import { HeaderBannerComponent } from '../layout/header-banner/header-banner.com
 import { QuizParms } from '../quiz-main/game/quiz-parms';
 import { GameParmsService } from '../quiz-main/game/game-parms.service';
 import { Router } from '@angular/router';
-import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
-import { QuizBuilderContext } from '../quiz-main/wizard/state/quiz-builder-context';
-import { DrillBuilderContext } from '../quiz-main/wizard/state/drill-builder-context';
 
 @Component({
   selector: 'app-main',
@@ -14,8 +11,7 @@ import { DrillBuilderContext } from '../quiz-main/wizard/state/drill-builder-con
 })
 export class MainComponent implements OnInit {
 
-  constructor(public testParmsService: GameParmsService, private router: Router,
-    private gameBuilderStateService: GameBuilderStateService) {
+  constructor(public testParmsService: GameParmsService, private router: Router) {
   }
 
   ngOnInit() {
@@ -27,12 +23,10 @@ export class MainComponent implements OnInit {
   }
 
   generateQuiz() {
-    this.gameBuilderStateService.setContext(new QuizBuilderContext());
     this.router.navigateByUrl('quiz-builder');
   }
 
   generateDrill() {
-    this.gameBuilderStateService.setContext(new DrillBuilderContext());
     this.router.navigateByUrl('drill-builder');
   }
 

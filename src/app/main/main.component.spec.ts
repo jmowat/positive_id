@@ -2,7 +2,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MainComponent } from './main.component';
 import { GameParmsService } from '../quiz-main/game/game-parms.service';
-import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
 import { LayoutModule } from '../layout/layout.module';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -13,7 +12,7 @@ describe('MainComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [MainComponent],
-      providers: [GameParmsService, GameBuilderStateService],
+      providers: [GameParmsService],
       imports: [LayoutModule, RouterTestingModule]
     })
       .compileComponents();

@@ -101,7 +101,7 @@ export class QuizBuilderComponent implements OnInit {
   }
 
   onMultiChange() {
-    // console.log(this.optionsModel);
+    console.log(this.optionsModel);
   }
 
   getQuizParms(): QuizParms {

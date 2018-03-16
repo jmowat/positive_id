@@ -59,7 +59,7 @@
               <div class="form-group">
                 <label for="perspectives">Perspectives</label>
                 <ss-multiselect-dropdown id="perspectives" name="perspectives" [settings]="mySettings" [options]="perspectives.availableOptions" [(ngModel)]="perspectives.selectedOptions"
-                  (ngModelChange)="onMultiChange($event)" #newMulti="ngModel" required></ss-multiselect-dropdown>
+                  #newMulti="ngModel" required></ss-multiselect-dropdown>
                 <div *ngIf="newMulti.invalid && (newMulti.dirty || newMulti.touched)" class="alert alert-danger">
                   <div *ngIf="newMulti.errors.required">
                     You must choose at least one perspective option

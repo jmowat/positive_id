@@ -2,7 +2,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderNarrowComponent } from './header-narrow.component';
 import { TopNavComponent } from '../top-nav/top-nav.component';
-import { GameBuilderStateService } from '../../quiz-main/wizard/state/game-builder-state.service';
 import { Router } from '@angular/router';
 
 describe('HeaderNarrowComponent', () => {
@@ -13,7 +12,7 @@ describe('HeaderNarrowComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderNarrowComponent, TopNavComponent],
-      providers: [GameBuilderStateService,
+      providers: [
         {
           provide: Router,
           useValue: routerSpy

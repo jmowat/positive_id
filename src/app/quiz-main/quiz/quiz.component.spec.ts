@@ -16,7 +16,6 @@ import { Vehicle } from '../../vehicle';
 import { QuizParms } from '../game/quiz-parms';
 import { FocusDirective } from './focus.directive';
 import { GameParmsService } from '../game/game-parms.service';
-import { GameBuilderStateService } from '../../quiz-main/wizard/state/game-builder-state.service';
 
 describe('QuizComponent', () => {
   let component: QuizComponent;
@@ -27,7 +26,7 @@ describe('QuizComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [QuizComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, FocusDirective],
-      providers: [QuizService, GameStateService, GameParmsService, GameBuilderStateService,
+      providers: [QuizService, GameStateService, GameParmsService,
         {
           provide: Router,
           useValue: routerSpy

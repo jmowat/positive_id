@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TermsComponent } from './terms.component';
-import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { LayoutModule } from '../layout/layout.module';
 
@@ -12,7 +11,7 @@ describe('TermsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [],
-      providers: [GameBuilderStateService],
+      providers: [],
       imports: [LayoutModule, RouterTestingModule]
     })
       .compileComponents();

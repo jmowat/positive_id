@@ -3,7 +3,6 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { TopNavComponent } from './top-nav.component';
-import { GameBuilderStateService } from '../../quiz-main/wizard/state/game-builder-state.service';
 import { Router } from '@angular/router';
 
 describe('TopNavComponent', () => {
@@ -16,7 +15,7 @@ describe('TopNavComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [TopNavComponent],
-      providers: [GameBuilderStateService,
+      providers: [
         {
           provide: Router,
           useValue: routerSpy

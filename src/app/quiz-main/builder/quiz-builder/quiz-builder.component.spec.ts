@@ -7,7 +7,6 @@ import { FIVE_VEHICLES } from '../../../mock-vehicles';
 import { QuizBuilderComponent } from './quiz-builder.component';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import { GameBuilderStateService } from '../../wizard/state/game-builder-state.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { LayoutModule } from '../../../layout/layout.module';
 import { GameParmsService } from '../../../quiz-main/game/game-parms.service';
@@ -21,7 +20,7 @@ describe('QuizBuilderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [QuizBuilderComponent],
-      providers: [GameBuilderStateService, GameParmsService,
+      providers: [GameParmsService,
         {
           provide: VehicleService,
           useClass: MockVehicleService
