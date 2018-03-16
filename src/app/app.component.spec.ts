@@ -29,6 +29,7 @@ import { VehicleSelectionComponent } from './quiz-main/wizard/vehicle-selection/
 import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
 
 import { LayoutModule } from './layout/layout.module';
+import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 
 import { NameFilterPipe } from './name-filter.pipe';
 import { Vehicle } from './vehicle';
@@ -43,7 +44,7 @@ describe('AppComponent', () => {
         SideComponent, DistanceComponent, OpticsComponent, PerspectivesComponent, SummaryComponent,
         CustomMinDirective, QuizBuilderComponent
       ],
-      imports: [AppRoutingModule, FormsModule, NgbModule.forRoot(), LayoutModule],
+      imports: [AppRoutingModule, FormsModule, NgbModule.forRoot(), LayoutModule, MultiselectDropdownModule],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
     }).compileComponents();
   }));

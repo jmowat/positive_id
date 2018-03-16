@@ -9,10 +9,10 @@
   font-size: 1.25em;
 }
 
-.ng-valid[required], .ng-valid.required  {
+.ng-valid[required]:not(ss-multiselect-dropdown), .ng-valid.required:not(ss-multiselect-dropdown)  {
   border-left: 5px solid #42A948; /* green */
 }
 
-.ng-invalid:not(form)  {
+.ng-invalid:not(form, ss-multiselect-dropdown)  {
   border-left: 5px solid #a94442; /* red */
 }

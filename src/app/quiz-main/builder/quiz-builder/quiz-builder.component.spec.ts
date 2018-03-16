@@ -11,6 +11,8 @@ import { GameBuilderStateService } from '../../wizard/state/game-builder-state.s
 import { RouterTestingModule } from '@angular/router/testing';
 import { LayoutModule } from '../../../layout/layout.module';
 import { GameParmsService } from '../../../quiz-main/game/game-parms.service';
+import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
+import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 
 describe('QuizBuilderComponent', () => {
   let component: QuizBuilderComponent;
@@ -25,7 +27,7 @@ describe('QuizBuilderComponent', () => {
           useClass: MockVehicleService
         },
       ],
-      imports: [ FormsModule, RouterTestingModule, LayoutModule ]
+      imports: [ FormsModule, RouterTestingModule, LayoutModule, MultiselectDropdownModule ]
     })
     .compileComponents();
   }));

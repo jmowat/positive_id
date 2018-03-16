@@ -8,6 +8,7 @@ import { FilterHelper } from '../../../filter-helper';
 import { GrammarHelper } from '../../grammar-helper';
 import { GameParmsService } from '../../game/game-parms.service';
 import { QuizParms } from '../../game/quiz-parms';
+import { IMultiSelectOption, IMultiSelectSettings } from 'angular-2-dropdown-multiselect';
 
 @Component({
   selector: 'app-quiz-builder',
@@ -16,6 +17,18 @@ import { QuizParms } from '../../game/quiz-parms';
 })
 export class QuizBuilderComponent implements OnInit {
   vehicles: Vehicle[];
+  myOptions: IMultiSelectOption[];
+  optionsModel: string[];
+
+  mySettings: IMultiSelectSettings = {
+    buttonClasses: 'btn btn-default btn-block',
+    dynamicTitleMaxItems: 3,
+    displayAllSelectedText: true,
+    showCheckAll: true,
+    showUncheckAll: true,
+    containerClasses: 'test'
+  };
+
 
   platforms = {
     availableOptions: [],
@@ -71,6 +84,13 @@ export class QuizBuilderComponent implements OnInit {
       this.vehicles = this.vehicles.filter(v => v.type === this.platforms.selectedOption.id);
       this.refreshSelectBoxes();
     });
+
+    // this.myOptions = [
+    //   { id: '1', name: 'Option 1' },
+    //   { id: '2', name: 'Option 2' },
+    //   { id: '3', name: 'Option 3' },
+    //   { id: '4', name: 'Option 4' },
+    // ];
   }
 
   refreshSelectBoxes() {
@@ -86,6 +106,10 @@ export class QuizBuilderComponent implements OnInit {
     console.log(this.getQuizParms());
     this.gameParmsService.setTestParms(this.getQuizParms());
     this.router.navigateByUrl('/quiz');
+  }
+
+  onMultiChange() {
+    console.log(this.optionsModel);
   }
 
   getQuizParms(): QuizParms {
@@ -140,7 +164,7 @@ export class QuizBuilderComponent implements OnInit {
         vehiclesBySide = this.vehicles.filter(v => v.side.includes(this.sides.selectedOption.id));
       } else {
         vehiclesBySide = this.vehicles.filter(v => v.side.includes(this.sides.selectedOption.id) &&
-        v.era.includes(this.eras.selectedOption.id));
+          v.era.includes(this.eras.selectedOption.id));
       }
       this.maxQuestions = vehiclesBySide.length;
     }
@@ -159,7 +183,7 @@ export class QuizBuilderComponent implements OnInit {
           v.images = v.images.filter(i => i.distance === this.distances.selectedOption.id);
         } else {
           v.images = v.images.filter(i => i.distance === this.distances.selectedOption.id
-          && i.optics === this.optics.selectedOption.id);
+            && i.optics === this.optics.selectedOption.id);
         }
       }
       this.populatePerspectives(vehiclesByDistance);
@@ -257,15 +281,19 @@ export class QuizBuilderComponent implements OnInit {
     if (vehicles) {
       this.perspectives.availableOptions = [];
       this.perspectives.selectedOptions = [];
+      //this.myOptions = [];
       // dynamically populate the available options
       const types = FilterHelper.getPerspectives(vehicles);
       for (const type of types) {
         this.perspectives.availableOptions.push({ id: type, name: GrammarHelper.toTitleCase(type) });
+        //this.myOptions.push({ id: type, name: GrammarHelper.toTitleCase(type) });
       }
       this.perspectives.availableOptions.sort((a, b) => a.name.localeCompare(b.name));
-      this.perspectives.availableOptions.unshift({ id: '', name: 'Any' });
+      //this.myOptions.sort((a, b) => a.name.localeCompare(b.name));
+
+      // this.perspectives.availableOptions.unshift({ id: '', name: 'Any' });
       // select the default
-      this.perspectives.selectedOptions = [this.perspectives.availableOptions[0]];
+      //this.perspectives.selectedOptions = [this.perspectives.availableOptions[0]];
     }
   }
 

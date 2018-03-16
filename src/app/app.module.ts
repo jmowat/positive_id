@@ -42,6 +42,7 @@ import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-buil
 import { DrillBuilderComponent } from './quiz-main/builder/drill-builder/drill-builder.component';
 
 import { LayoutModule } from './layout/layout.module';
+import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { LayoutModule } from './layout/layout.module';
     NgbModule.forRoot(),
     HttpClientModule,
     LayoutModule,
+    MultiselectDropdownModule,
     AppRoutingModule  // keep at the end!
   ],
   exports: [PaginationComponent],
