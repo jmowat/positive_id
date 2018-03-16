@@ -96,13 +96,12 @@ export class QuizBuilderComponent implements OnInit {
   }
 
   next() {
-    console.log(this.getQuizParms());
     this.gameParmsService.setTestParms(this.getQuizParms());
     this.router.navigateByUrl('/quiz');
   }
 
   onMultiChange() {
-    console.log(this.optionsModel);
+    // console.log(this.optionsModel);
   }
 
   getQuizParms(): QuizParms {

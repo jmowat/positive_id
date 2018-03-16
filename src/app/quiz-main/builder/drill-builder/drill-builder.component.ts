@@ -29,6 +29,15 @@ export class DrillBuilderComponent implements OnInit {
     containerClasses: 'test'
   };
 
+  vehicleSettings: IMultiSelectSettings = {
+    buttonClasses: 'btn btn-default btn-block',
+    enableSearch: true,
+    dynamicTitleMaxItems: 3,
+    displayAllSelectedText: true,
+    showCheckAll: true,
+    showUncheckAll: true,
+    containerClasses: 'test'
+  };
 
   platforms = {
     availableOptions: [],
@@ -72,6 +81,11 @@ export class DrillBuilderComponent implements OnInit {
     selectedOptions: []
   };
 
+  vehicleSelections = {
+    availableOptions: [],
+    selectedOptions: []
+  };
+
   maxQuestions = 20;
 
   constructor(private vehicleService: VehicleService, private gameParmsService: GameParmsService,
@@ -92,17 +106,16 @@ export class DrillBuilderComponent implements OnInit {
     this.populateDistances(this.vehicles);
     this.populateOptics(this.vehicles);
     this.populatePerspectives(this.vehicles);
-    this.maxQuestions = this.vehicles.length;
+    this.populateVehicles(this.vehicles);
   }
 
   next() {
-    console.log(this.getQuizParms());
     this.gameParmsService.setTestParms(this.getQuizParms());
     this.router.navigateByUrl('/quiz');
   }
 
   onMultiChange() {
-    console.log(this.optionsModel);
+    // console.log(this.optionsModel);
   }
 
   getQuizParms(): QuizParms {
@@ -125,6 +138,7 @@ export class DrillBuilderComponent implements OnInit {
     } else {
       delete parms.profiles;
     }
+    parms.originalValues = this.vehicleSelections.selectedOptions;
     return parms;
   }
 
@@ -139,17 +153,17 @@ export class DrillBuilderComponent implements OnInit {
   onEraChange(newValue) {
     if (!this.eras.selectedOption.id) {
       this.populateSides(this.vehicles);
-      this.maxQuestions = this.vehicles.length;
+      this.populateVehicles(this.vehicles);
     } else {
       const vehiclesByEra = this.vehicles.filter(v => v.era.includes(this.eras.selectedOption.id));
       this.populateSides(vehiclesByEra);
-      this.maxQuestions = vehiclesByEra.length;
+      this.populateVehicles(vehiclesByEra);
     }
   }
 
   onSideChange(newValue) {
     if (!this.sides.selectedOption.id) {
-      this.maxQuestions = this.vehicles.filter(v => v.era.includes(this.eras.selectedOption.id)).length;
+      this.populateVehicles(this.vehicles);
     } else {
       let vehiclesBySide;
       if (!this.eras.selectedOption.id) {
@@ -158,7 +172,7 @@ export class DrillBuilderComponent implements OnInit {
         vehiclesBySide = this.vehicles.filter(v => v.side.includes(this.sides.selectedOption.id) &&
           v.era.includes(this.eras.selectedOption.id));
       }
-      this.maxQuestions = vehiclesBySide.length;
+      this.populateVehicles(vehiclesBySide);
     }
   }
 
@@ -201,7 +215,6 @@ export class DrillBuilderComponent implements OnInit {
             i.optics === this.optics.selectedOption.id
           );
         }
-        // console.log('filtered images on optics change', v.images);
       }
       this.populatePerspectives(vehiclesByOptics);
     }
@@ -289,6 +302,18 @@ export class DrillBuilderComponent implements OnInit {
       this.optics.availableOptions.unshift({ id: '', name: 'Any' });
       // select the default
       this.optics.selectedOption = { id: '', name: 'Any' };
+    }
+  }
+
+  populateVehicles(vehicles: Vehicle[]) {
+    if (vehicles) {
+      this.vehicleSelections.availableOptions = [];
+      this.vehicleSelections.selectedOptions = [];
+      // dynamically populate the available options
+      for (const type of vehicles) {
+        this.vehicleSelections.availableOptions.push({ id: type.name, name: type.name });
+      }
+      this.vehicleSelections.availableOptions.sort((a, b) => a.name.localeCompare(b.name));
     }
   }
 }

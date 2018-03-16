@@ -70,6 +70,17 @@
               </div>
 
               <div class="form-group">
+                <label for="vehicleSelections">Vehicles</label>
+                <ss-multiselect-dropdown id="vehicleSelections" name="vehicleSelections" [settings]="vehicleSettings" [options]="vehicleSelections.availableOptions" [(ngModel)]="vehicleSelections.selectedOptions"
+                  (ngModelChange)="onMultiChange($event)" #vehicleMulti="ngModel" required></ss-multiselect-dropdown>
+                <div *ngIf="vehicleMulti.invalid && (vehicleMulti.dirty || vehicleMulti.touched)" class="alert alert-danger">
+                  <div *ngIf="vehicleMulti.errors.required">
+                    You must choose at least one vehicle
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
                 <label for="maxQuestions">Maximum number of questions</label>
                 <input class="form-control" type="number" id="maxQuestions" name="maxQuestions" [(ngModel)]="maxQuestions" #userInputMaxQuestions="ngModel" customMin="1" required>
                 <div *ngIf="userInputMaxQuestions.invalid && (userInputMaxQuestions.dirty || userInputMaxQuestions.touched)" class="alert alert-danger">
@@ -82,7 +93,6 @@
                 </div>
               </div>
 
-              <pre style="color: white;">{{ f.value | json }}</pre>
               <div class="clearfix">
                 <button type="button" class="btn btn-success float-right" (click)="next()" [disabled]="!f.form.valid">Take Drill!</button>
               </div>
