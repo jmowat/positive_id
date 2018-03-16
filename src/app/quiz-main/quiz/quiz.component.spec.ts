@@ -3,9 +3,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
 import { QuizComponent } from './quiz.component';
-import { HeaderNarrowComponent } from '../../header-narrow/header-narrow.component';
-import { FooterComponent } from '../../footer/footer.component';
-import { TopNavComponent } from '../../top-nav/top-nav.component';
+import { HeaderNarrowComponent } from '../../layout/header-narrow/header-narrow.component';
+import { FooterComponent } from '../../layout/footer/footer.component';
+import { TopNavComponent } from '../../layout/top-nav/top-nav.component';
 import { VehicleService } from '../../vehicle.service';
 import { QuizService } from '../quiz/quiz.service';
 import { GameStateService } from '../state/game-state.service';
@@ -16,7 +16,6 @@ import { Vehicle } from '../../vehicle';
 import { QuizParms } from '../game/quiz-parms';
 import { FocusDirective } from './focus.directive';
 import { GameParmsService } from '../game/game-parms.service';
-import { GameBuilderStateService } from '../../quiz-main/wizard/state/game-builder-state.service';
 
 describe('QuizComponent', () => {
   let component: QuizComponent;
@@ -27,7 +26,7 @@ describe('QuizComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [QuizComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, FocusDirective],
-      providers: [QuizService, GameStateService, GameParmsService, GameBuilderStateService,
+      providers: [QuizService, GameStateService, GameParmsService,
         {
           provide: Router,
           useValue: routerSpy

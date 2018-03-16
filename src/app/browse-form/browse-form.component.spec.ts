@@ -8,9 +8,6 @@ import { tick } from '@angular/core/testing';
 import { flush } from '@angular/core/testing';
 
 import { BrowseFormComponent } from './browse-form.component';
-import { HeaderNarrowComponent } from '../header-narrow/header-narrow.component';
-import { FooterComponent } from '../footer/footer.component';
-import { TopNavComponent } from '../top-nav/top-nav.component';
 import { BrowseComponent } from '../browse/browse.component';
 import { PaginationComponent } from '../pagination/pagination.component';
 
@@ -21,10 +18,10 @@ import { of } from 'rxjs/observable/of';
 import { Observable } from 'rxjs/Observable';
 import { Vehicle } from '../vehicle';
 import { MIXED } from '../mock-vehicles';
-import { GameBuilderStateService } from '../quiz-main/wizard/state/game-builder-state.service';
-import { Router } from '@angular/router';
 
-// BUG: setting side and then switching platforms messes up the side filter when you go back to it
+import { LayoutModule } from '../layout/layout.module';
+import { RouterTestingModule } from '@angular/router/testing';
+
 describe('BrowseFormComponent', () => {
   let component: BrowseFormComponent;
   let fixture: ComponentFixture<BrowseFormComponent>;
@@ -33,22 +30,17 @@ describe('BrowseFormComponent', () => {
 
   let resetEl: DebugElement;
   let nameEl: DebugElement;
-  const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [BrowseFormComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent, NameFilterPipe,
-        BrowseComponent, PaginationComponent],
-      imports: [FormsModule, NgbModule.forRoot()],
-      providers: [GameBuilderStateService,
-        {
-          provide: Router,
-          useValue: routerSpy
-        },
+      declarations: [BrowseFormComponent, NameFilterPipe, BrowseComponent, PaginationComponent],
+      imports: [FormsModule, LayoutModule, RouterTestingModule, NgbModule.forRoot()],
+      providers: [
         {
         provide: VehicleService,
         useClass: MockVehicleService
-      }]
+        }
+      ]
     })
       .compileComponents();
   }));
