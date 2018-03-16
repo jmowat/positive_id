@@ -84,13 +84,6 @@ export class QuizBuilderComponent implements OnInit {
       this.vehicles = this.vehicles.filter(v => v.type === this.platforms.selectedOption.id);
       this.refreshSelectBoxes();
     });
-
-    // this.myOptions = [
-    //   { id: '1', name: 'Option 1' },
-    //   { id: '2', name: 'Option 2' },
-    //   { id: '3', name: 'Option 3' },
-    //   { id: '4', name: 'Option 4' },
-    // ];
   }
 
   refreshSelectBoxes() {
@@ -127,7 +120,6 @@ export class QuizBuilderComponent implements OnInit {
 
     // delete blank entries from perspectives
     const perspectives = this.perspectives.selectedOptions.filter(v => v.id !== '' && v !== '');
-    console.log('filtered perspectives', perspectives);
     if (perspectives.length > 0) {
       parms.profiles = perspectives;
     } else {
@@ -174,7 +166,6 @@ export class QuizBuilderComponent implements OnInit {
     if (!this.distances.selectedOption.id) {
       this.populateOptics(this.vehicles);
       this.populatePerspectives(this.vehicles);
-      // this.maxQuestions = this.vehicles.length;
     } else {
       // distance will influence vehicle images and therefore perspectives
       const vehiclesByDistance = JSON.parse(JSON.stringify(this.vehicles));
@@ -187,15 +178,12 @@ export class QuizBuilderComponent implements OnInit {
         }
       }
       this.populatePerspectives(vehiclesByDistance);
-      // this.maxQuestions = vehiclesByDistance.length;
     }
   }
 
   onOpticsChange(newValue) {
     if (!this.optics.selectedOption.id) {
       this.onDistanceChange(this.distances.selectedOption.id);
-      // this.maxQuestions = this.vehicles.length;
-      // this.populatePerspectives(this.vehicles);
     } else {
       // optics will influence vehicle images and therefore perspectives
       // May need a deep copy to avoid changing images of this.vehicles by reference
@@ -216,7 +204,6 @@ export class QuizBuilderComponent implements OnInit {
         // console.log('filtered images on optics change', v.images);
       }
       this.populatePerspectives(vehiclesByOptics);
-      // this.maxQuestions = vehiclesByOptics.length;
     }
   }
 
@@ -281,19 +268,12 @@ export class QuizBuilderComponent implements OnInit {
     if (vehicles) {
       this.perspectives.availableOptions = [];
       this.perspectives.selectedOptions = [];
-      //this.myOptions = [];
       // dynamically populate the available options
       const types = FilterHelper.getPerspectives(vehicles);
       for (const type of types) {
         this.perspectives.availableOptions.push({ id: type, name: GrammarHelper.toTitleCase(type) });
-        //this.myOptions.push({ id: type, name: GrammarHelper.toTitleCase(type) });
       }
       this.perspectives.availableOptions.sort((a, b) => a.name.localeCompare(b.name));
-      //this.myOptions.sort((a, b) => a.name.localeCompare(b.name));
-
-      // this.perspectives.availableOptions.unshift({ id: '', name: 'Any' });
-      // select the default
-      //this.perspectives.selectedOptions = [this.perspectives.availableOptions[0]];
     }
   }
 
