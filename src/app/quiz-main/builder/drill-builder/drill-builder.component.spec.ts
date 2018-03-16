@@ -1,5 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { VehicleService } from '../../../vehicle.service';
+import { FormsModule } from '@angular/forms';
+import { Vehicle } from '../../../vehicle';
+import { FIVE_VEHICLES } from '../../../mock-vehicles';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
+import { GameBuilderStateService } from '../../wizard/state/game-builder-state.service';
+import { RouterTestingModule } from '@angular/router/testing';
+import { LayoutModule } from '../../../layout/layout.module';
+import { GameParmsService } from '../../../quiz-main/game/game-parms.service';
+import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
+import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 import { DrillBuilderComponent } from './drill-builder.component';
 
 describe('DrillBuilderComponent', () => {
@@ -8,7 +20,14 @@ describe('DrillBuilderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DrillBuilderComponent ]
+      declarations: [ DrillBuilderComponent ],
+      providers: [GameBuilderStateService, GameParmsService,
+        {
+          provide: VehicleService,
+          useClass: MockVehicleService
+        },
+      ],
+      imports: [ FormsModule, RouterTestingModule, LayoutModule, MultiselectDropdownModule ]
     })
     .compileComponents();
   }));
@@ -23,3 +42,10 @@ describe('DrillBuilderComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+class MockVehicleService {
+  constructor() { }
+  getVehicles(): Observable<Vehicle[]> {
+    return of(FIVE_VEHICLES);
+  }
+}

@@ -27,6 +27,7 @@ import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
 import { QuizParmDisplayComponent } from './quiz-main/wizard/quiz-parm-display/quiz-parm-display.component';
 import { VehicleSelectionComponent } from './quiz-main/wizard/vehicle-selection/vehicle-selection.component';
 import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
+import { DrillBuilderComponent } from './quiz-main/builder/drill-builder/drill-builder.component';
 
 import { LayoutModule } from './layout/layout.module';
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
@@ -42,7 +43,7 @@ describe('AppComponent', () => {
         NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective,
         QuizParmDisplayComponent, VehicleSelectionComponent, PlatformComponent, EraComponent,
         SideComponent, DistanceComponent, OpticsComponent, PerspectivesComponent, SummaryComponent,
-        CustomMinDirective, QuizBuilderComponent
+        CustomMinDirective, QuizBuilderComponent, DrillBuilderComponent
       ],
       imports: [AppRoutingModule, FormsModule, NgbModule.forRoot(), LayoutModule, MultiselectDropdownModule],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }]

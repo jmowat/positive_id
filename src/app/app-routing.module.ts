@@ -19,6 +19,7 @@ import { PerspectivesComponent } from './quiz-main/wizard/perspectives/perspecti
 import { VehicleSelectionComponent } from './quiz-main/wizard/vehicle-selection/vehicle-selection.component';
 import { SummaryComponent } from './quiz-main/wizard/summary/summary.component';
 import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
+import { DrillBuilderComponent } from './quiz-main/builder/drill-builder/drill-builder.component';
 
 const routes: Routes = [
   { path: 'main', component: MainComponent },
@@ -33,7 +34,7 @@ const routes: Routes = [
   { path: 'custom-quiz', component: QuizComponent },
   { path: 'drill', component: QuizComponent },
   { path: 'quiz-builder', component: QuizBuilderComponent },
-  { path: 'drill-builder', component: PlatformComponent },
+  { path: 'drill-builder', component: DrillBuilderComponent },
   { path: 'retry', component: RedoQuizComponent },
   { path: 'score', component: ScoreComponent },
 

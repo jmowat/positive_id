@@ -56,18 +56,6 @@
                 </select>
               </div>
 
-              <!-- <div class="form-group">
-                <label for="perspectives">Perspectives</label>
-                <select class="form-control" id="perspectives" [(ngModel)]="perspectives.selectedOptions" #userInputPerspectives="ngModel" name="perspectives" multiple required>
-                  <option *ngFor="let perspective of perspectives.availableOptions" [value]="perspective.id">{{perspective.name}}</option>
-                </select>
-                <div *ngIf="userInputPerspectives.invalid && (userInputPerspectives.dirty || userInputPerspectives.touched)" class="alert alert-danger">
-                  <div *ngIf="userInputPerspectives.errors.required">
-                    You must choose at least one perspective option
-                  </div>
-                </div>
-              </div> -->
-
               <div class="form-group">
                 <label for="perspectives">Perspectives</label>
                 <ss-multiselect-dropdown id="perspectives" name="perspectives" [settings]="mySettings" [options]="perspectives.availableOptions" [(ngModel)]="perspectives.selectedOptions"
@@ -92,7 +80,6 @@
                 </div>
               </div>
 
-              <pre style="color: white;">{{ f.value | json }}</pre>
               <div class="clearfix">
                 <button type="button" class="btn btn-success float-right" (click)="next()" [disabled]="!f.form.valid">Take Quiz!</button>
               </div>
