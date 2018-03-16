@@ -15,7 +15,7 @@ app.disable("x-powered-by");
 app.use(json());
 app.use(compression());
 app.use(urlencoded({ extended: true }));
-// app.use(cors());
+app.use(cors());
 app.use(helmet());
 
 if (app.get("env") === "production") {
@@ -36,7 +36,8 @@ const smtpConfig = {
 
 app.post("/sendmail", (req, res) => {
   // console.log("/sendmail post without route");
-  // console.log("data", req.body);
+  console.log("request body from post", req.body);
+  console.log("request params from post", req.params);
   // console.log("config:", smtpConfig);
   const transporter = nodemailer.createTransport(smtpConfig);
   const data = req.body;
@@ -46,7 +47,7 @@ app.post("/sendmail", (req, res) => {
     if (error) {
       console.log(error);
     } else {
-      console.log("Server is ready to take our messages");
+      // console.log("Server is ready to take our messages");
     }
   });
 

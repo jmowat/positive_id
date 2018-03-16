@@ -13,10 +13,18 @@ export class ContactComponent implements OnInit {
   message: string;
   statusMessage: string;
 
+public recaptchaCallback = (any) => {
+    console.log('callback called');
+}
+
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
+
+  // recaptchaCallback() {
+  //   console.log('callback called');
+  // }
 
   onSubmit() {
     // console.log('Form Submitted!');
@@ -27,6 +35,8 @@ export class ContactComponent implements OnInit {
       html: '<p>' + this.message + '</p>'
     };
     const url = `http://localhost:4300/sendmail`;
+    // grecaptcha.getResponse(widget_id);
+
     this.http.post(url, message).subscribe(res => {
       // console.log('Data received by contact component:', res);
       this.statusMessage = 'Your message was sent. Thanks!';
