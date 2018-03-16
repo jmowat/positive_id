@@ -16,6 +16,7 @@ import { ScoreComponent } from './quiz-main/score/score.component';
 import { RedoQuizComponent } from './quiz-main/quiz/redo-quiz.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
 import { CustomMinDirective } from './custom-min-validator.directive';
+import { CustomMaxDirective } from './custom-max-validator.directive';
 
 import { QuizBuilderComponent } from './quiz-main/builder/quiz-builder/quiz-builder.component';
 import { DrillBuilderComponent } from './quiz-main/builder/drill-builder/drill-builder.component';
@@ -32,7 +33,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent, BrowseFormComponent, MainComponent, BrowseComponent, PaginationComponent,
         NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective,
-        CustomMinDirective, QuizBuilderComponent, DrillBuilderComponent
+        CustomMinDirective, QuizBuilderComponent, DrillBuilderComponent, CustomMaxDirective
       ],
       imports: [AppRoutingModule, FormsModule, NgbModule.forRoot(), LayoutModule, MultiselectDropdownModule],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }]

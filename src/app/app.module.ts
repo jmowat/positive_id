@@ -24,6 +24,7 @@ import { NameFilterPipe } from './name-filter.pipe';
 import { ScoreComponent } from './quiz-main/score/score.component';
 import { FocusDirective } from './quiz-main/quiz/focus.directive';
 import { CustomMinDirective } from './custom-min-validator.directive';
+import { CustomMaxDirective } from './custom-max-validator.directive';
 import { CustomEmailValidatorDirective } from './custom-email-validator.directive';
 import { GameParmsService } from './quiz-main/game/game-parms.service';
 
@@ -49,6 +50,7 @@ import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
     ScoreComponent,
     FocusDirective,
     CustomMinDirective,
+    CustomMaxDirective,
     CustomEmailValidatorDirective,
     QuizBuilderComponent,
     DrillBuilderComponent
