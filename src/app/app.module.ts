@@ -75,12 +75,12 @@ import { RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
     QuizService,
     GameStateService,
     GameParmsService,
-    // {
-    //   provide: RECAPTCHA_SETTINGS,
-    //   // www.digitalpraxis.com: 6Lf0pzoUAAAAAGDqvSIkYwb31CaAmSxXHDE6R0-M
-    //   // localhost: 6LcIGU0UAAAAALZDoMr2zDfxC6XUVpZ1mG8vgEqx
-    //   useValue: { siteKey: '6LcIGU0UAAAAALZDoMr2zDfxC6XUVpZ1mG8vgEqx' } as RecaptchaSettings,
-    // }
+    {
+      provide: RECAPTCHA_SETTINGS,
+      // www.digitalpraxis.com: 6Lf0pzoUAAAAAGDqvSIkYwb31CaAmSxXHDE6R0-M
+      // 127.0.0.1: 6LcAL00UAAAAAIODAAHMYC7wvPOMkILX2eAahDvG
+      useValue: { siteKey: '6LcAL00UAAAAAIODAAHMYC7wvPOMkILX2eAahDvG' } as RecaptchaSettings,
+    }
   ],
   entryComponents: [
     ModalComponent
