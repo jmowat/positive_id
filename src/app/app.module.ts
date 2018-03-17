@@ -33,6 +33,9 @@ import { DrillBuilderComponent } from './quiz-main/builder/drill-builder/drill-b
 
 import { LayoutModule } from './layout/layout.module';
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
+import { RecaptchaModule } from 'ng-recaptcha';
+import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
+import { RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -59,6 +62,8 @@ import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
     BrowserModule,
     FormsModule,
     NgbModule.forRoot(),
+    RecaptchaModule.forRoot(),
+    RecaptchaFormsModule,
     HttpClientModule,
     LayoutModule,
     MultiselectDropdownModule,
@@ -69,7 +74,13 @@ import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
     VehicleService,
     QuizService,
     GameStateService,
-    GameParmsService
+    GameParmsService,
+    // {
+    //   provide: RECAPTCHA_SETTINGS,
+    //   // www.digitalpraxis.com: 6Lf0pzoUAAAAAGDqvSIkYwb31CaAmSxXHDE6R0-M
+    //   // localhost: 6LcIGU0UAAAAALZDoMr2zDfxC6XUVpZ1mG8vgEqx
+    //   useValue: { siteKey: '6LcIGU0UAAAAALZDoMr2zDfxC6XUVpZ1mG8vgEqx' } as RecaptchaSettings,
+    // }
   ],
   entryComponents: [
     ModalComponent

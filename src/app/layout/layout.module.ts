@@ -13,12 +13,14 @@ import { PrivacyComponent } from '../privacy/privacy.component';
 import { TermsComponent } from '../terms/terms.component';
 
 import { LayoutRoutingModule } from './layout-routing.module';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    FormsModule
+    FormsModule,
+    RecaptchaModule
   ],
   declarations: [HeaderBannerComponent, HeaderNarrowComponent, FooterComponent, TopNavComponent,
     AboutComponent, ContactComponent, PrivacyComponent, TermsComponent],

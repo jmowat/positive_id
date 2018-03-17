@@ -4,6 +4,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { APP_BASE_HREF } from '@angular/common';
+import { RecaptchaModule } from 'ng-recaptcha';
+import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -35,7 +37,8 @@ describe('AppComponent', () => {
         NameFilterPipe, QuizComponent, ScoreComponent, RedoQuizComponent, FocusDirective,
         CustomMinDirective, QuizBuilderComponent, DrillBuilderComponent, CustomMaxDirective
       ],
-      imports: [AppRoutingModule, FormsModule, NgbModule.forRoot(), LayoutModule, MultiselectDropdownModule],
+      imports: [AppRoutingModule, FormsModule, NgbModule.forRoot(), RecaptchaModule.forRoot(),
+        LayoutModule, MultiselectDropdownModule, RecaptchaFormsModule],
       providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
     }).compileComponents();
   }));

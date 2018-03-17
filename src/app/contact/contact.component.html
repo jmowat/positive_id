@@ -58,9 +58,11 @@
                     <div class="g-recaptcha" data-sitekey="6Lf0pzoUAAAAAGDqvSIkYwb31CaAmSxXHDE6R0-M"></div>
                   </div> -->
                   <!-- 127.0.0.1 -->
-                  <div class="form-group">
-                    <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcIGU0UAAAAALZDoMr2zDfxC6XUVpZ1mG8vgEqx"></div>
-                  </div>
+                  <!-- <div class="form-group">
+                    <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LcAL00UAAAAAIODAAHMYC7wvPOMkILX2eAahDvG"></div>
+                  </div> -->
+                  <re-captcha (resolved)="resolved($event)" siteKey="6LcAL00UAAAAAIODAAHMYC7wvPOMkILX2eAahDvG"></re-captcha>
+
                   <div class="buttons">
                     <button type="reset" value="Reset" name="reset" class="btn reset-button">Reset <span class="far fa-square"></span></button>
 

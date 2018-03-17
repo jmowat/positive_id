@@ -6,6 +6,7 @@ import * as express from "express";
 import * as helmet from "helmet";
 import * as nodemailer from "nodemailer";
 import * as path from "path";
+import * as request from "request";
 
 import { mailhost, mailport } from "./config";
 
@@ -35,13 +36,45 @@ const smtpConfig = {
 };
 
 app.post("/sendmail", (req, res) => {
-  // console.log("/sendmail post without route");
   console.log("request body from post", req.body);
-  console.log("request params from post", req.params);
   // console.log("config:", smtpConfig);
   const transporter = nodemailer.createTransport(smtpConfig);
   const data = req.body;
-  data.to = "jmowat@digitalpraxis.com";
+
+  const emailMessage = {
+    to: "jmowat@digitalpraxis.com",
+    from: data.from,
+    subject: data.subject,
+    text: data.text,
+    html: data.html
+  };
+
+  // An object of options to indicate where to post to
+  let post_options = {
+      host: 'www.google.com/recaptcha/api/siteverify',
+      port: '443',
+      method: 'POST',
+  };
+
+  request.post(
+    {
+      url: 'https://www.google.com/recaptcha/api/siteverify',
+      form: { secret: "6LcAL00UAAAAAJLEFQY9yKf3j4ko9ozadzy8Yysk", response: data.response }
+    },
+    function handleRecaptchaResponse(error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        let jsonBody = JSON.parse(body);
+        console.log('jsonBody.success', jsonBody.success);
+        if (jsonBody.success === true) {
+          console.log("This is not a bot!");
+        } else {
+          console.log("This may be a bot!");
+        }
+      }
+    }
+  );
+
   // verify connection configuration
   transporter.verify((error, success) => {
     if (error) {
@@ -51,7 +84,7 @@ app.post("/sendmail", (req, res) => {
     }
   });
 
-  transporter.sendMail(data, (error, info) => {
+  transporter.sendMail(emailMessage, (error, info) => {
     // console.log("real smtp attempt");
     if (error) {
       return console.log(error);
@@ -59,6 +92,7 @@ app.post("/sendmail", (req, res) => {
     // console.log("Message sent: " + info.response);
     // console.log("Data:" + data.name);
   });
+
   res.end();
 });
 
