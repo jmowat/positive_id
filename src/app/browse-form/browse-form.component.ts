@@ -16,18 +16,23 @@ export class BrowseFormComponent implements OnInit {
   nameFilter: string;
   errorMessage: string;
 
+  // platforms = {
+  //   availableOptions: [{
+  //     id: 'ground vehicle',
+  //     name: 'Ground Vehicles'
+  //   }, {
+  //     id: 'fixed wing aircraft',
+  //     name: 'Fixed Wing Aircraft'
+  //   }],
+  //   selectedOption: {
+  //     id: 'ground vehicle',
+  //     name: 'Ground Vehicles'
+  //   } // This sets the default value of the select in the ui
+  // };
+
   platforms = {
-    availableOptions: [{
-      id: 'ground vehicle',
-      name: 'Ground Vehicles'
-    }, {
-      id: 'fixed wing aircraft',
-      name: 'Fixed Wing Aircraft'
-    }],
-    selectedOption: {
-      id: 'ground vehicle',
-      name: 'Ground Vehicles'
-    } // This sets the default value of the select in the ui
+    availableOptions: [],
+    selectedOption: { id: '', name: '' }
   };
 
   // Populated with data from vehicles list
@@ -46,7 +51,24 @@ export class BrowseFormComponent implements OnInit {
   constructor(private vehicleService: VehicleService) { }
 
   ngOnInit() {
-    this.onChange();
+    this.vehicleService.getVehicles()
+      .subscribe(x => {
+        this.vehicles = x;
+        this.populatePlatforms(this.vehicles);
+        this.onChange();
+      });
+  }
+
+  populatePlatforms(vehicles: Vehicle[]) {
+    if (vehicles) {
+      // dynamically populate the available options
+      const types = FilterHelper.getTypes(vehicles);
+      for (const type of types) {
+        this.platforms.availableOptions.push({ id: type, name: GrammarHelper.toTitleCase(type) });
+      }
+      // select the default
+      this.platforms.selectedOption = { id: 'ground vehicle', name: 'Ground Vehicle' };
+    }
   }
 
   reset() {
