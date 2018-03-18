@@ -15,7 +15,7 @@
               <!-- <div class="panel-heading">
                 <h1>Contact Us</h1>
               </div> -->
-              <form #contactForm="ngForm" (ngSubmit)="onSubmit(); contactForm.reset()">
+              <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
                 <div class="panel-body">
                   <div class="form-group">
                     <div class="input-group">
