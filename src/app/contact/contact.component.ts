@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { CustomEmailValidatorDirective } from '../custom-email-validator.directive';
 import { RecaptchaComponent } from 'ng-recaptcha';
+import * as myGlobals from '../globals';
 
 @Component({
   selector: 'app-contact',
@@ -38,9 +39,7 @@ export class ContactComponent implements OnInit {
         response: this.recaptchaResponse
       };
 
-      const url = `http://localhost:4300/sendmail`;
-
-      this.http.post(url, message, {responseType: 'text'}).subscribe(res => {
+      this.http.post(myGlobals.sendmailUrl, message, {responseType: 'text'}).subscribe(res => {
         console.log('Data received by contact component:', (res));
         if (res === 'sent') {
           this.statusMessage = 'Your message was sent. Thanks!';
