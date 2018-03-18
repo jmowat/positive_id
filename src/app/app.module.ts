@@ -36,6 +36,7 @@ import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 import { RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
+import * as myGlobals from './globals';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,7 @@ import { RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
       provide: RECAPTCHA_SETTINGS,
       // www.digitalpraxis.com: 6Lf0pzoUAAAAAGDqvSIkYwb31CaAmSxXHDE6R0-M
       // 127.0.0.1: 6LcAL00UAAAAAIODAAHMYC7wvPOMkILX2eAahDvG
-      useValue: { siteKey: '6LcAL00UAAAAAIODAAHMYC7wvPOMkILX2eAahDvG' } as RecaptchaSettings,
+      useValue: { siteKey: myGlobals.localhostSiteKey } as RecaptchaSettings,
     }
   ],
   entryComponents: [
