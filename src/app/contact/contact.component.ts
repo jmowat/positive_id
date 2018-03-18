@@ -14,14 +14,12 @@ export class ContactComponent implements OnInit {
   message: string;
   statusMessage: string;
   recaptchaResponse: string;
-  captchaControl;
 
   @ViewChild(RecaptchaComponent) recaptcha: RecaptchaComponent;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    // console.log('running init, recaptcha id', this.recaptcha.id);
     this.recaptcha.reset();
   }
 
@@ -41,11 +39,14 @@ export class ContactComponent implements OnInit {
       };
 
       const url = `http://localhost:4300/sendmail`;
-      // grecaptcha.getResponse(widget_id);
 
-      this.http.post(url, message).subscribe(res => {
-        // console.log('Data received by contact component:', res);
-        this.statusMessage = 'Your message was sent. Thanks!';
+      this.http.post(url, message, {responseType: 'text'}).subscribe(res => {
+        console.log('Data received by contact component:', (res));
+        if (res === 'sent') {
+          this.statusMessage = 'Your message was sent. Thanks!';
+        } else {
+          this.statusMessage = 'Your message could not be sent. Reason:' + res;
+        }
       });
     } else {
       this.statusMessage = 'Please verify that you are not a bot, first.';
