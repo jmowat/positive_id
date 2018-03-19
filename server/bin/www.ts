@@ -12,7 +12,7 @@ import { serverPort } from '../config';
  * Get port from environment and store in Express.
  */
 const port = normalizePort(process.env.PORT || serverPort);
-app.set('port', port);
+app.set('port', process.env.port || port);
 
 /**
  * Create HTTP server.

@@ -26,8 +26,8 @@ if (app.get('env') === 'production') {
 }
 
 const smtpConfig = {
-  host: mailhost,
-  port: mailport,
+  host: process.env.mailhost || mailhost,
+  port: process.env.mailport || mailport,
   secure: false, // upgrade later with STARTTLS
   tls: {
     // do not fail on invalid certs
@@ -41,7 +41,7 @@ app.post('/sendmail', (req, res) => {
   const data = req.body;
 
   const emailMessage = {
-    to: sendEmailTo,
+    to: process.env.sendEmailTo || process.env.sendEmailTo,
     from: data.from,
     subject: data.subject,
     text: data.text,
@@ -49,38 +49,48 @@ app.post('/sendmail', (req, res) => {
   };
 
   const execute = async (userSecret, userResponse, message) => {
-    try {
-      await verifyUser(userSecret, userResponse);
-      await verifyConnection();
-      await deliver(message);
-      res.end('sent');
-    } catch (err) {
-      console.log(err);
-      res.end(err);
-    }
+    const callback = async (parm) => {
+      try {
+        if (parm) {
+          await verifyConnection();
+          await deliver(message);
+          res.end('sent');
+        } else {
+          // console.log('could not verify if user was a bot');
+          res.end('Could not verify if you are a bot or not.');
+        }
+      } catch (err) {
+        // console.log(err);
+        res.end(err.message);
+      }
+    };
+
+    await verifyUser(userSecret, userResponse, callback);
   };
 
   // this is asynchronous
-  function verifyUser(userSecret, userResponse) {
+  function verifyUser(userSecret, userResponse, callback) {
     // What about the errors? How do you handle these?
+    function handleRecaptchaResponse(error, response, body) {
+      if (!error && response.statusCode === 200) {
+        const jsonBody = JSON.parse(body);
+        if (jsonBody.success === true) {
+          console.log('This is not a bot!');
+          callback(true);
+        } else {
+          console.log('This may be a bot!');
+          callback(false);
+          // throw new Error('This may be a bot!');
+        }
+      }
+    }
+
     request.post(
       {
         url: siteVerifyUrl,
         form: { secret: userSecret, response: userResponse }
       }, handleRecaptchaResponse);
-        // after handle response, return whether is was successful or not
-  }
-
-  function handleRecaptchaResponse(error, response, body) {
-    if (!error && response.statusCode === 200) {
-      const jsonBody = JSON.parse(body);
-      if (jsonBody.success === true) {
-        console.log('This is not a bot!');
-      } else {
-        console.log('This may be a bot!');
-        throw new Error('This may be a bot!');
-      }
-    }
+      // after handle response, return whether is was successful or not
   }
 
   // this is asynchronous
@@ -103,7 +113,7 @@ app.post('/sendmail', (req, res) => {
       }
     });
   }
-  execute(siteSecret, data.response, emailMessage);
+  execute(process.env.siteSecret || siteSecret, data.response, emailMessage);
 });
 
 app.get('*', (req, res) => {
