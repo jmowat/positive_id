@@ -1,6 +1,6 @@
 {
   "name": "positive-id",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "server/app.js",
   "scripts": {
@@ -58,7 +58,7 @@
     "ts-helpers": "^1.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "^2.7",
+    "typescript": "^2.7.0",
     "uuid": "^3.0.1",
     "zone.js": "^0.8.19"
   },
