@@ -1,0 +1,73 @@
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.display-4 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.question {
+  margin-top: 1rem;
+}
+
+.choices {
+  margin-top: 1rem;
+}
+
+.choices li {
+  margin-left: 3rem;
+  font-size: 1.25rem;
+}
+
+.headlineQuiz img {
+  max-height: 50px;
+}
+
+ol {
+  list-style: none;
+  counter-reset: li
+}
+
+.choices li::before {
+  content: counter(li);
+  color: lightblue;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em
+}
+
+.choices li {
+  counter-increment: li
+}
+
+.choices ol li::before {
+  content: counter(li);
+  color: red;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  direction: rtl
+}
+
+#nextButton {
+  float: right;
+}
+
+#status {
+  float: left;
+  line-height: 47px;
+}
+
+#status-block {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+ngb-progressbar {
+  margin-top: 5rem;
+}

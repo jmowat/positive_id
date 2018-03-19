@@ -1,0 +1,53 @@
+<div class="site">
+  <div class="page">
+
+    <app-header-narrow></app-header-narrow>
+
+    <section class="browse">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2 col-md-4">
+            <form #browseForm="ngForm">
+              <div class="form-group">
+                <label for="nameFilter">Name</label>
+                <input type="text" class="form-control" id="nameFilter" name="nameFilter" [(ngModel)]="nameFilter" (keyup)="onKey($event)">
+              </div>
+              <div class="form-group" *ngIf="vehicles">
+                <label for="platform">Platform</label>
+                <select class="form-control" id="platform" [(ngModel)]="platforms.selectedOption.id" name="platform" (change)="onChange()">
+								<option *ngFor="let platform of platforms.availableOptions" [value]="platform.id">{{platform.name}}</option>
+							</select>
+              </div>
+              <div class="form-group" *ngIf="vehicles">
+                <label for="side">Side</label>
+                <select class="form-control" id="side" [(ngModel)]="sides.selectedOption.id" name="side" (change)="onChange()">
+								<option *ngFor="let side of sides.availableOptions" [value]="side.id">{{side.name}}</option>
+							</select>
+              </div>
+              <div class="form-group" *ngIf="vehicles">
+                <label for="era">Era</label>
+                <select class="form-control" id="era" [(ngModel)]="eras.selectedOption.id" name="side" (change)="onChange()">
+								<option *ngFor="let era of eras.availableOptions" [value]="era.id">{{era.name}}</option>
+							</select>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col-3">
+                <button id="reset" class="btn btn-default" (click)="reset()">Reset</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-10 col-md-8">
+            <app-browse [vehicles]="vehicles" [(nameFilter)]="nameFilter"></app-browse>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end .browse -->
+
+    <app-footer></app-footer>
+
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->

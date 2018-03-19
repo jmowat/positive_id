@@ -1,0 +1,114 @@
+<div class="site">
+  <div class="page">
+
+    <app-header-narrow></app-header-narrow>
+
+    <div class="container">
+      <section id="quiz-builder">
+        <div class="row">
+          <div class="intro col-md-4">
+            <h2>What is a drill?</h2>
+            <p>
+              A drill allows you to select the specific vehicles you want to see and will repeat
+              these vehicles randomly among themselves. <strong>Vehicles can and will appear more than once.</strong>
+              This is an excellent way to practice differentiating between specific vehicles that you
+              control.
+            </p>
+          </div>
+          <div class="col-md-8">
+            <h2>Drill Builder</h2>
+            <form class="form-horizontal" #f="ngForm">
+              <div class="form-group">
+                <label for="platform">Platform</label>
+                  <select class="form-control" id="platform" [(ngModel)]="platforms.selectedOption.id" name="platform"
+                    (ngModelChange)="onPlatformChange($event)">
+                  <option *ngFor="let platform of platforms.availableOptions" [value]="platform.id">{{platform.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="era">Era</label>
+                <select class="form-control" id="era" [(ngModel)]="eras.selectedOption.id" name="era"
+                  (ngModelChange)="onEraChange($event)">
+                  <option *ngFor="let era of eras.availableOptions" [value]="era.id">{{era.name}}</option>
+              </select>
+              </div>
+
+              <div class="form-group">
+                <label for="side">Side</label>
+                <select class="form-control" id="side" [(ngModel)]="sides.selectedOption.id" name="side"
+                  (ngModelChange)="onSideChange($event)">
+                  <option *ngFor="let side of sides.availableOptions" [value]="side.id">{{side.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="distance">Distance</label>
+                <select class="form-control" id="distance" [(ngModel)]="distances.selectedOption.id" name="distance"
+                  #userInput="ngModel" (ngModelChange)="onDistanceChange($event)">
+                  <option *ngFor="let distance of distances.availableOptions" [value]="distance.id">{{distance.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="optics">Optics</label>
+                <select class="form-control" id="optics" [(ngModel)]="optics.selectedOption.id" name="optics"
+                  (ngModelChange)="onOpticsChange($event)">
+                  <option *ngFor="let optic of optics.availableOptions" [value]="optic.id">{{optic.name}}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="perspectives">Perspectives</label>
+                <ss-multiselect-dropdown id="perspectives" name="perspectives" [settings]="mySettings" [options]="perspectives.availableOptions" [(ngModel)]="perspectives.selectedOptions"
+                  #perspectiveMulti="ngModel" required></ss-multiselect-dropdown>
+                <div *ngIf="perspectiveMulti.invalid && (perspectiveMulti.dirty || perspectiveMulti.touched)" class="alert alert-danger">
+                  <div *ngIf="perspectiveMulti.errors.required">
+                    You must choose at least one perspective option
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="vehicleSelections">Vehicles</label>
+                <ss-multiselect-dropdown id="vehicleSelections" name="vehicleSelections" [settings]="vehicleSettings" [options]="vehicleSelections.availableOptions" [(ngModel)]="vehicleSelections.selectedOptions"
+                  #vehicleMulti="ngModel" required></ss-multiselect-dropdown>
+                <div *ngIf="vehicleMulti.invalid && (vehicleMulti.dirty || vehicleMulti.touched)" class="alert alert-danger">
+                  <div *ngIf="vehicleMulti.errors.required">
+                    You must choose at least one vehicle
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="maxQuestions">Maximum number of questions</label>
+                <input class="form-control" type="number" id="maxQuestions" name="maxQuestions" [(ngModel)]="maxQuestions" #userInputMaxQuestions="ngModel" customMin="1" customMax="100" required>
+                <div *ngIf="userInputMaxQuestions.invalid && (userInputMaxQuestions.dirty || userInputMaxQuestions.touched)" class="alert alert-danger">
+                  <div *ngIf="userInputMaxQuestions.errors.required">
+                    You must specify a number
+                  </div>
+                  <div *ngIf="userInputMaxQuestions.errors?.customMax">
+                    Drills are limited to 100 question maximum
+                  </div>
+                  <div *ngIf="userInputMaxQuestions.errors?.customMin">
+                    You must choose a number greater than 0
+                  </div>                  
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <button type="button" class="btn btn-success float-right" (click)="next()" [disabled]="!f.form.valid">Take Drill!</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- end .quiz-builder -->
+    </div>
+
+    <app-footer></app-footer>
+
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->

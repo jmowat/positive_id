@@ -1,0 +1,113 @@
+.card {
+  background: #272727;
+}
+
+.cta {
+  margin-top: 2rem;
+}
+
+.ctaImage {
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.copyright {
+  padding-left: 10px;
+}
+
+.display-4 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Card deck control */
+
+@media (min-width:0) {
+  .card-deck .card {
+    flex: 0 0 calc(100% - 30px);
+  }
+}
+
+@media (min-width:576px) {
+  .card-deck .card {
+    flex: 0 0 calc(50% - 30px);
+  }
+}
+
+@media (min-width:768px) {
+  .card-deck .card {
+    flex: 0 0 calc(33.33333% - 30px);
+  }
+}
+
+@media (min-width:992px) {
+  .card-deck .card {
+    flex: 0 0 calc(33.33333% - 30px);
+  }
+}
+
+@media (min-width:1200px) {
+  .card-deck .card {
+    flex: 0 0 calc(33.33333% - 30px);
+  }
+}
+
+.question {
+  margin-top: 1rem;
+}
+
+.choices {
+  margin-top: 1rem;
+}
+
+.choices li {
+  margin-left: 3rem;
+  font-size: 1.25rem;
+}
+
+.headlineQuiz img {
+  max-height: 50px;
+}
+
+ol {
+  list-style: none;
+  counter-reset: li
+}
+
+.choices li::before {
+  content: counter(li);
+  color: lightblue;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em
+}
+
+.choices li {
+  counter-increment: li
+}
+
+.choices ol li::before {
+  content: counter(li);
+  color: red;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  direction: rtl
+}
+
+#nextButton {
+  float: right;
+}
+
+#status {
+  float: left;
+  line-height: 47px;
+}
+
+#status-block {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}

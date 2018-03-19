@@ -1,0 +1,56 @@
+<div class="site">
+  <div class="page">
+
+    <app-header-narrow></app-header-narrow>
+
+    <section class="quiz" *ngIf="service.getTest()">
+      <section class="progress">
+        <div class="container-fluid">
+          <ngb-progressbar type="success" [value]="getCurrentQuestionNumber()" [max]="getTotalNumberOfQuestions()">
+            <b>{{getCurrentQuestionNumber()}} of {{getTotalNumberOfQuestions()}}</b>
+          </ngb-progressbar>
+        </div>
+      </section>
+      <!-- /end .progress -->
+
+      <section class="question">
+        <div class="container-fluid no-padding">
+          <div class="text-center">
+            <img class="img-fluid rounded " src="assets/{{service.getTest().getQuestion().getRandomImagePath()}}">
+            <ol class="choices">
+              <div class="form-check form-check-inline" *ngFor="let possibleAnswer of getPossibleAnswers()">
+                <li>
+                  <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="choice" [value]="possibleAnswer.id" [disabled]="service.isSelectionDisabled()" (change)="onSelectionChange(possibleAnswer)" [checked]="possibleAnswer.id === selectedIndex" [focus]="myFocusTriggeringEventEmitter">
+                        {{possibleAnswer.name}}
+                    </label>
+                </li>
+              </div>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!-- end .question -->
+      <section class="status">
+        <div class="container-fluid " id="status-block" [ngClass]="statusClasses">
+          <div class="container ">
+            <div class="row ">
+              <div class="col-8 col-sm-8 align-self-center" [innerHTML]="service.getStatusMessage()">
+              </div>
+              <div class="col-4 col-sm-4 ">
+                <button type="button" [ngClass]="buttonClasses" id="nextButton" (click)="next()">{{service.getActionText()}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end .status -->
+    </section>
+    <!-- end .quiz -->
+
+    <app-footer></app-footer>
+
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->

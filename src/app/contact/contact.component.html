@@ -1,0 +1,80 @@
+<div class="site">
+  <div class="page">
+
+    <app-header-narrow></app-header-narrow>
+
+    <section class="intro">
+      <div class="container">
+        <h1 class="display-4">
+          	Contact
+          </h1>
+
+        <div class="row">
+          <div class="col-sm-6 col-centered">
+            <div class="panel panel-default">
+              <!-- <div class="panel-heading">
+                <h1>Contact Us</h1>
+              </div> -->
+              <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+                <div class="panel-body">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="far fa-user fa-lg"></i></span>
+                      <input type="text" name="name" id="name" autocomplete="name" [(ngModel)]="name" placeholder="Name" class="form-control" autofocus="autofocus" required #nameInput="ngModel">
+                    </div>
+                    <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="error-box alert alert-danger">
+                      <div *ngIf="nameInput.errors.required">
+                        You must enter your name
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="far fa-envelope fa-lg"></i></span>
+                      <input type="email" name="email" id="email" autocomplete="email" [(ngModel)]="email" placeholder="Email Address" class="form-control" required #emailInput="ngModel" emailvalidator>
+                    </div>
+                    <div *ngIf="emailInput.errors && (emailInput.dirty || emailInput.touched)" class="error-box alert alert-danger">
+                      <div *ngIf="emailInput.errors.required">
+                        You must enter an email address
+                      </div>
+                      <div *ngIf="emailInput.errors.emailvalidator">
+                        You must enter a valid email address
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="far fa-comment fa-lg"></i></span>
+                      <textarea name="message" id="message" [(ngModel)]="message" rows="6" class="form-control" type="text" required #messageInput="ngModel"></textarea>
+                    </div>
+                    <div *ngIf="messageInput.invalid && (messageInput.dirty || messageInput.touched)" class="error-box alert alert-danger">
+                      <div *ngIf="messageInput.errors.required">
+                        You must enter a message
+                      </div>
+                    </div>
+                  </div>
+                  <re-captcha (resolved)="resolved($event)"></re-captcha>
+                  <div class="buttons">
+                    <button type="reset" value="Reset" name="reset" class="btn reset-button">Reset <span class="far fa-square"></span></button>
+
+                    <button type="submit" class="btn btn-info float-right" [disabled]="!contactForm.form.valid">Send <span class="far fa-paper-plane"></span></button>
+                  </div>
+                  <div class="status-message text-center">
+                    {{statusMessage}}
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end .intro -->
+
+    <app-footer></app-footer>
+
+  </div>
+  <!-- /end .page -->
+</div>
+<!-- /end .site -->

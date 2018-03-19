@@ -1,0 +1,6461 @@
+[{
+	"name": "ASLAV",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "armored personnel carrier",
+	"nationality": ["Australia", "Canada"],
+	"era": ["modern"],
+	"image_dir": "img/ground/aslav",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "BM-21",
+	"side": ["eastern"],
+	"type": "ground vehicle",
+	"class": "multiple rocket launcher",
+	"nationality": ["Russia", "Soviet Union"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/bm21",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Challenger 2",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "main battle tank",
+	"nationality": ["United Kingdom"],
+	"era": ["modern"],
+	"image_dir": "img/ground/challenger2",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Chieftain",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "main battle tank",
+	"nationality": ["United Kingdom"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/chieftain",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "CV-90",
+	"side": ["western"],
+	"type": "ground vehicle",
+	"class": "infantry fighting vehicle",
+	"nationality": ["Sweden"],
+	"era": ["modern"],
+	"image_dir": "img/ground/cv90",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Fennek",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "light armored reconnaissance vehicle",
+	"nationality": ["Germany", "Netherlands"],
+	"era": ["modern"],
+	"image_dir": "img/ground/fennek",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Jaguar",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "tank destroyer",
+	"nationality": ["Germany"],
+	"era": ["cold war"],
+	"image_dir": "img/ground/jaguar",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "LAV-25",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "armored reconnaissance vehicle",
+	"nationality": ["Canada","United States"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/lav25",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Leclerc",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "main battle tank",
+	"nationality": ["France"],
+	"era": ["modern"],
+	"image_dir": "img/ground/leclerc",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Leopard 1",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "main battle tank",
+	"nationality": ["Germany"],
+	"era": ["cold war"],
+	"image_dir": "img/ground/leopard1",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Leopard 2",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "main battle tank",
+	"nationality": ["Germany"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/leopard2",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "M1A1",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "main battle tank",
+	"nationality": ["United States"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/m1a1",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "M1A2",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "main battle tank",
+	"nationality": ["United States"],
+	"era": ["modern"],
+	"image_dir": "img/ground/m1a2",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "M2A3",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "infantry fighting vehicle",
+	"nationality": ["United States"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/ground/m2a3",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "M60A3",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "main battle tank",
+	"nationality": ["United States"],
+	"era": ["cold war"],
+	"image_dir": "img/ground/m60a3",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "HMMWV M966",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "light armored car",
+	"nationality": ["United States"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/hmmwvm966",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "M113A3",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "armored personnel carrier",
+	"nationality": ["United States"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/m113a3",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "M901 ITV",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "tank destroyer",
+	"nationality": ["United States"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/m901itv",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Marder",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "infantry fighting vehicle",
+	"nationality": ["Germany"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/marder",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Merkava",
+	"side": ["western"],
+	"type": "ground vehicle",
+	"class": "main battle tank",
+	"nationality": ["Israel"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/merkava",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "MT-55",
+	"side": ["eastern"],
+	"type": "ground vehicle",
+	"class": "armored vehicle-launched bridge",
+	"nationality": ["Soviet Union"],
+	"era": ["cold war"],
+	"image_dir": "img/ground/mt55",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Piranha III",
+	"side": ["western"],
+	"type": "ground vehicle",
+	"class": "armored reconnaissance vehicle",
+	"nationality": ["Switzerland"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/piranhaiii",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Pizarro",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "armored fighting vehicle",
+	"nationality": ["Spain"],
+	"era": ["modern"],
+	"image_dir": "img/ground/pizarro",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Scimitar",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "reconnaissance vehicle",
+	"nationality": ["United Kingdom"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/scimitar",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Scorpion",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "reconnaissance vehicle",
+	"nationality": ["United Kingdom"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/scorpion",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "SPz Luchs",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "reconnaissance vehicle",
+	"nationality": ["Germany"],
+	"era": ["cold war"],
+	"image_dir": "img/ground/spzluchs",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Strv 122",
+	"side": ["western"],
+	"type": "ground vehicle",
+	"class": "main battle tank",
+	"nationality": ["Sweden"],
+	"era": ["modern"],
+	"image_dir": "img/ground/strv122",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "T-90",
+	"side": ["eastern"],
+	"type": "ground vehicle",
+	"class": "main batle tank",
+	"nationality": ["Soviet Union"],
+	"era": ["modern"],
+	"image_dir": "img/ground/t90",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "T-80",
+	"side": ["eastern"],
+	"type": "ground vehicle",
+	"class": "main batle tank",
+	"nationality": ["Soviet Union"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/ground/t80",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "T-72",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "ground vehicle",
+	"class": "main battle tank",
+	"nationality": ["Soviet Union"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/ground/t72",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "T-62",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "ground vehicle",
+	"class": "medium tank",
+	"nationality": ["Soviet Union"],
+	"era": ["cold war"],
+	"image_dir": "img/ground/t62",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "T-55",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "ground vehicle",
+	"class": "medium tank",
+	"nationality": ["Soviet Union"],
+	"era": ["cold war"],
+	"image_dir": "img/ground/t55",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "TPz Fuchs",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "armored personnel carrier",
+	"nationality": ["Germany"],
+	"era": ["cold war","modern"],
+	"image_dir": "img/ground/tpzfuchs",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Warrior",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "infantry fighting vehicle",
+	"nationality": ["United Kingdom"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/ground/warrior",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+},{
+	"name": "Wiesel",
+	"side": ["western", "NATO"],
+	"type": "ground vehicle",
+	"class": "tankette",
+	"nationality": ["Germany"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/ground/wiesel",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "PT-76",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "ground vehicle",
+	"class": "amphibious light tank",
+	"nationality": ["Soviet Union"],
+	"era": ["cold war"],
+	"image_dir": "img/ground/pt76",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "MT-LB",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "ground vehicle",
+	"class": "armored personnel carrier",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/ground/mtlb",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "BTR-80",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "ground vehicle",
+	"class": "armored personnel carrier",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/ground/btr80",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "BTR-50",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "ground vehicle",
+	"class": "amphibious armored personnel carrier",
+	"nationality": ["Soviet Union"],
+	"era": ["cold war"],
+	"image_dir": "img/ground/btr50",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "BRDM-2",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "ground vehicle",
+	"class": "amphibious armoured scout car",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/ground/brdm2",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "BMP-3",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "ground vehicle",
+	"class": "infantry fighting vehicle",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/ground/bmp3",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "BMP-2",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "ground vehicle",
+	"class": "infantry fighting vehicle",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/ground/bmp2",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "BMD-2",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "ground vehicle",
+	"class": "airborne infantry fighting vehicle",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/ground/bmd2",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "front",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Steel Beasts"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "thermal",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Steel Beasts"
+	}]
+}, {
+	"name": "Bf 109",
+	"side": ["Axis"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Germany"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/bf109",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "He 111",
+	"side": ["Axis"],
+	"type": "fixed wing aircraft",
+	"class": "bomber",
+	"nationality": ["Germany"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/he111",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "Ju 88",
+	"side": ["Axis"],
+	"type": "fixed wing aircraft",
+	"class": "multirole",
+	"nationality": ["Germany"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/ju88",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "MC.202",
+	"side": ["Axis"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Italy"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/mc202",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "Il-2",
+	"side": ["Allies"],
+	"type": "fixed wing aircraft",
+	"class": "fighter bomber",
+	"nationality": ["Soviet Union"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/il2",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "La-5",
+	"side": ["Allies"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Soviet Union"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/la5",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "MiG-3",
+	"side": ["Allies"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Soviet Union"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/mig3",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "P-40",
+	"side": ["Allies"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Soviet Union", "United States"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/p40",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "Ju 87",
+	"side": ["Axis"],
+	"type": "fixed wing aircraft",
+	"class": "bomber",
+	"nationality": ["Germany"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/ju87",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "Bf 110",
+	"side": ["Axis"],
+	"type": "fixed wing aircraft",
+	"class": "fighter bomber",
+	"nationality": ["Germany"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/bf110",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "11.png",
+		"img_sm": "11sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "12.png",
+		"img_sm": "12sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "13.png",
+		"img_sm": "13sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "Fw 190",
+	"side": ["Axis"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Germany"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/fw190",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "I-16",
+	"side": ["Allies"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Soviet Union"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/i16",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "13.png",
+		"img_sm": "13sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "14.png",
+		"img_sm": "14sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "15.png",
+		"img_sm": "15sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "LaGG 3",
+	"side": ["Allies"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Soviet Union"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/lagg3",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "Pe-2",
+	"side": ["Allies"],
+	"type": "fixed wing aircraft",
+	"class": "bomber",
+	"nationality": ["Soviet Union"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/pe2",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "Spitfire Mk V",
+	"side": ["Allies"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Soviet Union", "United Kingdom"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/spitfiremkv",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "Yak-1",
+	"side": ["Allies"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Soviet Union"],
+	"era": ["world war ii"],
+	"image_dir": "img/air/yak1",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Il-2 Battle of Stalingrad"
+	}]
+}, {
+	"name": "F/A-18",
+	"side": ["NATO", "western"],
+	"type": "fixed wing aircraft",
+	"class": "multirole",
+	"nationality": ["United States"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/fa18",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "F-4",
+	"side": ["NATO", "western"],
+	"type": "fixed wing aircraft",
+	"class": "interceptor",
+	"nationality": ["United States"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/f4",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "EF2000",
+	"side": ["NATO", "western"],
+	"type": "fixed wing aircraft",
+	"class": "multirole",
+	"nationality": ["United Kingdom", "Germany", "Italy", "Spain"],
+	"era": ["modern"],
+	"image_dir": "img/air/ef2000",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "F-5",
+	"side": ["NATO", "western"],
+	"type": "fixed wing aircraft",
+	"class": "light fighter",
+	"nationality": ["United States"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/f5",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "B-1",
+	"side": ["NATO", "western"],
+	"type": "fixed wing aircraft",
+	"class": "strategic bomber",
+	"nationality": ["United States"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/b1",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "F-16",
+	"side": ["NATO", "western"],
+	"type": "fixed wing aircraft",
+	"class": "multirole",
+	"nationality": ["United States"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/f16",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "F-15",
+	"side": ["NATO", "western"],
+	"type": "fixed wing aircraft",
+	"class": "air superiority fighter",
+	"nationality": ["United States"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/f15",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "Rafale",
+	"side": ["NATO", "western"],
+	"type": "fixed wing aircraft",
+	"class": "multirole",
+	"nationality": ["France", "Egypt"],
+	"era": ["modern"],
+	"image_dir": "img/air/rafale",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "Mirage 2000",
+	"side": ["NATO", "western"],
+	"type": "fixed wing aircraft",
+	"class": "multirole",
+	"nationality": ["France"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/mirage2000",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "F-14",
+	"side": ["NATO", "western"],
+	"type": "fixed wing aircraft",
+	"class": "multirole",
+	"nationality": ["United States"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/f14",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "MiG-19",
+	"side": ["Warsaw Pact", "eastern"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Soviet Union"],
+	"era": ["cold war"],
+	"image_dir": "img/air/mig19",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "MiG-21",
+	"side": ["Warsaw Pact", "eastern"],
+	"type": "fixed wing aircraft",
+	"class": "fighter",
+	"nationality": ["Soviet Union"],
+	"era": ["cold war"],
+	"image_dir": "img/air/mig21",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "MiG-23",
+	"side": ["Warsaw Pact", "eastern"],
+	"type": "fixed wing aircraft",
+	"class": "fighter-bomber",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/mig23",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "MiG-25",
+	"side": ["Warsaw Pact", "eastern"],
+	"type": "fixed wing aircraft",
+	"class": "interceptor",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/mig25",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "MiG-27",
+	"side": ["Warsaw Pact", "eastern"],
+	"type": "fixed wing aircraft",
+	"class": "ground attack",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/mig27",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "MiG-29",
+	"side": ["Warsaw Pact", "eastern"],
+	"type": "fixed wing aircraft",
+	"class": "multirole",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/mig29",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "MiG-31",
+	"side": ["Warsaw Pact", "eastern"],
+	"type": "fixed wing aircraft",
+	"class": "interceptor",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/mig31",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "Su-24",
+	"side": ["Warsaw Pact", "eastern"],
+	"type": "fixed wing aircraft",
+	"class": "attack",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/su24",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "Su-25",
+	"side": ["Warsaw Pact", "eastern"],
+	"type": "fixed wing aircraft",
+	"class": "close air support",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/su25",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "Su-27",
+	"side": ["Warsaw Pact", "eastern"],
+	"type": "fixed wing aircraft",
+	"class": "multirole",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/su27",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "Su-30",
+	"side": ["eastern"],
+	"type": "fixed wing aircraft",
+	"class": "multirole",
+	"nationality": ["Russia"],
+	"era": ["modern"],
+	"image_dir": "img/air/su30",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "Su-33",
+	"side": ["eastern"],
+	"type": "fixed wing aircraft",
+	"class": "multirole",
+	"nationality": ["Russia"],
+	"era": ["modern"],
+	"image_dir": "img/air/su33",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "Tu-16",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "fixed wing aircraft",
+	"class": "strategic bomber",
+	"nationality": ["Soviet Union"],
+	"era": ["cold war"],
+	"image_dir": "img/air/tu16",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "Tu-22",
+	"side": ["eastern", "Warsaw Pact"],
+	"type": "fixed wing aircraft",
+	"class": "strategic bomber",
+	"nationality": ["Soviet Union", "Russia"],
+	"era": ["cold war", "modern"],
+	"image_dir": "img/air/tu22",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}, {
+	"name": "Tu-160",
+	"side": ["eastern"],
+	"type": "fixed wing aircraft",
+	"class": "strategic bomber",
+	"nationality": ["Russia"],
+	"era": ["modern"],
+	"image_dir": "img/air/tu160",
+	"images": [{
+		"img_lg": "1.png",
+		"img_sm": "1sm.png",
+		"perspective": "front",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "2.png",
+		"img_sm": "2sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "3.png",
+		"img_sm": "3sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	}, {
+		"img_lg": "4.png",
+		"img_sm": "4sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "5.png",
+		"img_sm": "5sm.png",
+		"perspective": "top",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "6.png",
+		"img_sm": "6sm.png",
+		"perspective": "bottom",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "near",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "7.png",
+		"img_sm": "7sm.png",
+		"perspective": "oblique",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "8.png",
+		"img_sm": "8sm.png",
+		"perspective": "side",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	},{
+		"img_lg": "9.png",
+		"img_sm": "9sm.png",
+		"perspective": "rear",
+		"optics": "naked eye",
+		"classification": "computer",
+		"distance": "far",
+		"source": "Falcon BMS"
+	}]
+}]
