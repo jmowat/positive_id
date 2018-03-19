@@ -81,6 +81,7 @@ import * as myGlobals from './globals';
       // www.digitalpraxis.com: 6Lf0pzoUAAAAAGDqvSIkYwb31CaAmSxXHDE6R0-M
       // 127.0.0.1: 6LcAL00UAAAAAIODAAHMYC7wvPOMkILX2eAahDvG
       // useValue: { siteKey: myGlobals.localhostSiteKey } as RecaptchaSettings,
+      // positive-id.herokuapp.com 6LcBpk0UAAAAAHJ_NC92JdaZYskccK_vTc5A5lwN
       useValue: { siteKey: myGlobals.publicSiteKey } as RecaptchaSettings,
     }
   ],
