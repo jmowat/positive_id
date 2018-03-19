@@ -80,8 +80,8 @@ import * as myGlobals from './globals';
       provide: RECAPTCHA_SETTINGS,
       // www.digitalpraxis.com: 6Lf0pzoUAAAAAGDqvSIkYwb31CaAmSxXHDE6R0-M
       // 127.0.0.1: 6LcAL00UAAAAAIODAAHMYC7wvPOMkILX2eAahDvG
-      useValue: { siteKey: myGlobals.localhostSiteKey } as RecaptchaSettings,
-      // useValue: { siteKey: myGlobals.publicSiteKey } as RecaptchaSettings,
+      // useValue: { siteKey: myGlobals.localhostSiteKey } as RecaptchaSettings,
+      useValue: { siteKey: myGlobals.publicSiteKey } as RecaptchaSettings,
     }
   ],
   entryComponents: [
