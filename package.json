@@ -12,7 +12,8 @@
     "e2e": "ng e2e",
     "server:run": "nodemon",
     "server:build": "tsc -p ./server",
-    "start": "node dist/server/bin/www"
+    "start": "node dist/server/bin/www",
+    "postinstall": "ng build --prod --sm=false --aot --output-path=dist/client && npm run server:build"
   },
   "private": true,
   "dependencies": {
