@@ -1,6 +1,6 @@
 {
-  "name": "pid-a5",
-  "version": "0.0.0",
+  "name": "positive-id",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "server/app.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "server:run": "nodemon",
-    "server:build": "tsc -p ./server"
+    "server:build": "tsc -p ./server",
+    "start:prod": "node dist/server/bin/www"
   },
   "private": true,
   "dependencies": {
@@ -71,5 +72,9 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2"
+  },
+  "engines": {
+    "node": "8.9.1",
+    "npm": "5.5.1"
   }
 }
