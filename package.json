@@ -5,14 +5,14 @@
   "main": "server/app.js",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently --kill-others \"npm run server:run\" \"ng serve --aot --progress=false --host=127.0.0.1 --disable-host-check --open\"",
+    "start:dev": "concurrently --kill-others \"npm run server:run\" \"ng serve --aot --progress=false --host=127.0.0.1 --disable-host-check --open\"",
     "build": "ng build --prod --sm=false --aot --output-path=dist/client && npm run server:build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "server:run": "nodemon",
     "server:build": "tsc -p ./server",
-    "start:prod": "node dist/server/bin/www"
+    "start": "node dist/server/bin/www"
   },
   "private": true,
   "dependencies": {
