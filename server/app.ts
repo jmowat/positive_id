@@ -8,7 +8,7 @@ import * as nodemailer from 'nodemailer';
 import * as path from 'path';
 import * as request from 'request';
 
-import { mailhost, mailport, sendEmailTo, siteSecret, siteVerifyUrl } from './config';
+import { mailhost, mailport, sendEmailTo, siteVerifyUrl } from './config';
 
 const app: express.Application = express();
 
@@ -116,7 +116,7 @@ app.post('/sendmail', (req, res) => {
       }
     });
   }
-  execute(process.env.siteSecret || siteSecret, data.response, emailMessage);
+  execute(process.env.siteSecret, data.response, emailMessage);
 });
 
 app.get('*', (req, res) => {
