@@ -7,6 +7,7 @@ import { LayoutModule } from '../layout/layout.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
+import { environment } from '../../environments/environment';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;

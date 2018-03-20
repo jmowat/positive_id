@@ -8,7 +8,7 @@ import * as nodemailer from 'nodemailer';
 import * as path from 'path';
 import * as request from 'request';
 
-import { mailhost, mailport, sendEmailTo, siteVerifyUrl } from './config';
+// import { mailhost, mailport, sendEmailTo, siteVerifyUrl } from './config';
 
 const app: express.Application = express();
 
@@ -26,8 +26,8 @@ if (app.get('env') === 'production') {
 }
 
 const smtpConfig = {
-  host: process.env.MAILHOST || mailhost,
-  port: process.env.MAILPORT || mailport,
+  host: process.env.MAILHOST,
+  port: process.env.MAILPORT,
   secure: false, // upgrade later with STARTTLS
   tls: {
     // do not fail on invalid certs
@@ -40,10 +40,11 @@ app.post('/sendmail', (req, res) => {
   const transporter = nodemailer.createTransport(smtpConfig);
   const data = req.body;
 
-  console.log('process.env.MAILHOST', process.env.MAILHOST);
-  console.log('process.env.MAILPORT', process.env.MAILPORT);
-  console.log('process.env.SITESECRET', process.env.SITESECRET);
-  console.log('process.env.SENDEMAILTO', process.env.SENDEMAILTO);
+  // console.log('process.env.MAILHOST', process.env.MAILHOST);
+  // console.log('process.env.MAILPORT', process.env.MAILPORT);
+  // console.log('process.env.SITESECRET', process.env.SITESECRET);
+  // console.log('process.env.SENDEMAILTO', process.env.SENDEMAILTO);
+  // console.log('process.env.SITEVERIFYURL', process.env.SITEVERIFYURL);
 
   const emailMessage = {
     to: process.env.SENDEMAILTO,
@@ -54,9 +55,11 @@ app.post('/sendmail', (req, res) => {
   };
 
   const execute = async (userSecret, userResponse, message) => {
+    // console.log('executing');
     const callback = async (parm) => {
       try {
         if (parm) {
+          // console.log('good verification, walking through send');
           await verifyConnection();
           await deliver(message);
           res.end('sent');
@@ -77,25 +80,26 @@ app.post('/sendmail', (req, res) => {
   function verifyUser(userSecret, userResponse, callback) {
     // What about the errors? How do you handle these?
     function handleRecaptchaResponse(error, response, body) {
+      // console.log('handleRecaptchaResponse', JSON.parse(body));
       if (!error && response.statusCode === 200) {
         const jsonBody = JSON.parse(body);
-        console.log('jsonBody result from recaptcha check', jsonBody);
-        console.log('siteSecret', userSecret);
-        console.log('response', userResponse);
+        // console.log('jsonBody result from recaptcha check', jsonBody);
+        // console.log('siteSecret', userSecret);
+        // console.log('response', userResponse);
         if (jsonBody.success === true) {
-          console.log('This is not a bot!');
+          // console.log('This is not a bot!');
           callback(true);
         } else {
-          console.log('This may be a bot!');
+          // console.log('This may be a bot!');
           callback(false);
           // throw new Error('This may be a bot!');
         }
       }
     }
-
+    // console.log('sending challenge to', process.env.SITEVERIFYURL);
     request.post(
       {
-        url: siteVerifyUrl,
+        url: process.env.SITEVERIFYURL,
         form: { secret: userSecret, response: userResponse }
       }, handleRecaptchaResponse);
       // after handle response, return whether is was successful or not

@@ -6,13 +6,13 @@
 
 import * as http from 'http';
 import { app } from '../app';
-import { serverPort } from '../config';
+// import { serverPort } from '../config';
 
 /**
  * Get port from environment and store in Express.
  */
-const port = normalizePort(process.env.PORT || serverPort);
-app.set('port', process.env.port || port);
+const port = normalizePort(process.env.PORT);
+app.set('port', port);
 
 /**
  * Create HTTP server.
