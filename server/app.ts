@@ -8,7 +8,7 @@ import * as nodemailer from 'nodemailer';
 import * as path from 'path';
 import * as request from 'request';
 
-import { mailhost, mailport, sendEmailTo, siteSecret, siteVerifyUrl } from './config';
+import { mailhost, mailport, sendEmailTo, siteVerifyUrl } from './config';
 
 const app: express.Application = express();
 
@@ -26,8 +26,8 @@ if (app.get('env') === 'production') {
 }
 
 const smtpConfig = {
-  host: process.env.mailhost || mailhost,
-  port: process.env.mailport || mailport,
+  host: process.env.MAILHOST || mailhost,
+  port: process.env.MAILPORT || mailport,
   secure: false, // upgrade later with STARTTLS
   tls: {
     // do not fail on invalid certs
@@ -40,8 +40,13 @@ app.post('/sendmail', (req, res) => {
   const transporter = nodemailer.createTransport(smtpConfig);
   const data = req.body;
 
+  console.log('process.env.MAILHOST', process.env.MAILHOST);
+  console.log('process.env.MAILPORT', process.env.MAILPORT);
+  console.log('process.env.SITESECRET', process.env.SITESECRET);
+  console.log('process.env.SENDEMAILTO', process.env.SENDEMAILTO);
+
   const emailMessage = {
-    to: process.env.sendEmailTo || process.env.sendEmailTo,
+    to: process.env.SENDEMAILTO,
     from: data.from,
     subject: data.subject,
     text: data.text,
@@ -74,6 +79,9 @@ app.post('/sendmail', (req, res) => {
     function handleRecaptchaResponse(error, response, body) {
       if (!error && response.statusCode === 200) {
         const jsonBody = JSON.parse(body);
+        console.log('jsonBody result from recaptcha check', jsonBody);
+        console.log('siteSecret', userSecret);
+        console.log('response', userResponse);
         if (jsonBody.success === true) {
           console.log('This is not a bot!');
           callback(true);
@@ -113,7 +121,7 @@ app.post('/sendmail', (req, res) => {
       }
     });
   }
-  execute(process.env.siteSecret || siteSecret, data.response, emailMessage);
+  execute(process.env.SITESECRET, data.response, emailMessage);
 });
 
 app.get('*', (req, res) => {
