@@ -74,7 +74,9 @@ app.post('/sendmail', (req, res) => {
     function handleRecaptchaResponse(error, response, body) {
       if (!error && response.statusCode === 200) {
         const jsonBody = JSON.parse(body);
-        console.log('jsonBody result from recaptcha check', jsonBody, userSecret, userResponse);
+        console.log('jsonBody result from recaptcha check', jsonBody);
+        console.log('siteSecret', userSecret);
+        console.log('response', userResponse);
         if (jsonBody.success === true) {
           console.log('This is not a bot!');
           callback(true);
