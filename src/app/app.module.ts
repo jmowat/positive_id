@@ -36,7 +36,7 @@ import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 import { RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
-import * as myGlobals from './globals';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -78,11 +78,7 @@ import * as myGlobals from './globals';
     GameParmsService,
     {
       provide: RECAPTCHA_SETTINGS,
-      // www.digitalpraxis.com: 6Lf0pzoUAAAAAGDqvSIkYwb31CaAmSxXHDE6R0-M
-      // 127.0.0.1: 6LcAL00UAAAAAIODAAHMYC7wvPOMkILX2eAahDvG
-      // useValue: { siteKey: myGlobals.localhostSiteKey } as RecaptchaSettings,
-      // positive-id.herokuapp.com 6LcBpk0UAAAAAHJ_NC92JdaZYskccK_vTc5A5lwN
-      useValue: { siteKey: myGlobals.publicSiteKey } as RecaptchaSettings,
+      useValue: { siteKey: environment.siteKey } as RecaptchaSettings,
     }
   ],
   entryComponents: [

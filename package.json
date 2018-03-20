@@ -6,14 +6,14 @@
   "scripts": {
     "ng": "ng",
     "start:dev": "concurrently --kill-others \"npm run server:run\" \"ng serve --aot --progress=false --host=127.0.0.1 --disable-host-check --open\"",
-    "build": "ng build --prod --sm=false --aot --output-path=dist/client && npm run server:build",
+    "build": "ng build --prod --env=prod --sm=false --aot --output-path=dist/client && npm run server:build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "server:run": "nodemon",
     "server:build": "tsc -p ./server",
     "start": "node dist/server/bin/www",
-    "postinstall": "ng build --prod --sm=false --aot --output-path=dist/client && npm run server:build"
+    "postinstall": "ng build --prod --env=prod --sm=false --aot --output-path=dist/client && npm run server:build"
   },
   "private": true,
   "dependencies": {

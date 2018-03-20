@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { CustomEmailValidatorDirective } from '../custom-email-validator.directive';
 import { RecaptchaComponent } from 'ng-recaptcha';
-import * as myGlobals from '../globals';
+import { environment } from '../../environments/environment';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -26,7 +26,6 @@ export class ContactComponent implements OnInit {
   }
 
   resolved(captchaResponse: string) {
-    // console.log('captchaResponse', captchaResponse);
     this.recaptchaResponse = captchaResponse;
   }
 
@@ -39,14 +38,13 @@ export class ContactComponent implements OnInit {
         html: '<p>' + this.message + '</p>',
         response: this.recaptchaResponse
       };
-
-      this.http.post(myGlobals.sendmailUrl, message, {responseType: 'text'}).subscribe(res => {
-        console.log('Data received by contact component:', (res));
+      console.log('sendmail url =', environment.sendmailUrl);
+      this.http.post(environment.sendmailUrl, message, {responseType: 'text'}).subscribe(res => {
         if (res === 'sent') {
           this.statusMessage = 'Your message was sent. Thanks!';
           myForm.reset();
         } else {
-          this.statusMessage = 'Your message could not be sent. Reason:' + res;
+          this.statusMessage = 'Your message could not be sent. Reason: ' + res;
         }
       });
     } else {
