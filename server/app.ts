@@ -26,8 +26,8 @@ if (app.get('env') === 'production') {
 }
 
 const smtpConfig = {
-  host: process.env.mailhost || mailhost,
-  port: process.env.mailport || mailport,
+  host: process.env.MAILHOST || mailhost,
+  port: process.env.MAILPORT || mailport,
   secure: false, // upgrade later with STARTTLS
   tls: {
     // do not fail on invalid certs
@@ -40,13 +40,13 @@ app.post('/sendmail', (req, res) => {
   const transporter = nodemailer.createTransport(smtpConfig);
   const data = req.body;
 
-  console.log('process.env.mailhost', process.env.mailhost);
-  console.log('process.env.mailport', process.env.mailport);
-  console.log('process.env.siteSecret', process.env.siteSecret);
-  console.log('process.env.sendEmailTo', process.env.sendEmailTo);
+  console.log('process.env.MAILHOST', process.env.MAILHOST);
+  console.log('process.env.MAILPORT', process.env.MAILPORT);
+  console.log('process.env.SITESECRET', process.env.SITESECRET);
+  console.log('process.env.SENDEMAILTO', process.env.SENDEMAILTO);
 
   const emailMessage = {
-    to: process.env.sendEmailTo,
+    to: process.env.SENDEMAILTO,
     from: data.from,
     subject: data.subject,
     text: data.text,
@@ -121,7 +121,7 @@ app.post('/sendmail', (req, res) => {
       }
     });
   }
-  execute(process.env.siteSecret, data.response, emailMessage);
+  execute(process.env.SITESECRET, data.response, emailMessage);
 });
 
 app.get('*', (req, res) => {
