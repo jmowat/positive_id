@@ -40,8 +40,13 @@ app.post('/sendmail', (req, res) => {
   const transporter = nodemailer.createTransport(smtpConfig);
   const data = req.body;
 
+  console.log('process.env.mailhost', process.env.mailhost);
+  console.log('process.env.mailport', process.env.mailport);
+  console.log('process.env.siteSecret', process.env.siteSecret);
+  console.log('process.env.sendEmailTo', process.env.sendEmailTo);
+
   const emailMessage = {
-    to: process.env.sendEmailTo || process.env.sendEmailTo,
+    to: process.env.sendEmailTo,
     from: data.from,
     subject: data.subject,
     text: data.text,
