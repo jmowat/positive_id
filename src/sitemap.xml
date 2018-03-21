@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://positive-id.digitalpraxis.com/main</loc>
+  </url>
+  <url>
+    <loc>http://positive-id.digitalpraxis.com/quiz-builder</loc>
+  </url>
+  <url>
+    <loc>http://positive-id.digitalpraxis.com/drill-builder</loc>
+  </url>
+  <url>
+    <loc>http://positive-id.digitalpraxis.com/browse</loc>
+  </url>
+  <url>
+    <loc>http://positive-id.digitalpraxis.com/about</loc>
+  </url>
+  <url>
+    <loc>http://positive-id.digitalpraxis.com/contact</loc>
+  </url>
+  <url>
+    <loc>http://positive-id.digitalpraxis.com/terms</loc>
+  </url>
+  <url>
+    <loc>http://positive-id.digitalpraxis.com/privacy</loc>
+  </url>
+  <url>
+    <loc>http://positive-id.digitalpraxis.com/quiz</loc>
+  </url>
+</urlset>
