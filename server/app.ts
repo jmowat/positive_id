@@ -128,6 +128,10 @@ app.post('/sendmail', (req, res) => {
   execute(process.env.SITESECRET, data.response, emailMessage);
 });
 
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, '/../client/sitemap.xml'));
+});
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/../client/index.html'));
 });
