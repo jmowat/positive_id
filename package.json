@@ -1,6 +1,6 @@
 {
   "name": "positive-id",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "license": "MIT",
   "main": "server/app.js",
   "scripts": {
