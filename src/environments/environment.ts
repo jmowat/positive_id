@@ -6,5 +6,5 @@
 export const environment = {
   production: false,
   siteKey: '6LcAL00UAAAAAIODAAHMYC7wvPOMkILX2eAahDvG',
-  sendmailUrl: `http://localhost:2400/sendmail`
+  sendmailUrl: `http://localhost:4300/sendmail`
 };
